@@ -1,0 +1,11 @@
+.idea
+/dist
+/node_modules
+/config.php
+/admin/config.php
+.htaccess
+/console/*.xml
+/console/*.csv
+/console/*.xlsx
+/console/*.zip
+/console/*.sql

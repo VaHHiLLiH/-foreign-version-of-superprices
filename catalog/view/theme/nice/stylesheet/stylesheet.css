@@ -3068,3 +3068,30 @@ footer h5 {
   font-weight: bold;
   color: #fff;
 }
+
+/*--------------------Category fix rating, description------------------------------------------*/
+.product-thumb--rating{
+  display: flex;
+  justify-content: center;
+  height: 25px;
+  margin-bottom: 15px;
+}
+.product-thumb--rating .fa-star{
+  font-size: 17px;
+}
+.product-thumb--rating .fa-star-o{
+  font-size: 17px;
+}
+.product-thumb--rating .fa-stack{
+  margin-right: 8px;
+}
+.product-thumb{
+  margin-bottom: 20px;
+}
+.product-thumb--name-bold{
+  color: black;
+  font-weight: 600;
+}
+.product-thumb--description{
+  margin-top: 15px;
+}
