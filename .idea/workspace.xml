@@ -3,51 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="bcdbc27d-818e-4b19-849b-a0d673688937" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/language/ru-ru/product/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/language/ru-ru/product/category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/stylesheet/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/controller/product/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/controller/product/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/language/en-gb/product/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/language/en-gb/product/category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/language/en-gb/product/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/language/en-gb/product/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/language/ru-ru/product/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/language/ru-ru/product/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/model/catalog/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/model/catalog/product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/view/theme/nice/stylesheet/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/nice/stylesheet/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/category.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/category.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/04/04d0f0dab83c4123cdbd1c3fe2980d8e3bfdb40b55d65bed421489fc5ed66550.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/07/07fabe912a3eaa02645fc37eabea93924e3ceb239b93e0b4b2815617a0e763b8.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/1d/1da1a66466abcf52970687f0755f98db718b7fba8898f9e66c169cd9476fc640.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/2d/2d3717209db34895664343674157ddcdd1c7580f49112e58cd6688d7b0546b83.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/3e/3ea446f5c041527addff7e5062cf71f71bcaeee042d63342162b7b6122da136f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/49/4956ddd4e026dd2c8c2f4bc20816911191454eec5bcaa0c0dd13b144eb5bf6bc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/50/50472045a1a9e4aa3d2ea615a2ae5839e7e73b33e1cb331e77b453413f3a6c1b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/57/574579f0b9aaffca382e45ce38e52389df68fb2bbe95c135be2179fdc1a54eb7.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/58/58df8a5cc43c7880bc430f2e82c20a0ab5879cf778383429991f07cdc9ef724f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/58/58edc8f3d70e0784d88300f28a996ab9926bafac7c485630c717f5e55fa7d02f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/61/61b755dd5e0268bd8c9618a9cc11345f22d6fac29a46818fd5d8ca90d0acd97d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/62/626fb7f47a0a8a3f4682ec7346f7dbe37661049e4e901fdc868af3bf028740d3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/67/67c90fa10018290370ff61a0c842549ce10bd2f7f06cbf6dfe0ab08c4f29a657.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/6b/6be9a48314c31ce19fe53e6068a7f488258b8f4fe3c02b63d00a89dd328cb9fc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/72/7241038e387f68c60e34417e8fd4b003f1b2e96802401d4f3342439eeb7d5fe2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/75/75197bce0a0f8ebd41799d9e0606880dfc5b0f3dbfaa167f42cb10c4dc086177.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/7d/7d1ff4563dc5bc837f96ed0b38ec9aee3679d403ab6b586f7ad2305fa880ef08.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/7f/7fc4b05acf8c8d68c32537c2a1b68ad19f33b82b24a8b189f39bf6b5665df200.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/96/96fd25ffb6517777501f767c7287384d398f5c05b4dfdd44fd74339b63dea70d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/a1/a1d52a13430c649c7e03618c3c220176630896af144033d84c517c84bef2d283.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/a2/a207d6b0bb750b29ef08c0ab509c769e7ee5179b15ec6d96a9287b1f9158b735.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/a3/a391fbe11916a523f654795e19a92bcb11f7fce21b93f84c99091437328d884f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/a3/a3dce7923323e78c65493b27c0c3a3ed724870a087904eb7006ac053061d6238.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/c0/c0d755e49517fcd88a7f12a8b52dd20affa612af7586ce9e348d19f0dd8d9b8c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.admin.language.1664444983" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.catalog.language.1664445020" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.country.admin.1664443419" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.currency.1664444941" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.information.1.1664443419" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.length_class.1.1664443419" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.nice_megamenu.1.0.1664443449" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.order_status.1.1664443419" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.return_status.1.1664443419" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.store.1664445019" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.weight_class.1.1664443419" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.zone.176.1664443419" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cb/cb1b20cdec0a4041d03d903ded76bbbac7ee0b3295a1efcf19a3291969247acf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cc/cc96cb0680c8594d5388022daf0ca3d72e070d85b08c79d8e7fcb26e9896bb4a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/e2/e20fbf3606a5621e72d39c3d48ef340f1dbfc710bdd67d0aab88dadc9b69ad7b.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/product.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/product.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.admin.language.1664462391" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.catalog.language.1664462695" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.currency.1664462169" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.length_class.1.1664460939" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.nice_megamenu.1.0.1664460167" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.stock_status.1.1664460939" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.store.1664462391" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.tax_class.1664460939" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.weight_class.1.1664460939" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/logs/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/logs/ocmod.log" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/logs/ocmod.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/vendor/scss.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/vendor/scss.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/modification/catalog/controller/product/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/modification/catalog/controller/product/product.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,16 +44,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/OpenServer/domains/randSheetOnOC.orc",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/OpenServer/domains/randSheetOnOC.orc&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,7 +63,8 @@
       <option name="presentableId" value="Default" />
       <updated>1664438149670</updated>
       <workItem from="1664438150801" duration="10000" />
-      <workItem from="1664441721793" duration="4307000" />
+      <workItem from="1664441721793" duration="7050000" />
+      <workItem from="1664517863811" duration="5559000" />
     </task>
     <servers />
   </component>

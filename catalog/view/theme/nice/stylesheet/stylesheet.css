@@ -3095,3 +3095,11 @@ footer h5 {
 .product-thumb--description{
   margin-top: 15px;
 }
+/*----------------------Product card----------------------------------*/
+.product-container .tab-content .rating{
+  margin-top: 15px;
+}
+#button-compare{
+  width: 50%;
+  margin: auto;
+}

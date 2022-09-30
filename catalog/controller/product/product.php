@@ -446,6 +446,25 @@ class ControllerProductProduct extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
+            /*-----*/
+            $productsRand = $this->model_catalog_product->getFourRandomProductsFromParentCategory($this->request->get['product_id']);
+
+            foreach ($productsRand as $productRand) {
+
+                $fourProduct['products'][] = array(
+                    'product_id'  => $productRand['product_id'],
+                    'thumb'       => ($productRand['image']) ? $this->model_tool_image->resize($productRand['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height')) : $image = $this->model_tool_image->resize('placeholder.png', $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height')),
+                    'name'        => $productRand['name'],
+                    'description' => utf8_substr(trim(strip_tags(html_entity_decode($productRand['description'], ENT_QUOTES, 'UTF-8'))), 0, $this->config->get('theme_' . $this->config->get('config_theme') . '_product_description_length')) . '..',
+                    'rating'      => $productRand['rating'],
+                    'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $productRand['product_id'])
+                );
+
+            }
+
+             $data['randomFourProducts'] = $this->load->view('product/randomFourProducts', $fourProduct);
+            /*-----*/
+
 			$this->response->setOutput($this->load->view('product/product', $data));
 		} else {
 			$url = '';

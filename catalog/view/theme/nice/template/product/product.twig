@@ -12,31 +12,9 @@
         <div class="col-sm-12">
           <div class="">
             <h1 class="product-h1">{{ heading_title }}</h1>
-            <div class="row">
-              <div class="col-sm-6">
-                {% if review_status %}
-                <div class="rating">
-                  <p>{% for i in 1..5 %}
-                  {% if rating < i %}<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>{% else %}<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>{% endif %}
-                  {% endfor %} {{ reviews }} / <a href="#review-form--wrapper--modal" data-toggle="modal" data-target="#review-form--wrapper--modal">{{ text_write }}</a></p>
-
-                </div>
-                {% endif %}
-  {#              <!-- AddThis Button BEGIN -->
-                <div class="addthis_toolbox addthis_default_style" data-url="{{ share }}"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script> 
-                <!-- AddThis Button END -->#}
-              </div>          
-              <div class="col-sm-6">
-                {#<div class="btn-group pull-right">
-                  <button type="button" data-toggle="tooltip" class="btn btn-default" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product_id }}');"><i class="fa fa-heart"></i></button>
-                  <button type="button" data-toggle="tooltip" class="btn btn-default" title="{{ button_compare }}" onclick="compare.add('{{ product_id }}');"><i class="fa fa-exchange"></i></button>
-                </div>#}
-              </div>
-            </div>
           </div>            
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-12">
           <div class="row">
             <div class="col-sm-5">
               {{ block_image }}
@@ -56,11 +34,20 @@
                       {% if manufacturer %}
                       <li><span class="meta-label">{{ text_manufacturer }}</span> <a href="{{ manufacturers }}" class="meta-value">{{ manufacturer }}</a></li>
                       {% endif %}
-                      <li><span class="meta-label">{{ text_model }}</span> <span class="meta-value">{{ model }}</span></li>
-                      <li><span class="meta-label">{{ text_stock }}</span> <span class="meta-value">{{ stock }}</span></li>
-                      {% if reward %}
-                      <li><span class="meta-label">{{ text_reward }}</span> <span class="meta-value">{{ reward }}</span></li>
-                      {% endif %}
+						<div class="row">
+							<div class="rating">
+								<p>{% for i in 1..5 %}
+								   		{% if rating < i %}
+											<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+										{% else %}
+											<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+										{% endif %}
+									{% endfor %} {{ reviews }} / <a href="#review-form--wrapper--modal" data-toggle="modal" data-target="#review-form--wrapper--modal">{{ text_write }}</a></p>
+
+										{{ block_review_form_modal }}
+
+							</div>
+						</div>
                     </ul>
 
                     {#<div class="row">
@@ -119,7 +106,7 @@
               <div id="product">           
                 <div class="row">
                 <div class="col-xs-12">
-                  {{ block_conversion }}             
+					<button type="button" id="button-compare" data-loading-text="{{ text_loading }}" class="btn btn-accent btn-lg btn-block">{{ button_compare }}</button>
                 </div>
             </div>
             
@@ -128,16 +115,6 @@
           </div>
           
         </div>
-        <div class="col-sm-3">
-          {% if review_status %}
-          {% if rating > 0 %}
-          <div id="review"></div>          
-          {% else %}
-            {{ block_review_form }}
-          {% endif %}
-          {{ block_review_form_modal }}
-          {% endif %}
-        </div>         
         {% if tags %}
         <div class="row" id="product-row-2">
           <div class="col-sm-12">
@@ -149,9 +126,9 @@
           </div>
         </div>
         {% endif %}
-      </div>     
+      </div>
 
-      {{ block_products_related }}
+		{{ randomFourProducts }}
 
       {{ content_bottom }}
     </div>
