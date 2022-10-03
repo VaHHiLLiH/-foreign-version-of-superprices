@@ -26,5 +26,5 @@ $_['text_model_asc']    = 'Модель (А - Я)';
 $_['text_model_desc']   = 'Модель (Я - А)';
 $_['text_limit']        = 'Показать:';
 $_['button_compare']    = 'Сравнить товар';
-$_['preheading_title']  = 'Товары бренда';
+$_['preheading_title']  = 'Товары бренда ';
 

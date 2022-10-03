@@ -26,4 +26,4 @@ $_['text_model_asc']    = 'Model (A - Z)';
 $_['text_model_desc']   = 'Model (Z - A)';
 $_['text_limit']        = 'Show:';
 $_['button_compare']    = 'Compare product';
-$_['preheading_title']  = 'Brand products';
+$_['preheading_title']  = 'Brand products ';
