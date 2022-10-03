@@ -49,27 +49,6 @@
 							</div>
 						</div>
                     </ul>
-
-                    {#<div class="row">
-                      <div class="col-sm-6">
-                        <ul class="list-unstyled">
-                          {% if manufacturer %}
-                            <li><span class="meta-label">{{ text_manufacturer }}</span> <a href="{{ manufacturers }}" class="meta-value">{{ manufacturer }}</a></li>
-                            {% endif %}
-                          <li><span class="meta-label">{{ text_model }}</span> <span class="meta-value">{{ model }}</span></li>
-
-                        </ul>
-                      </div>
-                      <div class="col-sm-6">
-                        <ul class="list-unstyled">
-                          <li><span class="meta-label">{{ text_stock }}</span> <span class="meta-value">{{ stock }}</span></li>
-                          {% if reward %}
-                            <li><span class="meta-label">{{ text_reward }}</span> <span class="meta-value">{{ reward }}</span></li>
-                            {% endif %}
-
-                        </ul>
-                      </div>
-                    </div>#}
                     {% if short_description %}<div class="short-description">{{short_description}}</div>{% endif %}
                   </div>
 

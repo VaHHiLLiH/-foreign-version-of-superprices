@@ -3,25 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="bcdbc27d-818e-4b19-849b-a0d673688937" name="Changes" comment="finished the layout of the card and made a block with 4 random products from the parent category of the selected product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/controller/product/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/controller/product/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/controller/product/manufacturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/controller/product/manufacturer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/language/ru-ru/product/manufacturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/language/ru-ru/product/manufacturer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/model/catalog/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/model/catalog/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/nice/stylesheet/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/nice/stylesheet/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/category.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/category.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/manufacturer_info.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/manufacturer_info.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.admin.language.1664462391" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.catalog.language.1664462695" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.currency.1664462169" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.length_class.1.1664460939" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.nice_megamenu.1.0.1664460167" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.stock_status.1.1664460939" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.store.1664462391" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.tax_class.1664460939" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/cache.weight_class.1.1664460939" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/cache/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/logs/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/product.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/product.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/randomFourProducts.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/randomFourProducts.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/logs/ocmod.log" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/logs/ocmod.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/modification/catalog/controller/product/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/modification/catalog/controller/product/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/modification/catalog/controller/product/manufacturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/modification/catalog/controller/product/manufacturer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/storage/modification/catalog/controller/product/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/modification/catalog/controller/product/product.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +52,7 @@
       <workItem from="1664438150801" duration="10000" />
       <workItem from="1664441721793" duration="7050000" />
       <workItem from="1664517863811" duration="6938000" />
-      <workItem from="1664777221453" duration="8855000" />
+      <workItem from="1664777221453" duration="11320000" />
     </task>
     <task id="LOCAL-00001" summary="finished the layout of the card and made a block with 4 random products from the parent category of the selected product">
       <created>1664523635179</created>

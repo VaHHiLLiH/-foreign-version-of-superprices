@@ -3103,3 +3103,8 @@ footer h5 {
   width: 50%;
   margin: auto;
 }
+.fixed-size {
+  width: 400px;
+  height: 250px;
+  object-fit: contain;
+}
