@@ -272,6 +272,7 @@ class ControllerProductProduct extends Controller {
 			$data['block_review_form_modal'] = $this->load->controller('block/productpage_review_form_modal', $data);
 			$data['block_products_related'] = $this->load->controller('block/productpage_products_related', $data);
 			// Nice Theme . End
+            $data['attribute_groups'] = $this->model_catalog_product->getProductcharacteristics($this->request->get['product_id']);
 
             /*-----*/
             $productsRand = $this->model_catalog_product->getFourRandomProductsFromParentCategory($this->request->get['product_id']);

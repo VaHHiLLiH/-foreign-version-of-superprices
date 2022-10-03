@@ -1,6 +1,8 @@
 {% if products %}
+    {% if heading %}
+        <h2 class="fourProducts">{{ heading }}</h2>
+    {% endif %}
     <div class="section section--productlist">
-        <div class="section--title-wrapper"><p class="section--title">{{ text_similar_attributes }}</p></div>
         <div class="row productlist-row">
             {% for product in products %}
                 <div class="product-layout product-grid col-sm-3">

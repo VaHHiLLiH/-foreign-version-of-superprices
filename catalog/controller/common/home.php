@@ -9,6 +9,8 @@ class ControllerCommonHome extends Controller {
 			$this->document->addLink($this->config->get('config_url'), 'canonical');
 		}
 
+        $data['featured_products'] = $this->load->controller('product/featured_products');
+
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');

@@ -554,4 +554,16 @@ class ModelCatalogProduct extends Model {
 
         return json_decode($json_chars['spec']);
     }
+
+    public function getFeaturedProducts() {
+        $product_ids = $this->db->query("SELECT * FROM `oc_product` ORDER BY RAND() LIMIT 4")->rows;
+
+        $products = [];
+        foreach ($product_ids as $key => $product_id) {
+            $products[$key] = $this->getProduct($product_id['product_id']);
+            $products[$key]['thumb'] = $products[$key]['image'];
+        }
+
+        return $products;
+    }
 }
