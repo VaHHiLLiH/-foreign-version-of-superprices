@@ -20452,3 +20452,219 @@
 2022-09-29 13:30:08 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\vendor\scss.inc.php on line 1753
 2022-09-29 13:30:08 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\vendor\scss.inc.php on line 1753
 2022-09-29 13:30:08 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\vendor\scss.inc.php on line 1753
+2022-09-30 6:37:41 - PHP Notice:  Undefined index: category_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 469
+2022-10-03 8:50:55 - PHP Notice:  Undefined index: nmm_alt in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\admin\model\catalog\category.php on line 286
+2022-10-03 8:50:55 - PHP Notice:  Undefined index: nmm_title in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\admin\model\catalog\category.php on line 287
+2022-10-03 8:50:55 - PHP Notice:  Undefined index: nmm_text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\admin\model\catalog\category.php on line 288
+2022-10-03 8:50:55 - PHP Notice:  Undefined index: nmm_link in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\admin\model\catalog\category.php on line 289
+2022-10-03 8:50:55 - PHP Notice:  Undefined index: nmm_anchor in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\admin\model\catalog\category.php on line 290
+2022-10-03 8:50:55 - PHP Notice:  Undefined index: nmm_image in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\admin\controller\catalog\category.php on line 459
+2022-10-03 8:50:55 - PHP Notice:  Undefined index: nmm_image in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\admin\controller\catalog\category.php on line 477
+2022-10-03 8:50:55 - PHP Notice:  Undefined index: nmm_promo_status in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\admin\controller\catalog\category.php on line 514
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 8:52:30 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 8:52:30 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 8:52:30 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 8:52:30 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 8:52:30 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:40:47 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:41:42 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:41:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:44:18 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:46:32 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:46:38 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 9:46:38 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 9:46:38 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 9:46:38 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 9:46:38 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:46:38 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:46:47 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:47:08 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 9:47:08 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 9:47:08 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 9:47:08 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 9:47:08 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:08 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:29 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:47:36 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:47:40 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 9:47:40 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 9:47:40 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 9:47:40 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 475
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 476
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 477
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 478
+2022-10-03 9:47:40 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:47:40 - PHP Notice:  Trying to access array offset on value of type bool in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:56:21 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:56:37 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:56:42 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:56:54 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:57:01 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:57:07 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:58:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:58:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:58:26 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:58:35 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:58:53 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 9:58:53 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:58:53 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:58:53 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 9:58:53 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:00:16 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 10:00:17 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:00:17 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:00:17 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:00:17 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:00:43 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 90
+2022-10-03 10:00:43 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:00:43 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:00:43 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:00:43 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:01:05 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 89
+2022-10-03 10:01:05 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:01:05 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:01:05 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:01:05 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:02:29 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 91
+2022-10-03 10:02:29 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:02:29 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:02:29 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:02:29 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:02:51 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\menu.php on line 92
+2022-10-03 10:02:51 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:02:51 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:02:51 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:02:51 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:03:39 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:03:39 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:03:39 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:03:39 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:40:26 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:40:26 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:40:26 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:40:26 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:43:05 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:43:05 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:43:05 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:43:05 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:44:07 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:44:07 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:44:07 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:44:07 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:44:56 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:44:56 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:44:56 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:44:56 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:49:34 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:49:34 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:49:34 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:49:34 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:50:39 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:50:39 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:50:39 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:50:39 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:51:33 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:51:33 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:51:33 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:51:33 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:52:18 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:52:18 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:52:18 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:52:18 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:53:15 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 10:53:15 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 10:53:15 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 10:53:15 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 474
+2022-10-03 10:57:31 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:57:31 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:57:31 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479
+2022-10-03 10:57:31 - PHP Notice:  Undefined index: path in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\product.php on line 479

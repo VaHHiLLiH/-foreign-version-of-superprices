@@ -9,3 +9,6 @@
 /console/*.xlsx
 /console/*.zip
 /console/*.sql
+/system/storage/cache
+/system/storage/logs
+/image
