@@ -3128,10 +3128,10 @@ footer h5 {
 .text > a{
    background: #90F;
    padding: 8px 25px;
-   border-radius: 25px;
+   border-radius: 3px;
    color: white;
    text-decoration: none;
-  transition: background 0.5s ease;
+   transition: background 0.5s ease;
 }
 .text > a:hover{
   background: #33CC66;
@@ -3145,3 +3145,59 @@ footer h5 {
   width: 60%;
   margin-top: 70px;
 }
+
+/*---------------------------------Modal to comparison-----------------------*/
+
+.modal-to-compare{
+  width: 40%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  left: 30%;
+  background: aquamarine;
+  border-radius: 15px;
+}
+.compare-items-cont{
+  display: flex;
+  justify-content: space-around;
+}
+.compare-btn button{
+  background: #90F;
+  padding: 8px 25px;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  transition: background 0.5s ease;
+  margin-top: 15px;
+}
+.compare-btn button:hover{
+  background: #33CC66;
+}
+.modal-to-compare > .glyphicon{
+  display: none;
+}
+.close > .glyphicon-eject{
+  display: block;
+}
+.open > .glyphicon-resize-vertical{
+  display: block;
+}
+.compare-item-2{
+  width: 10%;
+  text-align: center;
+}
+.compare-item-1, .compare-item-3{
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+.compare-item-1 > .form-group, .compare-item-3 > .form-group{
+   width: 100%;
+}
+.glyphicon{
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/*---------------------------------End of Modal------------------------------*/
