@@ -541,7 +541,7 @@ class ModelCatalogProduct extends Model {
 
         $parent_id = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_to_category ptc LEFT JOIN " . DB_PREFIX . "category c ON (ptc.category_id = c.category_id) WHERE ptc.product_id = " . $product_id . " AND c.parent_id = 0")->row['category_id'];
 
-        $query = $this->db->query("SELECT ptc.product_id FROM " . DB_PREFIX . "product_to_category ptc LEFT JOIN " . DB_PREFIX . "product p ON (ptc.product_id = p.product_id) WHERE ptc.product_id > " . $product_id . " AND `ptc.category_id` = " . $parent_id . " AND p.manufacturer_id = " . (int)$manufacturer_id . " LIMIT 4")->rows;
+        $query = $this->db->query("SELECT ptc.product_id FROM " . DB_PREFIX . "product_to_category ptc LEFT JOIN " . DB_PREFIX . "product p ON (ptc.product_id = p.product_id) WHERE ptc.product_id > " . $product_id . " AND ptc.category_id = " . $parent_id . " AND p.manufacturer_id = " . (int)$manufacturer_id . " LIMIT 4")->rows;
         $products = array();
         foreach ($query as $item) {
             $products[] = $this->getProduct($item['product_id']);
