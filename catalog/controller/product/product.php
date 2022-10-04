@@ -173,8 +173,13 @@ class ControllerProductProduct extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-            $data['attribute_groups'] = $this->model_catalog_product->getProductCharacteristics($this->request->get['product_id']);
-
+            $attribute_groups = $this->model_catalog_product->getProductCharacteristics($this->request->get['product_id']);
+            /* Потому что атрибуты спаршены через жопу */
+            if (isset($attribute_groups['subspecs'])) {
+                $data['attribute_groups'][] = $attribute_groups;
+            } else {
+                $data['attribute_groups'] = $attribute_groups;
+            }
             /*-----*/
             $productsRand = $this->model_catalog_product->getProductWithSimilarChars($this->request->get['product_id'], $this->model_catalog_product->getProductManufacturerId($this->request->get['product_id']));
 

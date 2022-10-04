@@ -51,7 +51,7 @@ class ControllerProductCompare extends Controller {
 		$data['products'] = array();
 
 		$data['attribute_groups'] = array();
-        $spec_attr = [];
+        $spec_attr = array();
 		foreach ($this->session->data['compare'] as $key => $product_id) {
 			$product_info = $this->model_catalog_product->getProduct($product_id);
 
@@ -68,12 +68,30 @@ class ControllerProductCompare extends Controller {
 				$attribute_data = array();
 
                 $attribute_groups = $this->model_catalog_product->getProductCharacteristics($product_id);
-				foreach ($attribute_groups as $attribute_group) {
-                    foreach ($attribute_group['subspecs'] as $attribute) {
-                        $spec_attr[$attribute_group['name']][$attribute['name']][$key] = $attribute['value'];
-					}
-				}
-
+                $key_product = 0;
+                /* Потому что придумал херово */
+                foreach ($this->session->data['compare'] as $session_product_id){
+                    if ($session_product_id == $product_id) {
+                        break;
+                    }
+                    $key_product++;
+                }
+                /* Потому что атрибуты спаршены через жопу */
+                if (!empty($attribute_groups)) {
+                    if (empty($attribute_groups['subspecs'])) {
+                        foreach ($attribute_groups as $attribute_group) {
+                            if (!empty($attribute_group['subspecs'])) {
+                                foreach ($attribute_group['subspecs'] as $attribute) {
+                                    $spec_attr[$attribute_group['name']][$attribute['name']][$key_product] = $attribute['value'];
+                                }
+                            }
+                        }
+                    } else {
+                        foreach ($attribute_groups['subspecs'] as $attribute) {
+                            $spec_attr[$attribute_groups['name']][$attribute['name']][$key_product] = $attribute['value'];
+                        }
+                    }
+                }
 				$data['products'][$product_id] = array(
 					'product_id'   => $product_info['product_id'],
 					'name'         => $product_info['name'],
@@ -98,14 +116,16 @@ class ControllerProductCompare extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-        foreach ($spec_attr as $key1 => $group_attr) {
-            foreach ($group_attr as $key2 => $attribute) {
-                for ($i = 0; $i < count($this->session->data['compare']); $i++) {
-                    if (!isset($attribute[$i])) {
-                        $spec_attr[$key1][$key2][$i] = '-';
+        if(count($this->session->data['compare']) > 1) {
+            foreach ($spec_attr as $key1 => $group_attr) {
+                foreach ($group_attr as $key2 => $attribute) {
+                    for ($i = 0; $i < count($this->session->data['compare']); $i++) {
+                        if (!isset($attribute[$i])) {
+                            $spec_attr[$key1][$key2][$i] = '-';
+                        }
                     }
+                    ksort($spec_attr[$key1][$key2]);
                 }
-                ksort($spec_attr[$key1][$key2]);
             }
         }
         $data['spec_attr'] = $spec_attr;
