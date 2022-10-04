@@ -547,7 +547,8 @@ class ModelCatalogProduct extends Model {
             $products[] = $this->getProduct($item['product_id']);
         }
         if (count($query) < 4) {
-            $query2 = $this->db->query("SELECT `product_id` FROM " . DB_PREFIX . "product_to_category WHERE .product_id > " . $product_id . " AND `.category_id` = " . $parent_id . " LIMIT " . 4 - count($query))->rows;
+            $limit = 4 - count($query);
+            $query2 = $this->db->query("SELECT `product_id` FROM " . DB_PREFIX . "product_to_category WHERE .product_id > " . $product_id . " AND `.category_id` = " . $parent_id . " LIMIT " . $limit)->rows;
             foreach ($query2 as $item) {
                 $products[] = $this->getProduct($item['product_id']);
             }
