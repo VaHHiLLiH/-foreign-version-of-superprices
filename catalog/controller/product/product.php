@@ -173,7 +173,7 @@ class ControllerProductProduct extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-            $data['attribute_groups'] = $this->model_catalog_product->getProductcharacteristics($this->request->get['product_id']);
+            $data['attribute_groups'] = $this->model_catalog_product->getProductCharacteristics($this->request->get['product_id']);
 
             /*-----*/
             $productsRand = $this->model_catalog_product->getProductWithSimilarChars($this->request->get['product_id'], $this->model_catalog_product->getProductManufacturerId($this->request->get['product_id']));

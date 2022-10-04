@@ -39,82 +39,37 @@
             <td class="text-center">{% if product.thumb %} <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-thumbnail" /> {% endif %}</td>
             {% endfor %} </tr>
           <tr>
-            <td>{{ text_price }}</td>
-            {% for product in products %}
-            <td>{% if product.price %}
-              {% if not product.special %}
-              {{ product.price }}
-              {% else %} <strike>{{ product.price }}</strike> {{ product.special }}
-              {% endif %}
-              {% endif %}</td>
-            {% endfor %} </tr>
-          <tr>
-            <td>{{ text_model }}</td>
-            {% for product in products %}
-            <td>{{ product.model }}</td>
-            {% endfor %} </tr>
-          <tr>
             <td>{{ text_manufacturer }}</td>
             {% for product in products %}
             <td>{{ product.manufacturer }}</td>
             {% endfor %} </tr>
-          <tr>
-            <td>{{ text_availability }}</td>
-            {% for product in products %}
-            <td>{{ product.availability }}</td>
-            {% endfor %} </tr>
-        {% if review_status %}
-        <tr>
-          <td>{{ text_rating }}</td>
-          {% for product in products %}
-          <td class="rating"> {% for i in 1..5 %}
-            {% if product.rating < i %} <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span> {% else %} <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span> {% endif %}
-            {% endfor %} <br/>
-            {{ product.reviews }}</td>
-          {% endfor %} </tr>
-        {% endif %}
-        <tr>
-          <td>{{ text_summary }}</td>
-          {% for product in products %}
-          <td class="description">{{ product.description }}</td>
-          {% endfor %} </tr>
-        <tr>
-          <td>{{ text_weight }}</td>
-          {% for product in products %}
-          <td>{{ product.weight }}</td>
-          {% endfor %} </tr>
-        <tr>
-          <td>{{ text_dimension }}</td>
-          {% for product in products %}
-          <td>{{ product.length }} x {{ product.width }} x {{ product.height }}</td>
-          {% endfor %} </tr>
           </tbody>
-        
-        {% for attribute_group in attribute_groups %}
+
         <thead>
           <tr>
             <td colspan="{{ products|length + 1 }}"><strong>{{ attribute_group.name }}</strong></td>
           </tr>
         </thead>
-        {% for key, attribute in attribute_group.attribute %}
-        <tbody>
-          <tr>
-            <td>{{ attribute.name }}</td>
-            {% for product in products %}
-            {% if product.attribute[key] %}
-            <td> {{ product.attribute[key] }}</td>
-            {% else %}
-            <td></td>
-            {% endif %}
+        {% for group_attr_name, attributes in spec_attr %}
+          <tbody>
+            <tr>
+              <td colspan="{{ products|length + 1 }}"><strong class="power">{{ group_attr_name }}</strong></td>
+            </tr>
+
+            {% for attr_name, attribute in attributes %}
+              <tr>
+                <td><i>{{ attr_name }}</i></td>
+                {% for attr_value in attribute %}
+                    <td>{{ attr_value }}</td>
+                {% endfor %}
+              </tr>
             {% endfor %}
-          </tr>
-        </tbody>
-        {% endfor %}
+          </tbody>
         {% endfor %}
         <tr>
           <td></td>
           {% for product in products %}
-          <td><input type="button" value="{{ button_cart }}" class="btn btn-primary btn-block" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');" />
+          <td>
             <a href="{{ product.remove }}" class="btn btn-danger btn-block">{{ button_remove }}</a></td>
           {% endfor %} </tr>
       </table>
@@ -127,4 +82,4 @@
       {{ content_bottom }}</div>
     {{ column_right }}</div>
 </div>
-{{ footer }} 
+{{ footer }}

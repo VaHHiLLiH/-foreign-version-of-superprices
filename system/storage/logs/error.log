@@ -20677,3 +20677,890 @@
 2022-10-03 12:57:16 - PHP Unknown:  array_key_exists(): Using array_key_exists() on objects is deprecated. Use isset() or property_exists() instead in C:\OpenServer\domains\randSheetOnOC.orc\system\library\template\Twig\Template.php on line 533
 2022-10-03 12:57:16 - PHP Unknown:  array_key_exists(): Using array_key_exists() on objects is deprecated. Use isset() or property_exists() instead in C:\OpenServer\domains\randSheetOnOC.orc\system\library\template\Twig\Template.php on line 533
 2022-10-03 14:01:11 - PHP Notice:  Undefined property: Loader::$model_catalog_product in C:\OpenServer\domains\randSheetOnOC.orc\catalog\controller\product\featured_products.php on line 4
+2022-10-04 6:41:49 - PHP Unknown:  The behavior of unparenthesized expressions containing both '.' and '+'/'-' will change in PHP 8: '+'/'-' will take a higher precedence in C:\OpenServer\domains\randSheetOnOC.orc\catalog\model\catalog\product.php on line 550
+2022-10-04 7:13:34 - PHP Warning:  sprintf(): Too few arguments in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 407
+2022-10-04 7:18:43 - PHP Warning:  sprintf(): Too few arguments in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 407
+2022-10-04 7:18:54 - PHP Warning:  Illegal string offset 'subspecs' in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 121
+2022-10-04 7:18:54 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 121
+2022-10-04 7:18:54 - PHP Warning:  Illegal string offset 'name' in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 131
+2022-10-04 7:18:54 - PHP Notice:  Undefined index: subspecs in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 121
+2022-10-04 7:18:54 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 121
+2022-10-04 7:18:54 - PHP Notice:  Undefined index: name in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 131
+2022-10-04 7:19:10 - PHP Warning:  Illegal string offset 'subspecs' in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 121
+2022-10-04 7:19:10 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 121
+2022-10-04 7:19:10 - PHP Warning:  Illegal string offset 'name' in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 131
+2022-10-04 7:19:10 - PHP Notice:  Undefined index: subspecs in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 121
+2022-10-04 7:19:10 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 121
+2022-10-04 7:19:10 - PHP Notice:  Undefined index: name in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 131
+2022-10-04 7:19:19 - PHP Warning:  sprintf(): Too few arguments in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 407
+2022-10-04 7:19:29 - PHP Notice:  Undefined offset: 1 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 194
+2022-10-04 7:19:29 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 194
+2022-10-04 7:19:29 - PHP Notice:  Undefined offset: 2 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 195
+2022-10-04 7:19:29 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 195
+2022-10-04 7:19:39 - PHP Notice:  Undefined offset: 1 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 194
+2022-10-04 7:19:39 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 194
+2022-10-04 7:19:39 - PHP Notice:  Undefined offset: 2 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 195
+2022-10-04 7:19:39 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 195
+2022-10-04 7:19:55 - PHP Notice:  Undefined offset: 0 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 410
+2022-10-04 7:19:58 - PHP Notice:  Undefined offset: 1 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 194
+2022-10-04 7:19:58 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 194
+2022-10-04 7:19:58 - PHP Notice:  Undefined offset: 2 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 195
+2022-10-04 7:19:58 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 195
+2022-10-04 7:19:58 - PHP Notice:  Undefined index: first_spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 208
+2022-10-04 7:19:58 - PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 208
+2022-10-04 7:19:58 - PHP Notice:  Undefined index: first_spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 298
+2022-10-04 7:19:58 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 298
+2022-10-04 7:19:58 - PHP Warning:  array_search() expects parameter 2 to be array, null given in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 298
+2022-10-04 7:20:06 - PHP Warning:  sprintf(): Too few arguments in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 407
+2022-10-04 7:23:26 - PHP Warning:  sprintf(): Too few arguments in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 408
+2022-10-04 7:24:48 - PHP Warning:  sprintf(): Too few arguments in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 405
+2022-10-04 7:24:48 - PHP Warning:  sprintf(): Too few arguments in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 409
+2022-10-04 7:26:44 - PHP Warning:  sprintf(): Too few arguments in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 405
+2022-10-04 7:26:44 - PHP Warning:  sprintf(): Too few arguments in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 409
+2022-10-04 7:27:36 - PHP Warning:  sprintf(): Too few arguments in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 406
+2022-10-04 7:27:36 - PHP Warning:  sprintf(): Too few arguments in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 410
+2022-10-04 7:28:46 - PHP Warning:  sprintf(): Too few arguments in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 406
+2022-10-04 7:29:17 - PHP Warning:  Illegal string offset 'subspecs' in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 167
+2022-10-04 7:29:17 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 167
+2022-10-04 7:29:17 - PHP Warning:  Illegal string offset 'name' in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 177
+2022-10-04 7:29:17 - PHP Notice:  Undefined index: subspecs in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 167
+2022-10-04 7:29:17 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 167
+2022-10-04 7:29:17 - PHP Notice:  Undefined index: name in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 177
+2022-10-04 7:29:17 - PHP Notice:  Undefined offset: 0 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 193
+2022-10-04 7:29:17 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 193
+2022-10-04 7:29:17 - PHP Notice:  Undefined offset: 1 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 194
+2022-10-04 7:29:17 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 194
+2022-10-04 7:29:17 - PHP Notice:  Undefined offset: 2 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 195
+2022-10-04 7:29:17 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 195
+2022-10-04 7:31:35 - PHP Warning:  Illegal string offset 'subspecs' in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 167
+2022-10-04 7:31:35 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 167
+2022-10-04 7:31:35 - PHP Warning:  Illegal string offset 'name' in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 177
+2022-10-04 7:31:35 - PHP Notice:  Undefined index: subspecs in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 167
+2022-10-04 7:31:35 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 167
+2022-10-04 7:31:35 - PHP Notice:  Undefined index: name in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 177
+2022-10-04 7:31:35 - PHP Notice:  Undefined offset: 0 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 193
+2022-10-04 7:31:35 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 193
+2022-10-04 7:31:35 - PHP Notice:  Undefined offset: 1 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 194
+2022-10-04 7:31:35 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 194
+2022-10-04 7:31:35 - PHP Notice:  Undefined offset: 2 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 195
+2022-10-04 7:31:35 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 195
+2022-10-04 7:32:18 - PHP Warning:  Illegal string offset 'subspecs' in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 167
+2022-10-04 7:32:18 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 167
+2022-10-04 7:32:18 - PHP Warning:  Illegal string offset 'name' in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 177
+2022-10-04 7:32:18 - PHP Notice:  Undefined index: subspecs in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 167
+2022-10-04 7:32:18 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 167
+2022-10-04 7:32:18 - PHP Notice:  Undefined index: name in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 177
+2022-10-04 7:32:18 - PHP Notice:  Undefined offset: 0 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 193
+2022-10-04 7:32:18 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 193
+2022-10-04 7:32:18 - PHP Notice:  Undefined offset: 1 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 194
+2022-10-04 7:32:18 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 194
+2022-10-04 7:32:18 - PHP Notice:  Undefined offset: 2 in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 195
+2022-10-04 7:32:18 - PHP Notice:  Trying to access array offset on value of type null in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 195
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 74
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 102
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 102
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 102
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 102
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 102
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 102
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 102
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 102
+2022-10-04 8:00:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:00:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:01:58 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:01:58 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:03:59 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:03:59 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:04:00 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:04:00 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:04:00 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:04:00 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:04:00 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:04:00 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 75
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:04:00 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:04:00 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:04:00 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:04:00 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:04:00 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 103
+2022-10-04 8:04:00 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:04:00 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: spec in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 76
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:05:46 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:05:46 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 77
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:06:49 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:06:49 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:09:06 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:09:06 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: text in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 78
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:22 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:22 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 105
+2022-10-04 8:10:41 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:10:41 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 107
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:12:24 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:12:24 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute_group_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 104
+2022-10-04 8:13:11 - PHP Notice:  Undefined index: attribute in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106
+2022-10-04 8:13:11 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 106

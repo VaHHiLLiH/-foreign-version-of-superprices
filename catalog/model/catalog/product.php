@@ -562,10 +562,10 @@ class ModelCatalogProduct extends Model {
         return $manufacturer_id['manufacturer_id'];
     }
 
-    public function getProductcharacteristics($product_id) {
+    public function getProductCharacteristics($product_id) {
         $json_chars = $this->db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE product_id = " . (int)$product_id)->row;
 
-        return json_decode($json_chars['spec']);
+        return json_decode($json_chars['spec'], true);
     }
 
     public function getFeaturedProducts() {
