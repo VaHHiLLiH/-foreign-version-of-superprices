@@ -37,86 +37,6 @@ class ControllerProductProduct extends Controller {
             }
         }
 
-
-		/*if (isset($this->request->get['manufacturer_id'])) {
-			$data['breadcrumbs'][] = array(
-				'text' => $this->language->get('text_brand'),
-				'href' => $this->url->link('product/manufacturer')
-			);
-
-			$url = '';
-
-			if (isset($this->request->get['sort'])) {
-				$url .= '&sort=' . $this->request->get['sort'];
-			}
-
-			if (isset($this->request->get['order'])) {
-				$url .= '&order=' . $this->request->get['order'];
-			}
-
-			if (isset($this->request->get['page'])) {
-				$url .= '&page=' . $this->request->get['page'];
-			}
-
-			if (isset($this->request->get['limit'])) {
-				$url .= '&limit=' . $this->request->get['limit'];
-			}
-
-			$manufacturer_info = $this->model_catalog_manufacturer->getManufacturer($this->request->get['manufacturer_id']);
-
-			if ($manufacturer_info) {
-				$data['breadcrumbs'][] = array(
-					'text' => $manufacturer_info['name'],
-					'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url)
-				);
-			}
-		}
-
-		if (isset($this->request->get['search']) || isset($this->request->get['tag'])) {
-			$url = '';
-
-			if (isset($this->request->get['search'])) {
-				$url .= '&search=' . $this->request->get['search'];
-			}
-
-			if (isset($this->request->get['tag'])) {
-				$url .= '&tag=' . $this->request->get['tag'];
-			}
-
-			if (isset($this->request->get['description'])) {
-				$url .= '&description=' . $this->request->get['description'];
-			}
-
-			if (isset($this->request->get['category_id'])) {
-				$url .= '&category_id=' . $this->request->get['category_id'];
-			}
-
-			if (isset($this->request->get['sub_category'])) {
-				$url .= '&sub_category=' . $this->request->get['sub_category'];
-			}
-
-			if (isset($this->request->get['sort'])) {
-				$url .= '&sort=' . $this->request->get['sort'];
-			}
-
-			if (isset($this->request->get['order'])) {
-				$url .= '&order=' . $this->request->get['order'];
-			}
-
-			if (isset($this->request->get['page'])) {
-				$url .= '&page=' . $this->request->get['page'];
-			}
-
-			if (isset($this->request->get['limit'])) {
-				$url .= '&limit=' . $this->request->get['limit'];
-			}
-
-			$data['breadcrumbs'][] = array(
-				'text' => $this->language->get('text_search'),
-				'href' => $this->url->link('product/search', $url)
-			);
-		}*/
-
 		if (isset($this->request->get['product_id'])) {
 			$product_id = (int)$this->request->get['product_id'];
 		} else {
@@ -256,7 +176,7 @@ class ControllerProductProduct extends Controller {
             $data['attribute_groups'] = $this->model_catalog_product->getProductcharacteristics($this->request->get['product_id']);
 
             /*-----*/
-            $productsRand = $this->model_catalog_product->getFourRandomProductsFromParentCategory($this->request->get['product_id']);
+            $productsRand = $this->model_catalog_product->getProductWithSimilarChars($this->request->get['product_id'], $this->model_catalog_product->getProductManufacturerId($this->request->get['product_id']));
 
             foreach ($productsRand as $productRand) {
 
@@ -271,7 +191,7 @@ class ControllerProductProduct extends Controller {
 
             }
 
-             $data['randomFourProducts'] = $this->load->view('product/randomFourProducts', $fourProduct);
+             $data['similarProducts'] = $this->load->view('product/randomFourProducts', $fourProduct);
             /*-----*/
 
 			$this->response->setOutput($this->load->view('product/product', $data));
