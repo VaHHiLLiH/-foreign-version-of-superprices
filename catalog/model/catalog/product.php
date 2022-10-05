@@ -579,4 +579,16 @@ class ModelCatalogProduct extends Model {
 
         return $products;
     }
+
+    public function getParentCategoryOfACategory($category_id){
+        $category_id = $this->db->query("SELECT c.category_id FROM " . DB_PREFIX . "category c LEFT JOIN " . DB_PREFIX . "category_path cp ON (c.category_id = cp.category_id) WHERE cp.category_id = " . (int)$category_id . " AND cp.path_id = 0 AND cp.level = 0 AND c.parent_id = 0")->row['category_id'];
+
+        return $category_id;
+    }
+
+    public function getParentCategory($product_id){
+        $category_id = $this->db->query("SELECT c.category_id FROM " . DB_PREFIX . "category c LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON (c.category_id = ptc.category_id) WHERE ptc.product_id = " . (int)$product_id . " AND c.parent_id = 0")->row['category_id'];
+
+        return $category_id;
+    }
 }

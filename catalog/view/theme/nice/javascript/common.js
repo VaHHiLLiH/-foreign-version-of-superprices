@@ -393,6 +393,7 @@ var modalToComparison = {
 			dataType: 'json',
 			success: function(json) {
 				if (typeof json['error'] === 'undefined') {
+					$('#newcompare-1 option').remove();
 					$("#newcompare-1").append('<option selected value="' + product_id + '">' + product_name + '</option>');
 					$("#newcompare-1").prop('disabled', true);
 				}
@@ -410,6 +411,7 @@ var modalToComparison = {
 			dataType: 'json',
 			success: function(json) {
 				if (typeof json['error'] === 'undefined') {
+					$('#newcompare-2 option').remove();
 					$("#newcompare-2").append('<option selected value="' + product_id + '">' + product_name + '</option>');
 					$("#newcompare-2").prop('disabled', true);
 				}
@@ -429,6 +431,8 @@ var modalToComparison = {
 				if (typeof json['error'] === 'undefined') {
 					let new_left_id = $('#newcompare-2').val();
 					let new_left_name = $('#newcompare-2').text();
+					$('#newcompare-1 option').remove();
+					$('#newcompare-2 option').remove();
 					$("#newcompare-1").append('<option selected value="' + new_left_id + '">' + new_left_name + '</option>');
 					$("#newcompare-2").append('<option selected value="' + product_id + '">' + product_name + '</option>');
 					$("#newcompare-2").prop('disabled', true);

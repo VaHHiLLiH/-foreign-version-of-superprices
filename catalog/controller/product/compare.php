@@ -69,29 +69,29 @@ class ControllerProductCompare extends Controller {
                 $attribute_groups = $this->model_catalog_product->getProductCharacteristics($product_id);
                 $key_product = 0;
                 /* Потому что придумал херово */
-                foreach ($this->session->data['compare'] as $session_product_id){
+                /*foreach ($this->session->data['compare'] as $session_product_id){
                     if ($session_product_id == $product_id) {
                         break;
                     }
                     $key_product++;
-                }
+                }*/
                 /* Потому что атрибуты спаршены через жопу */
                 if (!empty($attribute_groups)) {
                     if (empty($attribute_groups['subspecs'])) {
                         foreach ($attribute_groups as $attribute_group) {
                             if (!empty($attribute_group['subspecs'])) {
                                 foreach ($attribute_group['subspecs'] as $attribute) {
-                                    $spec_attr[$attribute_group['name']][$attribute['name']][$key_product] = $attribute['value'];
+                                    $spec_attr[$attribute_group['name']][$attribute['name']][$key] = $attribute['value'];
                                 }
                             }
                         }
                     } else {
                         foreach ($attribute_groups['subspecs'] as $attribute) {
-                            $spec_attr[$attribute_groups['name']][$attribute['name']][$key_product] = $attribute['value'];
+                            $spec_attr[$attribute_groups['name']][$attribute['name']][$key] = $attribute['value'];
                         }
                     }
                 }
-				$data['products'][$product_id] = array(
+				$data['products'][$key] = array(
 					'product_id'   => $product_info['product_id'],
 					'name'         => $product_info['name'],
 					'thumb'        => $image,
@@ -126,12 +126,14 @@ class ControllerProductCompare extends Controller {
                     ksort($spec_attr[$key1][$key2]);
                 }
             }
+            ksort($data['products']);
         }
+
         $data['spec_attr'] = $spec_attr;
 		$this->response->setOutput($this->load->view('product/compare', $data));
 	}
 
-	public function add() {
+	/*public function add() {
 		$this->load->language('product/compare');
 
 		$json = array();
@@ -166,47 +168,76 @@ class ControllerProductCompare extends Controller {
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
-	}
+	}*/
 
     public function setLeftValue()
     {
+        $this->load->model('catalog/product');
+
         $json = [];
-        if (isset($this->request->post['left_product_id']) && !in_array($this->request->post['left_product_id'], $this->session->data['compare'])) {
-            unset($this->session->data['compare'][0]);
-            $this->session->data['compare'][0] = $this->request->post['left_product_id'];
+        if (empty($this->session->data['compare']) || $this->validateAdding($this->session->data['compare'][1], $this->request->post['left_product_id'])) {
+            if (empty($this->session->data['compare']) || (isset($this->request->post['left_product_id']) && !in_array($this->request->post['left_product_id'], $this->session->data['compare']))) {
+                unset($this->session->data['compare'][0]);
+                $this->session->data['compare'][0] = $this->request->post['left_product_id'];
+                unset($this->session->data['compare_parent_category_id']);
+                $this->session->data['compare_parent_category_id'] = $this->model_catalog_product->getParentCategory($this->request->post['left_product_id']);
+            } else {
+                $json['error'] = 'there is no product id or such id is already in comparison';
+            }
         } else {
-            $json['error'] = 'there is no product id or such id is already in comparison';
+            $json['error'] = 'that product can`t be comparing with a product from the comparison block';
         }
-            $this->response->addHeader('Content-Type: application/json');
-            $this->response->setOutput(json_encode($json));
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
     }
     public function setRightValue()
     {
+        $this->load->model('catalog/product');
+
         $json = [];
-        if (isset($this->request->post['right_product_id']) && !in_array($this->request->post['right_product_id'], $this->session->data['compare'])) {
-            unset($this->session->data['compare'][1]);
-            $this->session->data['compare'][1] = $this->request->post['right_product_id'];
+        if (empty($this->session->data['compare']) || $this->validateAdding($this->session->data['compare'][0], $this->request->post['right_product_id'])) {
+            if (empty($this->session->data['compare']) || (isset($this->request->post['right_product_id']) && !in_array($this->request->post['right_product_id'], $this->session->data['compare']))) {
+                unset($this->session->data['compare'][1]);
+                if (count($this->session->data['compare']) == 0){
+                    unset($this->session->data['compare_parent_category_id']);
+                    $this->session->data['compare_parent_category_id'] = $this->model_catalog_product->getParentCategory($this->request->post['right_product_id']);
+                }
+                $this->session->data['compare'][1] = $this->request->post['right_product_id'];
+            } else {
+                $json['error'] = 'there is no product id or such id is already in comparison';
+            }
         } else {
-            $json['error'] = 'there is no product id or such id is already in comparison';
+            $json['error'] = 'that product can`t be comparing with a product from the comparison block';
         }
-            $this->response->addHeader('Content-Type: application/json');
-            $this->response->setOutput(json_encode($json));
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
     }
 
     public function offsetComparisonProducts()
     {
-        $json = [];
-        if (isset($this->request->post['new_right_value']) && !in_array($this->request->post['new_right_value'], $this->session->data['compare'])) {
-            $new_left_value = $this->session->data['compare'][1];
+        $this->load->model('catalog/product');
 
-            unset($this->session->data['compare']);
-            $this->session->data['compare'][0] = $new_left_value;
-            $this->session->data['compare'][1] = $this->request->post['new_right_value'];
+        $json = [];
+
+        if ($this->validateAdding($this->session->data['compare'][1], $this->request->post['new_right_value'])) {
+            if (isset($this->request->post['new_right_value']) && !in_array($this->request->post['new_right_value'], $this->session->data['compare'])) {
+                $new_left_value = $this->session->data['compare'][1];
+                unset($this->session->data['compare_parent_category_id']);
+                $this->session->data['compare_parent_category_id'] = $this->model_catalog_product->getParentCategory($this->session->data['compare'][1]);
+                unset($this->session->data['compare']);
+                $this->session->data['compare'][0] = $new_left_value;
+                $this->session->data['compare'][1] = $this->request->post['new_right_value'];
+            } else {
+                $json['error'] = 'there is no product id or such id is already in comparison';
+            }
         } else {
-            $json['error'] = 'there is no product id or such id is already in comparison';
+            $json['error'] = 'that product can`t be comparing with a product from the comparison block';
         }
-            $this->response->addHeader('Content-Type: application/json');
-            $this->response->setOutput(json_encode($json));
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
     }
 
     public function getRightSide()
@@ -228,5 +259,15 @@ class ControllerProductCompare extends Controller {
 
         $this->response->addHeader('Content-Type: application/json');
         $this->response->setOutput(json_encode($json));
+    }
+
+    public function validateAdding($main_product_id, $dop_product_id)
+    {
+        $this->load->model('catalog/product');
+        if ($this->model_catalog_product->getParentCategory($main_product_id) == $this->model_catalog_product->getParentCategory($dop_product_id)){
+            return true;
+        } else {
+            return false;
+        }
     }
 }
