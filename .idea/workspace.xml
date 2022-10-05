@@ -3,12 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="bcdbc27d-818e-4b19-849b-a0d673688937" name="Changes" comment="finished the layout of the card and made a block with 4 random products from the parent category of the selected product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/controller/common/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/controller/common/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/controller/product/compare.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/controller/product/compare.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/view/theme/nice/javascript/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/nice/javascript/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/nice/stylesheet/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/nice/stylesheet/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/view/theme/nice/template/common/header.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/nice/template/common/header.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/category.twig" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/view/theme/nice/template/product/category.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/logs/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system/storage/logs/ocmod.log" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/logs/ocmod.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/modification/catalog/controller/common/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/modification/catalog/controller/common/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/storage/modification/catalog/controller/product/compare.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/storage/modification/catalog/controller/product/compare.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +56,7 @@
       <workItem from="1664777221453" duration="17491000" />
       <workItem from="1664864424497" duration="8432000" />
       <workItem from="1664874531483" duration="14743000" />
+      <workItem from="1664949958864" duration="16414000" />
     </task>
     <task id="LOCAL-00001" summary="finished the layout of the card and made a block with 4 random products from the parent category of the selected product">
       <created>1664523635179</created>

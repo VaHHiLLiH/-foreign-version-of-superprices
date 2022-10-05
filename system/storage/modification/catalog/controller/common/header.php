@@ -80,6 +80,7 @@ class ControllerCommonHeader extends Controller {
 		$data['cart'] = $this->load->controller('common/cart');
 		$data['menu'] = $this->load->controller('common/menu');
 		$data['menu_top'] = $this->load->controller('common/menu_top'); // Nice Theme
+        $data['modal_comparison'] = $this->load->controller('common/modal_compare');
 
 		return $this->load->view('common/header', $data);
 	}

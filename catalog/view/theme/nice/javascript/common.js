@@ -319,7 +319,7 @@ var wishlist = {
 }
 
 var compare = {
-	'add': function(product_id) {
+	/*'add': function(product_id) {
 		$.ajax({
 			url: 'index.php?route=product/compare/add',
 			type: 'post',
@@ -328,7 +328,7 @@ var compare = {
 			success: function(json) {
 				$('.alert-dismissible').remove();
 
-				/*if (json['success']) {
+				if (json['success']) {
 				  $('#report-modal .modal-title').html(json['nice_text_modal_compare_title']);
 
 				  $('#report-modal .modal-body').html('<div class="alert alert-success"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;' + json['success'] + '</div>');
@@ -338,13 +338,13 @@ var compare = {
 				  $('#report-modal').modal('show');
           
 				  $('#compare-total').html(json['total']);
-				}*/
+				}
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
 				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
 			}
 		});
-	},
+	},*/
 	'remove': function(product_id) {
 		$.ajax({
 			url: 'index.php?route=product/compare&remove='+product_id,
@@ -352,9 +352,25 @@ var compare = {
 		})
 	},
 	'newAdd' : function(product_id, product_name) {
-		this.add(product_id);
-		modalToComparison.setLeftValue(product_id, product_name);
-		modalToComparison.open();
+		$.ajax({
+			url: 'index.php?route=product/compare/getRightSide',
+			type: 'post',
+			dataType: 'json',
+			success: function(json) {
+				if (json['side'] == 'left') {
+					modalToComparison.setLeftValue(product_id, product_name);
+					console.log(product_id+' '+product_name);
+				} else if (json['side'] == 'right'){
+					modalToComparison.setRightValue(product_id, product_name);
+					console.log(product_id+' '+product_name);
+				} else if (json['side'] == 'offset') {
+					modalToComparison.offsetComparisonProducts(product_id, product_name);
+					console.log(product_id+' '+product_name);
+				}
+
+				modalToComparison.open();
+			},
+		});
 	}
 }
 
@@ -370,8 +386,58 @@ var modalToComparison = {
 		$(".modal-to-compare").addClass('close');
 	},
 	'setLeftValue': function(product_id, product_name) {
-		$("#newcompare-1").append('<option selected value="'+product_id+'">'+product_name+'</option>');
-		$("#newcompare-1").prop('disabled', true);
+		$.ajax({
+			url: 'index.php?route=product/compare/setLeftValue',
+			type: 'post',
+			data: 'left_product_id=' + product_id,
+			dataType: 'json',
+			success: function(json) {
+				if (typeof json['error'] === 'undefined') {
+					$("#newcompare-1").append('<option selected value="' + product_id + '">' + product_name + '</option>');
+					$("#newcompare-1").prop('disabled', true);
+				}
+			},
+			error: function(xhr, ajaxOptions, thrownError) {
+				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+			}
+		});
+	},
+	'setRightValue': function(product_id, product_name) {
+		$.ajax({
+			url: 'index.php?route=product/compare/setRightValue',
+			type: 'post',
+			data: 'right_product_id=' + product_id,
+			dataType: 'json',
+			success: function(json) {
+				if (typeof json['error'] === 'undefined') {
+					$("#newcompare-2").append('<option selected value="' + product_id + '">' + product_name + '</option>');
+					$("#newcompare-2").prop('disabled', true);
+				}
+			},
+			error: function(xhr, ajaxOptions, thrownError) {
+				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+			}
+		});
+	},
+	'offsetComparisonProducts': function(product_id, product_name) {
+		$.ajax({
+			url: 'index.php?route=product/compare/offsetComparisonProducts',
+			type: 'post',
+			data: 'new_right_value=' + product_id,
+			dataType: 'json',
+			success: function(json) {
+				if (typeof json['error'] === 'undefined') {
+					let new_left_id = $('#newcompare-2').val();
+					let new_left_name = $('#newcompare-2').text();
+					$("#newcompare-1").append('<option selected value="' + new_left_id + '">' + new_left_name + '</option>');
+					$("#newcompare-2").append('<option selected value="' + product_id + '">' + product_name + '</option>');
+					$("#newcompare-2").prop('disabled', true);
+				}
+			},
+			error: function(xhr, ajaxOptions, thrownError) {
+				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+			}
+		});
 	},
 	'removeLeftValue': function() {
 		left_product_id = $("#newcompare-1").val();

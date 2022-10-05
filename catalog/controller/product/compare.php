@@ -168,7 +168,65 @@ class ControllerProductCompare extends Controller {
 		$this->response->setOutput(json_encode($json));
 	}
 
-    public function comparisonViaModalWindow() {
+    public function setLeftValue()
+    {
+        $json = [];
+        if (isset($this->request->post['left_product_id']) && !in_array($this->request->post['left_product_id'], $this->session->data['compare'])) {
+            unset($this->session->data['compare'][0]);
+            $this->session->data['compare'][0] = $this->request->post['left_product_id'];
+        } else {
+            $json['error'] = 'there is no product id or such id is already in comparison';
+        }
+            $this->response->addHeader('Content-Type: application/json');
+            $this->response->setOutput(json_encode($json));
+    }
+    public function setRightValue()
+    {
+        $json = [];
+        if (isset($this->request->post['right_product_id']) && !in_array($this->request->post['right_product_id'], $this->session->data['compare'])) {
+            unset($this->session->data['compare'][1]);
+            $this->session->data['compare'][1] = $this->request->post['right_product_id'];
+        } else {
+            $json['error'] = 'there is no product id or such id is already in comparison';
+        }
+            $this->response->addHeader('Content-Type: application/json');
+            $this->response->setOutput(json_encode($json));
+    }
 
+    public function offsetComparisonProducts()
+    {
+        $json = [];
+        if (isset($this->request->post['new_right_value']) && !in_array($this->request->post['new_right_value'], $this->session->data['compare'])) {
+            $new_left_value = $this->session->data['compare'][1];
+
+            unset($this->session->data['compare']);
+            $this->session->data['compare'][0] = $new_left_value;
+            $this->session->data['compare'][1] = $this->request->post['new_right_value'];
+        } else {
+            $json['error'] = 'there is no product id or such id is already in comparison';
+        }
+            $this->response->addHeader('Content-Type: application/json');
+            $this->response->setOutput(json_encode($json));
+    }
+
+    public function getRightSide()
+    {
+        $json = [];
+        if (isset($this->session->data['compare'])) {
+            if (count($this->session->data['compare']) == 2) {
+                $json['side'] = 'offset';
+            } else {
+                if (empty($this->session->data['compare'][0])) {
+                    $json['side'] = 'left';
+                } else {
+                    $json['side'] = 'right';
+                }
+            }
+        } else {
+            $json['side'] = 'left';
+        }
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
     }
 }

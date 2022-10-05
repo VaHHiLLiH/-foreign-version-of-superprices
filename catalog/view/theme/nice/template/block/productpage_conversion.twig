@@ -31,7 +31,7 @@
 
   <div class="col-xs-6">
     <div class="btn-group pull-right">
-      <div class="product-page--compare" type="button" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product_id }}');"><i class="fa fa-exchange"></i></div>
+      <div class="product-page--compare" type="button" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.newAdd('{{ product.product_id }}', '{{ product.name }}');"><i class="fa fa-exchange"></i></div>
       <div class="product-page--wishlist" type="button" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product_id }}');"><i class="fa fa-heart-o"></i></div>
     </div>
   </div>

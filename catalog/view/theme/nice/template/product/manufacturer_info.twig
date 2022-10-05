@@ -34,7 +34,7 @@
               <a class="product-thumb--name {% if 'bold' == nice.productlist_name_font_weight %}-bold-sm{% endif %}" href="{{ product.href }}">{{ product.name }}</a>
               {% if nice.productlist_description %}<p class="product-thumb--description {% if not nice.productlist_description_on_mobile %}hidden-xs hidden-sm{% endif %}">{{ product.description }}</p>{% endif %}
               <div class="product-thumb--hidden-wrapper">
-                <button type="button" class="btn btn-accent product-thumb--button-buy -grid-hover-effect-hidden" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-shopping-cart"></i> <span class="">{{ button_compare }}</span></button>
+                <button type="button" class="btn btn-accent product-thumb--button-buy -grid-hover-effect-hidden" onclick="compare.newAdd('{{ product.product_id }}', '{{ product.name }}');"><i class="fa fa-shopping-cart"></i> <span class="">{{ button_compare }}</span></button>
               </div>
             </div>
           </div>

@@ -29,7 +29,7 @@
           {% endif %}
           <div>
             <button type="button" class="btn btn-accent product-thumb--button-buy -grid-hover-effect-hidden" onclick="cart.add('{{ product.product_id }}');"><i class="fa fa-shopping-cart"></i> <span class="">{{ button_cart }}</span></button>
-            <div class="product-thumb--compare" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-exchange"></i></div>
+            <div class="product-thumb--compare" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.newAdd('{{ product.product_id }}', '{{ product.name }}');"><i class="fa fa-exchange"></i></div>
         <div class="product-thumb--wishlist" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');"><i class="fa fa-heart-o"></i></div>
           </div>
         </div>

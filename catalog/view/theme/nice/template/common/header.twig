@@ -43,48 +43,7 @@
 {% endfor %}
 </head>
 <body>
-<div class="modal-to-compare close">
-  <span class="glyphicon glyphicon-eject" onclick="modalToComparison.open();"></span>
-  <span class="glyphicon glyphicon-resize-vertical" onclick="modalToComparison.close();"></span>
-  <div class="compare-select" style="display: none">
-    <div class="compare-select-in">
-      <div class="compare-select-body">
-        <form action="index.php?route=product/compare/comparisonViaModalWindow" class="compare-form compare-form-3" data-select_text="Select products to compare">
-          <div class="compare-items-cont clearfix">
-            <div class="compare-item compare-item-1">
-              <div class="form-group">
-                <select class="form-control" id="newcompare-1" name="pr_1"></select>
-              </div><span onclick="modalToComparison.removeLeftValue();" class="glyphicon glyphicon-remove"></span>
-            </div>
-            <div class="compare-item compare-item-2">
-              <div class="compare-vs">
-                <span>VS</span>
-              </div>
-            </div>
-            <div class="compare-item compare-item-3">
-              <div class="form-group">
-                <select  class="form-control" id="newcompare-2"  name="pr_2"></select>
-              </div><span onclick="modalToComparison.removeRightValue();" class="glyphicon glyphicon-remove"></span>
-            </div>
-            <input class="compare_type_hidden" type="hidden" name="type" value="cpu"/>
-          </div>
-          <div class="row">
-            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
-            </div>
-            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
-              <div class="compare-btn">
-                <button><span>Go to compare</span></button>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
-            </div>
-          </div>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</div>
+{{ modal_comparison }}
 <nav id="top">
   <div class="container top-container">
     {{ menu_top }}
