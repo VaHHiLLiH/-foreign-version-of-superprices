@@ -21805,3 +21805,54 @@
 2022-10-06 6:11:09 - PHP Notice:  Undefined index: route in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\header.php on line 84
 2022-10-06 6:11:09 - PHP Notice:  Undefined index: route in C:\OpenServer\domains\randSheetOnOC.orc\catalog\controller\common\modal_compare.php on line 6
 2022-10-06 6:11:09 - PHP Notice:  Undefined index: route in C:\OpenServer\domains\randSheetOnOC.orc\catalog\controller\common\modal_compare.php on line 11
+2022-10-06 7:24:44 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:45 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:49 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:49 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:49 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:49 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:49 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:51 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:51 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:51 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:51 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:51 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:52 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:52 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:52 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:52 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:52 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:52 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:52 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:52 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:52 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:52 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:53 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:53 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:53 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:53 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:24:53 - PHP Notice:  Undefined variable: option_data in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 304
+2022-10-06 7:50:24 - PHP Notice:  Undefined index: compare_parent_category_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 295
+2022-10-06 7:50:24 - PHP Notice:  Undefined index: compare_parent_category_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 295
+2022-10-06 7:50:24 - PHP Notice:  Undefined index: compare_parent_category_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 295
+2022-10-06 7:50:29 - PHP Notice:  Undefined index: compare_parent_category_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 295
+2022-10-06 7:51:18 - PHP Notice:  Undefined index: compare_parent_category_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 295
+2022-10-06 7:51:19 - PHP Notice:  Undefined index: compare_parent_category_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 295
+2022-10-06 7:51:24 - PHP Notice:  Undefined index: compare_parent_category_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 295
+2022-10-06 7:51:28 - PHP Notice:  Undefined index: compare_parent_category_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 295
+2022-10-06 7:51:31 - PHP Notice:  Undefined index: compare_parent_category_id in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 295
+2022-10-06 8:46:04 - PHP Notice:  Undefined index: category_id in C:\OpenServer\domains\randSheetOnOC.orc\catalog\model\catalog\product.php on line 584
+2022-10-06 8:46:04 - PHP Notice:  Undefined index: category_id in C:\OpenServer\domains\randSheetOnOC.orc\catalog\model\catalog\product.php on line 584
+2022-10-06 8:48:40 - PHP Notice:  Undefined index: category_id in C:\OpenServer\domains\randSheetOnOC.orc\catalog\model\catalog\product.php on line 585
+2022-10-06 8:48:40 - PHP Notice:  Undefined index: category_id in C:\OpenServer\domains\randSheetOnOC.orc\catalog\model\catalog\product.php on line 585
+2022-10-06 10:47:52 - PHP Notice:  Trying to get property 'rows' of non-object in C:\OpenServer\domains\randSheetOnOC.orc\catalog\model\catalog\product.php on line 607
+2022-10-06 10:47:52 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 296
+2022-10-06 10:47:53 - PHP Notice:  Trying to get property 'rows' of non-object in C:\OpenServer\domains\randSheetOnOC.orc\catalog\model\catalog\product.php on line 607
+2022-10-06 10:47:53 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 296
+2022-10-06 10:47:53 - PHP Notice:  Trying to get property 'rows' of non-object in C:\OpenServer\domains\randSheetOnOC.orc\catalog\model\catalog\product.php on line 607
+2022-10-06 10:47:53 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 296
+2022-10-06 10:47:56 - PHP Notice:  Trying to get property 'rows' of non-object in C:\OpenServer\domains\randSheetOnOC.orc\catalog\model\catalog\product.php on line 607
+2022-10-06 10:47:56 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 296
+2022-10-06 10:48:38 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 296
+2022-10-06 10:49:12 - PHP Notice:  Trying to get property 'rows' of non-object in C:\OpenServer\domains\randSheetOnOC.orc\catalog\model\catalog\product.php on line 608
+2022-10-06 10:49:12 - PHP Warning:  Invalid argument supplied for foreach() in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 296

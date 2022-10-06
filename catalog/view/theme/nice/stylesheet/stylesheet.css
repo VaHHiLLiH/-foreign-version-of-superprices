@@ -3157,9 +3157,15 @@ footer h5 {
   background: aquamarine;
   border-radius: 15px;
 }
+.compare-select{
+  height: 170px;
+}
 .compare-items-cont{
   display: flex;
   justify-content: space-around;
+}
+.compare-btn{
+  margin-top: 30px;
 }
 .compare-btn button{
   background: #90F;
@@ -3172,6 +3178,10 @@ footer h5 {
 }
 .compare-btn button:hover{
   background: #33CC66;
+}
+.compare-btn button > a{
+  color: white;
+  text-decoration: none;
 }
 .modal-to-compare > .glyphicon{
   display: none;

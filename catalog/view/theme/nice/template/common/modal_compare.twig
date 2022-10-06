@@ -7,7 +7,7 @@
                     <div class="compare-items-cont clearfix">
                         <div class="compare-item compare-item-1">
                             <div class="form-group">
-                                <input type="text" {% if products[0] is not null  %} disabled {% endif %} id="newcompare-1" name="pr_1" {% if products[0] is not null  %} data-product_id="{{ products[0]['product_id'] }}" value="{{ products[0]['name'] }}" {% else %} data-product_id="" value="" {% endif %} placeholder="{{ autocompleteProducts }}">
+                                <input type="text" disabled id="newcompare-1" name="comparing_product" {% if products[0] is not null  %} data-product_id="{{ products[0]['product_id'] }}" value="{{ products[0]['name'] }}" {% else %} data-product_id="" value="" {% endif %} placeholder="{{ autocompleteProducts }}">
                                 {#<select {% if products[0] is not null  %} disabled {% endif %} class="form-control" id="newcompare-1" name="pr_1">
                                     {% if products[0] is not null  %}
                                         <option selected value="{{ products[0]['product_id'] }}" data-product_name="{{ products[0]['name'] }}">{{ products[0]['name'] }}</option>
@@ -22,7 +22,7 @@
                         </div>
                         <div class="compare-item compare-item-3">
                             <div class="form-group">
-                                <input type="text" {% if products[1] is not null  %} disabled {% endif %} id="newcompare-2" name="pr_2" {% if products[1] is not null  %} data-product_id="{{ products[1]['product_id'] }}" value="{{ products[1]['name'] }}" {% else %} data-product_id="" value="" {% endif %} placeholder="{{ autocompleteProducts }}">
+                                <input type="text" {% if products[0] is null  %} disabled {% endif %} id="newcompare-2" name="comparing_products" {% if products[1] is not null  %} data-product_id="{{ products[1]['product_id'] }}" value="{{ products[1]['name'] }}" {% else %} data-product_id="" value="" {% endif %} placeholder="{{ autocompleteProducts }}">
                                 {#<select {% if products[1] is not null  %} disabled {% endif %} class="form-control" id="newcompare-2"  name="pr_2">
                                     {% if products[1] is not null %}
                                         <option selected value="{{ products[1]['product_id'] }}" data-product_name="{{ products[1]['name'] }}">{{ products[1]['name'] }}</option>
@@ -47,3 +47,31 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    // Related
+    $('input[name=\'comparing_products\']').autocomplete({
+        'source': function(request, response) {
+            $.ajax({
+                url: 'index.php?route=product/compare/autocompleteCompareProducts&product_name=' + encodeURIComponent(request),
+                dataType: 'json',
+                success: function(json) {
+                    console.log(json);
+                    response($.map(json, function(item) {
+                        return {
+                            label: item['name'],
+                            value: item['product_id']
+                        }
+                    }));
+                }
+            });
+        },
+        'select': function(item) {
+            $(this).val(item['label']);
+            $(this).data('product_id', item['value']);
+            compare.newAdd(item['value'], item['label']);
+            //$('#product-related' + item['value']).remove();
+
+            //$('#product-related').append('<div id="product-related' + item['value'] + '"><i class="fa fa-minus-circle"></i> ' + item['label'] + '<input type="hidden" name="product_related[]" value="' + item['value'] + '" /></div>');
+        }
+    });
+</script>

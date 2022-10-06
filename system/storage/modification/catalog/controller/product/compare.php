@@ -277,4 +277,32 @@ class ControllerProductCompare extends Controller {
             return false;
         }
     }
+
+    public function autocompleteCompareProducts() {
+
+        $json = array();
+
+        if (isset($this->request->get['product_name'])) {
+            $this->load->model('catalog/product');
+
+            $filter_data = array(
+                'filter_name'  => $this->request->get['product_name'],
+                'start'        => 0,
+                'limit'        => 5,
+                'category_id'  => (isset($this->session->data['compare_parent_category_id'])) ? $this->session->data['compare_parent_category_id'] : '',
+            );
+            $results = $this->model_catalog_product->getProductsToCompare($filter_data);
+
+            foreach ($results as $result) {
+
+                $json[] = array(
+                    'product_id' => $result['product_id'],
+                    'name'       => strip_tags(html_entity_decode($result['name'], ENT_QUOTES, 'UTF-8')),
+                );
+            }
+        }
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
+    }
 }

@@ -392,7 +392,7 @@ var modalToComparison = {
 				if (typeof json['error'] === 'undefined') {
 					$("#newcompare-1").val(product_name);
 					$("#newcompare-1").data('product_id', product_id);
-					$("#newcompare-1").prop('disabled', true);
+					$("#newcompare-2").prop('disabled', false);
 				}
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
@@ -410,7 +410,6 @@ var modalToComparison = {
 				if (typeof json['error'] === 'undefined') {
 					$("#newcompare-2").val(product_name);
 					$("#newcompare-2").data('product_id', product_id);
-					$("#newcompare-2").prop('disabled', true);
 				}
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
@@ -436,7 +435,6 @@ var modalToComparison = {
 					$('#newcompare-2').val(product_name);
 					$('#newcompare-1').data(new_left_id);
 					$('#newcompare-2').data(product_id);
-					$("#newcompare-2").prop('disabled', true);
 				}
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
@@ -449,14 +447,13 @@ var modalToComparison = {
 		$('#newcompare-1').val('');
 		$('#newcompare-1').data('product_id', '');
 		compare.remove(left_product_id);
-		$("#newcompare-1").prop('disabled', false);
+		$("#newcompare-2").prop('disabled', true);
 	},
 	'removeRightValue': function() {
 		right_product_id = $("#newcompare-2").data('product_id');
 		$('#newcompare-2').val('');
 		$('#newcompare-2').data('product_id', '');
 		compare.remove(right_product_id);
-		$("#newcompare-2").prop('disabled', false);
 	},
 }
 
