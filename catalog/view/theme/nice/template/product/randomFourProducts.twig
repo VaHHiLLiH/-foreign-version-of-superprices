@@ -11,13 +11,6 @@
                             <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive fixed-size" /></a>
                         </div>
                         <div class="product-thumb--info">
-                            <div class="product-thumb--rating">
-                                {% if product.rating %}
-                                    {% for i in 1..5 %}
-                                        {% if product.rating < i %}<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span> {% else %} <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>{% endif %}
-                                    {% endfor %}
-                                {% endif %}
-                            </div>
                             <a class="product-thumb--name-bold href="{{ product.href }}">{{ product.name }}</a>
                             <p class="product-thumb--description">{{ product.description }}</p>
                             <div class="product-thumb--hidden-wrapper">

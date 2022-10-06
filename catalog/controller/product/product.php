@@ -69,6 +69,7 @@ class ControllerProductProduct extends Controller {
 			$this->document->addStyle('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css');
 
 			$data['heading_title'] = $product_info['name'];
+            $data['product_id'] = $product_info['product_id'];
 
 			$data['text_minimum'] = sprintf($this->language->get('text_minimum'), $product_info['minimum']);
 			$data['text_login'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', true), $this->url->link('account/register', '', true));
@@ -184,12 +185,11 @@ class ControllerProductProduct extends Controller {
             $productsRand = $this->model_catalog_product->getProductWithSimilarChars($this->request->get['product_id'], $this->model_catalog_product->getProductManufacturerId($this->request->get['product_id']));
 
             foreach ($productsRand as $productRand) {
-
                 $fourProduct['products'][] = array(
                     'product_id'  => $productRand['product_id'],
                     'thumb'       => $productRand['image'],
-                    'name'        => $productRand['name'],
-                    'description' => utf8_substr(trim(strip_tags(html_entity_decode($productRand['description'], ENT_QUOTES, 'UTF-8'))), 0, $this->config->get('theme_' . $this->config->get('config_theme') . '_product_description_length')) . '..',
+                    'name'        => $this->cutText($productRand['name'], 4),
+                    'description' => (strlen($productRand['description']) > 93) ? utf8_substr(trim(strip_tags(html_entity_decode($productRand['description'], ENT_QUOTES, 'UTF-8'))), 0, 93) . '...' : $productRand['description'],
                     'rating'      => $productRand['rating'],
                     'href'        => $this->url->link('product/product', '&product_id=' . $productRand['product_id'])
                 );
@@ -426,5 +426,21 @@ class ControllerProductProduct extends Controller {
             $this->getNextBreadCrumbs($categories_ids, $breadcrumbs, $actualCategory['category_id'], $actualCategory['name']);
         }
 
+    }
+
+    function cutText($text, $length) {
+        $text = str_replace(['-'], ' ', $text);
+        $str = explode(' ', $text);
+        $cutText = '';
+
+        // if text len less then len of cut word
+        if (count($str) <= $length)
+            return $text;
+
+        for ($i = 0; $i < $length; $i++) {
+            $cutText .= $str[$i] . ' ';
+        }
+
+        return $cutText;
     }
 }

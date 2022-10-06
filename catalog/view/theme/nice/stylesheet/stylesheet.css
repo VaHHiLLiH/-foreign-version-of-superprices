@@ -3211,3 +3211,8 @@ footer h5 {
 }
 
 /*---------------------------------End of Modal------------------------------*/
+
+.section--productlist .product-thumb--name-bold {
+  height: 40px;
+  display: block;
+}

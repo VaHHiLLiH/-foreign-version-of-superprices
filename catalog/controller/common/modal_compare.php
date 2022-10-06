@@ -2,6 +2,7 @@
 class ControllerCommonModalCompare extends Controller {
     public function index() {
         $this->load->model('catalog/product');
+        var_dump($this->session->data['compare']);
         if (isset($this->session->data['compare']) && isset($this->session->data['compare_parent_category_id'])) {
             if ($this->request->get['route'] == 'product/category') {
                 if ($this->model_catalog_product->getParentCategoryOfACategory($this->request->get['path']) !== $this->model_catalog_product->getParentCategoryOfACategory($this->session->data['compare_parent_category_id'])) {

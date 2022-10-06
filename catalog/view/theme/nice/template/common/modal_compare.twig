@@ -22,7 +22,7 @@
                         </div>
                         <div class="compare-item compare-item-3">
                             <div class="form-group">
-                                <input type="text" {% if products[0] is null  %} disabled {% endif %} id="newcompare-2" name="comparing_products" {% if products[1] is not null  %} data-product_id="{{ products[1]['product_id'] }}" value="{{ products[1]['name'] }}" {% else %} data-product_id="" value="" {% endif %} placeholder="{{ autocompleteProducts }}">
+                                <input type="text" id="newcompare-2" name="comparing_products" {% if products[0] is null  %} disabled {% endif %} {% if products[1] is not null  %} data-product_id="{{ products[1]['product_id'] }}" value="{{ products[1]['name'] }}" {% else %} data-product_id="" value="" {% endif %} placeholder="{{ autocompleteProducts }}">
                                 {#<select {% if products[1] is not null  %} disabled {% endif %} class="form-control" id="newcompare-2"  name="pr_2">
                                     {% if products[1] is not null %}
                                         <option selected value="{{ products[1]['product_id'] }}" data-product_name="{{ products[1]['name'] }}">{{ products[1]['name'] }}</option>
