@@ -33,7 +33,7 @@ class ControllerCommonModalCompare extends Controller {
             }
         }
         $data['link_on_compare'] = $this->url->link('product/compare');
-
+        $data['autocompleteProducts'] = 'Выберите товар';
         return $this->load->view('common/modal_compare', $data);
     }
 }

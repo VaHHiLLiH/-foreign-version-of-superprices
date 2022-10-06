@@ -359,13 +359,10 @@ var compare = {
 			success: function(json) {
 				if (json['side'] == 'left') {
 					modalToComparison.setLeftValue(product_id, product_name);
-					console.log(product_id+' '+product_name);
 				} else if (json['side'] == 'right'){
 					modalToComparison.setRightValue(product_id, product_name);
-					console.log(product_id+' '+product_name);
 				} else if (json['side'] == 'offset') {
 					modalToComparison.offsetComparisonProducts(product_id, product_name);
-					console.log(product_id+' '+product_name);
 				}
 
 				modalToComparison.open();
@@ -393,8 +390,8 @@ var modalToComparison = {
 			dataType: 'json',
 			success: function(json) {
 				if (typeof json['error'] === 'undefined') {
-					$('#newcompare-1 option').remove();
-					$("#newcompare-1").append('<option selected value="' + product_id + '">' + product_name + '</option>');
+					$("#newcompare-1").val(product_name);
+					$("#newcompare-1").data('product_id', product_id);
 					$("#newcompare-1").prop('disabled', true);
 				}
 			},
@@ -411,8 +408,8 @@ var modalToComparison = {
 			dataType: 'json',
 			success: function(json) {
 				if (typeof json['error'] === 'undefined') {
-					$('#newcompare-2 option').remove();
-					$("#newcompare-2").append('<option selected value="' + product_id + '">' + product_name + '</option>');
+					$("#newcompare-2").val(product_name);
+					$("#newcompare-2").data('product_id', product_id);
 					$("#newcompare-2").prop('disabled', true);
 				}
 			},
@@ -429,12 +426,16 @@ var modalToComparison = {
 			dataType: 'json',
 			success: function(json) {
 				if (typeof json['error'] === 'undefined') {
-					let new_left_id = $('#newcompare-2').val();
-					let new_left_name = $('#newcompare-2').text();
-					$('#newcompare-1 option').remove();
-					$('#newcompare-2 option').remove();
-					$("#newcompare-1").append('<option selected value="' + new_left_id + '">' + new_left_name + '</option>');
-					$("#newcompare-2").append('<option selected value="' + product_id + '">' + product_name + '</option>');
+					let new_left_name = $('#newcompare-2').val();
+					let new_left_id = $('#newcompare-2').data('product_id');
+					$('#newcompare-1').val();
+					$('#newcompare-2').val();
+					$('#newcompare-1').data('product_id', '');
+					$('#newcompare-2').data('product_id', '');
+					$('#newcompare-1').val(new_left_name);
+					$('#newcompare-2').val(product_name);
+					$('#newcompare-1').data(new_left_id);
+					$('#newcompare-2').data(product_id);
 					$("#newcompare-2").prop('disabled', true);
 				}
 			},
@@ -444,15 +445,18 @@ var modalToComparison = {
 		});
 	},
 	'removeLeftValue': function() {
-		left_product_id = $("#newcompare-1").val();
-		console.log(left_product_id);
-		$('#newcompare-1 option').remove();
+		left_product_id = $("#newcompare-1").data('product_id');
+		$('#newcompare-1').val('');
+		$('#newcompare-1').data('product_id', '');
 		compare.remove(left_product_id);
+		$("#newcompare-1").prop('disabled', false);
 	},
 	'removeRightValue': function() {
-		right_product_id = $("#newcompare-2").val();
-		$('#newcompare-2 option').remove();
+		right_product_id = $("#newcompare-2").data('product_id');
+		$('#newcompare-2').val('');
+		$('#newcompare-2').data('product_id', '');
 		compare.remove(right_product_id);
+		$("#newcompare-2").prop('disabled', false);
 	},
 }
 

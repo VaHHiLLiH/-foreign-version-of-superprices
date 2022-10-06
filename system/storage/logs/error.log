@@ -21802,3 +21802,6 @@
 2022-10-05 14:08:44 - PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 184
 2022-10-05 14:13:42 - PHP Notice:  Undefined index: compare in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 184
 2022-10-05 14:13:42 - PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\product\compare.php on line 184
+2022-10-06 6:11:09 - PHP Notice:  Undefined index: route in C:\OpenServer\domains\randSheetOnOC.orc\system\storage\modification\catalog\controller\common\header.php on line 84
+2022-10-06 6:11:09 - PHP Notice:  Undefined index: route in C:\OpenServer\domains\randSheetOnOC.orc\catalog\controller\common\modal_compare.php on line 6
+2022-10-06 6:11:09 - PHP Notice:  Undefined index: route in C:\OpenServer\domains\randSheetOnOC.orc\catalog\controller\common\modal_compare.php on line 11
