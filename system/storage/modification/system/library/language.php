@@ -82,4 +82,20 @@ class Language {
 		
 		return $this->data;
 	}
+
+    public function cutText($text, $length) {
+        $text = str_replace(['-'], ' ', $text);
+        $str = explode(' ', $text);
+        $cutText = '';
+
+        // if text len less then len of cut word
+        if (count($str) <= $length)
+            return $text;
+
+        for ($i = 0; $i < $length; $i++) {
+            $cutText .= $str[$i] . ' ';
+        }
+
+        return $cutText;
+    }
 }

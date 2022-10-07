@@ -188,7 +188,7 @@ class ControllerProductProduct extends Controller {
                 $fourProduct['products'][] = array(
                     'product_id'  => $productRand['product_id'],
                     'thumb'       => $productRand['image'],
-                    'name'        => $this->cutText($productRand['name'], 4),
+                    'name'        => $this->language->cutText($productRand['name'], 5),
                     'description' => (strlen($productRand['description']) > 93) ? utf8_substr(trim(strip_tags(html_entity_decode($productRand['description'], ENT_QUOTES, 'UTF-8'))), 0, 93) . '...' : $productRand['description'],
                     'rating'      => $productRand['rating'],
                     'href'        => $this->url->link('product/product', '&product_id=' . $productRand['product_id'])
@@ -426,21 +426,5 @@ class ControllerProductProduct extends Controller {
             $this->getNextBreadCrumbs($categories_ids, $breadcrumbs, $actualCategory['category_id'], $actualCategory['name']);
         }
 
-    }
-
-    function cutText($text, $length) {
-        $text = str_replace(['-'], ' ', $text);
-        $str = explode(' ', $text);
-        $cutText = '';
-
-        // if text len less then len of cut word
-        if (count($str) <= $length)
-            return $text;
-
-        for ($i = 0; $i < $length; $i++) {
-            $cutText .= $str[$i] . ' ';
-        }
-
-        return $cutText;
     }
 }

@@ -43,7 +43,8 @@ class ControllerCommonHeader extends Controller {
 		} else {
 			$data['logo'] = '';
 		}
-
+        $data['comparison'] = $server . 'image/catalog/compare.png';
+        $data['comparison_text'] = 'Сравнение';
 		$this->load->language('common/header');
 		$this->load->language('extension/theme/nice'); // Nice Theme
 

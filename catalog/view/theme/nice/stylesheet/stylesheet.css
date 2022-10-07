@@ -3212,7 +3212,18 @@ footer h5 {
 
 /*---------------------------------End of Modal------------------------------*/
 
-.section--productlist .product-thumb--name-bold {
+.product-thumb--name-bold {
   height: 40px;
   display: block;
+}
+
+#search{
+  width: 70%;
+  float: right;
+}
+#top-2 a:hover{
+  text-decoration: none;
+}
+#top-2 .header-icons-item{
+  display: block ruby;
 }
