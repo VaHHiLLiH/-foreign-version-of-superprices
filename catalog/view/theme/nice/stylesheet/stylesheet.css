@@ -3268,3 +3268,41 @@ footer h5 {
   width: 100%;
 }
 /*----------------------End of Footer-----------------------------*/
+#slideshow0 img.img-responsive{
+  width: auto;
+  float: right;
+}
+
+#slideshow0 .slide-description{
+  top: 15%;
+  position: absolute;
+  left: 10%;
+}
+#slideshow0 .slide-description > .slide-title{
+  font-weight: 600;
+  font-size: 55px;
+  float: left;
+  position: static;
+  margin: 0;
+}
+#slideshow0 .slide-description > .slide-description{
+  font-size: 32px;
+  color: #8a8a90;
+  position: static;
+}
+#slideshow0 .slide-description > .link-on-category{
+  background: #6667ab;
+  padding: 4px 45px;
+  border-radius: 3px;
+  color: white;
+  float: left;
+  text-decoration: none;
+  transition: background 0.5s ease;
+  font-size: 24px;
+  box-shadow: -2px 3px 0.8rem gray;
+  position: static;
+  margin-top: 60px;
+}
+#slideshow0 .slide-description > .link-on-category:hover{
+  background: #444190;
+}

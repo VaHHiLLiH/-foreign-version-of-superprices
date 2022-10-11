@@ -21,8 +21,10 @@ $_['entry_link']        = 'Link';
 $_['entry_image']       = 'Image';
 $_['entry_status']      = 'Status';
 $_['entry_sort_order']  = 'Sort Order';
+$_['entry_description'] = 'Slide Description';
 
 // Error
 $_['error_permission'] = 'Warning: You do not have permission to modify banners!';
 $_['error_name']       = 'Banner Name must be between 3 and 64 characters!';
 $_['error_title']      = 'Banner Title must be between 2 and 64 characters!';
+$_['error_description']= 'Description must be between 3 and 255 characters!';

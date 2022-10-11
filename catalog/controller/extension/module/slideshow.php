@@ -18,12 +18,13 @@ class ControllerExtensionModuleSlideshow extends Controller {
 			if (is_file(DIR_IMAGE . $result['image'])) {
 				$data['banners'][] = array(
 					'title' => $result['title'],
+                    'description'   => $result['description'],
 					'link'  => $result['link'],
-					'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'])
+                    'image' => $this->model_tool_image->resize($result['image'], 640, 450),
+					//'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'])
 				);
 			}
 		}
-
 		$data['module'] = $module++;
 
 		return $this->load->view('extension/module/slideshow', $data);
