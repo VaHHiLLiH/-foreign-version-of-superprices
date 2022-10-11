@@ -313,6 +313,7 @@ body {
   font-family: "Open Sans";
   font-family: "Roboto Flex";
   font-family: "Nunito Sans";*/
+
   font-family: Inter;
   font-weight: 400;
   color: #3b3f41;
@@ -320,6 +321,7 @@ body {
   /*line-height: 20px;*/
   line-height: --line-height-p;
   width: 100%;
+  background-color: #f6f6f6;
 }
 
 /* +A1 . Begin */
@@ -3111,13 +3113,20 @@ footer h5 {
 /*--------------------Block with links on home page-----------------------*/
 .links-content{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .links-content-child{
   position: relative;
-  width: 48%;
-  border: 1px solid black;
-  height: 180px;
+  width: 49%;
+  background-color: white;
+  border-radius: 6px;
+}
+.links-content-child > img{
+  margin-left: 30px;
+}
+.links-content-child > img:hover {
+  transition: 0.5s;
+  transform: scale(1.03);
 }
 .text{
   width: 40%;
@@ -3126,19 +3135,21 @@ footer h5 {
   top: 50px;
 }
 .text > a{
-   background: #90F;
-   padding: 8px 25px;
+   background: #6667ab;
+   padding: 4px 40px;
    border-radius: 3px;
    color: white;
    text-decoration: none;
    transition: background 0.5s ease;
+   font-size: 20px;
+   box-shadow: -2px 3px 0.8rem gray;
 }
 .text > a:hover{
-  background: #33CC66;
+  background: #444190;;
 }
 .text > p{
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 .fourProducts{
   font-weight: bold;
@@ -3224,6 +3235,36 @@ footer h5 {
 #top-2 a:hover{
   text-decoration: none;
 }
-#top-2 .header-icons-item{
-  display: block ruby;
+.header-icons-item > a{
+  display: flex;
 }
+.compare-pic{
+  align-content: center;
+  display: flex;
+  height: 23px;
+  margin: auto;
+  margin-right: auto;
+  margin-right: 10px;
+}
+
+/*----------------------Footer------------------------------------*/
+.footer-right-column{
+  float: right;
+}
+#footer-logo{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-special-text {
+  width: 50%;
+  display: flex;
+  margin: 0;
+  align-items: end;
+}
+.footer-left-column #search{
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+/*----------------------End of Footer-----------------------------*/

@@ -2,24 +2,30 @@
   <div class="container footer-container">
     <div class="row">
       {% if informations %}
-      <div class="col-sm-6">
-        <h5>{{ text_information }}</h5>
-        <ul class="list-unstyled">
-         {% for information in informations %}
-          <li><a href="{{ information.href }}">{{ information.title }}</a></li>
-          {% endfor %}
-        </ul>
+      <div class="footer-left-column col-sm-5">
+        <div id="footer-logo">
+          {% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>
+          {% else %}
+            <h1><a href="{{ home }}">{{ name }}</a></h1>
+          {% endif %}
+          <p class="footer-special-text">All trademarks used are properties
+            of their respective owners.</p>
+        </div>
+        {{ search }}
       </div>
       {% endif %}
-      <div class="col-sm-6">
-        <h5>{{ text_extra }}</h5>
+      <div class="footer-right-column col-sm-5">
+
+        <h5>{{ text_information }}</h5>
         <ul class="list-unstyled">
+          {% for information in informations %}
+            <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+          {% endfor %}
+
           <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
         </ul>
       </div>
     </div>
-    <hr>
-    <p>{{ powered }}</p>
   </div>
 </footer>
 <!-- Report Modal -->
