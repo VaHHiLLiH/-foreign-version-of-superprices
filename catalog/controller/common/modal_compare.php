@@ -32,6 +32,8 @@ class ControllerCommonModalCompare extends Controller {
                 }
             }
         }
+        $data['disabled_image'] = '';
+        $data['enabled_image'] = '';
         $data['link_on_compare'] = $this->url->link('product/compare');
         $data['autocompleteProducts'] = 'Выберите товар';
         return $this->load->view('common/modal_compare', $data);

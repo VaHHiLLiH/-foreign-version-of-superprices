@@ -1,48 +1,50 @@
-<div class="modal-to-compare close">
-    <span class="glyphicon glyphicon-eject" onclick="modalToComparison.open();"></span>
-    <span class="glyphicon glyphicon-resize-vertical" onclick="modalToComparison.close();"></span>
-    <div class="compare-select" style="display: none">
-        <div class="compare-select-in">
-            <div class="compare-select-body">
-                    <div class="compare-items-cont clearfix">
-                        <div class="compare-item compare-item-1">
-                            <div class="form-group">
-                                <input type="text" disabled id="newcompare-1" name="comparing_product" {% if products[0] is not null  %} data-product_id="{{ products[0]['product_id'] }}" value="{{ products[0]['name'] }}" {% else %} data-product_id="" value="" {% endif %} placeholder="{{ autocompleteProducts }}">
-                                {#<select {% if products[0] is not null  %} disabled {% endif %} class="form-control" id="newcompare-1" name="pr_1">
-                                    {% if products[0] is not null  %}
-                                        <option selected value="{{ products[0]['product_id'] }}" data-product_name="{{ products[0]['name'] }}">{{ products[0]['name'] }}</option>
-                                    {% endif %}
-                                </select>#}
-                            </div><span onclick="modalToComparison.removeLeftValue();" class="glyphicon glyphicon-remove"></span>
+<div id="modal-to-comparison">
+    <div class="modal-to-compare close">
+        <span class="glyphicon glyphicon-eject" onclick="modalToComparison.open();"></span>
+        <span class="glyphicon glyphicon-eject rotate" onclick="modalToComparison.close();"></span>
+        <div class="compare-select" style="display: none">
+            <div class="compare-select-in">
+                <div class="compare-select-body">
+                        <div class="compare-items-cont clearfix">
+                            <div class="compare-item compare-item-1">
+                                <div class="form-group">
+                                    <input type="text" disabled id="newcompare-1" name="comparing_product" {% if products[0] is not null  %} data-product_id="{{ products[0]['product_id'] }}" value="{{ products[0]['name'] }}" {% else %} data-product_id="" value="" {% endif %} placeholder="{{ autocompleteProducts }}">
+                                    {#<select {% if products[0] is not null  %} disabled {% endif %} class="form-control" id="newcompare-1" name="pr_1">
+                                        {% if products[0] is not null  %}
+                                            <option selected value="{{ products[0]['product_id'] }}" data-product_name="{{ products[0]['name'] }}">{{ products[0]['name'] }}</option>
+                                        {% endif %}
+                                    </select>#}
+                                </div><span onclick="modalToComparison.removeLeftValue();" class="glyphicon {% if products[0] is not null  %} full {% endif %} glyphicon-remove"></span>
+                            </div>
+                            <div class="compare-item compare-item-2">
+                                <div class="compare-vs">
+                                    <span>VS</span>
+                                </div>
+                            </div>
+                            <div class="compare-item compare-item-3">
+                                <div class="form-group">
+                                    <input type="text" id="newcompare-2" name="comparing_products" {% if products[0] is null  %} disabled {% endif %} {% if products[1] is not null  %} data-product_id="{{ products[1]['product_id'] }}" value="{{ products[1]['name'] }}" {% else %} data-product_id="" value="" {% endif %} placeholder="{{ autocompleteProducts }}">
+                                    {#<select {% if products[1] is not null  %} disabled {% endif %} class="form-control" id="newcompare-2"  name="pr_2">
+                                        {% if products[1] is not null %}
+                                            <option selected value="{{ products[1]['product_id'] }}" data-product_name="{{ products[1]['name'] }}">{{ products[1]['name'] }}</option>
+                                        {% endif %}
+                                    </select>#}
+                                </div><span onclick="modalToComparison.removeRightValue();" class="glyphicon {% if products[1] is not null  %} full {% endif %} glyphicon-remove"></span>
+                            </div>
+                            <input class="compare_type_hidden" type="hidden" name="type" value="cpu"/>
                         </div>
-                        <div class="compare-item compare-item-2">
-                            <div class="compare-vs">
-                                <span>VS</span>
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+                            </div>
+                            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                                <div class="compare-btn">
+                                    <button><a href="{{ link_on_compare }}">Compare</a></button>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
                             </div>
                         </div>
-                        <div class="compare-item compare-item-3">
-                            <div class="form-group">
-                                <input type="text" id="newcompare-2" name="comparing_products" {% if products[0] is null  %} disabled {% endif %} {% if products[1] is not null  %} data-product_id="{{ products[1]['product_id'] }}" value="{{ products[1]['name'] }}" {% else %} data-product_id="" value="" {% endif %} placeholder="{{ autocompleteProducts }}">
-                                {#<select {% if products[1] is not null  %} disabled {% endif %} class="form-control" id="newcompare-2"  name="pr_2">
-                                    {% if products[1] is not null %}
-                                        <option selected value="{{ products[1]['product_id'] }}" data-product_name="{{ products[1]['name'] }}">{{ products[1]['name'] }}</option>
-                                    {% endif %}
-                                </select>#}
-                            </div><span onclick="modalToComparison.removeRightValue();" class="glyphicon glyphicon-remove"></span>
-                        </div>
-                        <input class="compare_type_hidden" type="hidden" name="type" value="cpu"/>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
-                        </div>
-                        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
-                            <div class="compare-btn">
-                                <button><a href="{{ link_on_compare }}">Go to compare</a></button>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
-                        </div>
-                    </div>
+                </div>
             </div>
         </div>
     </div>

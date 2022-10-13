@@ -1294,15 +1294,17 @@ html[dir=rtl] .breadcrumb > li::after {
 .btn-accent {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: var(--color-accent);
+  /*background-color: var(--color-accent);*/
+  background-color: #6667ab;
+  transition: background 0.5s ease;
   background-repeat: repeat-x;
   border-color: var(--color-accent--darker-1);
 }
 .btn-accent:hover, .btn-accent:active, .btn-accent:focus, .btn-accent.active, .btn-accent.disabled, .btn-accent[disabled] {
   color: #ffffff;
-  background-color: var(--color-accent--lighter-1);
-  border-color: var(--color-accent);
-  
+  /*background-color: var(--color-accent--lighter-1);
+  border-color: var(--color-accent);*/
+  background-color: #444190;
 }
 
 .btn-success {
@@ -1379,7 +1381,7 @@ html[dir=rtl] .breadcrumb > li::after {
 	transition: all .3s ease;
 	z-index: 2;
  	background-image: none;
-  background: rgba(0, 0, 0, 0.2);
+  /*background: rgba(0, 0, 0, 0.2);*/
   width: 50px;
   height: 50px;
   line-height: 50px; 
@@ -1387,9 +1389,9 @@ html[dir=rtl] .breadcrumb > li::after {
   border-radius: 50%;
 }
 
-.swiper-button-prev:hover, .swiper-button-next:hover {
+/*.swiper-button-prev:hover, .swiper-button-next:hover {
   background: rgba(0, 0, 0, 0.5);
-}
+}*/
 .swiper-viewport .swiper-button-prev {
 	opacity: 0.7;
 	left: 10px;
@@ -3103,7 +3105,7 @@ footer h5 {
 }
 #button-compare{
   width: 50%;
-  margin: auto;
+  /*margin: auto;*/
 }
 .fixed-size {
   width: 400px;
@@ -3158,8 +3160,16 @@ footer h5 {
 }
 
 /*---------------------------------Modal to comparison-----------------------*/
-
-.modal-to-compare{
+#modal-to-comparison{
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  bottom: 0;
+}
+#modal-to-comparison .form-group{
+  margin: 0;
+}
+/*.modal-to-compare{
   width: 40%;
   position: fixed;
   bottom: 0;
@@ -3167,6 +3177,14 @@ footer h5 {
   left: 30%;
   background: aquamarine;
   border-radius: 15px;
+}*/
+.modal-to-compare{
+  width: 1370px;
+  background: white;
+  border-radius: 6px;
+  margin: auto;
+  border: 1px solid #CCC;
+  float: none;
 }
 .compare-select{
   height: 170px;
@@ -3179,16 +3197,18 @@ footer h5 {
   margin-top: 30px;
 }
 .compare-btn button{
-  background: #90F;
-  padding: 8px 25px;
+  background: #6667ab;
+  padding: 4px 28px;
   border-radius: 3px;
   color: white;
   border: none;
   transition: background 0.5s ease;
   margin-top: 15px;
+  font-size: 22px;
+  box-shadow: -2px 3px 0.8rem gray;
 }
 .compare-btn button:hover{
-  background: #33CC66;
+  background: #444190;
 }
 .compare-btn button > a{
   color: white;
@@ -3200,15 +3220,20 @@ footer h5 {
 .close > .glyphicon-eject{
   display: block;
 }
-.open > .glyphicon-resize-vertical{
+.close > .rotate{
+  display: none;
+}
+.open > .rotate{
   display: block;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  transform: rotate(180deg);
 }
 .compare-item-2{
-  width: 10%;
   text-align: center;
 }
 .compare-item-1, .compare-item-3{
-  width: 35%;
+  width: 40%;
   display: flex;
   justify-content: space-between;
 }
@@ -3217,10 +3242,39 @@ footer h5 {
 }
 .glyphicon{
   font-size: 32px;
-  margin-bottom: 20px;
   text-align: center;
 }
-
+#modal-to-comparison .compare-item .glyphicon{
+  margin: 0;
+  font-size: 22px;
+  padding: 9px;
+  border-radius: 6px;
+  color: white;
+  background-color: #999999;
+  position: unset;
+}
+#modal-to-comparison .compare-item  > .full{
+  background-color: #666666;
+}
+.form-group > input{
+  width: 99%;
+  height: 40px;
+}
+.compare-vs{
+  margin-top: 20%;
+}
+#modal-to-comparison .dropdown-menu{
+  height: 110px;
+  font-size: 20px;
+  overflow-y: scroll;
+}
+#modal-to-comparison .form-group input{
+  padding-left: 20px;
+}
+.compare-vs > span{
+  font-weight: bold;
+  font-size: 22px
+}
 /*---------------------------------End of Modal------------------------------*/
 
 .product-thumb--name-bold {
@@ -3305,4 +3359,7 @@ footer h5 {
 }
 #slideshow0 .slide-description > .link-on-category:hover{
   background: #444190;
+}
+#tab-general > .list-unstyled > .row{
+  margin: 0;
 }

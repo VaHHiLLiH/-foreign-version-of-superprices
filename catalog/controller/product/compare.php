@@ -281,7 +281,7 @@ class ControllerProductCompare extends Controller {
             $filter_data = array(
                 'filter_name'  => $this->request->get['product_name'],
                 'start'        => 0,
-                'limit'        => 5,
+                'limit'        => 10,
                 'category_id'  => (isset($this->session->data['compare_parent_category_id'])) ? $this->session->data['compare_parent_category_id'] : '',
             );
             $results = $this->model_catalog_product->getProductsToCompare($filter_data);
