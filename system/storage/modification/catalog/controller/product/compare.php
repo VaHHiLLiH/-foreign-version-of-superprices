@@ -249,24 +249,40 @@ class ControllerProductCompare extends Controller {
 
     public function getRightSide()
     {
-        $json['session'] = $this->session->data['compare'];
         $json = [];
-        if (isset($this->session->data['compare'])) {
-            if (count($this->session->data['compare']) == 2) {
-                $json['side'] = 'offset';
-            } else {
-                if (empty($this->session->data['compare'][0])) {
-                    $json['side'] = 'left';
+        if (!in_array($this->request->post['product_id'], $this->session->data['compare'])) {
+            if (isset($this->session->data['compare'])) {
+                if (count($this->session->data['compare']) == 2) {
+                    $json['side'] = 'offset';
                 } else {
-                    $json['side'] = 'right';
+                    if (empty($this->session->data['compare'][0])) {
+                        $json['side'] = 'left';
+                    } else {
+                        $json['side'] = 'right';
+                    }
                 }
+            } else {
+                $json['side'] = 'left';
             }
         } else {
-            $json['side'] = 'left';
+            $json['side'] = 'nothing';
         }
 
         $this->response->addHeader('Content-Type: application/json');
         $this->response->setOutput(json_encode($json));
+    }
+
+    public function deleteCompareProduct()
+    {
+        $key = array_search($this->request->post['product_id'], $this->session->data['compare']);
+        if ($key !== false) {
+            unset($this->session->data['compare'][$key]);
+        }
+        /*$json['left_id'] = $this->session->data['compare'][0];
+        $json['right_id'] = $this->session->data['compare'][1];
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));*/
     }
 
     public function validateAdding($main_product_id, $dop_product_id)

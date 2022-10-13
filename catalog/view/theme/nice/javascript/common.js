@@ -347,14 +347,16 @@ var compare = {
 	},*/
 	'remove': function(product_id) {
 		$.ajax({
-			url: 'index.php?route=product/compare&remove='+product_id,
-			type: 'get',
+			url: 'index.php?route=product/compare/deleteCompareProduct',
+			type: 'post',
+			data: 'product_id=' + product_id,
 		})
 	},
 	'newAdd' : function(product_id, product_name) {
 		$.ajax({
 			url: 'index.php?route=product/compare/getRightSide',
 			type: 'post',
+			data: 'product_id=' + product_id,
 			dataType: 'json',
 			success: function(json) {
 				if (json['side'] == 'left') {
@@ -448,7 +450,7 @@ var modalToComparison = {
 		});
 	},
 	'removeLeftValue': function() {
-		left_product_id = $("#newcompare-1").data('product_id');
+		left_product_id = $("#newcompare-1").attr('data-product_id');
 		$('#newcompare-1').val('');
 		$('#newcompare-1').attr('data-product_id', '');
 		compare.remove(left_product_id);
@@ -456,7 +458,7 @@ var modalToComparison = {
 		$(".compare-item-1 > .glyphicon").removeClass('full');
 	},
 	'removeRightValue': function() {
-		right_product_id = $("#newcompare-2").data('product_id');
+		right_product_id = $("#newcompare-2").attr('data-product_id');
 		$('#newcompare-2').val('');
 		$('#newcompare-2').attr('data-product_id', '');
 		compare.remove(right_product_id);
