@@ -48,11 +48,16 @@
   <div class="container">
     <div id="top-2">      
       <div class="top-2--column logo-column">
+        <div>
+        <div class="only-mobile-menu">
+          {{ menu }}
+        </div>
         <div id="logo">
           {% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>
           {% else %}
           <h1><a href="{{ home }}">{{ name }}</a></h1>
           {% endif %}
+        </div>
         </div>
       </div>
         
@@ -85,4 +90,6 @@
     <div class="search--mobile"></div>
   </div>
 </header>
+<div class="only-desc-menu">
 {{ menu }}
+</div>

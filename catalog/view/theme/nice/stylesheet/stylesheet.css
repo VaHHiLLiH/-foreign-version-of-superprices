@@ -109,7 +109,9 @@
 
 
 /* Overwrite bootstrap . Begin */
-
+.container{
+  padding: 0;
+}
 /* make outer offset more than inner outers are */
 @media (max-width: 767px) {
   .container {
@@ -3179,7 +3181,7 @@ footer h5 {
   border-radius: 15px;
 }*/
 .modal-to-compare{
-  width: 1370px;
+  /*width: 1370px;*/
   background: white;
   border-radius: 6px;
   margin: auto;
@@ -3275,6 +3277,24 @@ footer h5 {
   font-weight: bold;
   font-size: 22px
 }
+@media (max-width: 767px) {
+  .modal-to-compare .compare-items-cont{
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-to-compare .compare-items-cont .compare-item-1, .modal-to-compare .compare-items-cont .compare-item-3{
+    width: 100%;
+  }
+  .modal-to-compare .compare-items-cont .compare-item-2{
+    height: 40px;
+  }
+  .modal-to-compare .compare-items-cont .compare-item-2 .compare-vs{
+    margin-top: 0;
+  }
+  #modal-to-comparison > .open{
+    height: 320px;
+  }
+}
 /*---------------------------------End of Modal------------------------------*/
 
 .product-thumb--name-bold {
@@ -3363,3 +3383,16 @@ footer h5 {
 #tab-general > .list-unstyled > .row{
   margin: 0;
 }
+/*------------------------------------------------*/
+.only-mobile-menu{
+  display: none;
+}
+@media (max-width: 989px) {
+  .only-mobile-menu{
+    display: block;
+  }
+  .only-desc-menu{
+     display: none;
+   }
+}
+/*------------------------------------------------*/
