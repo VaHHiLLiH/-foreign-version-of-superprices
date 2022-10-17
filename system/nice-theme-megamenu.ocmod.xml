@@ -314,7 +314,7 @@
 			$data['categories'][$key]['n'] = 0;
 			$column = 1;
 
-			foreach ($category['children'] as $key2 => $child) {
+			/*foreach ($category['children'] as $key2 => $child) {
 				if ($data['categories'][$key]['n'] >= $length) {
 					$column++;
 
@@ -328,7 +328,7 @@
 				foreach ($child['grandchildren'] as $key3 => $grandchild) {
 					$data['categories'][$key]['n'] ++;
 				}
-			}
+			}*/
 
 			$categories_columned[$key]['nice_menu_category_columns'] = $column;
 		}

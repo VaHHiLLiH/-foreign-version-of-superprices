@@ -76,16 +76,28 @@ class ControllerProductCategory extends Controller {
 
 				$category_info = $this->model_catalog_category->getCategory($path_id);
 
-				if ($category_info) {
+				/*if ($category_info) {
 					$data['breadcrumbs'][] = array(
 						'text' => $category_info['name'],
 						'href' => $this->url->link('product/category', 'path=' . $path . $url)
 					);
-				}
+				}*/
 			}
 		} else {
 			$category_id = 0;
 		}
+
+        $category_path = $this->model_catalog_category->getCategoryPath($category_id);
+
+		foreach ($category_path as $cat_id) {
+
+		    $cat_info = $this->model_catalog_category->getCategory($cat_id['path_id']);
+
+            $data['breadcrumbs'][] = array(
+                'text' => $cat_info['name'],
+                'href' => $this->url->link('product/category', 'path=' . $cat_id['category_id']),
+            );
+        }
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
@@ -99,10 +111,10 @@ class ControllerProductCategory extends Controller {
 			$data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
 
 			// Set the last category breadcrumb
-			$data['breadcrumbs'][] = array(
+			/*$data['breadcrumbs'][] = array(
 				'text' => $category_info['name'],
 				'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'])
-			);
+			);*/
 
 			if ($category_info['image']) {
 				$data['thumb'] = $this->model_tool_image->resize($category_info['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_height'));
@@ -387,10 +399,10 @@ class ControllerProductCategory extends Controller {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
 
-			$data['breadcrumbs'][] = array(
+			/*$data['breadcrumbs'][] = array(
 				'text' => $this->language->get('text_error'),
 				'href' => $this->url->link('product/category', $url)
-			);
+			);*/
 
 			$this->document->setTitle($this->language->get('text_error'));
 

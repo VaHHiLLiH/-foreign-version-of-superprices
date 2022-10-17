@@ -66,6 +66,7 @@ class ControllerExtensionModuleCategory extends Controller {
 				'name'        => $category['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
 				'children'    => $children_data,
 				'href'        => $this->url->link('product/category', 'path=' . $category['category_id'])
+                //'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $category['category_id']),
 			);
 		}
 

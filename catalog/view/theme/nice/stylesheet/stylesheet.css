@@ -3396,3 +3396,10 @@ footer h5 {
    }
 }
 /*------------------------------------------------*/
+#column-left .list-group-item {
+  height: 60px;
+}
+#column-left .list-group{
+  height: 473px;
+  overflow-y: scroll;
+}
