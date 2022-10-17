@@ -21,13 +21,23 @@ class ControllerExtensionModuleCategory extends Controller {
 			$data['child_id'] = 0;
 		}
 
+		if (isset($parts)) {
+		    $current_category_id = end($parts);
+        }
+
 		$this->load->model('catalog/category');
 
 		$this->load->model('catalog/product');
 
 		$data['categories'] = array();
 
-		$categories = $this->model_catalog_category->getCategories(0);
+		//$categories = $this->model_catalog_category->getCategories(0);
+        $categories = $this->model_catalog_category->getCategories($current_category_id);
+
+        if (empty($categories)) {
+            $current_category_parent_id = $this->model_catalog_category->getCategory($current_category_id);
+            $categories = $this->model_catalog_category->getCategories($current_category_parent_id['parent_id']);
+        }
 
 		foreach ($categories as $category) {
 			$children_data = array();
