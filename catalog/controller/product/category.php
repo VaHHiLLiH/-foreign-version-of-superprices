@@ -95,7 +95,7 @@ class ControllerProductCategory extends Controller {
 
             $data['breadcrumbs'][] = array(
                 'text' => $cat_info['name'],
-                'href' => $this->url->link('product/category', 'path=' . $cat_id['category_id']),
+                'href' => $this->url->link('product/category', 'path=' . $cat_id['path_id']),
             );
         }
 

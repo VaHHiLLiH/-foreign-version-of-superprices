@@ -619,6 +619,7 @@ header {
 /* --------------------------------------------------------------------------- */
 
 #top-2 {
+  width: 100%;
   display: flex;
 /*  flex-direction: row;
   flex-wrap: nowrap;*/
@@ -3411,33 +3412,102 @@ footer h5 {
   display: none;
 }
 /*----------------forTesting*/
+.only-mobile-menu > .navbar{
+  position: static;
+}
+#mobile-menu-categories{
+  position: static;
+}
+.main-categories hr{
+  padding: 0;
+  margin: 10px 0;
+}
 .main-categories{
   text-decoration: none;
   position: absolute;
   z-index: 1000;
-  background: black;
+  background: #f6f6f6;
   width: 100%;
+  left: 0;
+  right: 0;
+  color: #3b3f41;
+  list-style-type: none;
+}
+.my-dropdown{
+  margin: 10px 40px 10px 0;
+}
+.main-categories a{
+  color: #3b3f41;
+  font-size: 22px;
 }
 .child-categories{
   z-index: 1001;
 }
 .post-child-categories{
   z-index: 1002;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.open > .child-categories{
+.close-child > span.to-open{
+  display: none;
+}
+.open-child > span.to-close{
+  display: none;
+}
+.my-dropdown > span{
+  margin-left: 7px;
+}
+.open-child > .child-categories{
+  position: relative;
+  background: white;
+  display: block;
+  margin-left: 15px;
+  padding: 10px;
+  list-style-type: none;
+  font-size: 18px;
+}
+.main-categories .child-categories a{
+  font-size: 18px;
+  color: #3b3f41;
+  text-decoration: none;
+}
+.post-child-categories a{
+  font-size: 18px;
+  color: #3b3f41;
+  text-decoration: none;
+}
+.post-child-categories li{
+  margin: 5px 0;
+}
+.openOver{
   position: absolute;
-  background: grey;
-  width: 100%;
+  background: white;
+  list-style-type: none;
+  font-size: 18px;
+  color: #3b3f41;
+  left: 0;
+  right: 0;
   display: block;
 }
-.main-categories a {
-  color: white;
-  font-size: 22px;
+.hide-under{
+  z-index: -1;
 }
-.open > .post-child-categories{
-  position: absolute;
-  background: mediumseagreen;
-  width: 100%;
+.special-mobile-search{
+  display: none;
+}
+.show-up{
   display: block;
+}
+.show-up > #search{
+  width: 95%;
+  margin: 10px auto;
+  float: none;
+}
+.only-mobile-menu{
+  display: flex;
+  justify-content: space-around;
+}
+.icon-search-mobile{
+  margin-top: 20px;
 }
 /*--------------------------------End of Mobile Menu-------------------*/

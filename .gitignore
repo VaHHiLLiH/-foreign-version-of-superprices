@@ -1,5 +1,6 @@
 .idea
 /dist
+/robots.txt
 /node_modules
 /config.php
 /admin/config.php
