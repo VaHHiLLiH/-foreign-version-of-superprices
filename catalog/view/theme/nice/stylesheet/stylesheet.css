@@ -3437,9 +3437,10 @@ footer h5 {
 .my-dropdown{
   margin: 10px 40px 10px 0;
 }
-.main-categories a{
+.main-categories a, .main-categories p{
   color: #3b3f41;
   font-size: 22px;
+  display: inline;
 }
 .child-categories{
   z-index: 1001;
@@ -3467,12 +3468,12 @@ footer h5 {
   list-style-type: none;
   font-size: 18px;
 }
-.main-categories .child-categories a{
+.main-categories .child-categories a, .main-categories .child-categories p{
   font-size: 18px;
   color: #3b3f41;
   text-decoration: none;
 }
-.post-child-categories a{
+.post-child-categories a, .post-child-categories p{
   font-size: 18px;
   color: #3b3f41;
   text-decoration: none;
