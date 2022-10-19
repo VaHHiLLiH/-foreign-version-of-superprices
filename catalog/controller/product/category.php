@@ -147,7 +147,7 @@ class ControllerProductCategory extends Controller {
 
 			$results = $this->model_catalog_category->getCategories($category_id);
 
-			foreach ($results as $result) {
+			/*foreach ($results as $result) {
 				$filter_data = array(
 					'filter_category_id'  => $result['category_id'],
 					'filter_sub_category' => true
@@ -157,7 +157,7 @@ class ControllerProductCategory extends Controller {
 					'name' => $result['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
 					'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
 				);
-			}
+			}*/
 
 			$data['products'] = array();
 

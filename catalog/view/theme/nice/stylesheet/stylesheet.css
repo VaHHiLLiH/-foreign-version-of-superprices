@@ -3390,7 +3390,8 @@ footer h5 {
 }
 @media (max-width: 989px) {
   .only-mobile-menu{
-    display: block;
+    display: flex;
+    justify-content: space-around;
   }
   .only-desc-menu{
      display: none;
@@ -3502,10 +3503,6 @@ footer h5 {
   width: 95%;
   margin: 10px auto;
   float: none;
-}
-.only-mobile-menu{
-  display: flex;
-  justify-content: space-around;
 }
 .icon-search-mobile{
   margin-top: 20px;
