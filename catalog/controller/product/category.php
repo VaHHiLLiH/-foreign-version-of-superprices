@@ -101,6 +101,7 @@ class ControllerProductCategory extends Controller {
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
+		$data['category_description'] = $this->generateDescription($category_id);
 		if ($category_info) {
 			$this->document->setTitle($category_info['meta_title']);
 			$this->document->setDescription($category_info['meta_description']);
@@ -420,4 +421,197 @@ class ControllerProductCategory extends Controller {
 			$this->response->setOutput($this->load->view('error/not_found', $data));
 		}
 	}
+
+	public function generateDescription($category_id)
+    {
+        $this->load->model('catalog/manufacturer');
+
+        $category_path = $this->model_catalog_category->getCategoryPath($category_id);
+
+        if (count($category_path) == 1 && $category_path[0]['path_id'] == 1) {
+
+            return $this->language->get('CPU');
+
+        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 1) {
+
+            return sprintf($this->language->get('CPU_child'), $this->generateH1($category_id), $this->generateSubCategories(5, $category_id), $this->generateBrands(1, $category_id));
+
+        } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 1) {
+
+            return sprintf($this->language->get('CPU_post_child'), $this->generateH1($category_id), $this->generateParentH1($category_id), $this->generateParentH1($category_id), $this->generateProducts(5, $category_id));
+
+        } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 2) {
+
+            return $this->language->get('Monitors');
+
+        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 2){
+
+            return sprintf($this->language->get('Monitors_child'), $this->generateH1($category_id), $this->generateParentH1($category_id));
+
+        } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 3) {
+
+            return sprintf($this->language->get('Phones'), $this->generateBrands(3, $category_id), $this->generateCharacteristics(5, $category_id));
+
+        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 3 && $category_path[0]['category_id'] == 501) {
+
+            return $this->language->get('Phone_button');
+
+        } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 3 && $category_path[1]['path_id'] == 501) {
+
+            return sprintf($this->language->get('Phone_smart_child'), $this->generateH1($category_id), $this->generateH1($category_id));
+
+        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 3 && $category_path[0]['category_id'] == 500) {
+
+            return $this->language->get('Phone_smart');
+
+        } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 3 && $category_path[1]['path_id'] == 500) {
+
+            return sprintf($this->language->get('Phone_button_child'), $this->generateH1($category_id), $this->generateH1($category_id));
+
+        } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 4) {
+
+            return $this->language->get('Cameras');
+
+        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 4) {
+
+            return sprintf($this->language->get('Cameras_child'), $this->generateH1($category_id), $this->generateBrands(3, $category_id), $this->generateCharacteristics(5, $category_id));
+
+        } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 4) {
+
+            return sprintf($this->language->get('Cameras_post_child'), $this->generateH1($category_id), $this->generateH1($category_id), $this->generateCharacteristics(5, $category_id));
+
+        } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 5) {
+
+            return $this->language->get('Musical');
+
+        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 5) {
+
+            return sprintf($this->language->get('Musical_child'), $this->generateH1($category_id), $this->generateBrands(3, $category_id), $this->generateCharacteristics(5, $category_id));
+
+        } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 5) {
+
+            return sprintf($this->language->get('Musical_post_child'), $this->generateH1($category_id), $this->generateH1($category_id), $this->generateCharacteristics(5, $category_id));
+
+        } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 6) {
+
+            return $this->language->get('Smartwatches');
+
+        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 6) {
+
+            return sprintf($this->language->get('Smartwatch_child'), $this->generateH1($category_id), $this->generateBrands(3, $category_id));
+
+        } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 6) {
+
+            return sprintf($this->language->get('Smartwatch_post_child'), $this->generateH1($category_id), $this->generateH1($category_id));
+
+        } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 7) {
+
+            return $this->language->get('Consoles');
+
+        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 7) {
+
+            return sprintf($this->language->get('Consoles_child'), $this->generateH1($category_id), $this->generateH1($category_id));
+
+        } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 8) {
+
+            return $this->language->get('GPU');
+
+        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 8){
+
+            return sprintf($this->language->get('GPU_child'), $this->generateBrands(1, $category_id), $this->generateBrands(1, $category_id), $this->generateProducts(5, $category_id));
+
+        }
+
+
+        return '';
+    }
+
+    public function generateH1($category_id)
+    {
+        $category_h1 = $this->model_catalog_category->getCategory($category_id);
+
+        return $category_h1['name'];
+    }
+
+    public function generateParentH1($category_id)
+    {
+        $parent_category_h1 = $this->model_catalog_category->getParentCategory($category_id);
+
+        return $parent_category_h1['name'];
+    }
+
+    public function generateBrands($limit, $category_id)
+    {
+        $brands = $this->model_catalog_category->getBrandsProduct($limit, $category_id);
+
+        $brands_string = '';
+        foreach ($brands as $brand) {
+            $brands_string .= $brand['name'].', ';
+        }
+
+        return trim($brands_string, ', ');
+    }
+
+    public function generateProducts($limit, $category_id)
+    {
+        $products = $this->model_catalog_category->getProductsCategory($limit, $category_id);
+
+        $name_string = '';
+        foreach ($products as $product) {
+            $name_string .= $product['name'].', ';
+        }
+
+        return trim($name_string, ', ');
+    }
+
+    public function generateSubCategories($limit, $category_id)
+    {
+        $sub_categories = $this->model_catalog_category->getSubCategories($limit, $category_id);
+
+        $sub_categories_string = '';
+        foreach ($sub_categories as $category) {
+            $sub_categories_string .= $category['name'].', ';
+        }
+
+        return trim($sub_categories_string, ', ');
+    }
+
+    public function generateCharacteristics($limit, $category_id)
+    {
+        $characteristics = $this->model_catalog_category->getProductsChars($category_id);
+        // Строка для характеристик
+        $chars_string = '';
+        // массив где будет кол-во каждой характеристики
+        $count_chars = [];
+        // в $characteristics характеристики всех товаров, разворачиваю на характеристики каждого товара
+        foreach ($characteristics as $json_product_chars) {
+            // разворачиваю характеристики для каждого товара
+            $product_chars = json_decode($json_product_chars['spec'], true);
+            if (!empty($product_chars)) {
+                // Потому что спаршено через жопу
+                if (!empty($product_chars['subspecs'])) {
+                    foreach ($product_chars['subspecs'] as $char) {
+                        $count_chars[$char['name']] = (!empty($count_chars[$char['name']])) ? ($count_chars[$char['name']] + 1) : 1;
+                    }
+                } else {
+                    foreach ($product_chars as $group_chars) {
+                        // Достаю сами характеристики и начинаю их считать
+                        if (!empty($group_chars['subspecs'])) {
+                            foreach ($group_chars['subspecs'] as $char) {
+                                $count_chars[$char['name']] = (!empty($count_chars[$char['name']])) ? ($count_chars[$char['name']] + 1) : 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        arsort($count_chars);
+
+        $chars_ar = array_slice($count_chars, 0, $limit);
+
+        foreach ($chars_ar as $key => $char){
+            $chars_string .= $key.', ';
+        }
+        return trim($chars_string, ', ');
+    }
 }

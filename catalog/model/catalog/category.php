@@ -83,4 +83,41 @@ class ModelCatalogCategory extends Model {
 
         return $query->rows;
     }
+
+    public function getBrandsProduct($limit, $category_id)
+    {
+        $query = $this->db->query("SELECT m.name, COUNT(p.manufacturer_id) FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "manufacturer m ON (m.manufacturer_id = p.manufacturer_id) LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON (p.product_id = ptc.product_id) WHERE ptc.category_id = " . (int)$category_id . " GROUP BY p.manufacturer_id ORDER BY 2 DESC LIMIT " . (int)$limit);
+
+        return $query->rows;
+    }
+
+    public function getProductsCategory($limit, $category_id)
+    {
+        $query = $this->db->query("SELECT pd.name FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON (p.product_id = ptc.product_id) WHERE ptc.category_id = " . (int)$category_id . " ORDER BY p.viewed DESC LIMIT " . (int)$limit);
+
+        return $query->rows;
+    }
+
+    public function getSubCategories($limit, $category_id)
+    {
+        $query = $this->db->query("SELECT cd.name, COUNT(ptc.category_id) FROM " . DB_PREFIX . "category c LEFT JOIN " . DB_PREFIX . "category_description cd ON (c.category_id = cd.category_id) LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON (c.category_id = ptc.category_id) WHERE c.parent_id = " . (int)$category_id . " GROUP BY cd.name ORDER BY 2 DESC LIMIT " . (int)$limit);
+
+        return $query->rows;
+    }
+
+    public function getParentCategory($category_id)
+    {
+        $parent_id = $this->db->query("SELECT * FROM " . DB_PREFIX . "category WHERE category_id = " . (int)$category_id)->row['parent_id'];
+
+        $query = $this->db->query("SELECT cd.name FROM " . DB_PREFIX . "category c LEFT JOIN " . DB_PREFIX . "category_description cd ON (c.category_id = cd.category_id) WHERE cd.category_id = " . (int)$parent_id);
+
+        return $query->row;
+    }
+
+    public function getProductsChars($category_id)
+    {
+        $query = $this->db->query("SELECT spec FROM " . DB_PREFIX . "spec sp LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON (sp.product_id = ptc.product_id) WHERE ptc.category_id = " . (int)$category_id)->rows;
+
+        return $query;
+    }
 }
