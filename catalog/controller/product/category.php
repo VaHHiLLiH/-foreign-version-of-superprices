@@ -86,7 +86,7 @@ class ControllerProductCategory extends Controller {
 		} else {
 			$category_id = 0;
 		}
-        var_dump('zahoju');die();
+
         $category_path = $this->model_catalog_category->getCategoryPath($category_id);
 
 		foreach ($category_path as $cat_id) {
