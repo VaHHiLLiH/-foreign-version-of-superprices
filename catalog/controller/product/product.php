@@ -498,11 +498,11 @@ class ControllerProductProduct extends Controller {
                 $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                 if (!empty($product_chars)) {
                     $const_char = [
-                        'Общее число пикселов'    => false,
+                        'Общее число пикселей'    => false,
                         'Тип камеры'       => false,
                     ];
                     if ($this->checkToChars($const_char, $product_chars)) {
-                        return sprintf($this->language->get('Cameras'), $this->generateH1($product_id), $const_char['Общее число пикселов'], $const_char['Тип камеры'], $this->generateH1($product_id));
+                        return sprintf($this->language->get('Cameras'), $this->generateH1($product_id), $const_char['Общее число пикселей'], $const_char['Тип камеры'], $this->generateH1($product_id));
                     } else {
                         return sprintf($this->language->get('Cameras_empty'), $this->generateH1($product_id));
                     }
