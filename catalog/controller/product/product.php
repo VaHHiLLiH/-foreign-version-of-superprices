@@ -525,10 +525,10 @@ class ControllerProductProduct extends Controller {
                                 if ($this->checkToChars($const_char, $product_chars)) {
                                     return sprintf($this->language->get('Accordion'), $this->generateH1($product_id), $const_char['Тип инструмента']);
                                 } else {
-                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                    return sprintf($this->language->get('Accordion_empty'), $this->generateH1($product_id));
                                 }
                             } else {
-                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                return sprintf($this->language->get('Accordion_empty'), $this->generateH1($product_id));
                             }
                             break;
                         case 38:
@@ -545,10 +545,10 @@ class ControllerProductProduct extends Controller {
                                     $brand = $this->generateBrand($product_id);
                                     return sprintf($this->language->get('Digital Pianos'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество клавиш'], $const_char['Размер клавиш'], $const_char['Педали'], $const_char['Вес']);
                                 } else {
-                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                    return sprintf($this->language->get('Digital_Pianos_empty'), $this->generateH1($product_id));
                                 }
                             } else {
-                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                return sprintf($this->language->get('Digital_Pianos_empty'), $this->generateH1($product_id));
                             }
                             break;
                         case 40:
@@ -566,10 +566,10 @@ class ControllerProductProduct extends Controller {
                                     $brand = $this->generateBrand($product_id);
                                     return sprintf($this->language->get('Electric Bass'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество струн'], $const_char['Материал корпуса'], $const_char['Материал грифа'], $const_char['Схема звукоснимателей']);
                                 } else {
-                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                    return sprintf($this->language->get('Electric_Bass_empty'), $this->generateH1($product_id));
                                 }
                             } else {
-                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                return sprintf($this->language->get('Electric_Bass_empty'), $this->generateH1($product_id));
                             }
                             break;
                         case 36:
@@ -587,10 +587,10 @@ class ControllerProductProduct extends Controller {
                                     $brand = $this->generateBrand($product_id);
                                     return sprintf($this->language->get('Electric Guitars'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество струн'], $const_char['Материал корпуса'], $const_char['Материал грифа'], $const_char['Схема звукоснимателей']);
                                 } else {
-                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                    return sprintf($this->language->get('Electric_Guitars_empty'), $this->generateH1($product_id));
                                 }
                             } else {
-                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                return sprintf($this->language->get('Electric_Guitars_empty'), $this->generateH1($product_id));
                             }
                             break;
                         case 39:
@@ -608,10 +608,10 @@ class ControllerProductProduct extends Controller {
                                     $brand = $this->generateBrand($product_id);
                                     return sprintf($this->language->get('MIDI Keyboards'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество клавиш'], $const_char['Размер клавиш'], $const_char['Педали'], $const_char['Вес']);
                                 } else {
-                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                    return sprintf($this->language->get('MIDI_Keyboards_empty'), $this->generateH1($product_id));
                                 }
                             } else {
-                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                return sprintf($this->language->get('MIDI_Keyboards_empty'), $this->generateH1($product_id));
                             }
                             break;
                         case 41:
@@ -629,10 +629,10 @@ class ControllerProductProduct extends Controller {
                                     $brand = $this->generateBrand($product_id);
                                     return sprintf($this->language->get('Semi-Acoustic'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество струн'], $const_char['Материал корпуса'], $const_char['Материал грифа'], $const_char['Схема звукоснимателей']);
                                 } else {
-                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                    return sprintf($this->language->get('Semi-Acoustic_empty'), $this->generateH1($product_id));
                                 }
                             } else {
-                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                return sprintf($this->language->get('Semi-Acoustic_empty'), $this->generateH1($product_id));
                             }
                             break;
                         case 37:
@@ -650,10 +650,10 @@ class ControllerProductProduct extends Controller {
                                     $brand = $this->generateBrand($product_id);
                                     return sprintf($this->language->get('Synthesizers'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество клавиш'], $const_char['Размер клавиш'], $const_char['Вес'], $const_char['Количество тембров']);
                                 } else {
-                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                    return sprintf($this->language->get('Synthesizers_empty'), $this->generateH1($product_id));
                                 }
                             } else {
-                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                return sprintf($this->language->get('Synthesizers_empty'), $this->generateH1($product_id));
                             }
                             break;
                     }

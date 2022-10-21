@@ -75,6 +75,14 @@ $_['Electric Guitars'] = '%s is a %s %s with %s Strings. It is made of %s and it
 $_['MIDI Keyboards'] = '%s is a %s %s with %s %s Keyboard Keys. It has %s Pedals and weights %s.';
 $_['Semi-Acoustic'] = '%s is a %s %s with %s Strings. It is made of %s and its Fretboard is made of %s. It has %s Guitar Pickup Configuration. ';
 $_['Synthesizers'] = '%s is a %s %s with %s %s Keyboard Keys. It weights %s and has %s Number of Tones.';
+
+$_['Accordion_empty'] = '%s is an Accordion with technical specifications listed below:';
+$_['Digital_Pianos_empty'] = '%s is a Digital Piano with technical specifications listed below:';
+$_['Electric_Bass_empty'] = '%s is an Electric Bass with technical specifications listed below:';
+$_['Electric_Guitars_empty'] = '%s is an Electric Guitar with technical specifications listed below: ';
+$_['MIDI_Keyboards_empty'] = '%s is a MIDI-Keyboard with technical specifications listed below:';
+$_['Semi-Acoustic_empty'] = '%s is a Semi-acoustic Guitar with technical specifications listed below:';
+$_['Synthesizers_empty'] = '%s is a Synthesizer with technical specifications listed below:';
 $_['Musical_empty'] = '%s is a TYPE with technical specifications listed below:';
 /*--------------End of Musical Instruments------------------*/
 // 2 h1
