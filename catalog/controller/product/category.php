@@ -103,6 +103,7 @@ class ControllerProductCategory extends Controller {
 
 		$data['category_description'] = $this->generateDescription($category_id);
 		if ($category_info) {
+            var_dump('zahoju');die();
 			$this->document->setTitle($category_info['meta_title']);
 			$this->document->setDescription($category_info['meta_description']);
 			$this->document->setKeywords($category_info['meta_keyword']);
@@ -175,7 +176,6 @@ class ControllerProductCategory extends Controller {
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
 
-            var_dump('zahoju');die();
 			foreach ($results as $result) {
 				if ($result['image']) {
 					$image = $result['image'];
