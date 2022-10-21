@@ -526,6 +526,16 @@ class ControllerProductCategory extends Controller {
         return '';
     }
 
+    public function generateMetaTitle($category_id)
+    {
+        return $this->generateH1($category_id).' Technical Specifications, Details and Parameters';
+    }
+
+    public function generateMetaDescription($category_id)
+    {
+        return 'Find out all ' . $this->generateH1($category_id) . ' Technical Specs and Detailed Information. Compare ' . $this->generateH1($category_id) . ' main Features (' . $this->generateCharacteristics(3, $category_id) . ') and browse more Info on '. $this->config->get('config_name') . '.';
+    }
+
     public function generateCountProducts($category_id)
     {
         $countProducts = $this->model_catalog_category->getProductsCount($category_id);
