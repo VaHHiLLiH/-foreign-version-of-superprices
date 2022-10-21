@@ -730,7 +730,7 @@ class ControllerProductProduct extends Controller {
                 return false;
             }
             foreach ($group_chars['subspecs'] as $chars) {
-                if (array_key_exists($chars['name'], $const_char)){
+                if (array_key_exists($chars['name'], $const_char) && !$const_char[$chars['name']]){
                     $const_char[$chars['name']] = $chars['value'];
                 }
             }
