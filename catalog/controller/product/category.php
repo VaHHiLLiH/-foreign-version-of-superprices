@@ -102,8 +102,8 @@ class ControllerProductCategory extends Controller {
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
 		$data['category_description'] = $this->generateDescription($category_id);
+        var_dump($category_info);die();
 		if ($category_info) {
-            var_dump('zahoju');die();
 			$this->document->setTitle($category_info['meta_title']);
 			$this->document->setDescription($category_info['meta_description']);
 			$this->document->setKeywords($category_info['meta_keyword']);
