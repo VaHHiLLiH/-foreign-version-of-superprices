@@ -540,7 +540,7 @@ class ControllerProductProduct extends Controller {
                                 ];
                                 if ($this->checkToChars($const_char, $product_chars)) {
                                     $brand = $this->generateBrand($product_id);
-                                    return sprintf($this->language->get('Digital Pianos'), $this->generateH1($product_id), $brand, $const_char['Тип инструмента'], $const_char['Количество клавиш'], $const_char['Размер клавиш'], $const_char['Педали'], $const_char['Вес']);
+                                    return sprintf($this->language->get('Digital Pianos'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество клавиш'], $const_char['Размер клавиш'], $const_char['Педали'], $const_char['Вес']);
                                 } else {
                                     return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
                                 }
@@ -603,7 +603,7 @@ class ControllerProductProduct extends Controller {
                                 ];
                                 if ($this->checkToChars($const_char, $product_chars)) {
                                     $brand = $this->generateBrand($product_id);
-                                    return sprintf($this->language->get('MIDI Keyboards'), $this->generateH1($product_id), $brand, $const_char['Тип инструмента'], $const_char['Количество клавиш'], $const_char['Размер клавиш'], $const_char['Педали'], $const_char['Вес']);
+                                    return sprintf($this->language->get('MIDI Keyboards'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество клавиш'], $const_char['Размер клавиш'], $const_char['Педали'], $const_char['Вес']);
                                 } else {
                                     return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
                                 }
