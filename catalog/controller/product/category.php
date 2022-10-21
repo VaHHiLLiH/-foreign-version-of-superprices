@@ -175,6 +175,7 @@ class ControllerProductCategory extends Controller {
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
 
+            var_dump('zahoju');die();
 			foreach ($results as $result) {
 				if ($result['image']) {
 					$image = $result['image'];
@@ -220,7 +221,6 @@ class ControllerProductCategory extends Controller {
 				);
 			}
 
-            var_dump('zahoju');die();
 			$url = '';
 
 			if (isset($this->request->get['filter'])) {
