@@ -43,11 +43,11 @@ $_['Phone_smart'] = 'Check here all the technical specifications of the Smartpho
 //
 $_['Phone_button'] = 'Check here all the technical specifications of the Keypad Moblie Phones (Samsung, LG, Ericsson, Sony, Philips, Siemens). Browse through the detailed information and compare it\'s main parameters: Battery Life, Memory Storage, SIM Card Slot Count, Primary Camera Resolution, Connector Type, Device Features, etc.';
 // две строки h1
-$_['Phone_smart_child'] = 'Which is the best %s to buy? Easily compare main technical specifications of %s: Battery Life, RAM, CPU, Phone Screen Size, SIM Card Slot Count, Primary Camera Resolution, Connector Type, etc. and decide which Smartphone suits you the most.';
+$_['Phone_smart_child'] = 'Which is the best model of %s to buy? Easily compare main technical specifications of %s: Battery Life, RAM, CPU, Phone Screen Size, SIM Card Slot Count, Primary Camera Resolution, Connector Type, etc. and decide which Smartphone suits you the most.';
 // две строки h1
-$_['Phone_button_child'] = 'Which is the best %s to buy? Easily compare main technical specifications of %s: Battery Life, Memory Storage, SIM Card Slot Count, Primary Camera Resolution, Connector Type, Device Features, etc. and decide which Phone suits you the most.';
-// две строки h1
-$_['Monitors_child'] = 'Which is the best %s to buy? Easily compare main technical specifications of %s: Screen Size, Resolution Standard, Connectivity Technology, Screen Surface, Display Type, etc. and decide which monitor suits you the most.';
+$_['Phone_button_child'] = 'Which is the best model of %s to buy? Easily compare main technical specifications of %s: Battery Life, Memory Storage, SIM Card Slot Count, Primary Camera Resolution, Connector Type, Device Features, etc. and decide which Phone suits you the most.';
+// h1, Кол-во товаров в категории и 5 параметров
+$_['Monitors_child'] = 'Which is the best model of %s to buy? Browse through the specs of %s Monitors in this category. Easily compare its main technical specifications: %s and decide which Monitor meets your requirements.';
 // Первая строка H1, далее 3 бренда и 5 параметров
 $_['Musical_child'] = 'Check here all the technical specifications of the %s (%s etc.). Browse through the detailed information and compare it\'s main technical specifications: %s etc.';
 // 2 h1 и 5 параметров
@@ -56,11 +56,9 @@ $_['Musical_post_child']  = 'Which is the best %s to buy? Easily compare main te
 $_['Cameras_child'] = 'Check here all the technical specifications of the %s (%s etc.). Browse through the detailed information and compare it\'s main parameters: %s etc.';
 // 2 H1 и 5 параметров
 $_['Cameras_post_child'] = 'Which is the best %s to buy? Easily compare main technical specifications of %s: %s and decide which Camera suits you the most.';
-// H1 и три бренда
-$_['Smartwatch_child'] = 'Check here all the technical specifications of the %s (%s etc.). Browse through the detailed information and compare it\'s main parameters: Display Type, Shape, Case Material Type, Connectivity Technology, IP Rating, Battery Life and other special feautures.';
+// H1 и количество
+$_['Smartwatch_child'] = 'Which is the best model of %s to buy? Browse through the specs of %s Smart watches in this category. Easily compare its main technical specifications: Display Type, Shape, Case Material Type, Connectivity Technology, IP Rating, Battery Life, etc. and decide which Smart watch meets your requirements.';
 // два h1
-$_['Smartwatch_post_child'] = 'Which is the best %s to buy? Easily compare main technical specifications of %s: Display Type, Shape, Case Material Type, Connectivity Technology, IP Rating, Battery Life, etc. and decide which model suits you the most.';
-// два h1
-$_['Consoles_child'] = 'Which is the best %s to buy? Easily compare main technical specifications of %s: Release date, Console Type, HD and 4K UHD Support, SSD availability, etc. and decide which Gaming Console suits you the most.';
+$_['Consoles_child'] = 'Which is the best model of %s to buy? Easily compare main technical specifications of %s: Release date, Console Type, HD and 4K UHD Support, SSD availability, etc. and decide which Gaming Console suits you the most.';
 // Первые 2 строки названия брендов, следущие 5 - товары, но в одной строке
 $_['GPU_child'] = 'Which is the best %s GPU to buy? Easily compare main technical specifications of %s Graphics Cards: Core Clock Speed, Core Count, Memory Type and Size, Video Output Ports, etc. Find out which model suits you the most: %s etc.';

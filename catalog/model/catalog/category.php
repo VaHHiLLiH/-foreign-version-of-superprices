@@ -120,4 +120,11 @@ class ModelCatalogCategory extends Model {
 
         return $query;
     }
+
+    public function getProductsCount($category_id)
+    {
+        $query = $this->db->query("SELECT COUNT(*) as count FROM " . DB_PREFIX . "product_to_category WHERE category_id = " . (int)$category_id);
+
+        return $query->row;
+    }
 }

@@ -446,7 +446,7 @@ class ControllerProductCategory extends Controller {
 
         } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 2){
 
-            return sprintf($this->language->get('Monitors_child'), $this->generateH1($category_id), $this->generateParentH1($category_id));
+            return sprintf($this->language->get('Monitors_child'), $this->generateH1($category_id), $this->generateCountProducts($category_id), $this->generateCharacteristics(5, $category_id));
 
         } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 3) {
 
@@ -498,11 +498,11 @@ class ControllerProductCategory extends Controller {
 
         } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 6) {
 
-            return sprintf($this->language->get('Smartwatch_child'), $this->generateH1($category_id), $this->generateBrands(3, $category_id));
+            return sprintf($this->language->get('Smartwatch_child'), $this->generateH1($category_id), $this->generateCountProducts($category_id));
 
         } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 6) {
 
-            return sprintf($this->language->get('Smartwatch_post_child'), $this->generateH1($category_id), $this->generateH1($category_id));
+            return sprintf($this->language->get('Smartwatch_child'), $this->generateH1($category_id), $this->generateCountProducts($category_id));
 
         } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 7) {
 
@@ -524,6 +524,13 @@ class ControllerProductCategory extends Controller {
 
 
         return '';
+    }
+
+    public function generateCountProducts($category_id)
+    {
+        $countProducts = $this->model_catalog_category->getProductsCount($category_id);
+
+        return $countProducts['count'].' ';
     }
 
     public function generateH1($category_id)
