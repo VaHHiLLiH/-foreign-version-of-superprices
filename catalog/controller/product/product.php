@@ -18,6 +18,8 @@ class ControllerProductProduct extends Controller {
 
         $catFromProduct = $this->model_catalog_category->getProductCategories($this->request->get['product_id']);
 
+        $data['product_description'] = $this->generateDescription(end($catFromProduct)['category_id'], $this->request->get['product_id']);
+
         if(!empty($catFromProduct)) {
 
             if(count($catFromProduct) > 1) {
@@ -426,5 +428,305 @@ class ControllerProductProduct extends Controller {
             $this->getNextBreadCrumbs($categories_ids, $breadcrumbs, $actualCategory['category_id'], $actualCategory['name']);
         }
 
+    }
+
+    public function generateDescription($category_id, $product_id)
+    {
+        $this->load->model('catalog/category');
+        $this->load->model('catalog/product');
+
+        $parent_category = $this->model_catalog_product->getParentCategory($product_id);
+        switch ($parent_category) {
+            case 1:
+                $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                if (!empty($product_chars)) {
+                    $const_char = [
+                        'Частота процессора'    => false,
+                        'Количество ядер'       => false,
+                    ];
+                    if ($this->checkToChars($const_char, $product_chars)) {
+                        return sprintf($this->language->get('CPU'), $this->generateH1($product_id));
+                    } else {
+                        return sprintf($this->language->get('CPU_empty'), $this->generateH1($product_id));
+                    }
+                } else {
+                    return sprintf($this->language->get('CPU_empty'), $this->generateH1($product_id));
+                }
+                break;
+            case 2:
+                $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                if (!empty($product_chars)) {
+                    $const_char = [
+                        'Диагональ'    => false,
+                        'Разрешение'       => false,
+                        'Входы'       => false,
+                    ];
+                    if ($this->checkToChars($const_char, $product_chars)) {
+                        return sprintf($this->language->get('Monitors'), $this->generateH1($product_id), $this->generateH1($product_id));
+                    } else {
+                        return sprintf($this->language->get('Monitors_empty'), $this->generateH1($product_id));
+                    }
+                } else {
+                    return sprintf($this->language->get('Monitors_empty'), $this->generateH1($product_id));
+                }
+                break;
+            case 3:
+                $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                if (!empty($product_chars)) {
+                    $const_char = [
+                        'Операционная система'    => false,
+                        'Тип экрана'       => false,
+                    ];
+                    if ($this->checkToChars($const_char, $product_chars)) {
+                        return sprintf($this->language->get('Phones'), $this->generateH1($product_id));
+                    } else {
+                        return sprintf($this->language->get('Phones_empty'), $this->generateH1($product_id));
+                    }
+                } else {
+                    return sprintf($this->language->get('Phones_empty'), $this->generateH1($product_id));
+                }
+                break;
+            case 4:
+                $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                if (!empty($product_chars)) {
+                    $const_char = [
+                        'Общее число пикселов'    => false,
+                        'Тип камеры'       => false,
+                    ];
+                    if ($this->checkToChars($const_char, $product_chars)) {
+                        return sprintf($this->language->get('Cameras'), $this->generateH1($product_id), $this->generateH1($product_id));
+                    } else {
+                        return sprintf($this->language->get('Cameras_empty'), $this->generateH1($product_id));
+                    }
+                } else {
+                    return sprintf($this->language->get('Cameras_empty'), $this->generateH1($product_id));
+                }
+                break;
+            case 5:
+                $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                if (!empty($product_chars)) {
+                    $category_path = $this->model_catalog_category->getCategoryPath($category_id);
+                    switch ($category_path[1]['path_id']) {
+                        case 42:
+                            // Accordion
+                            $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                            if (!empty($product_chars)) {
+                                $const_char = [
+                                    'Тип инструмента' => false,
+                                ];
+                                if ($this->checkToChars($const_char, $product_chars)) {
+                                    return sprintf($this->language->get('Accordion'), $this->generateH1($product_id));
+                                } else {
+                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                }
+                            } else {
+                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                            }
+                            break;
+                        case 38:
+                            //Digital Piano
+                            $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                            if (!empty($product_chars)) {
+                                $const_char = [
+                                    'Производитель' => false,
+                                    'Тип инструмента'  => false,
+                                    'Количество клавиш'  => false,
+                                    'Размер клавиш'  => false,
+                                    'Педали'  => false,
+                                    'Вес'  => false,
+                                ];
+                                if ($this->checkToChars($const_char, $product_chars)) {
+                                    return sprintf($this->language->get('Digital Pianos'), $this->generateH1($product_id));
+                                } else {
+                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                }
+                            } else {
+                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                            }
+                            break;
+                        case 40:
+                            //Electric bass
+                            $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                            if (!empty($product_chars)) {
+                                $const_char = [
+                                    'Производитель' => false,
+                                    'Тип'  => false,
+                                    'Количество струн'  => false,
+                                    'Материал корпуса'  => false,
+                                    'Материал грифа'  => false,
+                                    'Схема звукоснимателей'  => false,
+                                ];
+                                if ($this->checkToChars($const_char, $product_chars)) {
+                                    return sprintf($this->language->get('Electric Bass'), $this->generateH1($product_id));
+                                } else {
+                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                }
+                            } else {
+                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                            }
+                            break;
+                        case 36:
+                            // Electric guitar
+                            $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                            if (!empty($product_chars)) {
+                                $const_char = [
+                                    'Производитель' => false,
+                                    'Тип'  => false,
+                                    'Количество струн'  => false,
+                                    'Материал корпуса'  => false,
+                                    'Материал грифа'  => false,
+                                    'Схема звукоснимателей'  => false,
+                                ];
+                                if ($this->checkToChars($const_char, $product_chars)) {
+                                    return sprintf($this->language->get('Electric Guitars'), $this->generateH1($product_id));
+                                } else {
+                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                }
+                            } else {
+                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                            }
+                            break;
+                        case 39:
+                            // MIDI Keyboard
+                            $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                            if (!empty($product_chars)) {
+                                $const_char = [
+                                    'Производитель' => false,
+                                    'Тип инструмента'  => false,
+                                    'Количество клавиш'  => false,
+                                    'Размер клавиш'  => false,
+                                    'Педали'  => false,
+                                    'Вес'  => false,
+                                ];
+                                if ($this->checkToChars($const_char, $product_chars)) {
+                                    return sprintf($this->language->get('MIDI Keyboards'), $this->generateH1($product_id));
+                                } else {
+                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                }
+                            } else {
+                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                            }
+                            break;
+                        case 41:
+                            // Semi-acoustic
+                            $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                            if (!empty($product_chars)) {
+                                $const_char = [
+                                    'Производитель' => false,
+                                    'Тип'  => false,
+                                    'Количество струн'  => false,
+                                    'Материал корпуса'  => false,
+                                    'Материал грифа'  => false,
+                                    'Схема звукоснимателей'  => false,
+                                ];
+                                if ($this->checkToChars($const_char, $product_chars)) {
+                                    return sprintf($this->language->get('Semi-Acoustic'), $this->generateH1($product_id));
+                                } else {
+                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                }
+                            } else {
+                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                            }
+                            break;
+                        case 37:
+                            // Synthesizer
+                            $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                            if (!empty($product_chars)) {
+                                $const_char = [
+                                    'Производитель' => false,
+                                    'Тип'  => false,
+                                    'Количество клавиш'  => false,
+                                    'Размер клавиш'  => false,
+                                    'Количество тембров'  => false,
+                                    'Вес'  => false,
+                                ];
+                                if ($this->checkToChars($const_char, $product_chars)) {
+                                    return sprintf($this->language->get('Synthesizers'), $this->generateH1($product_id));
+                                } else {
+                                    return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                                }
+                            } else {
+                                return sprintf($this->language->get('Musical_empty'), $this->generateH1($product_id));
+                            }
+                            break;
+                    }
+                }
+                break;
+            case 6:
+                $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                if (!empty($product_chars)) {
+                    $const_char = [
+                        'Емкость аккумулятора'    => false,
+                    ];
+                    if ($this->checkToChars($const_char, $product_chars)) {
+                        return sprintf($this->language->get('Smartwatches'), $this->generateH1($product_id), $this->generateH1($product_id));
+                    } else {
+                        return sprintf($this->language->get('Smartwatches_empty'), $this->generateH1($product_id));
+                    }
+                } else {
+                    return sprintf($this->language->get('Smartwatches_empty'), $this->generateH1($product_id));
+                }
+                break;
+            case 7:
+                $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                if (!empty($product_chars)) {
+                    $const_char = [
+                        'Тип'    => false,
+                    ];
+                    if ($this->checkToChars($const_char, $product_chars)) {
+                        return sprintf($this->language->get('Consoles'), $this->generateH1($product_id), $this->generateH1($product_id));
+                    } else {
+                        return sprintf($this->language->get('Consoles_empty'), $this->generateH1($product_id));
+                    }
+                } else {
+                    return sprintf($this->language->get('Consoles_empty'), $this->generateH1($product_id));
+                }
+                break;
+            case 8:
+                $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
+                if (!empty($product_chars)) {
+                    $const_char = [
+                        'Объем видеопамяти'    => false,
+                        'Тип видеопамяти'    => false,
+                        'Частота видеопамяти'    => false,
+                    ];
+                    if ($this->checkToChars($const_char, $product_chars)) {
+                        return sprintf($this->language->get('GPU'), $this->generateH1($product_id));
+                    } else {
+                        return sprintf($this->language->get('GPU_empty'), $this->generateH1($product_id));
+                    }
+                } else {
+                    return sprintf($this->language->get('GPU_empty'), $this->generateH1($product_id));
+                }
+                break;
+        }
+        return '';
+    }
+
+    public function checkToChars($chars_const, $product_chars)
+    {
+        foreach ($product_chars as $group_chars) {
+            if (empty($group_chars['subspecs'])) {
+                return false;
+            }
+            foreach ($group_chars['subspecs'] as $chars) {
+                if (array_key_exists($chars['name'], $chars_const)){
+                    $chars_const[$chars['name']] = true;
+                }
+            }
+        }
+        foreach ($chars_const as $char_const) {
+            if (!$char_const){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public function generateH1($product_id)
+    {
+        $product_h1 = $this->model_catalog_product->getProduct($product_id);
+
+        return $product_h1['name'];
     }
 }

@@ -51,7 +51,7 @@ $_['Monitors_child'] = 'Which is the best model of %s to buy? Browse through the
 // Первая строка H1, далее 3 бренда и 5 параметров
 $_['Musical_child'] = 'Check here all the technical specifications of the %s (%s etc.). Browse through the detailed information and compare it\'s main technical specifications: %s etc.';
 // 2 h1 и 5 параметров
-$_['Musical_post_child']  = 'Which is the best %s to buy? Easily compare main technical specifications of %s: %s and decide which model suits you the most.';
+$_['Musical_post_child']  = 'Which is the best model of %s to buy? Easily compare main technical specifications of %s: %s and decide which Musical Instrument suits you the most.';
 // Первая строка H1, дальше 3 бренда и 5 параметров
 $_['Cameras_child'] = 'Check here all the technical specifications of the %s (%s etc.). Browse through the detailed information and compare it\'s main parameters: %s etc.';
 // 2 H1 и 5 параметров

@@ -50,3 +50,41 @@ $_['tab_review']               = 'Reviews (%s)';
 $_['error_name']               = 'Warning: Review Name must be between 3 and 25 characters!';
 $_['error_text']               = 'Warning: Review Text must be between 25 and 1000 characters!';
 $_['error_rating']             = 'Warning: Please select a review rating!';
+
+/*-------------------------Generate description--------------------*/
+// h1
+$_['CPU'] = 'The %s is a processor with CPU Clock Speed up to Частота процессора. It contains Количество ядер CPU cores.';
+$_['CPU_empty'] = 'The %s is a CPU with technical specifications listed below:';
+// 2 h1
+$_['Monitors'] = 'The %s is a monitor with a screen diagonal of Диагональ and screen resolution Разрешение. It has such Connectors as: Входы. See the %s full list of Specs below:';
+// h1
+$_['Monitors_empty'] = 'The %s is a monitor with technical specifications listed below:';
+//h1
+$_['Phones'] = 'The %s is a TYPE with a screen diagonal of Diagonal, RAM RAM and Battery capacity battery capacity. It is a TYPE with SIM SIM card slots.';
+$_['Phones_empty'] = 'The %s is a phone with technical specifications listed below:';
+// 2 h1
+$_['Cameras'] = 'The %s is a Общее число пикселов megapixel Тип камеры camera. See the %s list of Specs below:';
+// h1
+$_['Cameras_empty'] = 'The H1 is a camera with technical specifications listed below:';
+/*--------------Musical Instruments-------------------------*/
+// h1
+$_['Accordion'] = 'The %s is a Тип инструмента with technical specifications listed below:';
+$_['Digital Pianos'] = 'The %s is a Производитель Тип инструмента with Количество клавиш Размер клавиш Keyboard Keys. It has Педали Pedals and weights Вес.';
+$_['Electric Bass'] = 'The %s is a Производитель Тип with Количество струн Strings. It is made of Материал корпуса and its Fretboard is made of Материал грифа. It has Схема звукоснимателей Guitar Pickup Configuration. ';
+$_['Electric Guitars'] = 'The %s is a Производитель Тип with Количество струн Strings. It is made of Материал корпуса and its Fretboard is made of Материал корпуса. It has Схема звукоснимателей Guitar Pickup Configuration. ';
+$_['MIDI Keyboards'] = 'The %s is a Производитель Тип инструмента with Количество клавиш Размер клавиш Keyboard Keys. It has Педали Pedals and weights Вес.';
+$_['Semi-Acoustic'] = 'The %s is a Производитель Тип with Количество струн Strings. It is made of Материал корпуса and its Fretboard is made of Материал грифа. It has Схема звукоснимателей Guitar Pickup Configuration. ';
+$_['Synthesizers'] = 'The %s is a Производитель Тип with Количество клавиш Размер клавиш Keyboard Keys. It weights Вес and has Количество тембров Number of Tones.';
+$_['Musical_empty'] = 'The %s is a TYPE with technical specifications listed below:';
+/*--------------End of Musical Instruments------------------*/
+// 2 h1
+$_['Smartwatches'] = 'The %s is a Тип with Емкость аккумулятора Battery. To find out all the %s technical specifications check the table below:';
+// h1
+$_['Smartwatches_empty'] = 'The %s is a smartwatch with technical specifications listed below:';
+// 2 h1
+$_['Consoles'] = 'The %s is a Тип gaming console. To find out all the %s technical specifications check the table below:';
+// h1
+$_['Consoles_empty'] = 'The %s is a gaming console with technical specifications listed below:';
+// h1
+$_['GPU'] = 'The %s is a GPU with Объем видеопамяти RAM. It is based on Тип видеопамяти with Core Clock Speed up to Частота видеопамяти.';
+$_['GPU_empty'] = 'The %s is a GPU with technical specifications listed below:';
