@@ -595,7 +595,7 @@ class ControllerProductProduct extends Controller {
                             $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                             if (!empty($product_chars)) {
                                 $const_char = [
-                                    'Тип инструмента'  => false,
+                                    'Тип'  => false,
                                     'Количество клавиш'  => false,
                                     'Размер клавиш'  => false,
                                     'Педали'  => false,
