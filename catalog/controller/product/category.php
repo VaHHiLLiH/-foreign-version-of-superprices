@@ -86,7 +86,7 @@ class ControllerProductCategory extends Controller {
 		} else {
 			$category_id = 0;
 		}
-
+        var_dump('zahoju');die();
         $category_path = $this->model_catalog_category->getCategoryPath($category_id);
 
 		foreach ($category_path as $cat_id) {
@@ -102,7 +102,6 @@ class ControllerProductCategory extends Controller {
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
 		$data['category_description'] = $this->generateDescription($category_id);
-        var_dump($category_info);die();
 		if ($category_info) {
 			$this->document->setTitle($category_info['meta_title']);
 			$this->document->setDescription($category_info['meta_description']);
