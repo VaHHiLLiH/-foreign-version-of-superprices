@@ -54,7 +54,7 @@ $_['error_rating']             = 'Пожалуйста, выберите оце�
 
 /*-------------------------Generate description--------------------*/
 // h1
-$_['CPU'] = '%s is a processor with CPU Clock Speed up to %s. It contains %s CPU cores.';
+$_['CPU'] = '%s is a %s processor with %s Socket and CPU Clock Speed up to %s. It contains %s CPU cores. More detailed information about this %s Processor check up in the table below.';
 $_['CPU_empty'] = '%s is a CPU with technical specifications listed below:';
 // 2 h1
 $_['Monitors'] = '%s is a monitor with a screen diagonal of %s and screen resolution %s. It has such Connectors as: %s. See the %s full list of Specs below:';
@@ -83,7 +83,7 @@ $_['Smartwatches'] = '%s is a %s with %s Battery. To find out all the %s technic
 // h1
 $_['Smartwatches_empty'] = '%s is a smartwatch with technical specifications listed below:';
 // 2 h1
-$_['Consoles'] = '%s is a %s gaming console. To find out all the %s technical specifications check the table below:';
+$_['Consoles'] = '%s is a %s gaming console with %s and %s support. To find out all the %s technical specifications check the table below:';
 // h1
 $_['Consoles_empty'] = '%s is a gaming console with technical specifications listed below:';
 // h1

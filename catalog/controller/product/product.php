@@ -442,11 +442,14 @@ class ControllerProductProduct extends Controller {
                 $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                 if (!empty($product_chars)) {
                     $const_char = [
+                        'Техпроцесс'            => false,
+                        'Socket'                => false,
                         'Частота процессора'    => false,
                         'Количество ядер'       => false,
                     ];
                     if ($this->checkToChars($const_char, $product_chars)) {
-                        return sprintf($this->language->get('CPU'), $this->generateH1($product_id), $const_char['Частота процессора'], $const_char['Количество ядер']);
+                        $brand = $this->generateBrand($product_id);
+                        return sprintf($this->language->get('CPU'), $this->generateH1($product_id), $const_char['Техпроцесс'], $const_char['Socket'], $const_char['Частота процессора'], $const_char['Количество ядер'], $brand);
                     } else {
                         return sprintf($this->language->get('CPU_empty'), $this->generateH1($product_id));
                     }
@@ -676,10 +679,12 @@ class ControllerProductProduct extends Controller {
                 $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                 if (!empty($product_chars)) {
                     $const_char = [
-                        'Тип'    => false,
+                        'Тип'           => false,
+                        'Разъемы'       => false,
+                        'Коммуникации'  => false,
                     ];
                     if ($this->checkToChars($const_char, $product_chars)) {
-                        return sprintf($this->language->get('Consoles'), $this->generateH1($product_id), $const_char['Тип'], $this->generateH1($product_id));
+                        return sprintf($this->language->get('Consoles'), $this->generateH1($product_id), $const_char['Тип'], $const_char['Разъемы'], $const_char['Коммуникации'], $this->generateH1($product_id));
                     } else {
                         return sprintf($this->language->get('Consoles_empty'), $this->generateH1($product_id));
                     }
