@@ -66,7 +66,7 @@ $_['Phones_empty'] = 'The %s is a phone with technical specifications listed bel
 // 2 h1
 $_['Cameras'] = 'The %s is a %s megapixel %s camera. See the %s list of Specs below:';
 // h1
-$_['Cameras_empty'] = 'The H1 is a camera with technical specifications listed below:';
+$_['Cameras_empty'] = 'The %s is a camera with technical specifications listed below:';
 /*--------------Musical Instruments-------------------------*/
 // h1
 $_['Accordion'] = 'The %s is a %s with technical specifications listed below:';
