@@ -637,13 +637,20 @@ class ControllerProductCategory extends Controller {
     public function getFullCategoryName($category_id)
     {
         $category_path = $this->model_catalog_category->getCategoryPath($category_id);
-        $category_name = '';
+        $category_name = [];
         foreach ($category_path as $path) {
             $category_info = $this->model_catalog_category->getCategory($path['path_id']);
+            $current_category_name = $category_info['name'];
 
-            $category_name .= str_replace($category_name, '', $category_info['name']).' ';
+            if(!empty($category_name)) {
+                foreach ($category_name as $name) {
+                    $current_category_name = str_replace($name, '', $current_category_name);
+                }
+            }
+
+            $category_name[] = $current_category_name;
         }
 
-        return trim($category_name, ', ');
+        return trim(implode(' ', $category_name));
     }
 }
