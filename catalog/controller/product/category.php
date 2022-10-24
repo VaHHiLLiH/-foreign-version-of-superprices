@@ -660,6 +660,5 @@ class ControllerProductCategory extends Controller {
         }*/
 
         //return trim(implode(' ', $category_name));
-
     }
 }
