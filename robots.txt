@@ -98,4 +98,3 @@ Disallow: /*affiliates
 Allow: /catalog/view/javascript/
 Allow: /catalog/view/theme/*/
 Clean-param: tracking
-
