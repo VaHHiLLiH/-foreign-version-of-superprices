@@ -636,8 +636,15 @@ class ControllerProductCategory extends Controller {
 
     public function getFullCategoryName($category_id)
     {
-        $category_path = $this->model_catalog_category->getCategoryPath($category_id);
-        $category_name = [];
+        $category_info = $this->model_catalog_category->getCategory($category_id);
+        if ($category_info['parent_id'] != 0) {
+            $category_parent_info = $this->model_catalog_category->getCategory($category_info['parent_id']);
+
+            return $category_parent_info['name'] . ' ' . str_replace($category_parent_info['name'], '', $category_info['name']);
+        } else {
+            return $category_info['name'];
+        }
+        /*$category_name = [];
         foreach ($category_path as $path) {
             $category_info = $this->model_catalog_category->getCategory($path['path_id']);
             $current_category_name = $category_info['name'];
@@ -649,8 +656,8 @@ class ControllerProductCategory extends Controller {
             }
 
             $category_name[] = $current_category_name;
-        }
+        }*/
 
-        return trim(implode(' ', $category_name));
+        //return trim(implode(' ', $category_name));
     }
 }
