@@ -88,7 +88,7 @@ $_['Musical_empty'] = '%s is a TYPE with technical specifications listed below:'
 // 2 h1
 $_['Smartwatches'] = '%s is a %s with %s Battery. To find out all the %s technical specifications check the table below:';
 // h1
-$_['Smartwatches_empty'] = '%s is a smartwatch with technical specifications listed below:';
+$_['Smartwatches_empty'] = '%s is a Smart Watch with technical specifications listed below:';
 // 2 h1
 $_['Consoles'] = '%s is a %s gaming console with %s and %s support. To find out all the %s technical specifications check the table below:';
 // h1
