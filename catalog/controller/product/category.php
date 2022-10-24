@@ -638,7 +638,7 @@ class ControllerProductCategory extends Controller {
     {
         $category_info = $this->model_catalog_category->getCategory($category_id);
         $array_categories_ids = [500, 501, 36, 37, 38, 39, 40, 41, 42, 268, 269];
-        if ($category_info['parent_id'] != 0 || (!in_array($category_id, $array_categories_ids))) {
+        if ($category_info['parent_id'] != 0 && (!in_array($category_id, $array_categories_ids))) {
             $category_parent_info = $this->model_catalog_category->getCategory($category_info['parent_id']);
 
             return $category_parent_info['name'] . ' ' . str_replace($category_parent_info['name'], '', $category_info['name']);
