@@ -377,6 +377,7 @@ var compare = {
 	'goToCompare': function() {
 		document.location.href = 'http://'+document.location.host+'/index.php?route=product/compare';
 	},
+
 }
 
 var modalToComparison = {
