@@ -54,7 +54,7 @@ $_['error_rating']             = 'Пожалуйста, выберите оце�
 
 /*-------------------------Generate description--------------------*/
 // h1
-$_['CPU'] = '%s is a %s processor with %s Socket and CPU Clock Speed up to %s. It contains %s CPU cores. More detailed information about this %s Processor check up in the table below.';
+$_['CPU'] = '%s is a %s (nanometre) processor with %s Socket and CPU Clock Speed up to %s. It contains %s CPU cores. More detailed information about this %s Processor check up in the table below.';
 $_['CPU_empty'] = '%s is a CPU with technical specifications listed below:';
 // 2 h1
 $_['Monitors'] = '%s is a monitor with a screen diagonal of %s and screen resolution %s. It has such Connectors as: %s. See the %s full list of Specs below:';
@@ -75,7 +75,7 @@ $_['Electric Bass'] = '%s is a %s %s with %s Strings. It is made of %s and its F
 $_['Electric Guitars'] = '%s is a %s %s with %s Strings. It is made of %s and its Fretboard is made of %s. It has %s Guitar Pickup Configuration. ';
 $_['MIDI Keyboards'] = '%s is a %s %s with %s %s Keyboard Keys. It has %s Pedals and weights %s.';
 $_['Semi-Acoustic'] = '%s is a %s %s with %s Strings. It is made of %s and its Fretboard is made of %s. It has %s Guitar Pickup Configuration. ';
-$_['Synthesizers'] = '%s is a %s %s with %s %s Keyboard Keys. It weights %s and has %s Number of Tones.';
+$_['Synthesizers'] = '%s is a %s %s with %s Keyboard Keys and a %s Case. To find out all the %s technical specifications check the table below:';
 
 $_['Accordion_empty'] = '%s is an Accordion with technical specifications listed below:';
 $_['Digital_Pianos_empty'] = '%s is a Digital Piano with technical specifications listed below:';

@@ -539,6 +539,7 @@ class ControllerProductProduct extends Controller {
                                     'Тип'  => false,
                                     'Количество клавиш'  => false,
                                     'Размер клавиш'  => false,
+                                    'Педали'    => false,
                                     'Вес'  => false,
                                 ];
                                 if ($this->checkToChars($const_char, $product_chars)) {
@@ -642,13 +643,11 @@ class ControllerProductProduct extends Controller {
                                 $const_char = [
                                     'Тип'  => false,
                                     'Количество клавиш'  => false,
-                                    'Размер клавиш'  => false,
-                                    'Вес'  => false,
-                                    'Количество тембров'  => false,
+                                    'Корпус'  => false,
                                 ];
                                 if ($this->checkToChars($const_char, $product_chars)) {
                                     $brand = $this->generateBrand($product_id);
-                                    return sprintf($this->language->get('Synthesizers'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество клавиш'], $const_char['Размер клавиш'], $const_char['Вес'], $const_char['Количество тембров']);
+                                    return sprintf($this->language->get('Synthesizers'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество клавиш'], $const_char['Корпус'], $this->generateH1($product_id));
                                 } else {
                                     return sprintf($this->language->get('Synthesizers_empty'), $this->generateH1($product_id));
                                 }
