@@ -107,7 +107,9 @@ class ControllerProductCategory extends Controller {
 			$this->document->setDescription($this->generateMetaDescription($category_id));
 			$this->document->setKeywords($category_info['meta_keyword']);
 
-			$data['heading_title'] = $category_info['name'];
+			//$data['heading_title'] = $category_info['name'];
+
+			$data['heading_title'] = $this->getFullCategoryName($category_info['category_id']);
 
 			$data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
 
@@ -630,5 +632,18 @@ class ControllerProductCategory extends Controller {
             $chars_string .= $key.', ';
         }
         return trim($chars_string, ', ');
+    }
+
+    public function getFullCategoryName($category_id)
+    {
+        $category_path = $this->model_catalog_category->getCategoryPath($category_id);
+        $category_name = '';
+        foreach ($category_path as $path) {
+            $category_info = $this->model_catalog_category->getCategory($path['path_id']);
+
+            $category_name .= str_replace($category_name, '', $category_info['name']).' ';
+        }
+
+        return trim($category_name, ', ');
     }
 }
