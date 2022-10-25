@@ -1,5 +1,5 @@
 <?php
-$path = '/var/www/www-root/data/www/everydayshop.ru';
+$path = '/var/www/www-root/data/www/everydayshop.ru/';
 
 // Configuration
 require_once($path . 'config.php');
