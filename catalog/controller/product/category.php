@@ -601,7 +601,7 @@ class ControllerProductCategory extends Controller {
     {
         return 'param1, param2, param3';
 
-        $chars_count = $this->model_catalog_category->getCountChars();
+        /*$chars_count = $this->model_catalog_category->getCountChars();
         $characteristics = $this->model_catalog_category->getProductsChars($category_id);
         // Строка для характеристик
         $chars_string = '';
@@ -636,7 +636,7 @@ class ControllerProductCategory extends Controller {
         foreach ($chars_ar as $key => $char){
             $chars_string .= $key.', ';
         }
-        return trim($chars_string, ', ');
+        return trim($chars_string, ', ');*/
     }
 
     public function getFullCategoryName($category_id)
