@@ -603,6 +603,7 @@ class ControllerProductCategory extends Controller {
     public function generateCharacteristics($limit, $category_id)
     {
         return 'param1, param2, param3';
+        echo'wtf';die();
         /*$characteristics = $this->model_catalog_category->getProductsChars($category_id);
         // Строка для характеристик
         $chars_string = '';
