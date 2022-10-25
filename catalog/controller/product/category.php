@@ -602,13 +602,13 @@ class ControllerProductCategory extends Controller {
 
     public function generateCharacteristics($limit, $category_id)
     {
-        var_dump('What the fox said');
         $characteristics = $this->model_catalog_category->getProductsChars($category_id);
         // Строка для характеристик
         $chars_string = '';
         // массив где будет кол-во каждой характеристики
         $count_chars = [];
         // в $characteristics характеристики всех товаров, разворачиваю на характеристики каждого товара
+        var_dump('i am still living');
         foreach ($characteristics as $json_product_chars) {
             // разворачиваю характеристики для каждого товара
             $product_chars = json_decode($json_product_chars['spec'], true);
