@@ -103,7 +103,6 @@ class ControllerProductCategory extends Controller {
 
 
 		$data['category_description'] = /*$this->generateDescription($category_id);*/'';
-        var_dump('Why are you falling?');die();
 		if ($category_info) {
 			$this->document->setTitle($this->generateMetaTitle($category_id));
 			$this->document->setDescription($this->generateMetaDescription($category_id));
@@ -369,6 +368,7 @@ class ControllerProductCategory extends Controller {
 
 			$data['continue'] = $this->url->link('common/home');
 
+            var_dump('Why are you falling?');die();
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['column_right'] = $this->load->controller('common/column_right');
 			$data['content_top'] = $this->load->controller('common/content_top');
