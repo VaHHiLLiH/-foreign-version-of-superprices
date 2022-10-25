@@ -106,8 +106,9 @@
         </div>
         {% endif %}
       </div>
-
-		{{ similarProducts }}
+		{% if similarProducts %}
+			{{ similarProducts }}
+		{% endif %}
 
       {{ content_bottom }}
     </div>

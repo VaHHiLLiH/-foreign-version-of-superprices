@@ -199,7 +199,9 @@ class ControllerProductProduct extends Controller {
 
             }
 
-             $data['similarProducts'] = $this->load->view('product/randomFourProducts', $fourProduct);
+            if (!empty($fourProduct['products'])) {
+                $data['similarProducts'] = $this->load->view('product/randomFourProducts', $fourProduct);
+            }
             /*-----*/
 
 			$this->response->setOutput($this->load->view('product/product', $data));
