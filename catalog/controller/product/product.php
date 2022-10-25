@@ -762,40 +762,54 @@ class ControllerProductProduct extends Controller {
 
     public function generateCharacteristics($limit, $category_id)
     {
-        $characteristics = $this->model_catalog_category->getProductsChars($category_id);
-        // Строка для характеристик
+        $chars_count = $this->model_catalog_category->getCountChars($category_id);
+
+        $charsOnPage = 5000;
+        $currentPage = 1;
+        $maxPage = ceil($chars_count/$charsOnPage);
+
         $chars_string = '';
-        // массив где будет кол-во каждой характеристики
-        $count_chars = [];
-        // в $characteristics характеристики всех товаров, разворачиваю на характеристики каждого товара
-        foreach ($characteristics as $json_product_chars) {
-            // разворачиваю характеристики для каждого товара
-            $product_chars = json_decode($json_product_chars['spec'], true);
-            if (!empty($product_chars)) {
-                // Потому что спаршено через жопу
-                if (!empty($product_chars['subspecs'])) {
-                    foreach ($product_chars['subspecs'] as $char) {
-                        $count_chars[$char['name']] = (!empty($count_chars[$char['name']])) ? ($count_chars[$char['name']] + 1) : 1;
-                    }
-                } else {
-                    foreach ($product_chars as $group_chars) {
-                        // Достаю сами характеристики и начинаю их считать
-                        if (!empty($group_chars['subspecs'])) {
-                            foreach ($group_chars['subspecs'] as $char) {
-                                $count_chars[$char['name']] = (!empty($count_chars[$char['name']])) ? ($count_chars[$char['name']] + 1) : 1;
+
+        while($currentPage <= $maxPage) {
+            $from = ($currentPage-1)*$charsOnPage;
+
+            $characteristics = $this->model_catalog_category->getProductsChars($category_id, $from, $charsOnPage);
+            // Строка для характеристик
+            $chars_string = '';
+            // массив где будет кол-во каждой характеристики
+            $count_chars = [];
+            // в $characteristics характеристики всех товаров, разворачиваю на характеристики каждого товара
+            foreach ($characteristics as $json_product_chars) {
+                // разворачиваю характеристики для каждого товара
+                $product_chars = json_decode($json_product_chars['spec'], true);
+                if (!empty($product_chars)) {
+                    // Потому что спаршено через жопу
+                    if (!empty($product_chars['subspecs'])) {
+                        foreach ($product_chars['subspecs'] as $char) {
+                            $count_chars[$char['name']] = (!empty($count_chars[$char['name']])) ? ($count_chars[$char['name']] + 1) : 1;
+                        }
+                    } else {
+                        foreach ($product_chars as $group_chars) {
+                            // Достаю сами характеристики и начинаю их считать
+                            if (!empty($group_chars['subspecs'])) {
+                                foreach ($group_chars['subspecs'] as $char) {
+                                    $count_chars[$char['name']] = (!empty($count_chars[$char['name']])) ? ($count_chars[$char['name']] + 1) : 1;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-        arsort($count_chars);
+            arsort($count_chars);
 
-        $chars_ar = array_slice($count_chars, 0, $limit);
+            $chars_ar = array_slice($count_chars, 0, $limit);
 
-        foreach ($chars_ar as $key => $char){
-            $chars_string .= $key.', ';
+            foreach ($chars_ar as $key => $char){
+                $chars_string .= $key.', ';
+            }
+            $currentPage++;
         }
+
         return trim($chars_string, ', ');
     }
 }
