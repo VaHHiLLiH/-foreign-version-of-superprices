@@ -101,7 +101,7 @@ class ControllerProductCategory extends Controller {
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
-		$data['category_description'] = $this->generateDescription($category_id);
+		//$data['category_description'] = $this->generateDescription($category_id);
 		if ($category_info) {
 		    var_dump('WHY are you falling?');die();
 			$this->document->setTitle($this->generateMetaTitle($category_id));
