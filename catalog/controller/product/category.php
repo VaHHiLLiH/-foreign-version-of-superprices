@@ -101,8 +101,7 @@ class ControllerProductCategory extends Controller {
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
-
-		$data['category_description'] = /*$this->generateDescription($category_id);*/'';
+		$data['category_description'] = $this->generateDescription($category_id);
 		if ($category_info) {
 			$this->document->setTitle($this->generateMetaTitle($category_id));
 			$this->document->setDescription($this->generateMetaDescription($category_id));
@@ -177,7 +176,7 @@ class ControllerProductCategory extends Controller {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
-
+            var_dump('WHY are you falling?');die();
 			foreach ($results as $result) {
 				if ($result['image']) {
 					$image = $result['image'];
@@ -337,7 +336,6 @@ class ControllerProductCategory extends Controller {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
 
-            var_dump('WHY are you falling?');die();
 			$pagination = new Pagination();
 			$pagination->total = $product_total;
 			$pagination->page = $page;
