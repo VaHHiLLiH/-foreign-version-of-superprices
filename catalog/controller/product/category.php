@@ -454,8 +454,9 @@ class ControllerProductCategory extends Controller {
             return sprintf($this->language->get('Monitors_child'), $this->generateH1($category_id), $this->generateCountProducts($category_id), $this->generateCharacteristics(5, $category_id));
 
         } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 3) {echo'Pervaya';
-
-            var_dump(sprintf($this->language->get('Phones'), $this->generateBrands(3, $category_id), $this->generateCharacteristics(5, $category_id)));
+            var_dump($this->language->get('Phones'));echo'<br/><br/>';
+            var_dump($this->generateBrands(3, $category_id));echo'<br/><br/>';
+            var_dump($this->generateCharacteristics(5, $category_id));echo'<br/><br/>';
             return sprintf($this->language->get('Phones'), $this->generateBrands(3, $category_id), $this->generateCharacteristics(5, $category_id));
 
         } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 3 && $category_path[0]['category_id'] == 501) {echo'Vtoraya';
