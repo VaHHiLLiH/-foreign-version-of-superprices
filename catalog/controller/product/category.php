@@ -453,23 +453,23 @@ class ControllerProductCategory extends Controller {
 
             return sprintf($this->language->get('Monitors_child'), $this->generateH1($category_id), $this->generateCountProducts($category_id), $this->generateCharacteristics(5, $category_id));
 
-        } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 3) {
+        } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 3) {echo'Pervaya';
 
             return sprintf($this->language->get('Phones'), $this->generateBrands(3, $category_id), $this->generateCharacteristics(5, $category_id));
 
-        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 3 && $category_path[0]['category_id'] == 501) {
+        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 3 && $category_path[0]['category_id'] == 501) {echo'Vtoraya';
 
             return $this->language->get('Phone_button');
 
-        } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 3 && $category_path[1]['path_id'] == 501) {
+        } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 3 && $category_path[1]['path_id'] == 501) {echo'Tretya';
 
             return sprintf($this->language->get('Phone_smart_child'), $this->generateH1($category_id), $this->generateH1($category_id));
 
-        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 3 && $category_path[0]['category_id'] == 500) {
+        } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 3 && $category_path[0]['category_id'] == 500) {echo'4etvertaya';
 
             return $this->language->get('Phone_smart');
 
-        } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 3 && $category_path[1]['path_id'] == 500) {
+        } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 3 && $category_path[1]['path_id'] == 500) {echo'pyataya';
 
             return sprintf($this->language->get('Phone_button_child'), $this->generateH1($category_id), $this->generateH1($category_id));
 
