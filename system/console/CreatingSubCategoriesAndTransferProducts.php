@@ -1,7 +1,7 @@
 <?php
-$path = 'C:/OpenServer/domains/burj/';
+$path = '/var/www/www-root/data/www/everydayshop.ru/';
 
-$file_path = 'C:/OpenServer/domains/burj/categoryPhones.txt';
+$file_path = $path.'categoryMonitores.txt';
 
 // Configuration
 require_once($path . 'config.php');
