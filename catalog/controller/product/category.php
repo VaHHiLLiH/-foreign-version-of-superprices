@@ -664,7 +664,7 @@ class ControllerProductCategory extends Controller {
         }*/
         $category_info = $this->model_catalog_category->getCategory($category_id);
         $array_categories_ids = [500, 501, 36, 37, 38, 39, 40, 41, 42, 268, 269];
-        if ($category_info['parent_id'] != 0 && (!in_array($category_id, $array_categories_ids))) {
+        if ($category_info['parent_id'] != 0 /*&& (!in_array($category_id, $array_categories_ids))*/) {
             $category_path = $this->model_catalog_category->getCategoryPath($category_id);
             $category_name = [];
             foreach ($category_path as $path) {
@@ -680,6 +680,9 @@ class ControllerProductCategory extends Controller {
                 $category_name[] = $current_category_name;
             }
             $categ_name = '';
+            if ($category_path[0]['path_id'] == 3 || $category_path[0]['path_id'] == 5 || ($category_path[0]['path_id'] == 6 && $category_path[1]['path_id'] == 268) || ($category_path[0]['path_id'] == 6 && $category_path[1]['path_id'] == 269)) {
+                array_shift($category_name);
+            }
             foreach ($category_name as $name) {
                 $categ_name = $name . ' ' . $categ_name;
             }
