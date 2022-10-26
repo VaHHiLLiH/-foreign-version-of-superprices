@@ -89,12 +89,13 @@ class ControllerProductCategory extends Controller {
 
         $category_path = $this->model_catalog_category->getCategoryPath($category_id);
 
-		foreach ($category_path as $cat_id) {
+		foreach ($category_path as $key => $cat_id) {
 
 		    $cat_info = $this->model_catalog_category->getCategory($cat_id['path_id']);
-
+            $parent_cat_info = $this->model_catalog_category->getCategory($cat_info['parent_id']);
+            $name = ($cat_info['parent_id'] == 0) ? $cat_info['name'] : str_replace($parent_cat_info['name'], '', $cat_info['name']);
             $data['breadcrumbs'][] = array(
-                'text' => $cat_info['name'],
+                'text' => $name,
                 'href' => $this->url->link('product/category', 'path=' . $cat_id['path_id']),
             );
         }
@@ -652,7 +653,7 @@ class ControllerProductCategory extends Controller {
 
     public function getFullCategoryName($category_id)
     {
-        $category_info = $this->model_catalog_category->getCategory($category_id);
+        /*$category_info = $this->model_catalog_category->getCategory($category_id);
         $array_categories_ids = [500, 501, 36, 37, 38, 39, 40, 41, 42, 268, 269];
         if ($category_info['parent_id'] != 0 && (!in_array($category_id, $array_categories_ids))) {
             $category_parent_info = $this->model_catalog_category->getCategory($category_info['parent_id']);
@@ -660,22 +661,31 @@ class ControllerProductCategory extends Controller {
             return $category_parent_info['name'] . ' ' . str_replace($category_parent_info['name'], '', $category_info['name']);
         } else {
             return $category_info['name'];
-        }
-        /*$category_name = [];
-        foreach ($category_path as $path) {
-            $category_info = $this->model_catalog_category->getCategory($path['path_id']);
-            $current_category_name = $category_info['name'];
-
-            if(!empty($category_name)) {
-                foreach ($category_name as $name) {
-                    $current_category_name = str_replace($name, '', $current_category_name);
-                }
-            }
-
-            $category_name[] = $current_category_name;
         }*/
+        $category_info = $this->model_catalog_category->getCategory($category_id);
+        $array_categories_ids = [500, 501, 36, 37, 38, 39, 40, 41, 42, 268, 269];
+        if ($category_info['parent_id'] != 0 && (!in_array($category_id, $array_categories_ids))) {
+            $category_path = $this->model_catalog_category->getCategoryPath($category_id);
+            $category_name = [];
+            foreach ($category_path as $path) {
+                $category_info = $this->model_catalog_category->getCategory($path['path_id']);
+                $current_category_name = $category_info['name'];
 
-        //return trim(implode(' ', $category_name));
+                if (!empty($category_name)) {
+                    foreach ($category_name as $name) {
+                        $current_category_name = str_replace($name, '', $current_category_name);
+                    }
+                }
 
+                $category_name[] = $current_category_name;
+            }
+            $categ_name = '';
+            foreach ($category_name as $name) {
+                $categ_name = $name . ' ' . $categ_name;
+            }
+            return $categ_name;
+        } else {
+            return $category_info['name'];
+        }
     }
 }
