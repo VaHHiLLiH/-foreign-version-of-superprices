@@ -32,11 +32,11 @@ class ControllerExtensionModuleCategory extends Controller {
 		$data['categories'] = array();
 
 		//$categories = $this->model_catalog_category->getCategories(0);
-        $categories = $this->model_catalog_category->getCategories($current_category_id);
+        $categories = $this->model_catalog_category->getCategoriesSort($current_category_id);
 
         if (empty($categories)) {
             $current_category_parent_id = $this->model_catalog_category->getCategory($current_category_id);
-            $categories = $this->model_catalog_category->getCategories($current_category_parent_id['parent_id']);
+            $categories = $this->model_catalog_category->getCategoriesSort($current_category_parent_id['parent_id']);
         }
         $parent_category_name = $this->model_catalog_category->getCategory($parent_category_id);
 		foreach ($categories as $category) {
