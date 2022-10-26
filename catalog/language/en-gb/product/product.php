@@ -86,7 +86,7 @@ $_['Synthesizers_empty'] = '%s is a Synthesizer with technical specifications li
 $_['Musical_empty'] = '%s is a TYPE with technical specifications listed below:';
 /*--------------End of Musical Instruments------------------*/
 // 2 h1
-$_['Smartwatches'] = '%s is a %s with %s Battery. To find out all the %s technical specifications check the table below:';
+$_['Smartwatches'] = '%s is a Smart Watch with %s Battery. To find out all the %s technical specifications check the table below:';
 // h1
 $_['Smartwatches_empty'] = '%s is a Smart Watch with technical specifications listed below:';
 // 2 h1

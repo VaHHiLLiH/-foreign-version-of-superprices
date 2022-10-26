@@ -664,11 +664,10 @@ class ControllerProductProduct extends Controller {
                 $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                 if (!empty($product_chars)) {
                     $const_char = [
-                        'Тип'    => false,
                         'Емкость аккумулятора'    => false,
                     ];
                     if ($this->checkToChars($const_char, $product_chars)) {
-                        return sprintf($this->language->get('Smartwatches'), $this->generateH1($product_id), $const_char['Тип'], $const_char['Емкость аккумулятора'], $this->generateH1($product_id));
+                        return sprintf($this->language->get('Smartwatches'), $this->generateH1($product_id), $const_char['Емкость аккумулятора'], $this->generateH1($product_id));
                     } else {
                         return sprintf($this->language->get('Smartwatches_empty'), $this->generateH1($product_id));
                     }
