@@ -563,7 +563,7 @@ class ModelCatalogProduct extends Model {
     }
 
     public function getProductCharacteristics($product_id) {
-        $json_chars = $this->db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE product_id = " . (int)$product_id)->row;
+        $json_chars = $this->db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE product_id = " . (int)$product_id . " AND language_id = 2")->row;
 
         return json_decode($json_chars['spec'], true);
     }
