@@ -34,7 +34,7 @@ foreach ($products_chars as $key1 => $product_chars) {
 
     var_dump($products_chars[$key1]['product_id']);
 
-    $db->query("INSERT INTO " . DB_PREFIX . "spec (product_id, language_id, spec) VALUES (" . (int)$products_chars[$key1]['product_id'] . ", 2, " . $products_chars[$key1]['spec'] . ")");
+    $db->query("INSERT INTO " . DB_PREFIX . "spec (product_id, language_id, spec) VALUES (" . (int)$products_chars[$key1]['product_id'] . ", 2, '" . $products_chars[$key1]['spec'] . "')");
     //var_dump($products_chars[$key1]);die();
 }
 
