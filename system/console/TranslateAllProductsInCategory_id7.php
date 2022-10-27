@@ -15,31 +15,33 @@ $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_P
 
 
 
-$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec LIMIT 0, 100")->rows;
+$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec LIMIT 0, 10")->rows;
 
 foreach ($products_chars as $key1 => $product_chars) {
     $characteristics = json_decode($product_chars['spec'], true);
     //var_dump($characteristics);
     foreach ($characteristics as $key2 => $group_chars) {
-        //$characteristics[$key2]['name'] = translateText($group_chars['name']);
-        $characteristics[$key2]['name'] = $group_chars['name'];
+        $characteristics[$key2]['name'] = translateText($group_chars['name']);
         $group_chars = $group_chars['subspecs'];
         foreach ($group_chars as $key3 => $group_char) {
-            //$group_chars[$key3]['name'] = translateText($group_char['name']);
-            //$group_chars[$key3]['value'] = translateText($group_char['value']);
-            $group_chars[$key3]['name'] = $group_char['name'];
-            $group_chars[$key3]['value'] = $group_char['value'];
+            $group_chars[$key3]['name'] = translateText($group_char['name']);
+            $group_chars[$key3]['value'] = translateText($group_char['value']);
         }
         $characteristics[$key2]['subspecs'] = $group_chars;
     }
-    $products_chars[$key1]['spec'] = $characteristics;
+    $products_chars[$key1]['spec'] = json_encode($characteristics);
+
+    var_dump($products_chars[$key1]['product_id']);
+
+    $db->query("INSERT INTO " . DB_PREFIX . "spec (product_id, language_id, spec) VALUES (" . (int)$products_chars[$key1]['product_id'] . ", 2, " . $products_chars[$key1]['spec'] . ")");
+    //var_dump($products_chars[$key1]);die();
 }
-var_dump($products_chars[0]);die();
 
 
 function translateText($text)
 {
-    /*$IAM_TOKEN = 't1.9euelZqYnJSJkM_GzM_KkJPIyJyQlu3rnpWakcuMkoycnYqLnp6JiZSJjI_l8_c_ZRZl-e8fXEw4_t3z938TFGX57x9cTDj-.c6FVZkVgMeSfcip8ukUyHHj-XA00Bk-ZcCHB6N8RJNRNGK4M7q2UgxMO1eea2ITenpiWMKUPHV6D-dD8Q2OzCQ';
+    //return 'Случайное текст';
+    $IAM_TOKEN = 't1.9euelZqYnJSJkM_GzM_KkJPIyJyQlu3rnpWakcuMkoycnYqLnp6JiZSJjI_l8_c_ZRZl-e8fXEw4_t3z938TFGX57x9cTDj-.c6FVZkVgMeSfcip8ukUyHHj-XA00Bk-ZcCHB6N8RJNRNGK4M7q2UgxMO1eea2ITenpiWMKUPHV6D-dD8Q2OzCQ';
     $folder_id = 'b1gq1kelin7d9rqn3ot0';
     $target_language = 'en';
 
@@ -70,8 +72,7 @@ function translateText($text)
     curl_close($curl);
 
     $translatedText = json_decode($result, true);
-    return $translatedText['translations'][0]['text'];*/
-    return 'empty';
+    return $translatedText['translations'][0]['text'];
     //var_dump($translatedText['translations'][0]['text']);die();
 }
 /*--------------Test yandex translator api-----------------*/
