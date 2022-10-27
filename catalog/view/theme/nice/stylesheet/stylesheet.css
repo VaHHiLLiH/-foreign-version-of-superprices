@@ -109,7 +109,9 @@
 
 
 /* Overwrite bootstrap . Begin */
-
+.container{
+  padding: 0;
+}
 /* make outer offset more than inner outers are */
 @media (max-width: 767px) {
   .container {
@@ -617,6 +619,7 @@ header {
 /* --------------------------------------------------------------------------- */
 
 #top-2 {
+  width: 100%;
   display: flex;
 /*  flex-direction: row;
   flex-wrap: nowrap;*/
@@ -3179,7 +3182,7 @@ footer h5 {
   border-radius: 15px;
 }*/
 .modal-to-compare{
-  width: 1370px;
+  /*width: 1370px;*/
   background: white;
   border-radius: 6px;
   margin: auto;
@@ -3275,6 +3278,24 @@ footer h5 {
   font-weight: bold;
   font-size: 22px
 }
+@media (max-width: 767px) {
+  .modal-to-compare .compare-items-cont{
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-to-compare .compare-items-cont .compare-item-1, .modal-to-compare .compare-items-cont .compare-item-3{
+    width: 100%;
+  }
+  .modal-to-compare .compare-items-cont .compare-item-2{
+    height: 40px;
+  }
+  .modal-to-compare .compare-items-cont .compare-item-2 .compare-vs{
+    margin-top: 0;
+  }
+  #modal-to-comparison > .open{
+    height: 320px;
+  }
+}
 /*---------------------------------End of Modal------------------------------*/
 
 .product-thumb--name-bold {
@@ -3363,3 +3384,128 @@ footer h5 {
 #tab-general > .list-unstyled > .row{
   margin: 0;
 }
+/*------------------------------------------------*/
+.only-mobile-menu{
+  display: none;
+}
+@media (max-width: 989px) {
+  .only-mobile-menu{
+    display: flex;
+    justify-content: space-around;
+  }
+  .only-desc-menu{
+     display: none;
+   }
+}
+/*------------------------------------------------*/
+#column-left .list-group-item {
+  height: 60px;
+}
+#column-left .list-group{
+  max-height: 473px;
+  overflow-y: scroll;
+}
+/*--------------------------------Mobile Menu--------------------------*/
+.child-categories{
+  display: none;
+}
+.post-child-categories{
+  display: none;
+}
+/*----------------forTesting*/
+.only-mobile-menu > .navbar{
+  position: static;
+}
+#mobile-menu-categories{
+  position: static;
+}
+.main-categories hr{
+  padding: 0;
+  margin: 10px 0;
+}
+.main-categories{
+  text-decoration: none;
+  position: absolute;
+  z-index: 1000;
+  background: #f6f6f6;
+  width: 100%;
+  left: 0;
+  right: 0;
+  color: #3b3f41;
+  list-style-type: none;
+}
+.my-dropdown{
+  margin: 10px 40px 10px 0;
+}
+.main-categories a, .main-categories p{
+  color: #3b3f41;
+  font-size: 22px;
+  display: inline;
+}
+.child-categories{
+  z-index: 1001;
+}
+.post-child-categories{
+  z-index: 1002;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.close-child > span.to-open{
+  display: none;
+}
+.open-child > span.to-close{
+  display: none;
+}
+.my-dropdown > span{
+  margin-left: 7px;
+}
+.open-child > .child-categories{
+  position: relative;
+  background: white;
+  display: block;
+  margin-left: 15px;
+  padding: 10px;
+  list-style-type: none;
+  font-size: 18px;
+}
+.main-categories .child-categories a, .main-categories .child-categories p{
+  font-size: 18px;
+  color: #3b3f41;
+  text-decoration: none;
+}
+.post-child-categories a, .post-child-categories p{
+  font-size: 18px;
+  color: #3b3f41;
+  text-decoration: none;
+}
+.post-child-categories li{
+  margin: 5px 0;
+}
+.openOver{
+  position: absolute;
+  background: white;
+  list-style-type: none;
+  font-size: 18px;
+  color: #3b3f41;
+  left: 0;
+  right: 0;
+  display: block;
+}
+.hide-under{
+  z-index: -1;
+}
+.special-mobile-search{
+  display: none;
+}
+.show-up{
+  display: block;
+}
+.show-up > #search{
+  width: 95%;
+  margin: 10px auto;
+  float: none;
+}
+.icon-search-mobile{
+  margin-top: 20px;
+}
+/*--------------------------------End of Mobile Menu-------------------*/

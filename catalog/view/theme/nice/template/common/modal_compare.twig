@@ -1,5 +1,5 @@
-<div id="modal-to-comparison">
-    <div class="modal-to-compare close">
+<!-noindex-><div id="modal-to-comparison">
+    <div class="modal-to-compare container close">
         <span class="glyphicon glyphicon-eject" onclick="modalToComparison.open();"></span>
         <span class="glyphicon glyphicon-eject rotate" onclick="modalToComparison.close();"></span>
         <div class="compare-select" style="display: none">
@@ -38,7 +38,7 @@
                             </div>
                             <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
                                 <div class="compare-btn">
-                                    <button><a href="{{ link_on_compare }}">Compare</a></button>
+                                    <button><a onclick="compare.goToCompare();" rel="nofollow noindex">Compare</a></button>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -77,3 +77,4 @@
         }
     });
 </script>
+<!-/noindex->

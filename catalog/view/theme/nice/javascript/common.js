@@ -369,8 +369,15 @@ var compare = {
 
 				modalToComparison.open();
 			},
+			error: function(xhr, ajaxOptions, thrownError) {
+				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+			},
 		});
-	}
+	},
+	'goToCompare': function() {
+		document.location.href = 'http://'+document.location.host+'/index.php?route=product/compare';
+	},
+
 }
 
 var modalToComparison = {

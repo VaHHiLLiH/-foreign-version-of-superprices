@@ -1,0 +1,110 @@
+{% if categories %}
+  <nav id="mobile-menu-categories" class="navbar">
+    <div class="navbar-header">
+      <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target="#navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+      <span id="category" class="visible-xs">{{ text_menu_catalog }}</span>
+    </div>
+    <div id="navbar-ex1-collapse" class="collapse navbar-collapse ">
+
+      <ul class="main-categories mobile-menu">
+        {% for category in categories %}
+          <li class="my-dropdown close-child" data-item-id="{{ category.id }}">
+              <p>{{ category.name }}</p>
+              {% if category.children %}
+                  <span class="to-close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                  <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/></svg></span>
+                  <span class="to-open"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg></span>
+              {% endif %}
+            {% if category.children %}
+            <ul class="child-categories mobile-menu" data-parent-id="{{ category.id }}">
+                <li class="back-to-parent" data-item-id="{{ child_category.id }}" data-parent-id="{{ category.id }}"><a href="{{ category.href }}">See all&nbsp;{{ category.name }}</a></li>
+                <hr>
+              {% for child_category in category.children %}
+                <li class="my-dropdown-over" data-item-id="{{ child_category.id }}">
+                  <p data-id="{{ child_category.id }}" data-parent-name="{{ category.name }}">{{ child_category.name }}</p>
+                    {% if child_category.children %}
+                    <span class="to-close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                        <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/></svg></span>
+                    {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+        <div id="post-child-categories">
+            {% for category in categories %}
+                {% if category.children %}
+                    {% for child_category in category.children %}
+                        {% if child_category.children %}
+                            <ul class="post-child-categories mobile-menu" data-parent-id="{{ child_category.id }}">
+                                <li><a href="{{ child_category.href }}">See all&nbsp;{{ child_category.name }}</a><span class="caret back-to-parent" data-parent-id="{{ child_category.id }}"></span></li>
+                                <hr>
+                                {% for post_child_category in child_category.children %}
+                                    <li data-item-id="{{ post_child_category.id }}">
+                                        <a href="{{ post_child_category.href }}">{{ post_child_category.name }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+      {#<ul class="nav navbar-nav">
+        {% for category in categories %}
+        {% if category.children %}
+        <li class="dropdown"><a href="{{ category.href }}" class="dropdown-toggle" data-toggle="dropdown">{{ category.name }} <span class="caret"></span></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-inner"> {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
+              <ul class="list-unstyled">
+                {% for child in children %}
+                <li><a href="{{ child.href }}">{{ child.name }}</a></li>
+                {% endfor %}
+              </ul>
+              {% endfor %}</div>
+            <a href="{{ category.href }}" class="see-all">{{ text_all }} {{ category.name }}</a> </div>
+        </li>
+        {% else %}
+        <li><a href="{{ category.href }}">{{ category.name }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>#}
+    </div>
+  </nav>
+{% endif %}
+
+<script type="text/javascript"><!--
+    $('.main-categories > li.my-dropdown').on('click', function(){
+        if ($(this).hasClass('open-child')){
+            $(this).removeClass('open-child');
+            $(this).addClass('close-child');
+        } else {
+            $('.main-categories > li.my-dropdown').removeClass('open-child');
+            $('.main-categories > li.my-dropdown').addClass('close-child');
+            $(this).removeClass('close-child');
+            $(this).addClass('open-child');
+        }
+    });
+
+    $('.child-categories > li.my-dropdown-over').on('click', function() {
+        let category_id = $(this).find('p').attr('data-id');
+        $('.post-child-categories[data-parent-id="'+category_id+'"]').addClass('openOver');
+        $('main-categories').addClass('hide-under');
+    });
+
+    $('.back-to-parent').on('click', function() {
+       let child_parent_id = $(this).attr('data-parent-id');
+
+       $(this).closest('.post-child-categories[data-parent-id="'+child_parent_id+'"]').removeClass('openOver');
+
+       let parent_id = $('li.my-dropdown-over[data-item-id="'+child_parent_id+'"]').closest('ul.child-categories').attr('data-parent-id');
+
+        $('main-categories').removeClass('hide-under');
+
+       $('ul.main-categories > li[data-item-id="'+parent_id+'"]').addClass('open-child');
+    });
+    //--></script>

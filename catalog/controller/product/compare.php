@@ -243,8 +243,9 @@ class ControllerProductCompare extends Controller {
     public function getRightSide()
     {
         $json = [];
-        if (!in_array($this->request->post['product_id'], $this->session->data['compare'])) {
-            if (isset($this->session->data['compare'])) {
+        if (!empty($this->session->data['compare'])) {
+            if (!in_array($this->request->post['product_id'], $this->session->data['compare'])) {
+
                 if (count($this->session->data['compare']) == 2) {
                     $json['side'] = 'offset';
                 } else {
@@ -255,11 +256,12 @@ class ControllerProductCompare extends Controller {
                     }
                 }
             } else {
-                $json['side'] = 'left';
+                $json['side'] = 'nothing';
             }
         } else {
-            $json['side'] = 'nothing';
+            $json['side'] = 'left';
         }
+
 
         $this->response->addHeader('Content-Type: application/json');
         $this->response->setOutput(json_encode($json));

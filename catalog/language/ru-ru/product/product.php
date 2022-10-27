@@ -51,3 +51,49 @@ $_['error_name']               = 'Имя должно быть от 3 до 25 с
 $_['error_text']               = 'Текст отзыва должен быть от 25 до 1000 символов!';
 $_['error_rating']             = 'Пожалуйста, выберите оценку!';
 
+
+/*-------------------------Generate description--------------------*/
+// h1
+$_['CPU'] = '%s is a %s (nanometre) processor with %s Socket and CPU Clock Speed up to %s. It contains %s CPU cores. More detailed information about this %s Processor check up in the table below.';
+$_['CPU_empty'] = '%s is a CPU with technical specifications listed below:';
+// 2 h1
+$_['Monitors'] = '%s is a monitor with a screen diagonal of %s and screen resolution %s. It has such Connectors as: %s. See the %s full list of Specs below:';
+// h1
+$_['Monitors_empty'] = '%s is a monitor with technical specifications listed below:';
+//h1
+$_['Phones'] = '%s is a %s with a screen diagonal of %s, %s RAM and %s battery capacity. It is a %s with %s SIM card slots.';
+$_['Phones_empty'] = '%s is a phone with technical specifications listed below:';
+// 2 h1
+$_['Cameras'] = '%s is a %s megapixel %s camera. See the %s list of Specs below:';
+// h1
+$_['Cameras_empty'] = '%s is a camera with technical specifications listed below:';
+/*--------------Musical Instruments-------------------------*/
+// h1
+$_['Accordion'] = '%s is a %s with technical specifications listed below:';
+$_['Digital Pianos'] = '%s is a %s %s with %s %s Keyboard Keys. It has %s Pedals and weights %s.';
+$_['Electric Bass'] = '%s is a %s %s with %s Strings. It is made of %s and its Fretboard is made of %s. It has %s Guitar Pickup Configuration. ';
+$_['Electric Guitars'] = '%s is a %s %s with %s Strings. It is made of %s and its Fretboard is made of %s. It has %s Guitar Pickup Configuration. ';
+$_['MIDI Keyboards'] = '%s is a %s %s with %s %s Keyboard Keys. It has %s Pedals and weights %s.';
+$_['Semi-Acoustic'] = '%s is a %s %s with %s Strings. It is made of %s and its Fretboard is made of %s. It has %s Guitar Pickup Configuration. ';
+$_['Synthesizers'] = '%s is a %s %s with %s Keyboard Keys and a %s Case. To find out all the %s technical specifications check the table below:';
+
+$_['Accordion_empty'] = '%s is an Accordion with technical specifications listed below:';
+$_['Digital_Pianos_empty'] = '%s is a Digital Piano with technical specifications listed below:';
+$_['Electric_Bass_empty'] = '%s is an Electric Bass with technical specifications listed below:';
+$_['Electric_Guitars_empty'] = '%s is an Electric Guitar with technical specifications listed below: ';
+$_['MIDI_Keyboards_empty'] = '%s is a MIDI-Keyboard with technical specifications listed below:';
+$_['Semi-Acoustic_empty'] = '%s is a Semi-acoustic Guitar with technical specifications listed below:';
+$_['Synthesizers_empty'] = '%s is a Synthesizer with technical specifications listed below:';
+$_['Musical_empty'] = '%s is a TYPE with technical specifications listed below:';
+/*--------------End of Musical Instruments------------------*/
+// 2 h1
+$_['Smartwatches'] = '%s is a Smart Watch with %s Battery. To find out all the %s technical specifications check the table below:';
+// h1
+$_['Smartwatches_empty'] = '%s is a Smart Watch with technical specifications listed below:';
+// 2 h1
+$_['Consoles'] = '%s is a %s gaming console with %s and %s support. To find out all the %s technical specifications check the table below:';
+// h1
+$_['Consoles_empty'] = '%s is a gaming console with technical specifications listed below:';
+// h1
+$_['GPU'] = '%s is a GPU with %s RAM. It is based on %s with Core Clock Speed up to %s.';
+$_['GPU_empty'] = '%s is a GPU with technical specifications listed below:';
