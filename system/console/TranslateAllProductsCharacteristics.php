@@ -16,7 +16,7 @@ $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_P
 
 
 
-$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec LIMIT 10, 990")->rows;
+$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec LIMIT 209, 792")->rows;
 
 foreach ($products_chars as $key1 => $product_chars) {
     $characteristics = json_decode($product_chars['spec'], true);
@@ -34,7 +34,7 @@ foreach ($products_chars as $key1 => $product_chars) {
 
     var_dump($products_chars[$key1]['product_id']);
 
-    $db->query("INSERT INTO " . DB_PREFIX . "spec (product_id, language_id, spec) VALUES (" . (int)$products_chars[$key1]['product_id'] . ", 2, '" . $products_chars[$key1]['spec'] . "')");
+    $db->query("INSERT INTO " . DB_PREFIX . "spec (product_id, language_id, spec) VALUES (" . (int)$products_chars[$key1]['product_id'] . ", 2, '" . $db->escape($products_chars[$key1]['spec']) . "')");
     //var_dump($products_chars[$key1]);die();
 }
 
