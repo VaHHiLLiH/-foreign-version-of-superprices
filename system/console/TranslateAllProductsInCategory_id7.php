@@ -16,10 +16,7 @@ $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_P
 
 
 $products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec LIMIT 0, 100")->rows;
-//var_dump($products_chars[0]);
-echo'';
-echo'After';
-echo'';
+
 foreach ($products_chars as $key1 => $product_chars) {
     $characteristics = json_decode($product_chars['spec'], true);
     //var_dump($characteristics);
