@@ -1,5 +1,6 @@
 <?php
-$path = 'C:/OpenServer/domains/randSheetOnOC.orc/';
+//$path = 'C:/OpenServer/domains/randSheetOnOC.orc/';
+$path = '/var/www/www-root/data/www/everydayshop.ru/';
 
 // Configuration
 require_once($path . 'config.php');
