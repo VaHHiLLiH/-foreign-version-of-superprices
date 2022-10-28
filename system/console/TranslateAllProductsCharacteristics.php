@@ -16,7 +16,7 @@ $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_P
 
 
 
-$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "WHERE product_id = 210")->rows;
+$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE product_id = 210")->rows;
 
 foreach ($products_chars as $key1 => $product_chars) {
     $characteristics = json_decode($product_chars['spec'], true);
