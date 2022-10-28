@@ -16,11 +16,10 @@ $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_P
 
 
 
-$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec LIMIT 209, 792")->rows;
+$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "WHERE product_id = 210")->rows;
 
 foreach ($products_chars as $key1 => $product_chars) {
     $characteristics = json_decode($product_chars['spec'], true);
-    //var_dump($characteristics);
     foreach ($characteristics as $key2 => $group_chars) {
         $characteristics[$key2]['name'] = translateText($group_chars['name']);
         $group_chars = $group_chars['subspecs'];
@@ -35,15 +34,14 @@ foreach ($products_chars as $key1 => $product_chars) {
     var_dump($products_chars[$key1]['product_id']);
 
     $db->query("INSERT INTO " . DB_PREFIX . "spec (product_id, language_id, spec) VALUES (" . (int)$products_chars[$key1]['product_id'] . ", 2, '" . $db->escape($products_chars[$key1]['spec']) . "')");
-    //var_dump($products_chars[$key1]);die();
 }
 
 
 function translateText($text)
 {
     //return 'Случайное текст';
-    $IAM_TOKEN = '';
-    $folder_id = '';
+    $IAM_TOKEN = 't1.9euelZqanprOmJeVxo-Jk5nIxpPPne3rnpWakcuMkoycnYqLnp6JiZSJjI_l8_dYLRFl-e8cNz5S_t3z9xhcDmX57xw3PlL-.K7yf1Pph2S_fsKUcGEdB1IupPmD8PQ-_0w5JaaPexPr1IxNyQ5ztHGR8rCt8wDvzWoM2R_W85Ai2jDA1tzG7Bg';
+    $folder_id = 'b1gq1kelin7d9rqn3ot0';
     $target_language = 'en';
 
     $url = 'https://translate.api.cloud.yandex.net/translate/v2/translate';
@@ -74,5 +72,4 @@ function translateText($text)
 
     $translatedText = json_decode($result, true);
     return $translatedText['translations'][0]['text'];
-    //var_dump($translatedText['translations'][0]['text']);die();
 }
