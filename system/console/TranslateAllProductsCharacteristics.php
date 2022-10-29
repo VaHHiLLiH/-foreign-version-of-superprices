@@ -16,8 +16,7 @@ $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_P
 
 
 
-//$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 0 LIMIT 4000, 2000")->rows;
-$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 0 AND product_id IN (4719, 4720, 4722, 4723, 4724, 4725, 4726, 4727, 4728, 4729, 4730, 4731, 4732, 4733, 4734, 4735, 4737, 4740, 4742, 4743, 4744, 4745, 4747, 4748, 4749, 4750, 4751, 4753, 4754, 4755, 4756, 4757, 4758, 4759, 4760, 4761, 4762, 4763, 4764, 4765, 4766, 4767, 4768, 4769, 4770, 4771, 4772, 4773, 4839, 4841, 4842, 4843, 4844, 4845, 4846, 4847, 4848, 4849, 4850, 4851, 4852, 4853, 4854, 4855, 4856, 4857, 4858, 4859, 4860, 4861, 4862, 4863, 4864, 4866, 4867) ")->rows;
+$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 0 LIMIT 4000, 2000")->rows;
 
 foreach ($products_chars as $key1 => $product_chars) {
     $characteristics = json_decode($product_chars['spec'], true);
@@ -41,8 +40,8 @@ foreach ($products_chars as $key1 => $product_chars) {
 function translateText($text)
 {
     //return 'Случайное текст';
-    $IAM_TOKEN = 't1.9euelZqbnc2Wy5LHxpaUlJ7HjsmZkO3rnpWakcuMkoycnYqLnp6JiZSJjI_l8_d2Sgxl-e82Y01V_d3z9zZ5CWX57zZjTVX9.hXdx5zGWM7GORSxZRIr3NyHn86Hn4jb_pMS60bURGoHPeYIva8zCLn7NMimjhJiuV7XYzCMO1dEj2OM98NBCBg';
-    $folder_id = 'b1gq1kelin7d9rqn3ot0';
+    $IAM_TOKEN = '';
+    $folder_id = '';
     $target_language = 'en';
 
     $url = 'https://translate.api.cloud.yandex.net/translate/v2/translate';
