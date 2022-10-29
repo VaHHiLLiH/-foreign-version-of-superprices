@@ -40,8 +40,8 @@ foreach ($products_chars as $key1 => $product_chars) {
 function translateText($text)
 {
     //return 'Случайное текст';
-    $IAM_TOKEN = 't1.9euelZqbnc2Wy5LHxpaUlJ7HjsmZkO3rnpWakcuMkoycnYqLnp6JiZSJjI_l8_d2Sgxl-e82Y01V_d3z9zZ5CWX57zZjTVX9.hXdx5zGWM7GORSxZRIr3NyHn86Hn4jb_pMS60bURGoHPeYIva8zCLn7NMimjhJiuV7XYzCMO1dEj2OM98NBCBg';
-    $folder_id = 'b1gq1kelin7d9rqn3ot0';
+    $IAM_TOKEN = '';
+    $folder_id = '';
     $target_language = 'en';
 
     $url = 'https://translate.api.cloud.yandex.net/translate/v2/translate';
