@@ -12,7 +12,7 @@ require_once(DIR_SYSTEM . 'helper/general.php');
 // Database
 $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
 
-$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 0 LIMIT 4000, 2000")->rows;
+$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 0 LIMIT 6000, 1000")->rows;
 var_dump('start');
 foreach ($products_chars as $key1 => $product_chars) {
     $characteristics = json_decode($product_chars['spec'], true);
