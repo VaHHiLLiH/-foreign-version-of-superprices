@@ -32,6 +32,7 @@ while ($currentPage <= $maxPage) {
         }
         //$db->query("INSERT INTO " . DB_PREFIX . "spec (product_id, language_id, spec) VALUES (" . (int)$products_chars[$key1]['product_id'] . ", 2, '" . $db->escape($products_chars[$key1]['spec']) . "')");
     }
+    $currentPage++;
 }
 var_dump('end');
 
