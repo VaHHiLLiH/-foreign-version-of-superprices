@@ -25,11 +25,14 @@ while ($currentPage <= $maxPage) {
     $products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 0 LIMIT " . $from . ", " . $recordOnOnePage)->rows;
     foreach ($products_chars as $key1 => $product_chars) {
         $characteristics = json_decode($product_chars['spec'], true);
-        foreach ($characteristics as $group_chars) {
+        if (!empty($characteristics['name'])){
+            var_dump($products_chars[$key1]['product_id']);
+        }
+        /*foreach ($characteristics as $group_chars) {
             if (empty($group_chars['name'])) {
                 var_dump($products_chars[$key1]['product_id']);
             }
-        }
+        }*/
         //$db->query("INSERT INTO " . DB_PREFIX . "spec (product_id, language_id, spec) VALUES (" . (int)$products_chars[$key1]['product_id'] . ", 2, '" . $db->escape($products_chars[$key1]['spec']) . "')");
     }
     $currentPage++;
