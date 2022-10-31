@@ -3513,3 +3513,9 @@ footer h5 {
   margin-top: 20px;
 }
 /*--------------------------------End of Mobile Menu-------------------*/
+.characteristics > p {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+}

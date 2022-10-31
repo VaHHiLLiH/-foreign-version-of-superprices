@@ -10,23 +10,14 @@
       {{ content_top }}
       <div class="row product-container">
         <div class="col-sm-12">
-          <div class="">
-            <h1 class="product-h1">{{ heading_title }}</h1>
-          </div>            
-        </div>
-        <div class="col-sm-12">
           <div class="row">
             <div class="col-sm-5">
               {{ block_image }}
             </div>
             <div class="col-sm-7">
               <div class="product-tab--container">
-                <ul class="nav nav-tabs">
-                  <li class="active"><a href="#tab-general" data-toggle="tab">{{ nice_tab_general }}</a></li>
-                  {% if description %}<li><a href="#tab-description" data-toggle="tab">{{ tab_description }}</a></li>{% endif %}
-                  {% if attribute_groups %}<li><a href="#tab-specification" data-toggle="tab">{{ tab_attribute }}</a></li>{% endif %}
-  {#                {% if review_status %}<li><a href="#tab-review" data-toggle="tab">{{ tab_review }}</a></li>{% endif %}#}
-                </ul>
+
+				  <h1 class="product-h1">{{ heading_title }}</h1>
                 <div class="tab-content">
                   <!-- tab-general -->
                   <div class="tab-pane active" id="tab-general">
@@ -34,7 +25,7 @@
                       {% if manufacturer %}
                       <li><span class="meta-label">{{ text_manufacturer }}</span> <a href="{{ manufacturers }}" class="meta-value">{{ manufacturer }}</a></li>
                       {% endif %}
-						<div class="row">
+						{#<div class="row">
 							<div class="rating">
 								<p>{% for i in 1..5 %}
 								   		{% if rating < i %}
@@ -47,7 +38,7 @@
 										{{ block_review_form_modal }}
 
 							</div>
-						</div>
+						</div>#}
                     </ul>
                     <div class="description">{{ product_description }}</div>
                   </div>
@@ -58,27 +49,6 @@
                     <div class="product-description">{{ description }}</div>
                   </div>
                   {% endif %}
-                  {% if attribute_groups %}
-                    <div class="tab-pane" id="tab-specification">
-                      <table class="table table-borderless">
-                        {% for attribute_group in attribute_groups %}
-                          <thead>
-                            <tr>
-                              <td colspan="2"><strong>{{ attribute_group.name }}</strong></td>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {% for attribute in attribute_group.subspecs %}
-                              <tr>
-                                <td>{{ attribute.name }}</td>
-                                <td>{{ attribute.value }}</td>
-                              </tr>
-                            {% endfor %}
-                          </tbody>
-                        {% endfor %}
-                      </table>
-                    </div>
-                  {% endif %}                
                 </div>
               </div>
                 
@@ -88,11 +58,34 @@
 					<button type="button" id="button-compare" onclick="compare.newAdd('{{ product_id }}', '{{ heading_title }}');" data-loading-text="{{ text_loading }}" class="btn btn-accent btn-lg btn-block">{{ button_compare }}</button>
                 </div>
             </div>
-            
+
             </div>
-            </div>                       
+            </div>
           </div>
-          
+			{% if attribute_groups %}
+          <div class="characteristics">
+			  <p>Characteristics</p>
+				  <div class="tab-pane" id="tab-specification">
+					  <table class="table table-borderless">
+						  {% for attribute_group in attribute_groups %}
+							  <thead>
+							  <tr>
+								  <td colspan="2"><strong>{{ attribute_group.name }}</strong></td>
+							  </tr>
+							  </thead>
+							  <tbody>
+							  {% for attribute in attribute_group.subspecs %}
+								  <tr>
+									  <td>{{ attribute.name }}</td>
+									  <td>{{ attribute.value }}</td>
+								  </tr>
+							  {% endfor %}
+							  </tbody>
+						  {% endfor %}
+					  </table>
+				  </div>
+		  </div>
+			{% endif %}
         </div>
         {% if tags %}
         <div class="row" id="product-row-2">
