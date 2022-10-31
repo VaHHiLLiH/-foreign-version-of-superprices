@@ -16,7 +16,7 @@ $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_P
 
 
 
-$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 0 LIMIT 6500, 1500")->rows;
+$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 0 LIMIT 8000, 2000")->rows;
 
 foreach ($products_chars as $key1 => $product_chars) {
     $characteristics = json_decode($product_chars['spec'], true);
@@ -40,8 +40,8 @@ foreach ($products_chars as $key1 => $product_chars) {
 function translateText($text)
 {
     //return 'Случайное текст';
-    $IAM_TOKEN = '';
-    $folder_id = '';
+    $IAM_TOKEN = 't1.9euelZqYnZTHx4vMk5WVipmZyomZnu3rnpWajZaUx8fJjM7Kk82bk5eXyZvl8_cdcgFl-e9QYRtx_t3z910gf2T571BhG3H-.L4DP1j_vVzO-NNNBgSEnByaelBcSS3H_FXFnqNXXG5EXjQTayMrKxdVfVksB9IEtPkcf5kzBEyvLIFD4K9o5DA';
+    $folder_id = 'b1g6r4j76lbn3gqbptis';
     $target_language = 'en';
 
     $url = 'https://translate.api.cloud.yandex.net/translate/v2/translate';
