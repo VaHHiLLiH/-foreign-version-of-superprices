@@ -27,7 +27,7 @@ while ($currentPage <= $maxPage) {
         $characteristics = json_decode($product_chars['spec'], true);
         if (!empty($characteristics['name'])){
             var_dump($products_chars[$key1]['product_id']);
-            $db->query("UPDATE oc_spec SET spec = '[" . $db->escape($product_chars['spec']) . "]' " );
+            //$db->query("UPDATE oc_spec SET spec = '[" . $db->escape($product_chars['spec']) . "]' " );
         }
         /*foreach ($characteristics as $group_chars) {
             if (empty($group_chars['name'])) {
