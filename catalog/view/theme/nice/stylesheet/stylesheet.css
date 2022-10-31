@@ -3397,13 +3397,17 @@ footer h5 {
      display: none;
    }
 }
+.only-desc-menu .main-nav{
+  display: flex;
+  justify-content: space-around;
+}
 /*------------------------------------------------*/
 #column-left .list-group-item {
   height: 60px;
 }
 #column-left .list-group{
   max-height: 473px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 /*--------------------------------Mobile Menu--------------------------*/
 .child-categories{
