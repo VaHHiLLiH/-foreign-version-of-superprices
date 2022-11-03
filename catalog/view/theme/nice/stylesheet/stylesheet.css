@@ -3316,12 +3316,14 @@ footer h5 {
 .compare-pic{
   align-content: center;
   display: flex;
-  height: 23px;
+  height: 32px;
   margin: auto;
   margin-right: auto;
   margin-right: 10px;
 }
-
+.compare-pic > img{
+  height: 32px;
+}
 /*----------------------Footer------------------------------------*/
 .footer-right-column{
   float: right;
@@ -3509,8 +3511,33 @@ footer h5 {
   margin: 10px auto;
   float: none;
 }
-.icon-search-mobile{
-  margin-top: 20px;
+.icon-search-mobile > svg{
+  height: 32px;
+  width: 32px;
+  color: #6667ab;
+}
+.menu-icon-text{
+  font-size: 20px;
+  color: #6667ab;
+}
+.search-compare{
+  display: none;
+}
+@media (max-width: 989px) {
+  #top-2{
+    justify-content: space-between;
+  }
+  .logo-menu{
+    display: flex;
+  }
+  .search-compare{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+  }
+  .desc-top-compare{
+    display: none;
+  }
 }
 /*--------------------------------End of Mobile Menu-------------------*/
 .characteristics > p {
