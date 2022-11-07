@@ -143,7 +143,18 @@ class ControllerStartupSeoUrl extends Controller {
 						$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "seo_url WHERE `query` = 'category_id=" . (int)$category . "' AND store_id = '" . (int)$this->config->get('config_store_id') . "' AND language_id = '" . (int)$this->config->get('config_language_id') . "'");
 
 						if ($query->num_rows && $query->row['keyword']) {
-							$url .= '/' . $query->row['keyword'];
+                            if (strrpos($query->row['query'], 'product_id=')) {
+
+                                $url .= '/product/' . $query->row['keyword'];
+                            } else if (strrpos($query->row['query'], 'category_id=')) {
+
+                                $url .= '/category/' . $query->row['keyword'];
+                            } else if (strrpos($query->row['query'], 'manufacturer_id=')) {
+
+                                $url .= '/manufacturer/' . $query->row['keyword'];
+                            } else {
+                                $url .= '/' . $query->row['keyword'];
+                            }
 						} else {
 							$url = '';
 
@@ -155,7 +166,18 @@ class ControllerStartupSeoUrl extends Controller {
 				} elseif ($key == 'route') {
 					$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "seo_url WHERE `query` = '" . $this->db->escape($data['route']) . "' AND store_id = '" . (int)$this->config->get('config_store_id') . "' AND language_id = '" . (int)$this->config->get('config_language_id') . "'");
 					if ($query->num_rows) /**/ {
-						$url .= '/' . $query->row['keyword'];
+                        if (strrpos($query->row['query'], 'product_id=')) {
+
+                            $url .= '/product/' . $query->row['keyword'];
+                        } else if (strrpos($query->row['query'], 'category_id=')) {
+
+                            $url .= '/category/' . $query->row['keyword'];
+                        } else if (strrpos($query->row['query'], 'manufacturer_id=')) {
+
+                            $url .= '/manufacturer/' . $query->row['keyword'];
+                        } else {
+                            $url .= '/' . $query->row['keyword'];
+                        }
 					}
 				}
 			}
