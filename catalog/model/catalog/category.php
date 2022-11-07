@@ -116,14 +116,14 @@ class ModelCatalogCategory extends Model {
 
     public function getProductsChars($category_id, $from, $offset)
     {
-        $query = $this->db->query("SELECT spec FROM " . DB_PREFIX . "spec sp LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON (sp.product_id = ptc.product_id) WHERE ptc.category_id = " . (int)$category_id . " LIMIT " . (int)$from . ", " . (int)$offset)->rows;
+        $query = $this->db->query("SELECT spec FROM " . DB_PREFIX . "spec sp LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON (sp.product_id = ptc.product_id) WHERE sp.language_id = 2 AND ptc.category_id = " . (int)$category_id . " LIMIT " . (int)$from . ", " . (int)$offset)->rows;
 
         return $query;
     }
 
     public function getCountChars($category_id)
     {
-        $query = $this->db->query("SELECT COUNT(*) as count FROM " . DB_PREFIX . "spec sp LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON (sp.product_id = ptc.product_id) WHERE ptc.category_id = " . (int)$category_id)->row;
+        $query = $this->db->query("SELECT COUNT(*) as count FROM " . DB_PREFIX . "spec sp LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON (sp.product_id = ptc.product_id) WHERE sp.language_id = 2 AND ptc.category_id = " . (int)$category_id)->row;
 
         return $query['count'];
     }
