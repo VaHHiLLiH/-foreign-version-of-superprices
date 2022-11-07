@@ -20,7 +20,7 @@ class ControllerStartupSeoUrl extends Controller {
 
 				if ($query->num_rows) {
 					$url = explode('=', $query->row['query']);
-
+                    var_dump($url);
 					if ($url[0] == 'product_id') {
 						$this->request->get['product_id'] = $url[1];
 					}
