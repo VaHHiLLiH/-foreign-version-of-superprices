@@ -1,6 +1,6 @@
 <?php
 
-$path = 'C:/OpenServer/domains/burj/';
+$path = '/var/www/www-root/data/www/everydayshop.ru/';
 
 // Configuration
 require_once($path . 'config.php');
