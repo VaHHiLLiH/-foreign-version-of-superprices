@@ -34,7 +34,7 @@ class ControllerCommonMenuTop extends Controller {
 		foreach ($menu_items as $item) {
 			$data['menu_items'][] = array(
 					'title' => html_entity_decode($item['title'][$language_id], ENT_QUOTES, 'UTF-8'),
-					'href' => $item['link'][$language_id],
+					'href' => 'category/'.$item['link'][$language_id],
 					'sort' => $item['sort_order'],
 			);
 		}
