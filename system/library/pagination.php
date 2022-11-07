@@ -43,9 +43,9 @@ class Pagination {
 
 		$num_links = $this->num_links;
 		$num_pages = ceil($total / $limit);
-        var_dump($this->url);
 		$this->url = str_replace('%7Bpage%7D', '{page}', $this->url);
-        var_dump($this->url);
+
+		$this->url = str_replace('?page={page}', '/page-{page}', $this->url);
 
 		$output = '<ul class="pagination">';
 
