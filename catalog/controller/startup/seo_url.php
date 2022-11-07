@@ -20,7 +20,7 @@ class ControllerStartupSeoUrl extends Controller {
 
 				if ($query->num_rows) {
 					$url = explode('=', $query->row['query']);
-                    var_dump($url);
+
 					if ($url[0] == 'product_id') {
 						$this->request->get['product_id'] = $url[1];
 					}
@@ -121,7 +121,18 @@ class ControllerStartupSeoUrl extends Controller {
 					$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "seo_url WHERE `query` = '" . $this->db->escape($key . '=' . (int)$value) . "' AND store_id = '" . (int)$this->config->get('config_store_id') . "' AND language_id = '" . (int)$this->config->get('config_language_id') . "'");
 
 					if ($query->num_rows && $query->row['keyword']) {
-						$url .= '/' . $query->row['keyword'];
+					    if (strrpos($query->row['query'], 'product_id=')) {
+
+                            $url .= '/product/' . $query->row['keyword'];
+                        } else if (strrpos($query->row['query'], 'category_id=')) {
+
+                            $url .= '/category/' . $query->row['keyword'];
+                        } else if (strrpos($query->row['query'], 'manufacturer_id=')) {
+
+                            $url .= '/manufacturer/' . $query->row['keyword'];
+                        } else {
+                            $url .= '/' . $query->row['keyword'];
+                        }
 
 						unset($data[$key]);
 					}
