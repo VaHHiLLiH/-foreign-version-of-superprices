@@ -445,14 +445,14 @@ class ControllerProductProduct extends Controller {
                 $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                 if (!empty($product_chars)) {
                     $const_char = [
-                        'Техпроцесс'            => false,
+                        'Techprocess'            => false,
                         'Socket'                => false,
-                        'Частота процессора'    => false,
-                        'Количество ядер'       => false,
+                        'CPU frequency'    => false,
+                        'Number of Cores'       => false,
                     ];
                     if ($this->checkToChars($const_char, $product_chars)) {
                         $brand = $this->generateBrand($product_id);
-                        return sprintf($this->language->get('CPU'), $this->generateH1($product_id), $const_char['Техпроцесс'], $const_char['Socket'], $const_char['Частота процессора'], $const_char['Количество ядер'], $brand);
+                        return sprintf($this->language->get('CPU'), $this->generateH1($product_id), $const_char['Techprocess'], $const_char['Socket'], $const_char['CPU frequency'], $const_char['Number of Cores'], $brand);
                     } else {
                         return sprintf($this->language->get('CPU_empty'), $this->generateH1($product_id));
                     }
@@ -464,12 +464,12 @@ class ControllerProductProduct extends Controller {
                 $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                 if (!empty($product_chars)) {
                     $const_char = [
-                        'Диагональ'    => false,
-                        'Разрешение'       => false,
-                        'Входы'       => false,
+                        'Diagonal'    => false,
+                        'Permission'       => false,
+                        'Inputs'       => false,
                     ];
                     if ($this->checkToChars($const_char, $product_chars)) {
-                        return sprintf($this->language->get('Monitors'), $this->generateH1($product_id), $const_char['Диагональ'], $const_char['Разрешение'], $const_char['Входы'], $this->generateH1($product_id));
+                        return sprintf($this->language->get('Monitors'), $this->generateH1($product_id), $const_char['Diagonal'], $const_char['Permission'], $const_char['Inputs'], $this->generateH1($product_id));
                     } else {
                         return sprintf($this->language->get('Monitors_empty'), $this->generateH1($product_id));
                     }
@@ -481,15 +481,14 @@ class ControllerProductProduct extends Controller {
                 $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                 if (!empty($product_chars)) {
                     $const_char = [
-                        'Операционная система'    => false,
-                        'Тип экрана'       => false,
-                        'Операционная система 2'    => false,
-                        'Тип экрана 2'       => false,
-                        'Операционная система 3'    => false,
-                        'Тип экрана 3'       => false,
+                        'Type'    => false,
+                        'Diagonal'       => false,
+                        'RAM'    => false,
+                        'Battery capacity'       => false,
+                        'Number of SIM cards'    => false,
                     ];
                     if ($this->checkToChars($const_char, $product_chars)) {
-                        return sprintf($this->language->get('Phones'), $this->generateH1($product_id), $const_char['Операционная система'], $const_char['Тип экрана'], $const_char['Операционная система 2'], $const_char['Тип экрана 2'], $const_char['Операционная система 3'], $const_char['Тип экрана 3']);
+                        return sprintf($this->language->get('Phones'), $this->generateH1($product_id), $const_char['Type'], $const_char['Diagonal'], $const_char['RAM'], $const_char['Battery capacity'], $const_char['Type'], $const_char['Number of SIM cards']);
                     } else {
                         return sprintf($this->language->get('Phones_empty'), $this->generateH1($product_id));
                     }
@@ -501,11 +500,11 @@ class ControllerProductProduct extends Controller {
                 $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                 if (!empty($product_chars)) {
                     $const_char = [
-                        'Общее число пикселей'    => false,
-                        'Тип камеры'       => false,
+                        'Total number of pixels'    => false,
+                        'Camera type'       => false,
                     ];
                     if ($this->checkToChars($const_char, $product_chars)) {
-                        return sprintf($this->language->get('Cameras'), $this->generateH1($product_id), $const_char['Общее число пикселей'], $const_char['Тип камеры'], $this->generateH1($product_id));
+                        return sprintf($this->language->get('Cameras'), $this->generateH1($product_id), $const_char['Total number of pixels'], $const_char['Camera type'], $this->generateH1($product_id));
                     } else {
                         return sprintf($this->language->get('Cameras_empty'), $this->generateH1($product_id));
                     }
@@ -523,10 +522,10 @@ class ControllerProductProduct extends Controller {
                             $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                             if (!empty($product_chars)) {
                                 $const_char = [
-                                    'Тип инструмента' => false,
+                                    'Tool type' => false,
                                 ];
                                 if ($this->checkToChars($const_char, $product_chars)) {
-                                    return sprintf($this->language->get('Accordion'), $this->generateH1($product_id), $const_char['Тип инструмента']);
+                                    return sprintf($this->language->get('Accordion'), $this->generateH1($product_id), $const_char['Tool type']);
                                 } else {
                                     return sprintf($this->language->get('Accordion_empty'), $this->generateH1($product_id));
                                 }
@@ -539,15 +538,15 @@ class ControllerProductProduct extends Controller {
                             $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                             if (!empty($product_chars)) {
                                 $const_char = [
-                                    'Тип'  => false,
-                                    'Количество клавиш'  => false,
-                                    'Размер клавиш'  => false,
-                                    'Педали'    => false,
-                                    'Вес'  => false,
+                                    'Type'  => false,
+                                    'Number of keys'  => false,
+                                    'Key size'  => false,
+                                    'Pedals'    => false,
+                                    'The weight'  => false,
                                 ];
                                 if ($this->checkToChars($const_char, $product_chars)) {
                                     $brand = $this->generateBrand($product_id);
-                                    return sprintf($this->language->get('Digital Pianos'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество клавиш'], $const_char['Размер клавиш'], $const_char['Педали'], $const_char['Вес']);
+                                    return sprintf($this->language->get('Digital Pianos'), $this->generateH1($product_id), $brand, $const_char['Type'], $const_char['Number of keys'], $const_char['Key size'], $const_char['Pedals'], $const_char['The weight']);
                                 } else {
                                     return sprintf($this->language->get('Digital_Pianos_empty'), $this->generateH1($product_id));
                                 }
@@ -560,15 +559,15 @@ class ControllerProductProduct extends Controller {
                             $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                             if (!empty($product_chars)) {
                                 $const_char = [
-                                    'Тип'  => false,
-                                    'Количество струн'  => false,
-                                    'Материал корпуса'  => false,
-                                    'Материал грифа'  => false,
-                                    'Схема звукоснимателей'  => false,
+                                    'Type'  => false,
+                                    'Number of strings'  => false,
+                                    'Corpus material'  => false,
+                                    'Neck material'  => false,
+                                    'Pickup Diagram'  => false,
                                 ];
                                 if ($this->checkToChars($const_char, $product_chars)) {
                                     $brand = $this->generateBrand($product_id);
-                                    return sprintf($this->language->get('Electric Bass'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество струн'], $const_char['Материал корпуса'], $const_char['Материал грифа'], $const_char['Схема звукоснимателей']);
+                                    return sprintf($this->language->get('Electric Bass'), $this->generateH1($product_id), $brand, $const_char['Type'], $const_char['Number of strings'], $const_char['Corpus material'], $const_char['Neck material'], $const_char['Pickup Diagram']);
                                 } else {
                                     return sprintf($this->language->get('Electric_Bass_empty'), $this->generateH1($product_id));
                                 }
@@ -581,15 +580,15 @@ class ControllerProductProduct extends Controller {
                             $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                             if (!empty($product_chars)) {
                                 $const_char = [
-                                    'Тип'  => false,
-                                    'Количество струн'  => false,
-                                    'Материал корпуса'  => false,
-                                    'Материал грифа'  => false,
-                                    'Схема звукоснимателей'  => false,
+                                    'Type'  => false,
+                                    'Number of strings'  => false,
+                                    'Corpus material'  => false,
+                                    'Neck material'  => false,
+                                    'Pickup Diagram'  => false,
                                 ];
                                 if ($this->checkToChars($const_char, $product_chars)) {
                                     $brand = $this->generateBrand($product_id);
-                                    return sprintf($this->language->get('Electric Guitars'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество струн'], $const_char['Материал корпуса'], $const_char['Материал грифа'], $const_char['Схема звукоснимателей']);
+                                    return sprintf($this->language->get('Electric Guitars'), $this->generateH1($product_id), $brand, $const_char['Type'], $const_char['Number of strings'], $const_char['Corpus material'], $const_char['Neck material'], $const_char['Pickup Diagram']);
                                 } else {
                                     return sprintf($this->language->get('Electric_Guitars_empty'), $this->generateH1($product_id));
                                 }
@@ -602,15 +601,15 @@ class ControllerProductProduct extends Controller {
                             $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                             if (!empty($product_chars)) {
                                 $const_char = [
-                                    'Тип'  => false,
-                                    'Количество клавиш'  => false,
-                                    'Размер клавиш'  => false,
-                                    'Педали'  => false,
-                                    'Вес'  => false,
+                                    'Type'  => false,
+                                    'Number of keys'  => false,
+                                    'Key size'  => false,
+                                    'Pedals'  => false,
+                                    'The weight'  => false,
                                 ];
                                 if ($this->checkToChars($const_char, $product_chars)) {
                                     $brand = $this->generateBrand($product_id);
-                                    return sprintf($this->language->get('MIDI Keyboards'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество клавиш'], $const_char['Размер клавиш'], $const_char['Педали'], $const_char['Вес']);
+                                    return sprintf($this->language->get('MIDI Keyboards'), $this->generateH1($product_id), $brand, $const_char['Type'], $const_char['Number of keys'], $const_char['Key size'], $const_char['Pedals'], $const_char['The weight']);
                                 } else {
                                     return sprintf($this->language->get('MIDI_Keyboards_empty'), $this->generateH1($product_id));
                                 }
@@ -623,15 +622,15 @@ class ControllerProductProduct extends Controller {
                             $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                             if (!empty($product_chars)) {
                                 $const_char = [
-                                    'Тип'  => false,
-                                    'Количество струн'  => false,
-                                    'Материал корпуса'  => false,
-                                    'Материал грифа'  => false,
-                                    'Схема звукоснимателей'  => false,
+                                    'Type'  => false,
+                                    'Number of strings'  => false,
+                                    'Corpus material'  => false,
+                                    'Neck material'  => false,
+                                    'Pickup Diagram'  => false,
                                 ];
                                 if ($this->checkToChars($const_char, $product_chars)) {
                                     $brand = $this->generateBrand($product_id);
-                                    return sprintf($this->language->get('Semi-Acoustic'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество струн'], $const_char['Материал корпуса'], $const_char['Материал грифа'], $const_char['Схема звукоснимателей']);
+                                    return sprintf($this->language->get('Semi-Acoustic'), $this->generateH1($product_id), $brand, $const_char['Type'], $const_char['Number of strings'], $const_char['Corpus material'], $const_char['Neck material'], $const_char['Pickup Diagram']);
                                 } else {
                                     return sprintf($this->language->get('Semi-Acoustic_empty'), $this->generateH1($product_id));
                                 }
@@ -644,13 +643,13 @@ class ControllerProductProduct extends Controller {
                             $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                             if (!empty($product_chars)) {
                                 $const_char = [
-                                    'Тип'  => false,
-                                    'Количество клавиш'  => false,
-                                    'Корпус'  => false,
+                                    'Type'  => false,
+                                    'Number of keys'  => false,
+                                    'Frame'  => false,
                                 ];
                                 if ($this->checkToChars($const_char, $product_chars)) {
                                     $brand = $this->generateBrand($product_id);
-                                    return sprintf($this->language->get('Synthesizers'), $this->generateH1($product_id), $brand, $const_char['Тип'], $const_char['Количество клавиш'], $const_char['Корпус'], $this->generateH1($product_id));
+                                    return sprintf($this->language->get('Synthesizers'), $this->generateH1($product_id), $brand, $const_char['Type'], $const_char['Number of keys'], $const_char['Frame'], $this->generateH1($product_id));
                                 } else {
                                     return sprintf($this->language->get('Synthesizers_empty'), $this->generateH1($product_id));
                                 }
@@ -665,10 +664,10 @@ class ControllerProductProduct extends Controller {
                 $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                 if (!empty($product_chars)) {
                     $const_char = [
-                        'Емкость аккумулятора'    => false,
+                        'Battery capacity'    => false,
                     ];
                     if ($this->checkToChars($const_char, $product_chars)) {
-                        return sprintf($this->language->get('Smartwatches'), $this->generateH1($product_id), $const_char['Емкость аккумулятора'], $this->generateH1($product_id));
+                        return sprintf($this->language->get('Smartwatches'), $this->generateH1($product_id), $const_char['Battery capacity'], $this->generateH1($product_id));
                     } else {
                         return sprintf($this->language->get('Smartwatches_empty'), $this->generateH1($product_id));
                     }
@@ -680,12 +679,12 @@ class ControllerProductProduct extends Controller {
                 $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                 if (!empty($product_chars)) {
                     $const_char = [
-                        'Тип'           => false,
-                        'Разъемы'       => false,
-                        'Коммуникации'  => false,
+                        'Type'           => false,
+                        'Connectors'       => false,
+                        'Communications'  => false,
                     ];
                     if ($this->checkToChars($const_char, $product_chars)) {
-                        return sprintf($this->language->get('Consoles'), $this->generateH1($product_id), $const_char['Тип'], $const_char['Разъемы'], $const_char['Коммуникации'], $this->generateH1($product_id));
+                        return sprintf($this->language->get('Consoles'), $this->generateH1($product_id), $const_char['Type'], $const_char['Connectors'], $const_char['Communications'], $this->generateH1($product_id));
                     } else {
                         return sprintf($this->language->get('Consoles_empty'), $this->generateH1($product_id));
                     }
@@ -697,12 +696,12 @@ class ControllerProductProduct extends Controller {
                 $product_chars = $this->model_catalog_product->getProductCharacteristics($product_id);
                 if (!empty($product_chars)) {
                     $const_char = [
-                        'Объем видеопамяти'    => false,
-                        'Тип видеопамяти'    => false,
-                        'Частота видеопамяти'    => false,
+                        'Video memory size'    => false,
+                        'Type video memory'    => false,
+                        'Frequency video memory'    => false,
                     ];
                     if ($this->checkToChars($const_char, $product_chars)) {
-                        return sprintf($this->language->get('GPU'), $this->generateH1($product_id), $const_char['Объем видеопамяти'], $const_char['Тип видеопамяти'], $const_char['Частота видеопамяти']);
+                        return sprintf($this->language->get('GPU'), $this->generateH1($product_id), $const_char['Video memory size'], $const_char['Type video memory'], $const_char['Frequency video memory']);
                     } else {
                         return sprintf($this->language->get('GPU_empty'), $this->generateH1($product_id));
                     }
