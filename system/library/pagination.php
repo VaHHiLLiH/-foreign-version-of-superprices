@@ -43,8 +43,9 @@ class Pagination {
 
 		$num_links = $this->num_links;
 		$num_pages = ceil($total / $limit);
-
+        var_dump($this->url);
 		$this->url = str_replace('%7Bpage%7D', '{page}', $this->url);
+        var_dump($this->url);
 
 		$output = '<ul class="pagination">';
 
@@ -82,7 +83,6 @@ class Pagination {
 					$output .= '<li class="active"><span>' . $i . '</span></li>';
 				} else {
 					if ($i === 1) {
-					    var_dump($this->url);
 						$output .= '<li><a href="' . str_replace(array('&amp;page={page}', '?page={page}', '&page={page}'), '', $this->url) . '">' . $i . '</a></li>';
 					} else {
 						$output .= '<li><a href="' . str_replace('{page}', $i, $this->url) . '">' . $i . '</a></li>';
