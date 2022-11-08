@@ -351,7 +351,7 @@ class ControllerProductCategory extends Controller {
 
 			// http://googlewebmastercentral.blogspot.com/2011/09/pagination-with-relnext-and-relprev.html
 			if ((int)$page > 1) {
-			    $this->document->addLink($this->url->link('product/category', 'path=' . $category_info['category_id']), 'canonical');
+                $this->document->addLink('text', 'canonical');
 			}
 			
 			if ($page > 1) {
