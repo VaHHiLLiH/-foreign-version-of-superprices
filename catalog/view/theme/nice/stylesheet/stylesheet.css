@@ -3586,6 +3586,9 @@ footer h5 {
 .product-thumb--name-bold{
   text-decoration: none;
 }
-product-thumb--name-bold:hover{
+.product-thumb--name-bold:hover{
   text-decoration: none!important;
+}
+.product-thumb--info a{
+  text-decoration: none;
 }
