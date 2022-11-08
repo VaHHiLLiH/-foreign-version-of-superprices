@@ -3577,6 +3577,15 @@ footer h5 {
 .characteristics > p {
   font-size: 22px;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   margin-top: 40px;
+}
+.product-images a.main-img > img{
+  max-height: 430px;
+}
+.product-thumb--name-bold{
+  text-decoration: none;
+}
+product-thumb--name-bold:hover{
+  text-decoration: none!important;
 }

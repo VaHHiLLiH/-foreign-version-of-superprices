@@ -64,7 +64,7 @@
           </div>
 			{% if attribute_groups %}
           <div class="characteristics">
-			  <p>Characteristics</p>
+			  <h2>Technical specs</h2>
 				  <div class="tab-pane" id="tab-specification">
 					  <table class="table table-borderless">
 						  {% for attribute_group in attribute_groups %}
@@ -100,6 +100,7 @@
         {% endif %}
       </div>
 		{% if similarProducts %}
+			<h3>Products with similar characteristics</h3>
 			{{ similarProducts }}
 		{% endif %}
 
