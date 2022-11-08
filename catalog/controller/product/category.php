@@ -677,9 +677,17 @@ class ControllerProductCategory extends Controller {
             foreach ($category_name as $name) {
                 $categ_name = $name . ' ' . $categ_name;
             }
-            return $categ_name;
+            if (empty($this->request->get['page']) || $this->request->get['page'] == 1) {
+                return $categ_name;
+            } else {
+                return $categ_name.' page '.$this->request->get['page'];
+            }
         } else {
-            return $category_info['name'];
+            if (empty($this->request->get['page']) || $this->request->get['page'] == 1) {
+                return $category_info['name'];
+            } else {
+                return $category_info['name'].' page '.$this->request->get['page'];
+            }
         }
     }
 }
