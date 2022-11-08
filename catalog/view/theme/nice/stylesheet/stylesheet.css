@@ -8,7 +8,7 @@
   --color-primary--darker-2: #4f508f;
   --color-primary--darker-1: #5859a0;
   --color-primary: #6667ab;
-  --color-primary--lighter-1: #7677b4;
+  --color-primary--lighter-1: #7687b4;
   --color-primary--lighter-2: #8788bd;
   --color-primary--lighter-3: #9798c6;
   
@@ -16,7 +16,7 @@
   --color-accent--darker-2: #4f508f;
   --color-accent--darker-1: #5859a0;
   --color-accent: #ea435d;
-  --color-accent--lighter-1: #7677b4;
+  --color-accent--lighter-1: #7687b4;
   --color-accent--lighter-2: #8788bd;
   --color-accent--lighter-3: #9798c6;
   
@@ -113,7 +113,7 @@
   padding: 0;
 }
 /* make outer offset more than inner outers are */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .container {
     padding-left: 24px;
     padding-right: 24px;
@@ -543,7 +543,7 @@ header {
   vertical-align: middle; /* for line */
 }
 
-@media (max-width: 989px) {
+@media (max-width: 768px) {
   #menu-top {
     display: none;
   }
@@ -584,7 +584,7 @@ header {
   margin-left: var(--space-1);
 }
 
-@media (max-width: 989px) {
+@media (max-width: 768px) {
   .top-buttons {
     position: absolute;
     top: 13px;
@@ -644,7 +644,7 @@ header {
   margin-right: 0;
 }
 
-@media (max-width: 989px) {
+@media (max-width: 768px) {
   .logo-column {
     flex-grow: 2;
   }
@@ -664,7 +664,7 @@ header {
 }
 
 /* media as menu */
-@media (min-width: 990px) {
+@media (min-width: 768px) {
   .logo-column {
     max-width: 20%;
     max-width: 180px;
@@ -729,8 +729,9 @@ header {
 }
 
 .header-icons-container {
-  height: 40px;
   line-height: 40px;
+  margin-left: 35px;
+  margin-right: 10px;
 }
 
 .header-icons-item {
@@ -971,7 +972,7 @@ header {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   #menu-top .navbar-toggle {
     /*border-color: #777;*/
     border-color: var(--color-primary);
@@ -1086,7 +1087,7 @@ header {
     display: block;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   #menu-categories {
     border-radius: 3px;
   }
@@ -1487,7 +1488,7 @@ html[dir=rtl] .breadcrumb > li::after {
   border-radius: 4px;
 }
   
-@media(max-width: 767px) {  
+@media(max-width: 768px) {  
   .banner-near-slideshow + .banner-near-slideshow {
     margin-top: 15px;
   } 
@@ -2522,7 +2523,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
   box-sizing: border-box;
 }
 
-@media (min-width: 990px) {
+@media (min-width: 768px) {
   .main-nav-trigger {
     display: none;
   }
@@ -2559,7 +2560,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
 }
 
 /*
-@media (max-width: 989px) {
+@media (max-width: 768px) {
   .main-nav-wrap {
     position: absolute;
     top: 0;
@@ -2608,7 +2609,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
   text-decoration: none;
 }
 
-@media (max-width: 989px) {
+@media (max-width: 768px) {
   .main-nav-trigger.active {
     position: fixed;
   }
@@ -2675,7 +2676,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
   font: normal normal normal 14px/1 FontAwesome;
 }
 
-@media (min-width: 990px) {
+@media (min-width: 768px) {
   .has-subnav-link:after {
     content:"\f0d7";
     display: inline-block;
@@ -2697,7 +2698,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
   /*margin-bottom: 20px;*/
 }
 
-@media (max-width: 989px) {
+@media (max-width: 768px) {
   .promo-img {
     padding: 24px 32px 0 32px;
   }
@@ -2707,7 +2708,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
   padding: 0 24px 12px;
 }
 
-@media (max-width: 989px) {
+@media (max-width: 768px) {
   .promo-body {
     padding: 0 32px 12px;
   }
@@ -2717,7 +2718,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
   padding: 0;
 }
 
-@media (min-width: 990px) {
+@media (min-width: 768px) {
   .main-nav-wrap {
     overflow: visible;
   }
@@ -2892,7 +2893,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
   outline: none;
 }
 
-@media (max-width: 989px) {
+@media (max-width: 768px) {
   .subnav-promo {
     border-top: 1px solid rgba(0,0,0, .175); 
     /*border-top: 1px solid rgba(255,255,255, .475);*/
@@ -2907,7 +2908,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
   font-size: 15px;
 }
 
-@media (min-width: 990px) {
+@media (min-width: 768px) {
   
   .main-dropdown {
     font-size: 14px;
@@ -2947,7 +2948,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
 }
 
 /* styles only */
-@media (min-width: 990px) {
+@media (min-width: 768px) {
   .subnav a {
     color: var(--color-primary);
     
@@ -3043,7 +3044,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
 }
 
 /* as menu change */
-@media (max-width: 989px) {
+@media (max-width: 768px) {
   #top {
     min-height: 55px;
   }
@@ -3274,7 +3275,7 @@ footer h5 {
   font-weight: bold;
   font-size: 22px
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .modal-to-compare .compare-items-cont{
     display: flex;
     flex-direction: column;
@@ -3386,7 +3387,7 @@ footer h5 {
 .only-mobile-menu{
   display: none;
 }
-@media (max-width: 989px) {
+@media (max-width: 768px) {
   .only-mobile-menu{
     display: flex;
     justify-content: space-around;
@@ -3508,39 +3509,68 @@ footer h5 {
   float: none;
 }
 .icon-search-mobile > svg{
-  height: 32px;
-  width: 32px;
+  height: 22px;
+  width: 22px;
   color: #6667ab;
 }
 .menu-icon-text{
-  font-size: 20px;
+  font-size: 18px;
   color: #6667ab;
 }
 .search-compare{
   display: none;
 }
-@media (max-width: 989px) {
-  #top-2{
+@media (max-width: 768px) {
+  #top-2 {
     justify-content: space-between;
   }
-  .logo-menu{
+
+  .logo-menu {
     display: flex;
+    width: 80%;
   }
-  .search-compare{
+
+  .search-compare {
     display: flex;
     justify-content: space-around;
     width: 40%;
   }
-  .desc-top-compare{
+
+  .desc-top-compare {
     display: none;
   }
 
-  .only-mobile-menu > .mobile-menu-categories{
+  .only-mobile-menu > #mobile-menu-categories {
     margin: 0;
   }
 
-  .logo-menu > #logo{
+  .logo-menu > #logo {
     align-self: center;
+  }
+
+  .compare-pic > img {
+    width: 22px;
+    height: 22px;
+    padding: 2px 0;
+  }
+  .icon-search-mobile > img {
+    width: 20px;
+    height: 20px;
+  }
+  .icon-search-mobile{
+    display: flex;
+    align-items: center;
+  }
+  .compare-pic{
+    display: flex;align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .menu-icon-text {
+    font-size: 12px;
+  }
+  .header-icons-container {
+    margin-left: 15px;
   }
 }
 /*--------------------------------End of Mobile Menu-------------------*/
