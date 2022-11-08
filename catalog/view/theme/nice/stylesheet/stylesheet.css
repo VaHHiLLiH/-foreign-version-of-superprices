@@ -634,10 +634,6 @@ header {
   margin-right: var(--space-4x);
 }
 
-.logo-column {
-  max-width: 30%;
-}
-
 .tagline-column {}
 
 .search-column--desktop {
@@ -3537,6 +3533,14 @@ footer h5 {
   }
   .desc-top-compare{
     display: none;
+  }
+
+  .only-mobile-menu > .mobile-menu-categories{
+    margin: 0;
+  }
+
+  .logo-menu > #logo{
+    align-self: center;
   }
 }
 /*--------------------------------End of Mobile Menu-------------------*/
