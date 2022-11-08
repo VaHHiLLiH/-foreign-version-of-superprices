@@ -87,6 +87,16 @@ class ControllerProductManufacturer extends Controller {
 			$page = 1;
 		}
 
+        if (isset($this->request->get['page'])) {
+            if ($this->request->get['page'] > 1) {
+                $data['meta_checker'] = true;
+            } else {
+                $data['meta_checker'] = false;
+            }
+        } else {
+            $data['meta_checker'] = false;
+        }
+
 		if (isset($this->request->get['limit'])) {
 			$limit = (int)$this->request->get['limit'];
 		} else {

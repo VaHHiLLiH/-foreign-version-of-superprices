@@ -33,6 +33,16 @@ class ControllerProductCategory extends Controller {
 			$page = 1;
 		}
 
+        if (isset($this->request->get['page'])) {
+            if ($this->request->get['page'] > 1) {
+                $data['meta_checker'] = true;
+            } else {
+                $data['meta_checker'] = false;
+            }
+        } else {
+            $data['meta_checker'] = false;
+        }
+
 		if (isset($this->request->get['limit'])) {
 			$limit = (int)$this->request->get['limit'];
 		} else {
@@ -101,8 +111,11 @@ class ControllerProductCategory extends Controller {
         }
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
-
-		$data['category_description'] = $this->generateDescription($category_id);
+        if ($this->request->get['page'] > 1) {
+            $data['category_description'] = $this->generateDescription($category_id);
+        } else {
+            $data['category_description']= '';
+        }
 
 		if ($category_info) {
 
