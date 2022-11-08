@@ -172,7 +172,7 @@ class ControllerStartupSeoUrl extends Controller {
 
                     $url .= ($data['route'] == 'product/manufacturer/info' && $key == 'manufacturer_id') ? '/brand' : '';
                     if ($query->num_rows && $query->row['keyword']) {
-                        $url .= '/' . $query->row['keyword'];
+                        $url .= 'brand/' . $query->row['keyword'];
 
                         unset($data[$key]);
                     }
