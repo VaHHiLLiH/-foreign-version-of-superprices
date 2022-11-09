@@ -1763,7 +1763,7 @@ html[dir=rtl] .breadcrumb > li::after {
 .product-thumb--image img {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
+  margin-top: 45px;
   border-radius: 0;
 }
 
