@@ -8,7 +8,7 @@ class ControllerProductManufacturer extends Controller {
 
         $this->load->model('tool/image');
         if (!empty($this->request->get['page']) && $this->request->get['page'] > 1) {
-            $this->document->setTitle('Page '.$this->request->get['page'].' '.$this->language->get('heading_title'));
+            $this->document->setTitle('Page '.$this->request->get['page'].' - '.$this->language->get('heading_title'));
         } else {
             $this->document->setTitle($this->language->get('heading_title'));
         }
