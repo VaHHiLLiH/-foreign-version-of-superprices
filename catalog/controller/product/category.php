@@ -111,16 +111,21 @@ class ControllerProductCategory extends Controller {
         }
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
-        if ($this->request->get['page'] > 1) {
-            $data['category_description'] = $this->generateDescription($category_id);
+        if (!empty($this->request->get['page']) && $this->request->get['page'] > 1) {
+            $data['category_description'] = $this->generateDescription($category_id).' page '.$this->request->get['page'];
         } else {
-            $data['category_description']= '';
+            $data['category_description'] = $this->generateDescription($category_id);
         }
 
 		if ($category_info) {
 
-			$this->document->setTitle($this->generateMetaTitle($category_id));
-			$this->document->setDescription($this->generateMetaDescription($category_id));
+            if (!empty($this->request->get['page']) && $this->request->get['page'] > 1) {
+                $this->document->setTitle($this->generateMetaTitle($category_id)).' page '.$this->request->get['page'];
+                $this->document->setDescription($this->generateMetaDescription($category_id)).' page '.$this->request->get['page'];
+            } else {
+                $this->document->setTitle($this->generateMetaTitle($category_id));
+                $this->document->setDescription($this->generateMetaDescription($category_id));
+            }
 			$this->document->setKeywords($category_info['meta_keyword']);
 
 			//$data['heading_title'] = $category_info['name'];
