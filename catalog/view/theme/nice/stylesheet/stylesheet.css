@@ -3613,3 +3613,33 @@ footer h5 {
 .header-icons-item{
   cursor: pointer;
 }
+/*------------------SlideShow----------------------------*/
+#slideshow1{
+  display: none;
+}
+@media (max-width: 768px) {
+  #slideshow0{
+    display: none;
+  }
+  #slideshow1{
+    display: block;
+  }
+  #slideshow1 .slide-description {
+    position: absolute;
+    bottom: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #slideshow1 .img-responsive{
+    height: 60%;
+    margin: auto;
+  }
+  #slideshow1 .slide-title{
+    font-size: 24px;
+  }
+  #slideshow1 .slide-description{
+    font-size: 14px;
+  }
+}
+/*------------------EndOfSlideShow-----------------------*/
