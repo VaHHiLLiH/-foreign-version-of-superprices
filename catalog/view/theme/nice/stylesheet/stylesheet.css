@@ -2003,7 +2003,7 @@ a.product-thumb--name { display: block; }
 }
 
 .product-grid .product-thumb--button-buy {
-  width: 100%;
+  width: 75%;
 }
 
 
@@ -3595,6 +3595,7 @@ footer h5 {
 }
 .product-thumb--hidden-wrapper{
   display: flex;
+  justify-content: space-between;
 }
 .product-thumb--hidden-wrapper > span > img{
   width: 50px;
