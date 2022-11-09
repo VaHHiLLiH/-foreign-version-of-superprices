@@ -120,8 +120,8 @@ class ControllerProductCategory extends Controller {
 		if ($category_info) {
 
             if (!empty($this->request->get['page']) && $this->request->get['page'] > 1) {
-                $this->document->setTitle($this->generateMetaTitle($category_id).' page '.$this->request->get['page']);
-                $this->document->setDescription($this->generateMetaDescription($category_id).' page '.$this->request->get['page']);
+                $this->document->setTitle('Page '.$this->request->get['page'].' '.$this->generateMetaTitle($category_id));
+                $this->document->setDescription('Page '.$this->request->get['page'].' '.$this->generateMetaDescription($category_id));
             } else {
                 $this->document->setTitle($this->generateMetaTitle($category_id));
                 $this->document->setDescription($this->generateMetaDescription($category_id));

@@ -1,13 +1,17 @@
 <?php
 class ControllerProductManufacturer extends Controller {
-	public function index() {
-		$this->load->language('product/manufacturer');
+	public function index()
+    {
+        $this->load->language('product/manufacturer');
 
-		$this->load->model('catalog/manufacturer');
+        $this->load->model('catalog/manufacturer');
 
-		$this->load->model('tool/image');
-
-		$this->document->setTitle($this->language->get('heading_title'));
+        $this->load->model('tool/image');
+        if (!empty($this->request->get['page']) && $this->request->get['page'] > 1) {
+            $this->document->setTitle('Page '.$this->request->get['page'].' '.$this->language->get('heading_title'));
+        } else {
+            $this->document->setTitle($this->language->get('heading_title'));
+        }
 
 		$data['breadcrumbs'] = array();
 
