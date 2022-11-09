@@ -3642,5 +3642,8 @@ footer h5 {
   #slideshow1 .slide-description{
     font-size: 14px;
   }
+  #slideshow1 .slide-description .link-on-category{
+    display: none;
+  }
 }
 /*------------------EndOfSlideShow-----------------------*/
