@@ -3623,6 +3623,7 @@ footer h5 {
   }
   #slideshow1{
     display: block;
+    height: 320px;
   }
   #slideshow1 .slide-description {
     position: absolute;
