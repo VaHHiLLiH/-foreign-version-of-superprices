@@ -3518,6 +3518,9 @@ footer h5 {
   font-size: 18px;
   color: #6667ab;
 }
+.menu-icon-text:hover {
+  color: #444190;
+}
 .search-compare{
   display: none;
 }
@@ -3603,4 +3606,10 @@ footer h5 {
 }
 .product-thumb--hidden-wrapper a{
   color: #ffffff!important;
+}
+.desc-top-compare .img-responsive:hover {
+  background: url(/image/catalog/compare_head_hard.svg);
+}
+.header-icons-item{
+  cursor: pointer;
 }
