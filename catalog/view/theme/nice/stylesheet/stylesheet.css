@@ -3666,6 +3666,22 @@ footer h5 {
     width: 100%;
     margin-bottom: 20px;
   }
+  .links-content-child:nth-child(1) .main-text{
+    font-size: 36px;
+    margin-bottom: 0;
+    display: block;
+    text-align: center;
+  }
+  .links-content-child .link-on-category{
+    font-size: 12px;
+    text-align: center;
+  }
+  .links-content-child:nth-child(2) .main-text{
+    font-size: 23px;
+    margin-bottom: 0;
+    display: block;
+    text-align: center;
+  }
   .links-content-child .text{
     width: 40%;
     position: absolute;
