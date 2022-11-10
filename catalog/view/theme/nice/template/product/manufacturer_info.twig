@@ -1,4 +1,7 @@
 {{ header }}
+{% if meta_checker %}
+  <meta name="robots" content="noindex, follow">
+{% endif %}
 <div id="product-manufacturer" class="container">
   <ul class="breadcrumb">
     {% for breadcrumb in breadcrumbs %}
