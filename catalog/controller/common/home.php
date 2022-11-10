@@ -2,8 +2,8 @@
 class ControllerCommonHome extends Controller {
 	public function index() {
 
-		$this->document->setTitle($this->config->get('config_meta_title'));
-		$this->document->setDescription($this->config->get('config_meta_description'));
+		$this->document->setTitle('Electronics Technical Specifications and Features on ' . $this->config->get('config_name') . '.');
+		$this->document->setDescription('Detailed info and all main Technical Specifications of Computer Equipment and Electronics (Monitors, GPU, CPU, Cameras, Smartphones, etc.). Compare Specs of different models on ' . $this->config->get('config_name') . '.');
 		$this->document->setKeywords($this->config->get('config_meta_keyword'));
 
 		if (isset($this->request->get['route'])) {
