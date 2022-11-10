@@ -84,7 +84,7 @@ class ControllerCommonHeader extends Controller {
         if (isset($this->request->get['route']) && $this->request->get['route'] !== 'product/compare') {
             $data['modal_comparison'] = $this->load->controller('common/modal_compare');
         }
-            var_dump($data['modal_comparison']);
+            var_dump(isset($this->request->get['route']));echo'<br/><br/>';var_dump($this->request->get['route'] !== 'product/compare');
 		return $this->load->view('common/header', $data);
 	}
 }
