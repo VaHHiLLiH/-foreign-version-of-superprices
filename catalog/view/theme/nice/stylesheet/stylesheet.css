@@ -3687,6 +3687,7 @@ footer h5 {
     position: absolute;
     right: 10px;
     bottom: 30px;
+    top: auto;
   }
 }
 /*------------------EndOf2CategoriesOnMain---------------*/
