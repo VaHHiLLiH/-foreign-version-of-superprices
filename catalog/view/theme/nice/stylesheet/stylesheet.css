@@ -3628,7 +3628,7 @@ footer h5 {
   #slideshow1 .swiper-slide{
     margin-bottom: 150px;
   }
-  #slideshow1 .slide-description {
+  #slideshow1 div.slide-description {
     position: absolute;
     bottom: -50px;
     left: 50%;
