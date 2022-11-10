@@ -3655,6 +3655,11 @@ footer h5 {
 /*------------------EndOfSlideShow-----------------------*/
 /*------------------2CategoriesOnMain--------------------*/
 @media (max-width: 768px) {
+  .links-content-child:first-child{
+    margin-right: 10px;
+  }
+}
+@media (max-width: 500px) {
   #link-on-categories > .links-content{
     flex-direction: column;
   }
