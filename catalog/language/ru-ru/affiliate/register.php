@@ -1,53 +1,52 @@
 <?php
 // Heading
-$_['heading_title']             = 'Партнерская программа';
+$_['heading_title']             = 'Affiliate Program';
 
 // Text
-$_['text_account']              = 'Кабинет Партнера';
-$_['text_register']             = 'Регистрация Партнера';
-$_['text_account_already']      = 'Если у Вас уже есть партнерский логин, пожалуйста <a href="%s">авторизируйтесь</a>.';
-$_['text_signup']               = 'Для создания учетной записи партнера необходимо заполнить форму регистрации';
-$_['text_your_details']         = 'Ваши персональные данные';
-$_['text_your_address']         = 'Ваш адрес';
-$_['text_your_affiliate']       = 'Ваша информация партнера';
-$_['text_your_password']        = 'Пароль';
-$_['text_cheque']               = 'Чек';
+$_['text_account']              = 'Account';
+$_['text_register']             = 'Affiliate Register';
+$_['text_account_already']      = 'If you already have an account with us, please login at the <a href="%s">login page</a>.';
+$_['text_signup']               = 'To create an affiliate account, fill in the form below ensuring you complete all the required fields:';
+$_['text_your_details']         = 'Your Personal Details';
+$_['text_your_address']         = 'Your Address Details';
+$_['text_your_affiliate']       = 'Your Affiliate Information';
+$_['text_your_password']        = 'Your Password';
+$_['text_cheque']               = 'Cheque';
 $_['text_paypal']               = 'PayPal';
-$_['text_bank']                 = 'Банковский перевод';
-$_['text_agree']                = 'Я прочитал <a href="%s" class="agree"><b>%s</b></a> и согласен с <br /> условиями безопасности и обработки персональных данных';
+$_['text_bank']                 = 'Bank Transfer';
+$_['text_agree']                = 'I have read and agree to the <a href="%s" class="agree"><b>%s</b></a>';
 
 // Entry
-$_['entry_customer_group']      = 'Группа';
-$_['entry_firstname']           = 'Имя, Отчество';
-$_['entry_lastname']            = 'Фамилия';
+$_['entry_customer_group']      = 'Customer Group';
+$_['entry_firstname']           = 'First Name';
+$_['entry_lastname']            = 'Last Name';
 $_['entry_email']               = 'E-Mail';
-$_['entry_telephone']           = 'Телефон';
-$_['entry_company']             = 'Компания';
-$_['entry_website']             = 'Веб-сайт';
-$_['entry_tax']                 = 'ИНН';
-$_['entry_payment']             = 'Способ оплаты';
-$_['entry_cheque']              = 'Имя получателя чека';
-$_['entry_paypal']              = 'PayPal Email аккаунт';
-$_['entry_bank_name']           = 'Наименование банка';
-$_['entry_bank_branch_number']  = 'Номер отделения';
-$_['entry_bank_swift_code']     = 'БИК';
-$_['entry_bank_account_name']   = 'Корр. счет';
-$_['entry_bank_account_number'] = 'Расчетный счет';
-$_['entry_password']            = 'Пароль';
-$_['entry_confirm']             = 'Подтверждение пароля';
+$_['entry_telephone']           = 'Telephone';
+$_['entry_company']             = 'Company';
+$_['entry_website']             = 'Web Site';
+$_['entry_tax']                 = 'Tax ID';
+$_['entry_payment']             = 'Payment Method';
+$_['entry_cheque']              = 'Cheque Payee Name';
+$_['entry_paypal']              = 'PayPal Email Account';
+$_['entry_bank_name']           = 'Bank Name';
+$_['entry_bank_branch_number']  = 'ABA/BSB number (Branch Number)';
+$_['entry_bank_swift_code']     = 'SWIFT Code';
+$_['entry_bank_account_name']   = 'Account Name';
+$_['entry_bank_account_number'] = 'Account Number';
+$_['entry_password']            = 'Password';
+$_['entry_confirm']             = 'Password Confirm';
 
 // Error
-$_['error_exists']              = 'Данный E-Mail уже зарегистрирован!';
-$_['error_firstname']           = 'Имя должно быть от 1 до 32 символов!';
-$_['error_lastname']            = 'Фамилия должна быть от 1 до 32 символов!';
-$_['error_email']               = 'E-Mail адрес введен неверно!';
-$_['error_telephone']           = 'Номер телефона должен быть от 3 до 32 символов!';
-$_['error_custom_field']        = '%s необходим!';
-$_['error_cheque']              = 'Имя получателя чека необходимо!';
-$_['error_paypal']              = 'PayPal Email аккаунт не корректный!';
-$_['error_bank_account_name']   = 'Корр. счет необходим!';
-$_['error_bank_account_number'] = 'Расчетный счет необходим!';
-$_['error_password']            = 'Пароль должен быть от 4 до 20 символов!';
-$_['error_confirm']             = 'Пароль и Пароль подтверждения не совпадают!';
-$_['error_agree']               = 'Внимание. Вы должны прочитать и согласится %s!';
-
+$_['error_exists']              = 'Warning: E-Mail Address is already registered!';
+$_['error_firstname']           = 'First Name must be between 1 and 32 characters!';
+$_['error_lastname']            = 'Last Name must be between 1 and 32 characters!';
+$_['error_email']               = 'E-Mail Address does not appear to be valid!';
+$_['error_telephone']           = 'Telephone must be between 3 and 32 characters!';
+$_['error_custom_field']        = '%s required!';
+$_['error_cheque']              = 'Cheque Payee Name required!';
+$_['error_paypal']              = 'PayPal Email Address does not appear to be valid!';
+$_['error_bank_account_name']   = 'Account Name required!';
+$_['error_bank_account_number'] = 'Account Number required!';
+$_['error_password']            = 'Password must be between 4 and 20 characters!';
+$_['error_confirm']             = 'Password confirmation does not match password!';
+$_['error_agree']               = 'Warning: You must agree to the %s!';

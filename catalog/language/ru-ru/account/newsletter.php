@@ -1,12 +1,11 @@
 <?php
 // Heading
-$_['heading_title']    = 'Подписка на новости';
+$_['heading_title']    = 'Newsletter Subscription';
 
 // Text
-$_['text_account']     = 'Личный Кабинет';
-$_['text_newsletter']  = 'Рассылка';
-$_['text_success']     = 'Ваша подписка успешно обновлена!';
+$_['text_account']     = 'Account';
+$_['text_newsletter']  = 'Newsletter';
+$_['text_success']     = 'Success: Your newsletter subscription has been successfully updated!';
 
 // Entry
-$_['entry_newsletter'] = 'Подписаться';
-
+$_['entry_newsletter'] = 'Subscribe';

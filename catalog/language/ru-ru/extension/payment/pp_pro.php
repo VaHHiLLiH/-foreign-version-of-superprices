@@ -1,18 +1,17 @@
 <?php
 // Text
-$_['text_title']				= 'Карты Visa и MasterCard (PayPal)';
-$_['text_wait']					= 'Пожалуйста, подождите!';
-$_['text_credit_card']			= 'Информация платежной карты';
+$_['text_title']				= 'Credit or Debit Card (Processed securely by PayPal)';
+$_['text_wait']					= 'Please wait!';
+$_['text_credit_card']			= 'Credit Card Details';
 
 // Entry
-$_['entry_cc_type']				= 'Тип карты:';
-$_['entry_cc_number']			= 'Номер карты:';
-$_['entry_cc_start_date']		= 'Дата начала срока действия карты:';
-$_['entry_cc_expire_date']		= 'Дата окончания срока действия карты:';
-$_['entry_cc_cvv2']				= 'Код безопасности (CVV2):';
-$_['entry_cc_issue']			= 'Код карты (Issue):';
+$_['entry_cc_type']				= 'Card Type';
+$_['entry_cc_number']			= 'Card Number';
+$_['entry_cc_start_date']		= 'Card Valid From Date';
+$_['entry_cc_expire_date']		= 'Card Expiry Date';
+$_['entry_cc_cvv2']				= 'Card Security Code (CVV2)';
+$_['entry_cc_issue']			= 'Card Issue Number';
 
 // Help
-$_['help_start_date']			= '(если известно)';
-$_['help_issue']				= '(только для Maestro и Solo карт)';
-
+$_['help_start_date']			= '(if available)';
+$_['help_issue']				= '(for Maestro and Solo cards only)';

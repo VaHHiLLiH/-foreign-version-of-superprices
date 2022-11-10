@@ -1,23 +1,22 @@
 <?php
 // Heading
-$_['heading_title']                 = 'Партнерская программа';
+$_['heading_title']                 = 'Affiliate Program';
 
 // Text
-$_['text_account']                  = 'Кабинет Партнера';
-$_['text_login']                    = 'Войти';
-$_['text_description']              = '<p>Партнерская программа %s совершенно бесплатна и позволяет участникам получать дополнительный доход, путем размещения ссылок как на Наш магазин %s или на отдельные товары. Каждая покупка, совершенная по партнерской ссылке, приносит агентскую комиссию. Стандартный размер комиссии составляет %s.</p><p>За подробной информацией обращайтесь на страницу информации для партнеров.</p>';
-$_['text_new_affiliate']            = 'Новый Партнер';
-$_['text_register_account']         = '<strong>Я не являюсь партнером.</strong><p>Нажмите Вперед чтобы создать учетную запись партнера. Обратите внимание, что эта учетная запись никак не связана с какой либо учетной записью покупателя!</p>';
-$_['text_returning_affiliate']      = 'Вход для партнеров';
-$_['text_i_am_returning_affiliate'] = 'Я уже зарегистрирован.';
-$_['text_forgotten']                = 'Забыли пароль?';
+$_['text_account']                  = 'Account';
+$_['text_login']                    = 'Login';
+$_['text_description']              = '<p>%s affiliate program is free and enables members to earn revenue by placing a link or links on their web site which advertises %s or specific products on it. Any sales made to customers who have clicked on those links will earn the affiliate commission. The standard commission rate is currently %s.</p><p>For more information, visit our FAQ page or see our Affiliate terms &amp; conditions.</p>';
+$_['text_new_affiliate']            = 'New Affiliate';
+$_['text_register_account']         = '<p>I am not currently an affiliate.</p><p>Click Continue below to create a new affiliate account. Please note that this is not connected in any way to your customer account.</p>';
+$_['text_returning_affiliate']      = 'Affiliate Login';
+$_['text_i_am_returning_affiliate'] = 'I am a returning affiliate.';
+$_['text_forgotten']                = 'Forgotten Password';
 
 // Entry
-$_['entry_email']                   = 'Партнерский E-Mail:';
-$_['entry_password']                = 'Пароль:';
+$_['entry_email']                   = 'Affiliate E-Mail';
+$_['entry_password']                = 'Password';
 
 // Error
-$_['error_login']                   = 'Не найден введенный адрес E-Mail и/или пароль указан неправильно.';
-$_['error_attempts']                = 'Вы превысили максимальное количество попыток авторизации. Повторите попытку авторизации на сайте через 1 час';
-$_['error_approved']                = 'Ваш аккаунт пока не одобрен. Ожидайте, скоро администрация должна одобрить Ваш аккаунт.';
-
+$_['error_login']                   = 'Warning: No match for E-Mail Address and/or Password.';
+$_['error_attempts']                = 'Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.';
+$_['error_approved']                = 'Warning: Your account requires approval before you can login.';

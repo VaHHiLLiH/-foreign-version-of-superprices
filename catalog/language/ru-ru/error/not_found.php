@@ -1,7 +1,6 @@
 <?php
 // Heading
-$_['heading_title'] = 'Запрашиваемая страница не найдена!';
+$_['heading_title'] = 'The page you requested cannot be found!';
 
 // Text
-$_['text_error']    = 'К сожалению, запрашиваемая Вами страница не найдена. Вероятно, Вы указали несуществующий адрес, страница была удалена, перемещена или сейчас она временно недоступна!';
-
+$_['text_error']    = 'The page you requested cannot be found.';

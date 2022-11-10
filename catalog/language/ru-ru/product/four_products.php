@@ -1,2 +1,2 @@
 <?php
-$_['heading']       = 'Рекомендуемые товары';
+$_['heading']       = 'Featured products';

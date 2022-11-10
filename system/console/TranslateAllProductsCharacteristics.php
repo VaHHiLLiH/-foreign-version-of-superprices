@@ -1,6 +1,8 @@
 <?php
-//$path = 'C:/OpenServer/domains/randSheetOnOC.orc/';
-$path = '/var/www/www-root/data/www/everydayshop.ru/';
+
+use Stichoza\GoogleTranslate\GoogleTranslate;
+
+$path = 'C:/OpenServer/domains/burj/';
 
 // Configuration
 require_once($path . 'config.php');
@@ -13,63 +15,51 @@ require_once(DIR_SYSTEM . 'helper/general.php');
 // Database
 $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
 
+$tr = new GoogleTranslate('en');
 
+$recordOnOnePage = 2000;
+$allRecords = $db->query("SELECT COUNT(*) as count FROM oc_spec WHERE language_id = 0")->row['count'];
+$current_page = 3;
+$maxPages = ceil($allRecords/$recordOnOnePage);
 
+while($current_page <= $maxPages) {
+    $from = ($current_page-1)*$recordOnOnePage;
 
-$products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 0 LIMIT 8000, 2000")->rows;
+    $products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 0 LIMIT " . $from . ", " . $recordOnOnePage)->rows;
 
-foreach ($products_chars as $key1 => $product_chars) {
-    $characteristics = json_decode($product_chars['spec'], true);
-    foreach ($characteristics as $key2 => $group_chars) {
-        $characteristics[$key2]['name'] = translateText($group_chars['name']);
-        $group_chars = $group_chars['subspecs'];
-        foreach ($group_chars as $key3 => $group_char) {
-            $group_chars[$key3]['name'] = translateText($group_char['name']);
-            $group_chars[$key3]['value'] = translateText($group_char['value']);
+    if (!empty($products_chars)) {
+        foreach ($products_chars as $key1 => $product_chars) {
+
+            $checking_translated = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 2 AND spec_id = " . (int)$product_chars['spec_id'] . " AND product_id = " . (int)$product_chars['product_id'])->row;
+
+            if (empty($checking_translated)) {
+
+                $characteristics = json_decode($product_chars['spec'], true);
+                foreach ($characteristics as $key2 => $group_chars) {
+                    if ($group_chars['name'] != null) {
+                        $characteristics[$key2]['name'] = $tr->translate($group_chars['name']);
+                    }
+                    $group_chars = $group_chars['subspecs'];
+                    foreach ($group_chars as $key3 => $group_char) {
+                        if ($group_char['name'] != null) {
+                            $group_chars[$key3]['name'] = $tr->translate($group_char['name']);
+                        }
+                        if ($group_char['value'] != null) {
+                            $group_chars[$key3]['value'] = $tr->translate($group_char['value']);
+                        }
+                    }
+                    $characteristics[$key2]['subspecs'] = $group_chars;
+                }
+                $products_chars[$key1]['spec'] = json_encode($characteristics);
+
+                var_dump($products_chars[$key1]['product_id']);
+
+                $db->query("INSERT INTO " . DB_PREFIX . "spec (spec_id, product_id, language_id, spec) VALUES (" . (int)$products_chars[$key1]['spec_id'] . ", " . (int)$products_chars[$key1]['product_id'] . ", 2, '" . $db->escape($products_chars[$key1]['spec']) . "')");
+            }
         }
-        $characteristics[$key2]['subspecs'] = $group_chars;
     }
-    $products_chars[$key1]['spec'] = json_encode($characteristics);
-
-    var_dump($products_chars[$key1]['product_id']);
-
-    $db->query("INSERT INTO " . DB_PREFIX . "spec (product_id, language_id, spec) VALUES (" . (int)$products_chars[$key1]['product_id'] . ", 2, '" . $db->escape($products_chars[$key1]['spec']) . "')");
+    $current_page++;
 }
 
 
-function translateText($text)
-{
-    //return 'Случайное текст';
-    $IAM_TOKEN = '';
-    $folder_id = '';
-    $target_language = 'en';
 
-    $url = 'https://translate.api.cloud.yandex.net/translate/v2/translate';
-
-    $headers = [
-        'Content-Type: application/json',
-        "Authorization: Bearer $IAM_TOKEN"
-    ];
-
-    $post_data = [
-        "targetLanguageCode" => $target_language,
-        "texts" => $text,
-        "folderId" => $folder_id,
-    ];
-
-    $data_json = json_encode($post_data);
-
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $data_json);
-    curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_POST, true);
-
-    $result = curl_exec($curl);
-
-    curl_close($curl);
-
-    $translatedText = json_decode($result, true);
-    return $translatedText['translations'][0]['text'];
-}

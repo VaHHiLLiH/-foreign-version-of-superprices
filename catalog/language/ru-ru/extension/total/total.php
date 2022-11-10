@@ -1,4 +1,3 @@
 <?php
 // Text
-$_['text_total'] = 'Итого';
-
+$_['text_total'] = 'Total';
