@@ -3662,6 +3662,10 @@ footer h5 {
     margin-left: 0;
     width: 55%;
   }
+  .links-content-child{
+    width: 100%;
+    margin-bottom: 20px;
+  }
   .links-content-child .text{
     width: 40%;
     position: absolute;
