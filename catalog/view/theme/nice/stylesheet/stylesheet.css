@@ -3663,15 +3663,7 @@ footer h5 {
     margin-left: 0;
     width: 55%;
   }
-}
-@media (max-width: 500px) {
-  #link-on-categories > .links-content{
-    flex-direction: column;
-  }
-  .links-content-child{
-    width: 100%;
-    margin-bottom: 20px;
-  }
+
   .links-content-child:first-child .main-text{
     font-size: 36px;
     margin-bottom: 0;
@@ -3698,6 +3690,15 @@ footer h5 {
     right: 10px;
     bottom: 30px;
     top: auto;
+  }
+}
+@media (max-width: 500px) {
+  #link-on-categories > .links-content{
+    flex-direction: column;
+  }
+  .links-content-child{
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 /*------------------EndOf2CategoriesOnMain---------------*/
