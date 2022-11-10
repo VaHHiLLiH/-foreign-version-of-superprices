@@ -3625,12 +3625,14 @@ footer h5 {
     display: block;
     height: 320px;
   }
+  #slideshow1 .swiper-slide{
+    margin-bottom: 150px;
+  }
   #slideshow1 .slide-description {
     position: absolute;
-    bottom: 30px;
-    top: 50%;
+    bottom: -50px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
   }
   #slideshow1 .img-responsive{
     height: 60%;
@@ -3638,6 +3640,7 @@ footer h5 {
   }
   #slideshow1 .slide-title{
     font-size: 24px;
+    margin: 0 auto;
   }
   #slideshow1 .slide-description{
     font-size: 14px;
