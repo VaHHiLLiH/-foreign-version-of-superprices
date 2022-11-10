@@ -3666,7 +3666,7 @@ footer h5 {
     width: 100%;
     margin-bottom: 20px;
   }
-  .links-content-child:nth-child(1) .main-text{
+  .links-content-child:first-child .main-text{
     font-size: 36px;
     margin-bottom: 0;
     display: block;
