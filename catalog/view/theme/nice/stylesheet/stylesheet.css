@@ -3637,6 +3637,7 @@ footer h5 {
   #slideshow1 .img-responsive{
     height: 60%;
     margin: auto;
+    object-fit: contain;
   }
   #slideshow1 .slide-title{
     font-size: 24px;
