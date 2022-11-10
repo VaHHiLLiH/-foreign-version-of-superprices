@@ -3126,6 +3126,8 @@ footer h5 {
 }
 .links-content-child > img{
   margin-left: 30px;
+  height: 100%;
+  object-fit: contain;
 }
 .links-content-child > img:hover {
   transition: 0.5s;
@@ -3651,3 +3653,20 @@ footer h5 {
   }
 }
 /*------------------EndOfSlideShow-----------------------*/
+/*------------------2CategoriesOnMain--------------------*/
+@media (max-width: 450px) {
+  #link-on-categories > .links-content{
+    flex-direction: column;
+  }
+  .links-content-child > img {
+    margin-left: 0;
+    width: 55%;
+  }
+  .links-content-child .text{
+    width: 40%;
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+  }
+}
+/*------------------EndOf2CategoriesOnMain---------------*/
