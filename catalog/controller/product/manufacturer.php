@@ -8,9 +8,11 @@ class ControllerProductManufacturer extends Controller {
 
         $this->load->model('tool/image');
         if (!empty($this->request->get['page']) && $this->request->get['page'] > 1) {
-            $this->document->setTitle('Page '.$this->request->get['page'].' - '.$this->language->get('heading_title'));
+            $this->document->setTitle('Page ' . $this->request->get['page'] . ' - ' . 'BrandName Electronics — ' . $this->config->get('config_name') . '.');
+            $this->document->setDescription('Page ' . $this->request->get['page'] . ' - ' . 'List of BrandName Electronics. Check and compare main Technical Specifications of BrandName Electronics on ' . $this->config->get('config_name') . '.');
         } else {
-            $this->document->setTitle($this->language->get('heading_title'));
+            $this->document->setTitle('BrandName Electronics — ' . $this->config->get('config_name') . '.');
+            $this->document->setDescription('List of BrandName Electronics. Check and compare main Technical Specifications of BrandName Electronics on ' . $this->config->get('config_name') . '.');
         }
 
 		$data['breadcrumbs'] = array();
@@ -122,7 +124,8 @@ class ControllerProductManufacturer extends Controller {
 		$manufacturer_info = $this->model_catalog_manufacturer->getManufacturer($manufacturer_id);
 
 		if ($manufacturer_info) {
-			$this->document->setTitle($manufacturer_info['name']);
+			$this->document->setTitle('All Manufacturers — ' . $this->config->get('config_name'));
+            $this->document->setDescription('List of all Electronics Manufacturers. Compare Technical Specs of different models and brands on ' . $this->config->get('config_name') . '.');
 
 			$url = '';
 
