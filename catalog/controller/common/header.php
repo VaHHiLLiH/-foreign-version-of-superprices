@@ -80,8 +80,8 @@ class ControllerCommonHeader extends Controller {
 
         $data['mobile_menu'] = $this->load->controller('common/mobile_menu');
         //var_dump($data['mobile_menu']);die();
-        var_dump($_SERVER['HTTP_HOST']);
-        if ($this->request->get['route'] !== 'product/compare') {
+
+        if (empty($this->request->get['route']) || $this->request->get['route'] !== 'product/compare') {
             $data['modal_comparison'] = $this->load->controller('common/modal_compare');
         }
 		return $this->load->view('common/header', $data);
