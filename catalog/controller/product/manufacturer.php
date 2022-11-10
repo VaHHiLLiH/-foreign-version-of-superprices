@@ -122,11 +122,11 @@ class ControllerProductManufacturer extends Controller {
 		if ($manufacturer_info) {
 
             if (!empty($this->request->get['page']) && $this->request->get['page'] > 1) {
-                $this->document->setTitle('Page ' . $this->request->get['page'] . ' - ' . 'BrandName Electronics — ' . $this->config->get('config_name') . '.');
-                $this->document->setDescription('Page ' . $this->request->get['page'] . ' - ' . 'List of BrandName Electronics. Check and compare main Technical Specifications of BrandName Electronics on ' . $this->config->get('config_name') . '.');
+                $this->document->setTitle('Page ' . $this->request->get['page'] . ' - ' . $manufacturer_info['name'] . ' Electronics — ' . $this->config->get('config_name') . '.');
+                $this->document->setDescription('Page ' . $this->request->get['page'] . ' - ' . 'List of ' . $manufacturer_info['name'] . ' Electronics. Check and compare main Technical Specifications of ' . $manufacturer_info['name'] . ' Electronics on ' . $this->config->get('config_name') . '.');
             } else {
-                $this->document->setTitle('BrandName Electronics — ' . $this->config->get('config_name') . '.');
-                $this->document->setDescription('List of BrandName Electronics. Check and compare main Technical Specifications of BrandName Electronics on ' . $this->config->get('config_name') . '.');
+                $this->document->setTitle($manufacturer_info['name'] . ' Electronics — ' . $this->config->get('config_name') . '.');
+                $this->document->setDescription('List of ' . $manufacturer_info['name'] . ' Electronics. Check and compare main Technical Specifications of ' . $manufacturer_info['name'] . ' Electronics on ' . $this->config->get('config_name') . '.');
             }
 
 			$url = '';
