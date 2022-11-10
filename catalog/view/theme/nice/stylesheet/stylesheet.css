@@ -3658,14 +3658,15 @@ footer h5 {
   .links-content-child:first-child{
     margin-right: 10px;
   }
+
+  .links-content-child > img {
+    margin-left: 0;
+    width: 55%;
+  }
 }
 @media (max-width: 500px) {
   #link-on-categories > .links-content{
     flex-direction: column;
-  }
-  .links-content-child > img {
-    margin-left: 0;
-    width: 55%;
   }
   .links-content-child{
     width: 100%;
