@@ -3654,7 +3654,7 @@ footer h5 {
 }
 /*------------------EndOfSlideShow-----------------------*/
 /*------------------2CategoriesOnMain--------------------*/
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   #link-on-categories > .links-content{
     flex-direction: column;
   }
@@ -3675,6 +3675,10 @@ footer h5 {
   .links-content-child .link-on-category{
     font-size: 12px;
     text-align: center;
+    display: block;
+    margin: auto;
+    width: 60%;
+    padding: 4px 10px;
   }
   .links-content-child:nth-child(2) .main-text{
     font-size: 23px;
