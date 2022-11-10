@@ -152,7 +152,11 @@ class ControllerProductManufacturer extends Controller {
 				'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url)
 			);
 
-			$data['heading_title'] = $manufacturer_info['name'];
+            if (!empty($this->request->get['page']) && $this->request->get['page'] > 1) {
+                $data['heading_title'] = $manufacturer_info['name'].' page ' . $this->request->get['page'];
+            } else {
+                $data['heading_title'] = $manufacturer_info['name'];
+            }
 
 			$data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
 
