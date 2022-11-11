@@ -941,7 +941,7 @@ function tuneSearch() {
   //console.log('tuneTopMenu() is called');
   
   $('.search--mobile').html($('.search-column--desktop').html());
-  $('.search-column--desktop').html('');
+  //$('.search-column--desktop').html('');
 }
 
 function resetSearch() {
