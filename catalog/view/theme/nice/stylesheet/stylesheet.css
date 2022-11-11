@@ -3702,3 +3702,25 @@ footer h5 {
   }
 }
 /*------------------EndOf2CategoriesOnMain---------------*/
+/*------------------PlanwManu----------------------------*/
+@media (min-width: 768px) and (max-width: 999px) {
+
+  .only-desc-menu li > a{
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  #link-on-categories .text{
+    width: 40%;
+    position: absolute;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+  }
+  .links-content-child > img{
+    margin-left: 0;
+    width: 50%;
+  }
+}
+/*------------------EndOfPlanwManu-----------------------*/
