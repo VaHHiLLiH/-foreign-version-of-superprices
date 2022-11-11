@@ -635,9 +635,10 @@ header {
 }
 
 .tagline-column {}
-
-.search-column--desktop {
-  display: none;
+@media (max-width: 768px) {
+  .search-column--desktop {
+    display: none;
+  }
 }
 
 .cart-column {
@@ -3108,6 +3109,13 @@ footer h5 {
   width: 50%;
   /*margin: auto;*/
 }
+
+@media (max-width: 768px) {
+  #button-compare {
+    width: 80%;
+    margin: auto;
+  }
+}
 .fixed-size {
   width: 400px;
   height: 250px;
@@ -3327,6 +3335,11 @@ footer h5 {
 /*----------------------Footer------------------------------------*/
 .footer-right-column{
   float: right;
+}
+@media (max-width: 768px) {
+  .footer-right-column{
+    margin-bottom: 40px;
+  }
 }
 #footer-logo{
   display: flex;
@@ -3570,6 +3583,10 @@ footer h5 {
   .compare-pic{
     display: flex;align-items: center;
   }
+
+  .product-layout{
+    margin: auto;
+  }
 }
 @media (max-width: 500px) {
   .menu-icon-text {
@@ -3708,6 +3725,9 @@ footer h5 {
   .only-desc-menu li > a{
     font-size: 10px;
   }
+  .section--productlist .product-layout{
+    width: 50%;
+  }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
 
@@ -3722,5 +3742,43 @@ footer h5 {
     margin-left: 0;
     width: 50%;
   }
+  #slideshow0 img.img-responsive{
+    width: 60%;
+  }
+  #slideshow0 .slide-description{
+    left: 20px;
+    top: 35%;
+  }
+  #slideshow0 .slide-description .slide-title{
+    font-size: 36px;
+  }
+  #slideshow0 .slide-description .slide-description{
+    font-size: 22px;
+  }
+  #slideshow0 .slide-description .link-on-category{
+    font-size: 16px;
+    margin-top: 30px;
+  }
 }
 /*------------------EndOfPlanwManu-----------------------*/
+/*-----------------------TableComparing------------------*/
+@media (max-width: 768px) {
+  table.table-bordered img.img-thumbnail {
+    object-fit: contain;
+    width: 100px;
+    height: 200px;
+  }
+}
+@media (max-width: 1199px) {
+  table.table-bordered img.img-thumbnail {
+    object-fit: contain;
+    width: 250px;
+    height: 200px;
+  }
+}
+table.table-bordered img.img-thumbnail {
+  object-fit: contain;
+  width: 100%;
+  height: 400px;
+}
+/*-----------------------EndOfTableComparing-------------*/
