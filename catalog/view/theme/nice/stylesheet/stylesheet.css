@@ -3782,3 +3782,12 @@ table.table-bordered img.img-thumbnail {
   height: 400px;
 }
 /*-----------------------EndOfTableComparing-------------*/
+.desc-top-compare .header-icons-item:hover .img-responsive{
+  background: url(/image/catalog/compare_head_hard.svg);
+}
+.desc-top-compare .header-icons-item:hover .menu-icon-text{
+  color: #444190;
+}
+.product-thumb--hidden-wrapper > span > img:hover{
+  background: url(/image/catalog/compare_button_hard.svg);
+}
