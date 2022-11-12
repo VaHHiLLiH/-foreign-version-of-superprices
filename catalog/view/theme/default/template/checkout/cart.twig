@@ -34,7 +34,7 @@
         &nbsp;({{ weight }})
         {% endif %} </h1>
       <form action="{{ action }}" method="post" enctype="multipart/form-data">
-        <div class="table-responsive">
+        <div class="table-responsive" itemscope itemtype="https://schema.org/Table">
           <table class="table table-bordered">
             <thead>
               <tr>
@@ -98,7 +98,7 @@
         {% endfor %} </div>
       {% endif %} <br />
       <div class="row">
-        <div class="col-sm-4 col-sm-offset-8">
+        <div class="col-sm-4 col-sm-offset-8" itemscope itemtype="https://schema.org/Table">
           <table class="table table-bordered">
             {% for total in totals %}
             <tr>
