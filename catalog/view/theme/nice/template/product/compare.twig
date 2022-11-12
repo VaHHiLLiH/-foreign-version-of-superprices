@@ -1,8 +1,13 @@
 {{ header }}
 <div id="product-compare" class="container">
-  <ul class="breadcrumb">
+  <ul class="breadcrumb" vocab="https://{{ server_name }}/" typeof="BreadcrumbList">
     {% for breadcrumb in breadcrumbs %}
-    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+    <li property="itemListElement" typeof="ListItem">
+      <a property="item" typeof="WebPage" href="{{ breadcrumb.href }}">
+        <span property="name">{{ breadcrumb.text }}</span>
+      </a>
+      <meta property="position" content="{{ loop.index }}">
+    </li>
     {% endfor %}
   </ul>
   {% if success %}
