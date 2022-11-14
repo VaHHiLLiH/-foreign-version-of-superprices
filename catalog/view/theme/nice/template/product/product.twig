@@ -13,7 +13,7 @@
   <div class="row">
     <div id="content" class="col-sm-12">
       {{ content_top }}
-      <div class="row product-container">
+      <div class="row product-container" itemscope itemtype="https://schema.org/Product">
         <div class="col-sm-12">
           <div class="row">
             <div class="col-sm-5">
@@ -22,35 +22,21 @@
             <div class="col-sm-7">
               <div class="product-tab--container">
 
-				  <h1 class="product-h1">{{ heading_title }}</h1>
+				  <h1 class="product-h1" itemprop="name">{{ heading_title }}</h1>
                 <div class="tab-content">
                   <!-- tab-general -->
                   <div class="tab-pane active" id="tab-general">
                     <ul class="list-unstyled identity-list">
                       {% if manufacturer %}
-                      <li><span class="meta-label">{{ text_manufacturer }}</span> <a href="{{ manufacturers }}" class="meta-value">{{ manufacturer }}</a></li>
+                      <li><span class="meta-label">{{ text_manufacturer }}</span> <a href="{{ manufacturers }}" class="meta-value" itemprop="manufacturer">{{ manufacturer }}</a></li>
                       {% endif %}
-						{#<div class="row">
-							<div class="rating">
-								<p>{% for i in 1..5 %}
-								   		{% if rating < i %}
-											<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
-										{% else %}
-											<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
-										{% endif %}
-									{% endfor %} {{ reviews }} / <a href="#review-form--wrapper--modal" data-toggle="modal" data-target="#review-form--wrapper--modal">{{ text_write }}</a></p>
-
-										{{ block_review_form_modal }}
-
-							</div>
-						</div>#}
                     </ul>
                     <div class="description">{{ product_description }}</div>
                   </div>
 
                   {% if description %}
                   <!-- tab-description -->
-                  <div class="tab-pane" id="tab-description">           
+                  <div class="tab-pane" id="tab-description" itemprop="description">
                     <div class="product-description">{{ description }}</div>
                   </div>
                   {% endif %}
