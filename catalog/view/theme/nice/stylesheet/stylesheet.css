@@ -3821,5 +3821,21 @@ footer.only-for-mobile{
   footer{
     display: none;
   }
+  .bottom-search #search{
+    width: 100%;
+    float: none;
+  }
+  .bottom-logo #footer-logo{
+    display: block;
+  }
+  .bottom-logo #footer-logo .footer-special-text{
+    width: 100%;
+    text-align: center;
+  }
+  .bottom-logo #footer-logo a{
+    width: 60%;
+    display: block;
+    margin: auto;
+  }
 }
 /*---------------------------EndOfFooter-----------------*/
