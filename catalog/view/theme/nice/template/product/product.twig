@@ -26,11 +26,11 @@
                 <div class="tab-content">
                   <!-- tab-general -->
                   <div class="tab-pane active" id="tab-general">
-                    <ul class="list-unstyled identity-list">
                       {% if manufacturer %}
-                      <li itemprop="manufacturer"><span class="meta-label">{{ text_manufacturer }}</span> <a href="{{ manufacturers }}" class="meta-value" >{{ manufacturer }}</a></li>
+						  <div class="manufacturer" >
+                      		<span class="meta-label">{{ text_manufacturer }}</span><a href="{{ manufacturers }}" class="meta-value" itemprop="manufacturer">{{ manufacturer }}</a>
+						  </div>
                       {% endif %}
-                    </ul>
                     <div class="description">{{ product_description }}</div>
                   </div>
 
