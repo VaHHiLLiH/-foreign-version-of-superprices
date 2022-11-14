@@ -3639,20 +3639,20 @@ footer h5 {
   cursor: pointer;
 }
 /*------------------SlideShow----------------------------*/
-.slideshow:nth-child(2){
+.slideshow:nth-child(3){
   display: none;
 }
 #slideshow1{
   display: none;
 }
 @media (max-width: 768px) {
-  .slideshow:first-child{
+  .slideshow:first-child {
     display: none;
   }
   #slideshow0{
     display: none;
   }
-  .slideshow:nth-child(2){
+  .slideshow:nth-child(3){
     display: block;
   }
   #slideshow1{
