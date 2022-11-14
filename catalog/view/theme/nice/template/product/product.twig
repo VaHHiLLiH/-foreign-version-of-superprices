@@ -31,12 +31,12 @@
                       		<span class="meta-label">{{ text_manufacturer }}</span><a href="{{ manufacturers }}" class="meta-value" itemprop="url"><span itemprop="name">{{ manufacturer }}</span></a>
 						  </div>
                       {% endif %}
-                    <div class="description">{{ product_description }}</div>
+                    <div class="description" id="tab-description">{{ product_description }}</div>
                   </div>
 
                   {% if description %}
                   <!-- tab-description -->
-                  <div class="tab-pane" id="tab-description" itemprop="description">
+                  <div class="tab-pane" id="tab-description" >
                     <div class="product-description">{{ description }}</div>
                   </div>
                   {% endif %}
