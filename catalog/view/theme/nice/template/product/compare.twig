@@ -23,8 +23,8 @@
     {% else %}
     {% set class = 'col-sm-12' %}
     {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
+    <div {% if products %} itemscope itemtype="https://schema.org/Table" {% endif %} id="content" class="{{ class }}">{{ content_top }}
+      <h1 {% if products %} itemprop="about" {% endif %} >{{ heading_title }}</h1>
       {% if products %}
       <table class="table table-bordered">
         <thead>

@@ -68,9 +68,9 @@
             </div>
           </div>
 			{% if attribute_groups %}
-          <div class="characteristics">
-			  <h2>Technical specs</h2>
-				  <div class="tab-pane" id="tab-specification" itemscope itemtype="https://schema.org/Table">
+          <div class="characteristics" itemscope itemtype="https://schema.org/Table">
+			  <h2 itemprop="about">Technical specs</h2>
+				  <div class="tab-pane" id="tab-specification">
 					  <table class="table table-borderless">
 						  {% for attribute_group in attribute_groups %}
 							  <thead>
