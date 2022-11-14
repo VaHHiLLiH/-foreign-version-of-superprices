@@ -28,6 +28,35 @@
     </div>
   </div>
 </footer>
+<footer class="only-for-mobile">
+  <div class="container footer-container">
+    <div class="bottom-menu col-sm-5">
+      <p>{{ text_information }}</p>
+      <ul class="list-unstyled">
+        {% for information in informations %}
+          <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+        {% endfor %}
+
+        <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+      </ul>
+    </div>
+    {{ search }}
+    <div class="row">
+      {% if informations %}
+        <div class="footer-left-column col-sm-5">
+          <div id="footer-logo">
+            {% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>
+            {% else %}
+              <h1><a href="{{ home }}">{{ name }}</a></h1>
+            {% endif %}
+            <p class="footer-special-text">All trademarks used are properties
+              of their respective owners.</p>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</footer>
 <!-- Report Modal -->
 <div id="report-modal" class="modal fade" role="dialog">
   <div class="modal-dialog">

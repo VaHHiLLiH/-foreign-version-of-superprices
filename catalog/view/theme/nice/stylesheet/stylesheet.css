@@ -3810,3 +3810,16 @@ table.table-bordered img.img-thumbnail {
 .tab-content .description{
   margin-top: 20px;
 }
+footer.only-for-mobile{
+  display: none;
+}
+/*---------------------------Footer----------------------*/
+@media (max-width: 768px) {
+  footer.only-for-mobile{
+    display: block;
+  }
+  footer{
+    display: none;
+  }
+}
+/*---------------------------EndOfFooter-----------------*/
