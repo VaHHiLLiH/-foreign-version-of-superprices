@@ -3587,6 +3587,9 @@ footer h5 {
   .product-layout{
     margin: auto;
   }
+  #product-category .productlist-row .product-layout{
+    width: 50%;
+  }
 }
 @media (max-width: 500px) {
   .menu-icon-text {
@@ -3594,6 +3597,9 @@ footer h5 {
   }
   .header-icons-container {
     margin-left: 15px;
+  }
+  #product-category .productlist-row .product-layout{
+    width: 100%;
   }
 }
 /*--------------------------------End of Mobile Menu-------------------*/
