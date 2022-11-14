@@ -3113,7 +3113,7 @@ footer h5 {
 @media (max-width: 768px) {
   #button-compare {
     width: 80%;
-    margin: auto;
+    margin: 20px 0;
   }
 }
 .fixed-size {
