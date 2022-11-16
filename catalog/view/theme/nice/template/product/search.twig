@@ -61,7 +61,7 @@
       {% if products %}
       <div class="row productlist-row">
         {% for product in products %}
-            <div class="product-layout {% if nice.productlist_grid_hover_effect %}grid-hover-effect{% endif %} product-grid col-md-4 col-sm-6 {% if '1' == nice.productlist_cols_on_mobile %}col-xs-12{% else %}col-xs-6{% endif %}">
+            <div class="product-layout product-grid col-md-4 col-sm-6 {% if '1' == nice.productlist_cols_on_mobile %}col-xs-12{% else %}col-xs-6{% endif %}">
                 <div class="product-thumb transition">
                     <div class="product-thumb--image {% if nice.productlist_image_margins %}-has-margins{% endif %}">
                         <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive fixed-size" /></a>
@@ -75,7 +75,7 @@
                             {% endif %}
                         </div>
                         {#<a class="product-thumb--name {% if 'bold' == nice.productlist_name_font_weight %}-bold-sm{% endif %}" href="{{ product.href }}">{{ product.name }}</a>#}
-                        <a class="product-thumb--name-bold href="{{ product.href }}">{{ product.name }}</a>
+                        <a class="product-thumb--name-bold" href="{{ product.href }}">{{ product.name }}</a>
                         {% if nice.productlist_description %}<p class="product-thumb--description {% if not nice.productlist_description_on_mobile %}hidden-xs hidden-sm{% endif %}">{{ product.description }}</p>{% endif %}
                         <div class="product-thumb--hidden-wrapper">
                             <button type="button" class="btn btn-accent product-thumb--button-buy -grid-hover-effect-hidden" onclick="compare.newAdd('{{ product.product_id }}', '{{ product.name }}');"><span class="">{{ button_compare }}</span></button>
