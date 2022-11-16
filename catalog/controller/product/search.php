@@ -82,9 +82,9 @@ class ControllerProductSearch extends Controller {
 
 		$url = '';
 
-		if (isset($this->request->get['search'])) {
+		/*if (isset($this->request->get['search'])) {
 			$url .= '&search=' . urlencode(html_entity_decode($this->request->get['search'], ENT_QUOTES, 'UTF-8'));
-		}
+		}*/
 
 		if (isset($this->request->get['tag'])) {
 			$url .= '&tag=' . urlencode(html_entity_decode($this->request->get['tag'], ENT_QUOTES, 'UTF-8'));
@@ -189,7 +189,7 @@ class ControllerProductSearch extends Controller {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
-
+            var_dump($url);
 			foreach ($results as $result) {
 				if ($result['image']) {
 					$image = $result['image'];
@@ -232,9 +232,9 @@ class ControllerProductSearch extends Controller {
 
 			$url = '';
 
-			if (isset($this->request->get['search'])) {
+			/*if (isset($this->request->get['search'])) {
 				$url .= '&search=' . urlencode(html_entity_decode($this->request->get['search'], ENT_QUOTES, 'UTF-8'));
-			}
+			}*/
 
 			if (isset($this->request->get['tag'])) {
 				$url .= '&tag=' . urlencode(html_entity_decode($this->request->get['tag'], ENT_QUOTES, 'UTF-8'));
