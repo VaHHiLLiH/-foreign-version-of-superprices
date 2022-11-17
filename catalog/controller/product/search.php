@@ -229,7 +229,7 @@ class ControllerProductSearch extends Controller {
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 				);
 			}
-
+            var_dump($data['products']);
 			$url = '';
 
 			/*if (isset($this->request->get['search'])) {
