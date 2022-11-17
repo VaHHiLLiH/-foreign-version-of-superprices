@@ -2,14 +2,16 @@
 <div id="product-product" class="container">
 	<ul class="breadcrumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
 		{% for breadcrumb in breadcrumbs %}
-			<p>{{ loop.index }}</p>
-			{% if loop.index == loop.last %}
-				<h1>{{ loop.last }}</h1>
-			{% endif %}
 			<li itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="{{ breadcrumb.href }}">
-					<span itemprop="name">{{ breadcrumb.text }}</span>
-				</a>
+				{% if loop.last %}
+					<p itemprop="item">
+						<span itemprop="name">{{ breadcrumb.text }}</span>
+					</p>
+				{% else %}
+					<a itemprop="item" href="{{ breadcrumb.href }}">
+						<span itemprop="name">{{ breadcrumb.text }}</span>
+					</a>
+				{% endif %}
 				<meta itemprop="position" content="{{ loop.index }}">
 			</li>
 		{% endfor %}
