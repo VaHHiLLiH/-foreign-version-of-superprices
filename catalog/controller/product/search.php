@@ -226,10 +226,10 @@ class ControllerProductSearch extends Controller {
 					'thumb'       => $image,
 					'name'        => $this->language->cutText($result['name'], 5),
 					'description' => (strlen($result['description']) > 93) ? utf8_substr(trim(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8'))), 0, 93) . '...' : $result['description'],
-					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
+					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
 				);
 			}
-            var_dump($data['products']);
+
 			$url = '';
 
 			/*if (isset($this->request->get['search'])) {
