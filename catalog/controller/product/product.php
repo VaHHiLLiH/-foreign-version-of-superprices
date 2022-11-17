@@ -187,7 +187,7 @@ class ControllerProductProduct extends Controller {
             }
             /*-----*/
             $productsRand = $this->model_catalog_product->getProductWithSimilarChars($this->request->get['product_id'], $this->model_catalog_product->getProductManufacturerId($this->request->get['product_id']));
-
+            var_dump($productsRand);
             foreach ($productsRand as $productRand) {
                 $fourProduct['products'][] = array(
                     'product_id'  => $productRand['product_id'],
