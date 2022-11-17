@@ -715,7 +715,7 @@ class ControllerProductProduct extends Controller {
 
     public function generateMetaTitle($product_id)
     {
-        return htmlspecialchars($this->generateH1($product_id).' Technical Scpecifications and Additional Info');
+        return $this->generateH1($product_id).' Technical Scpecifications and Additional Info';
     }
 
     public function generateMetaDescription($category_id, $product_id)
