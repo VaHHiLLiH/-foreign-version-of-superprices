@@ -1,7 +1,15 @@
 <?php
+
+use Jenssegers\Agent\Agent;
+
 class ControllerCommonHeader extends Controller {
 	public function index() {
 		// Analytics
+
+        $agent = new Agent();
+
+        $data['isMobile'] = $agent->isMobile();
+
 		$this->load->model('setting/extension');
 
 		$data['analytics'] = array();
