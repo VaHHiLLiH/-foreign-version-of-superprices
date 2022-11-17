@@ -550,7 +550,7 @@ class ModelCatalogProduct extends Model {
             $limit = 4 - count($query);
             var_dump($limit);echo'<br/><br/>';
             $query2 = $this->db->query("SELECT product_id FROM " . DB_PREFIX . "product_to_category WHERE product_id > " . $product_id . " AND category_id = " . $parent_id . " LIMIT " . $limit)->rows;
-            var_dump($query2);echo'<br/><br/>';
+            var_dump("SELECT product_id FROM " . DB_PREFIX . "product_to_category WHERE product_id > " . $product_id . " AND category_id = " . $parent_id . " LIMIT " . $limit);echo'<br/><br/>';
             foreach ($query2 as $item) {
                 $products[] = $this->getProduct($item['product_id']);
             }
