@@ -715,12 +715,12 @@ class ControllerProductProduct extends Controller {
 
     public function generateMetaTitle($product_id)
     {
-        return $this->generateH1($product_id).' Technical Scpecifications and Additional Info';
+        return htmlspecialchars($this->generateH1($product_id).' Technical Scpecifications and Additional Info');
     }
 
     public function generateMetaDescription($category_id, $product_id)
     {
-        return 'Check ' . $this->generateH1($product_id) . ' Technical Specs (' . $this->generateCharacteristics(3, $category_id) . ') and Details on '. $this->config->get('config_name') . '.';
+        return htmlspecialchars('Check ' . $this->generateH1($product_id) . ' Technical Specs (' . $this->generateCharacteristics(3, $category_id) . ') and Details on '. $this->config->get('config_name') . '.');
     }
 
     public function checkToChars(&$const_char, $product_chars)
