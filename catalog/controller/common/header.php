@@ -10,6 +10,8 @@ class ControllerCommonHeader extends Controller {
 
         $data['isMobile'] = $agent->isMobile();
 
+        $data['isDesc'] = $agent->isDesktop();
+
 		$this->load->model('setting/extension');
 
 		$data['analytics'] = array();
