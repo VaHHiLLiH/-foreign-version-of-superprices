@@ -17,7 +17,7 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/manufacturer');
 
         $catFromProduct = $this->model_catalog_category->getProductCategories($this->request->get['product_id']);
-        var_dump($this->generateDescription(end($catFromProduct)['category_id'], $this->request->get['product_id']));
+
         $data['product_description'] = $this->generateDescription(end($catFromProduct)['category_id'], $this->request->get['product_id']);
 
         $this->document->setTitle($this->generateMetaTitle($this->request->get['product_id']));
