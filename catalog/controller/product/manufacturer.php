@@ -339,7 +339,7 @@ class ControllerProductManufacturer extends Controller {
 			}
 			//var_dump($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . '&page='. ($page - 2) ? '&page='. ($page - 1) : ''), 'prev');
 			if ($page > 1) {
-                $link = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . '&page='. (($page - 2) ? '&page='. ($page - 1) : ''), true);
+                $link = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . (($page - 2) ? '&page='. ($page - 1) : ''), true);
                 $link = str_replace('?page=', '/page-', $link);
                 $this->document->addLink($link, 'prev');
 			    //$this->document->addLink($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . '&page='. (($page - 2) ? '&page='. ($page - 1) : ''), true), 'prev');
