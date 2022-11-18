@@ -341,8 +341,8 @@ class ControllerProductManufacturer extends Controller {
 			if ($page > 1) {
                 $link = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . '&page='. (($page - 3) ? '&page='. ($page - 1) : ''), true);
                 $link = str_replace('?page=', '/page-', $link);
+                $this->document->addLink($link, 'prev');
 			    //$this->document->addLink($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . '&page='. (($page - 2) ? '&page='. ($page - 1) : ''), true), 'prev');
-			    $this->document->addLink($link, 'prev');
             }
 
 			if ($limit && ceil($product_total / $limit) > $page) {
