@@ -676,7 +676,6 @@ class ControllerProductCategory extends Controller {
         $category_info = $this->model_catalog_category->getCategory($category_id);
         //$array_categories_ids = [500, 501, 36, 37, 38, 39, 40, 41, 42, 268, 269];
         if ($category_info['parent_id'] != 0 && $category_info['parent_id'] != 13 && $category_info['parent_id'] != 22 /*&& (!in_array($category_id, $array_categories_ids))*/) {
-            var_dump('pervij');
             $category_path = $this->model_catalog_category->getCategoryPath($category_id);
             $category_name = [];
             foreach ($category_path as $path) {
@@ -703,14 +702,11 @@ class ControllerProductCategory extends Controller {
             } else {
                 return $categ_name.' page '.$this->request->get['page'];
             }
-        } else if ($category_info['parent_id'] == 13 && $category_info['parent_id'] == 22) {
-            var_dump('pidor');
+        } else if ($category_info['parent_id'] == 13 || $category_info['parent_id'] == 22) {
             $parent_category = $this->model_catalog_category->getCategory($category_info['parent_id']);
             $string = $parent_category . ' ' . $category_info['name'] . ' CPU';
-            var_dump($string);
             return ($string);
         } else {
-            var_dump($category_info['parent_id']);
             if (empty($this->request->get['page']) || $this->request->get['page'] == 1) {
                 return $category_info['name'];
             } else {
