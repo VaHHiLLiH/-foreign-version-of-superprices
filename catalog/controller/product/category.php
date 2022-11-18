@@ -704,8 +704,12 @@ class ControllerProductCategory extends Controller {
             }
         } else if ($category_info['parent_id'] == 13 || $category_info['parent_id'] == 22) {
             $parent_category = $this->model_catalog_category->getCategory($category_info['parent_id']);
-            $string = $parent_category['name'] . ' ' . $category_info['name'] . ' CPU';
-            return ($string);
+            $string = $category_info['name'] . ' CPU';
+            if (empty($this->request->get['page']) || $this->request->get['page'] == 1) {
+                return $string;
+            } else {
+                return $string . ' page ' . $this->request->get['page'];
+            }
         } else {
             if (empty($this->request->get['page']) || $this->request->get['page'] == 1) {
                 return $category_info['name'];
