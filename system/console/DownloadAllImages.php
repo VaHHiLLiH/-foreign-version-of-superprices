@@ -13,7 +13,7 @@ require_once(DIR_SYSTEM . 'helper/general.php');
 // Database
 $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
 
-$recordOnOnePage = 2000;
+$recordOnOnePage = 1000;
 $allRecords = $db->query("SELECT COUNT(*) as count FROM oc_product")->row['count'];
 $current_page = 1;
 $maxPages = ceil($allRecords/$recordOnOnePage);
@@ -26,7 +26,7 @@ while($current_page <= $maxPages) {
     foreach ($products as $product) {
         $image = file_get_contents($product['image']);
 
-        file_put_contents($file_path.str_slug($product['name']), $image, FILE_APPEND);die();
+        file_put_contents($file_path.str_slug($product['name']).'jpg', $image, FILE_APPEND);die();
 
         //перезаписываю путь к изображению в oc_product['image']
     }
