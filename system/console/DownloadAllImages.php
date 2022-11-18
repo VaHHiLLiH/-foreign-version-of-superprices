@@ -1,7 +1,7 @@
 <?php
 $path = '/var/www/www-root/data/www/everydayshop.ru/';/*C:/OpenServer/domains/randSheetOnOC.orc/*/
 
-$file_path = '/var/www/www-root/data/www/everydayshop.ru/image/catalog/demo/product/';
+$file_path = 'https://everydayshop.ru/image/catalog/demo/product/';
 // Configuration
 require_once($path . 'config.php');
 
@@ -24,14 +24,15 @@ while($current_page <= $maxPages) {
     $products = $db->query("SELECT * FROM oc_product p LEFT JOIN oc_product_description pd ON (p.product_id = pd.product_id) LIMIT " . (int)$from . ", " . (int)$recordOnOnePage)->rows;
 
     foreach ($products as $product) {
-        $image = file_get_contents($product['image']);
+        //$image = file_get_contents($product['image']);
 
-        if (file_put_contents($file_path.str_slug($product['name']).$product['product_id'].'.jpg', $image, FILE_APPEND)) {
+        //if (file_put_contents($file_path.str_slug($product['name']).$product['product_id'].'.jpg', $image, FILE_APPEND)) {
 
             $db->query("UPDATE oc_product SET image = '" . $db->escape($file_path.str_slug($product['name']).$product['product_id'].'.jpg') . "' WHERE product_id = " . (int)$product['product_id']);
-        } else {
-            var_dump('Товар с id = ' . $product['product_id'] . ' и названием ' . $product['name'] . ' не смог скачать свое изображение');
-        }
+        //} else {
+            //var_dump('Товар с id = ' . $product['product_id'] . ' и названием ' . $product['name'] . ' не смог скачать свое изображение');
+        //}
     }
+
     $current_page++;
 }
