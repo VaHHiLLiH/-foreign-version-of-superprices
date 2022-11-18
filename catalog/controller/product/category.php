@@ -710,7 +710,7 @@ class ControllerProductCategory extends Controller {
             var_dump($string);
             return ($string);
         } else {
-            var_dump('tretij');
+            var_dump($category_info['parent_id']);
             if (empty($this->request->get['page']) || $this->request->get['page'] == 1) {
                 return $category_info['name'];
             } else {
