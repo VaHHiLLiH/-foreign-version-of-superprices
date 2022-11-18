@@ -26,7 +26,7 @@ while($current_page <= $maxPages) {
     foreach ($products as $product) {
         $image = file_get_contents($product['image']);
 
-        file_put_contents($file_path.str_slug($product['name']).'jpg', $image, FILE_APPEND);die();
+        file_put_contents($file_path.str_slug($product['name']).'.jpg', $image, FILE_APPEND);die();
 
         //перезаписываю путь к изображению в oc_product['image']
     }
