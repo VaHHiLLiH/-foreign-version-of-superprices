@@ -1,5 +1,5 @@
 <?php
-$path = 'C:/OpenServer/domains/randSheetOnOC.orc/';/*/var/www/www-root/data/www/everydayshop.ru/*/
+$path = '/var/www/www-root/data/www/everydayshop.ru/';/*C:/OpenServer/domains/randSheetOnOC.orc/*/
 
 $file_path = '/var/www/www-root/data/www/everydayshop.ru/image/catalog/demo/product/';
 // Configuration
