@@ -18,7 +18,7 @@ class ControllerProductProduct extends Controller {
 
         $catFromProduct = $this->model_catalog_category->getProductCategories($this->request->get['product_id']);
 
-        $data['product_description'] = htmlspecialchars($this->generateDescription(end($catFromProduct)['category_id'], $this->request->get['product_id']));
+        $data['product_description'] = $this->generateDescription(end($catFromProduct)['category_id'], $this->request->get['product_id']);
 
         $this->document->setTitle($this->generateMetaTitle($this->request->get['product_id']));
         $this->document->setDescription($this->generateMetaDescription(end($catFromProduct)['category_id'], $this->request->get['product_id']));
