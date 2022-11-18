@@ -26,9 +26,12 @@ while($current_page <= $maxPages) {
     foreach ($products as $product) {
         $image = file_get_contents($product['image']);
 
-        file_put_contents($file_path.str_slug($product['name']).'.jpg', $image, FILE_APPEND);die();
+        if (file_put_contents($file_path.str_slug($product['name']).$product['product_id'].'.jpg', $image, FILE_APPEND)) {
 
-        //перезаписываю путь к изображению в oc_product['image']
+            $db->query("UPDATE oc_product SET image = '" . $db->escape($file_path.str_slug($product['name']).$product['product_id'].'.jpg') . "' WHERE product_id = " . (int)$product['product_id']);
+        } else {
+            var_dump('Товар с id = ' . $product['product_id'] . ' и названием ' . $product['name'] . ' не смог скачать свое изображение');
+        }
     }
     $current_page++;
 }
