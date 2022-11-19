@@ -38,7 +38,7 @@ class ControllerProductCompare extends Controller {
 			'text' => $this->language->get('heading_title'),
 			'href' => $this->url->link('product/compare')
 		);
-        var_dump($data['breadcrumbs']);
+        var_dump($data['breadcrumbs']);echo'<br/><br/>';
 		if (isset($this->session->data['success'])) {
 			$data['success'] = $this->session->data['success'];
 
@@ -131,6 +131,7 @@ class ControllerProductCompare extends Controller {
             ksort($data['products']);
         }
 
+        var_dump($data['breadcrumbs']);echo'<br/><br/>';
         $data['spec_attr'] = $spec_attr;
 		$this->response->setOutput($this->load->view('product/compare', $data));
 	}
