@@ -122,10 +122,10 @@ class ControllerProductManufacturer extends Controller {
 		if ($manufacturer_info) {
 
             if (!empty($this->request->get['page']) && $this->request->get['page'] > 1) {
-                $this->document->setTitle('Page ' . $this->request->get['page'] . ' - ' . $manufacturer_info['name'] . ' Electronics — ' . $this->config->get('config_name') . '.');
+                $this->document->setTitle('Page ' . $this->request->get['page'] . ' - ' . $manufacturer_info['name'] . ' Electronics — ' . $this->config->get('config_name'));
                 $this->document->setDescription('Page ' . $this->request->get['page'] . ' - ' . 'List of ' . $manufacturer_info['name'] . ' Electronics. Check and compare main Technical Specifications of ' . $manufacturer_info['name'] . ' Electronics on ' . $this->config->get('config_name') . '.');
             } else {
-                $this->document->setTitle($manufacturer_info['name'] . ' Electronics — ' . $this->config->get('config_name') . '.');
+                $this->document->setTitle($manufacturer_info['name'] . ' Electronics — ' . $this->config->get('config_name'));
                 $this->document->setDescription('List of ' . $manufacturer_info['name'] . ' Electronics. Check and compare main Technical Specifications of ' . $manufacturer_info['name'] . ' Electronics on ' . $this->config->get('config_name') . '.');
             }
 
@@ -217,7 +217,7 @@ class ControllerProductManufacturer extends Controller {
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
-					'href'        => $this->url->link('product/product', '&product_id=' . $result['product_id'] . $url)
+					'href'        => $this->url->link('product/product', '&product_id=' . $result['product_id'])
 				);
 			}
 
@@ -337,13 +337,17 @@ class ControllerProductManufacturer extends Controller {
 			if ($page != 1) {
 			    $this->document->addLink($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'], true), 'canonical');
 			}
-			
+			//var_dump($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . '&page='. ($page - 2) ? '&page='. ($page - 1) : ''), 'prev');
 			if ($page > 1) {
-			    $this->document->addLink($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . '&page='. (($page - 2) ? '&page='. ($page - 1) : ''), true), 'prev');
-			}
+                $link = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . (($page - 2) ? '&page='. ($page - 1) : ''), true);
+                $this->document->addLink(fixInUrlPage($link), 'prev');
+			    //$this->document->addLink($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . '&page='. (($page - 2) ? '&page='. ($page - 1) : ''), true), 'prev');
+            }
 
 			if ($limit && ceil($product_total / $limit) > $page) {
-			    $this->document->addLink($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . '&page='. ($page + 1), true), 'next');
+                $link = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . '&page='. ($page + 1), true);
+                $this->document->addLink(fixInUrlPage($link), 'next');
+			    //$this->document->addLink($this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url . '&page='. ($page + 1), true), 'next');
 			}
 
 			$data['sort'] = $sort;

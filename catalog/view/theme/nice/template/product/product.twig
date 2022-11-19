@@ -3,9 +3,15 @@
 	<ul class="breadcrumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
 		{% for breadcrumb in breadcrumbs %}
 			<li itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
-				<a itemprop="item" href="{{ breadcrumb.href }}">
-					<span itemprop="name">{{ breadcrumb.text }}</span>
-				</a>
+				{% if loop.last %}
+					<p itemprop="item">
+						<span itemprop="name">{{ breadcrumb.text }}</span>
+					</p>
+				{% else %}
+					<a itemprop="item" href="{{ breadcrumb.href }}">
+						<span itemprop="name">{{ breadcrumb.text }}</span>
+					</a>
+				{% endif %}
 				<meta itemprop="position" content="{{ loop.index }}">
 			</li>
 		{% endfor %}
@@ -13,7 +19,7 @@
   <div class="row">
     <div id="content" class="col-sm-12">
       {{ content_top }}
-      <div class="row product-container">
+      <div class="row product-container" itemscope itemtype="https://schema.org/Product">
         <div class="col-sm-12">
           <div class="row">
             <div class="col-sm-5">
@@ -22,45 +28,24 @@
             <div class="col-sm-7">
               <div class="product-tab--container">
 
-				  <h1 class="product-h1">{{ heading_title }}</h1>
+				  <h1 class="product-h1" itemprop="name">{{ heading_title }}</h1>
                 <div class="tab-content">
                   <!-- tab-general -->
                   <div class="tab-pane active" id="tab-general">
-                    <ul class="list-unstyled identity-list">
                       {% if manufacturer %}
-                      <li><span class="meta-label">{{ text_manufacturer }}</span> <a href="{{ manufacturers }}" class="meta-value">{{ manufacturer }}</a></li>
+						  <div class="manufacturer" >
+                      		<span class="meta-label">{{ text_manufacturer }}</span><a href="{{ manufacturers }}" class="meta-value" itemprop="url"><span itemprop="brand">{{ manufacturer }}</span></a>
+						  </div>
                       {% endif %}
-						{#<div class="row">
-							<div class="rating">
-								<p>{% for i in 1..5 %}
-								   		{% if rating < i %}
-											<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
-										{% else %}
-											<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
-										{% endif %}
-									{% endfor %} {{ reviews }} / <a href="#review-form--wrapper--modal" data-toggle="modal" data-target="#review-form--wrapper--modal">{{ text_write }}</a></p>
-
-										{{ block_review_form_modal }}
-
-							</div>
-						</div>#}
-                    </ul>
-                    <div class="description">{{ product_description }}</div>
+                    <div class="description" itemprop="description">{{ product_description }}</div>
                   </div>
-
-                  {% if description %}
-                  <!-- tab-description -->
-                  <div class="tab-pane" id="tab-description">           
-                    <div class="product-description">{{ description }}</div>
-                  </div>
-                  {% endif %}
                 </div>
               </div>
                 
               <div id="product">           
                 <div class="row">
                 <div class="col-xs-12">
-					<button type="button" id="button-compare" onclick="compare.newAdd('{{ product_id }}', '{{ heading_title }}');" data-loading-text="{{ text_loading }}" class="btn btn-accent btn-lg btn-block">{{ button_compare }}</button>
+					<button type="button" id="button-compare" onclick="compare.newAdd('{{ product_id }}', '{{ heading_title }}');" data-loading-text="{{ text_loading }}" class="btn btn-accent btn-lg btn-block">{{ button_compare }}{{ heading_title }}</button>
                 </div>
             </div>
 
@@ -68,9 +53,9 @@
             </div>
           </div>
 			{% if attribute_groups %}
-          <div class="characteristics">
-			  <h2>Technical specs</h2>
-				  <div class="tab-pane" id="tab-specification" itemscope itemtype="https://schema.org/Table">
+          <div class="characteristics" itemscope itemtype="https://schema.org/Table">
+			  <h2 itemprop="about">Technical specs</h2>
+				  <div class="tab-pane" id="tab-specification">
 					  <table class="table table-borderless">
 						  {% for attribute_group in attribute_groups %}
 							  <thead>
@@ -105,7 +90,7 @@
         {% endif %}
       </div>
 		{% if similarProducts %}
-			<h3>Products with similar characteristics</h3>
+			<h3>Products with similar characteristics {{ heading_title }}</h3>
 			{{ similarProducts }}
 		{% endif %}
 

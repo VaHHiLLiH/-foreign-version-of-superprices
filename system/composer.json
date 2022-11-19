@@ -1,0 +1,13 @@
+{
+    "name": "pitbel/burj",
+    "type": "project",
+    "require": {
+        "jenssegers/agent": "^2.6",
+        "stichoza/google-translate-php": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Services\\": "../system/Services/"
+        }
+    }
+}

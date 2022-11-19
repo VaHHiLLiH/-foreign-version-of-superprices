@@ -82,9 +82,9 @@ class ControllerProductSearch extends Controller {
 
 		$url = '';
 
-		if (isset($this->request->get['search'])) {
+		/*if (isset($this->request->get['search'])) {
 			$url .= '&search=' . urlencode(html_entity_decode($this->request->get['search'], ENT_QUOTES, 'UTF-8'));
-		}
+		}*/
 
 		if (isset($this->request->get['tag'])) {
 			$url .= '&tag=' . urlencode(html_entity_decode($this->request->get['tag'], ENT_QUOTES, 'UTF-8'));
@@ -226,15 +226,15 @@ class ControllerProductSearch extends Controller {
 					'thumb'       => $image,
 					'name'        => $this->language->cutText($result['name'], 5),
 					'description' => (strlen($result['description']) > 93) ? utf8_substr(trim(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8'))), 0, 93) . '...' : $result['description'],
-					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 				);
 			}
 
 			$url = '';
 
-			if (isset($this->request->get['search'])) {
+			/*if (isset($this->request->get['search'])) {
 				$url .= '&search=' . urlencode(html_entity_decode($this->request->get['search'], ENT_QUOTES, 'UTF-8'));
-			}
+			}*/
 
 			if (isset($this->request->get['tag'])) {
 				$url .= '&tag=' . urlencode(html_entity_decode($this->request->get['tag'], ENT_QUOTES, 'UTF-8'));

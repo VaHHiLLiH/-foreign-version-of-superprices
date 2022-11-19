@@ -3113,7 +3113,7 @@ footer h5 {
 @media (max-width: 768px) {
   #button-compare {
     width: 80%;
-    margin: auto;
+    margin: 20px 0;
   }
 }
 .fixed-size {
@@ -3587,6 +3587,9 @@ footer h5 {
   .product-layout{
     margin: auto;
   }
+  #product-category .productlist-row .product-layout{
+    width: 50%;
+  }
 }
 @media (max-width: 500px) {
   .menu-icon-text {
@@ -3594,6 +3597,9 @@ footer h5 {
   }
   .header-icons-container {
     margin-left: 15px;
+  }
+  #product-category .productlist-row .product-layout{
+    width: 100%;
   }
 }
 /*--------------------------------End of Mobile Menu-------------------*/
@@ -3633,12 +3639,21 @@ footer h5 {
   cursor: pointer;
 }
 /*------------------SlideShow----------------------------*/
+.slideshow:nth-child(3){
+  display: none;
+}
 #slideshow1{
   display: none;
 }
 @media (max-width: 768px) {
+  .slideshow:first-child {
+    display: none;
+  }
   #slideshow0{
     display: none;
+  }
+  .slideshow:nth-child(3){
+    display: block;
   }
   #slideshow1{
     display: block;
@@ -3762,12 +3777,10 @@ footer h5 {
 }
 /*------------------EndOfPlanwManu-----------------------*/
 /*-----------------------TableComparing------------------*/
-@media (max-width: 768px) {
-  table.table-bordered img.img-thumbnail {
-    object-fit: contain;
-    width: 100px;
-    height: 200px;
-  }
+table.table-bordered img.img-thumbnail {
+  object-fit: contain;
+  width: 100%;
+  height: 400px;
 }
 @media (max-width: 1199px) {
   table.table-bordered img.img-thumbnail {
@@ -3776,10 +3789,12 @@ footer h5 {
     height: 200px;
   }
 }
-table.table-bordered img.img-thumbnail {
-  object-fit: contain;
-  width: 100%;
-  height: 400px;
+@media (max-width: 768px) {
+  table.table-bordered img.img-thumbnail {
+    object-fit: contain;
+    width: 100px;
+    height: 200px;
+  }
 }
 /*-----------------------EndOfTableComparing-------------*/
 .desc-top-compare .header-icons-item:hover .img-responsive{
@@ -3791,3 +3806,36 @@ table.table-bordered img.img-thumbnail {
 .product-thumb--hidden-wrapper > span > img:hover{
   background: url(/image/catalog/compare_button_hard.svg);
 }
+
+.tab-content .description{
+  margin-top: 20px;
+}
+footer.only-for-mobile{
+  display: none;
+}
+/*---------------------------Footer----------------------*/
+@media (max-width: 768px) {
+  footer.only-for-mobile{
+    display: block;
+  }
+  footer{
+    display: none;
+  }
+  .bottom-search #search{
+    width: 100%;
+    float: none;
+  }
+  .bottom-logo #footer-logo{
+    display: block;
+  }
+  .bottom-logo #footer-logo .footer-special-text{
+    width: 100%;
+    text-align: center;
+  }
+  .bottom-logo #footer-logo a{
+    width: 60%;
+    display: block;
+    margin: auto;
+  }
+}
+/*---------------------------EndOfFooter-----------------*/

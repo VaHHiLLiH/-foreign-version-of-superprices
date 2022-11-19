@@ -284,3 +284,7 @@ function checkForBadWords($haystack)
 
     return false;
 }
+
+function fixInUrlPage($link) {
+    return str_replace('?page=', '/page-', $link);
+}

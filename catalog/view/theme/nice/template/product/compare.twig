@@ -3,9 +3,22 @@
   <ul class="breadcrumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
     {% for breadcrumb in breadcrumbs %}
     <li itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="{{ breadcrumb.href }}">
-        <span itemprop="name">{{ breadcrumb.text }}</span>
-      </a>
+      <ul class="breadcrumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+        {% for breadcrumb in breadcrumbs %}
+          <li itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+            {% if loop.last %}
+              <p itemprop="item">
+                <span itemprop="name">{{ breadcrumb.text }}</span>
+              </p>
+            {% else %}
+              <a itemprop="item" href="{{ breadcrumb.href }}">
+                <span itemprop="name">{{ breadcrumb.text }}</span>
+              </a>
+            {% endif %}
+            <meta itemprop="position" content="{{ loop.index }}">
+          </li>
+        {% endfor %}
+      </ul>
       <meta itemprop="position" content="{{ loop.index }}">
     </li>
     {% endfor %}
@@ -23,8 +36,8 @@
     {% else %}
     {% set class = 'col-sm-12' %}
     {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
+    <div {% if products %} itemscope itemtype="https://schema.org/Table" {% endif %} id="content" class="{{ class }}">{{ content_top }}
+      <h1 {% if products %} itemprop="about" {% endif %} >{{ heading_title }}</h1>
       {% if products %}
       <table class="table table-bordered">
         <thead>

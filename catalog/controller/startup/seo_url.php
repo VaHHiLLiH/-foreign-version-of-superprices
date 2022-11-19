@@ -166,6 +166,14 @@ class ControllerStartupSeoUrl extends Controller {
                         unset($data[$key]);
                     }
 
+                } else if($data['route'] == 'product/manufacturer') {
+                    $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "seo_url WHERE query = '" . $this->db->escape($value) . "'");
+
+                    if ($query->num_rows && $query->row['keyword']) {
+                        $url .= '/' . $query->row['keyword'];
+
+                        unset($data[$key]);
+                    }
                 } else if($data['route'] == 'product/manufacturer/info' && $key == 'manufacturer_id') {
 
                     $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "seo_url WHERE `query` = '" . $this->db->escape($key . '=' . (int)$value) . "'");

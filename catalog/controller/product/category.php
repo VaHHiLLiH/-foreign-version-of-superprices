@@ -373,11 +373,15 @@ class ControllerProductCategory extends Controller {
 			}
 			
 			if ($page > 1) {
-			    $this->document->addLink($this->url->link('product/category', 'path=' . $category_info['category_id'] . (($page - 2) ? '&page='. ($page - 1) : '')), 'prev');
+			    //$this->document->addLink($this->url->link('product/category', 'path=' . $category_info['category_id'] . (($page - 2) ? '&page='. ($page - 1) : '')), 'prev');
+                $link = $this->url->link('product/category', 'path=' . $category_info['category_id'] . (($page - 2) ? '&page='. ($page - 1) : ''));
+                $this->document->addLink(fixInUrlPage($link), 'prev');
 			}
 
 			if ($limit && ceil($product_total / $limit) > $page) {
-			    $this->document->addLink($this->url->link('product/category', 'path=' . $category_info['category_id'] . '&page='. ($page + 1)), 'next');
+			    //$this->document->addLink($this->url->link('product/category', 'path=' . $category_info['category_id'] . '&page='. ($page + 1)), 'next');
+                $link = $this->url->link('product/category', 'path=' . $category_info['category_id'] . '&page='. ($page + 1));
+                $this->document->addLink(fixInUrlPage($link), 'next');
 			}
 
 			$data['sort'] = $sort;
@@ -455,11 +459,11 @@ class ControllerProductCategory extends Controller {
 
         } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 1) {
 
-            return sprintf($this->language->get('CPU_child'), $this->generateH1($category_id), $this->generateSubCategories(5, $category_id), $this->generateBrands(1, $category_id));
+            return sprintf($this->language->get('CPU_child'), $this->getFullCategoryName($category_id), $this->generateSubCategories(5, $category_id), $this->generateBrands(1, $category_id));
 
         } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 1) {
 
-            return sprintf($this->language->get('CPU_post_child'), $this->generateH1($category_id), $this->generateParentH1($category_id), $this->generateParentH1($category_id), $this->generateProducts(5, $category_id));
+            return sprintf($this->language->get('CPU_post_child'), $this->getFullCategoryName($category_id), $this->generateParentH1($category_id), $this->generateParentH1($category_id), $this->generateProducts(5, $category_id));
 
         } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 2) {
 
@@ -467,7 +471,7 @@ class ControllerProductCategory extends Controller {
 
         } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 2){
 
-            return sprintf($this->language->get('Monitors_child'), $this->generateH1($category_id), $this->generateCountProducts($category_id), $this->generateCharacteristics(5, $category_id));
+            return sprintf($this->language->get('Monitors_child'), $this->getFullCategoryName($category_id), $this->generateCountProducts($category_id), $this->generateCharacteristics(5, $category_id));
 
         } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 3) {
 
@@ -479,7 +483,7 @@ class ControllerProductCategory extends Controller {
 
         } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 3 && $category_path[1]['path_id'] == 501) {
 
-            return sprintf($this->language->get('Phone_smart_child'), $this->generateH1($category_id), $this->generateH1($category_id));
+            return sprintf($this->language->get('Phone_smart_child'), $this->getFullCategoryName($category_id), $this->getFullCategoryName($category_id));
 
         } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 3 && $category_path[0]['category_id'] == 500) {
 
@@ -487,7 +491,7 @@ class ControllerProductCategory extends Controller {
 
         } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 3 && $category_path[1]['path_id'] == 500) {
 
-            return sprintf($this->language->get('Phone_button_child'), $this->generateH1($category_id), $this->generateH1($category_id));
+            return sprintf($this->language->get('Phone_button_child'), $this->getFullCategoryName($category_id), $this->getFullCategoryName($category_id));
 
         } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 4) {
 
@@ -495,11 +499,11 @@ class ControllerProductCategory extends Controller {
 
         } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 4) {
 
-            return sprintf($this->language->get('Cameras_child'), $this->generateH1($category_id), $this->generateBrands(3, $category_id), $this->generateCharacteristics(5, $category_id));
+            return sprintf($this->language->get('Cameras_child'), $this->getFullCategoryName($category_id), $this->generateBrands(3, $category_id), $this->generateCharacteristics(5, $category_id));
 
         } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 4) {
 
-            return sprintf($this->language->get('Cameras_post_child'), $this->generateH1($category_id), $this->generateH1($category_id), $this->generateCharacteristics(5, $category_id));
+            return sprintf($this->language->get('Cameras_post_child'), $this->getFullCategoryName($category_id), $this->getFullCategoryName($category_id), $this->generateCharacteristics(5, $category_id));
 
         } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 5) {
 
@@ -507,11 +511,11 @@ class ControllerProductCategory extends Controller {
 
         } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 5) {
 
-            return sprintf($this->language->get('Musical_child'), $this->generateH1($category_id), $this->generateBrands(3, $category_id), $this->generateCharacteristics(5, $category_id));
+            return sprintf($this->language->get('Musical_child'), $this->getFullCategoryName($category_id), $this->generateBrands(3, $category_id), $this->generateCharacteristics(5, $category_id));
 
         } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 5) {
 
-            return sprintf($this->language->get('Musical_post_child'), $this->generateH1($category_id), $this->generateH1($category_id), $this->generateCharacteristics(5, $category_id));
+            return sprintf($this->language->get('Musical_post_child'), $this->getFullCategoryName($category_id), $this->getFullCategoryName($category_id), $this->generateCharacteristics(5, $category_id));
 
         } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 6) {
 
@@ -519,11 +523,11 @@ class ControllerProductCategory extends Controller {
 
         } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 6) {
 
-            return sprintf($this->language->get('Smartwatch_child'), $this->generateH1($category_id), $this->generateCountProducts($category_id));
+            return sprintf($this->language->get('Smartwatch_child'), $this->getFullCategoryName($category_id), $this->generateCountProducts($category_id));
 
         } else if (count($category_path) == 3 && $category_path[0]['path_id'] == 6) {
 
-            return sprintf($this->language->get('Smartwatch_child'), $this->generateH1($category_id), $this->generateCountProducts($category_id));
+            return sprintf($this->language->get('Smartwatch_child'), $this->getFullCategoryName($category_id), $this->generateCountProducts($category_id));
 
         } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 7) {
 
@@ -531,7 +535,7 @@ class ControllerProductCategory extends Controller {
 
         } else if (count($category_path) == 2 && $category_path[0]['path_id'] == 7) {
 
-            return sprintf($this->language->get('Consoles_child'), $this->generateH1($category_id), $this->generateH1($category_id));
+            return sprintf($this->language->get('Consoles_child'), $this->getFullCategoryName($category_id), $this->getFullCategoryName($category_id));
 
         } else if (count($category_path) == 1 && $category_path[0]['path_id'] == 8) {
 
@@ -549,12 +553,12 @@ class ControllerProductCategory extends Controller {
 
     public function generateMetaTitle($category_id)
     {
-        return $this->generateH1($category_id).' Technical Specifications, Details and Parameters';
+        return $this->getFullCategoryName($category_id).' Technical Specifications, Details and Parameters';
     }
 
     public function generateMetaDescription($category_id)
     {
-        return 'Find out all ' . $this->generateH1($category_id) . ' Technical Specs and Detailed Information. Compare ' . $this->generateH1($category_id) . ' main Features (' . $this->generateCharacteristics(3, $category_id) . ') and browse more Info on ' . $this->config->get('config_name') . '.';
+        return 'Find out all ' . $this->getFullCategoryName($category_id) . ' Technical Specs and Detailed Information. Compare ' . $this->getFullCategoryName($category_id) . ' main Features (' . $this->generateCharacteristics(3, $category_id) . ') and browse more Info on ' . $this->config->get('config_name') . '.';
     }
 
     public function generateCountProducts($category_id)
@@ -564,12 +568,12 @@ class ControllerProductCategory extends Controller {
         return $countProducts['count'].' ';
     }
 
-    public function generateH1($category_id)
+    /*public function generateH1($category_id)
     {
         $category_h1 = $this->model_catalog_category->getCategory($category_id);
 
         return $category_h1['name'];
-    }
+    }*/
 
     public function generateParentH1($category_id)
     {
@@ -670,8 +674,8 @@ class ControllerProductCategory extends Controller {
     public function getFullCategoryName($category_id)
     {
         $category_info = $this->model_catalog_category->getCategory($category_id);
-        $array_categories_ids = [500, 501, 36, 37, 38, 39, 40, 41, 42, 268, 269];
-        if ($category_info['parent_id'] != 0 /*&& (!in_array($category_id, $array_categories_ids))*/) {
+        //$array_categories_ids = [500, 501, 36, 37, 38, 39, 40, 41, 42, 268, 269];
+        if ($category_info['parent_id'] != 0 && $category_info['parent_id'] != 13 && $category_info['parent_id'] != 22 /*&& (!in_array($category_id, $array_categories_ids))*/) {
             $category_path = $this->model_catalog_category->getCategoryPath($category_id);
             $category_name = [];
             foreach ($category_path as $path) {
@@ -697,6 +701,14 @@ class ControllerProductCategory extends Controller {
                 return $categ_name;
             } else {
                 return $categ_name.' page '.$this->request->get['page'];
+            }
+        } else if ($category_info['parent_id'] == 13 || $category_info['parent_id'] == 22) {
+            $parent_category = $this->model_catalog_category->getCategory($category_info['parent_id']);
+            $string = $category_info['name'] . ' CPU';
+            if (empty($this->request->get['page']) || $this->request->get['page'] == 1) {
+                return $string;
+            } else {
+                return $string . ' page ' . $this->request->get['page'];
             }
         } else {
             if (empty($this->request->get['page']) || $this->request->get['page'] == 1) {
