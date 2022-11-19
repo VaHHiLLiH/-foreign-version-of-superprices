@@ -3106,13 +3106,13 @@ footer h5 {
   margin-top: 15px;
 }
 #button-compare{
-  width: 50%;
+  /*width: 50%;*/
   /*margin: auto;*/
 }
 
 @media (max-width: 768px) {
   #button-compare {
-    width: 80%;
+    /*width: 80%;*/
     margin: 20px 0;
   }
 }
