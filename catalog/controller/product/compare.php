@@ -27,13 +27,13 @@ class ControllerProductCompare extends Controller {
 
 		$data['breadcrumbs'] = array();
 
-        var_dump($data['breadcrumbs']);
+        var_dump($data['breadcrumbs']);echo'<br/><br/>';
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
 			'href' => $this->url->link('common/home')
 		);
 
-        var_dump($data['breadcrumbs']);
+        var_dump($data['breadcrumbs']);echo'<br/><br/>';
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
 			'href' => $this->url->link('product/compare')
