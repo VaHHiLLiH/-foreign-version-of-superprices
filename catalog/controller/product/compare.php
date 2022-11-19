@@ -36,7 +36,7 @@ class ControllerProductCompare extends Controller {
 			'text' => $this->language->get('heading_title'),
 			'href' => $this->url->link('product/compare')
 		);
-
+        var_dump($data['breadcrumbs']);
 		if (isset($this->session->data['success'])) {
 			$data['success'] = $this->session->data['success'];
 
