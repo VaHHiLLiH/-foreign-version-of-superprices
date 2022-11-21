@@ -11,7 +11,7 @@ class ControllerProductProduct extends Controller {
 
 	public function index() {
 
-        $temp = new ProductSitemapGenerate();
+        /*$temp = new ProductSitemapGenerate();
 
         $temp->generate($temp->getDate(), '/var/www/www-root/data/www/everydayshop.ru/ProductSitemap.xml', 'product');
 
@@ -21,7 +21,7 @@ class ControllerProductProduct extends Controller {
 
         $temp2 = new ManufacturerSitemapGenerate();
 
-        $temp2->generate($temp2->getDate(), '/var/www/www-root/data/www/everydayshop.ru/ManufacturerSitemap.xml', 'manufacturer');
+        $temp2->generate($temp2->getDate(), '/var/www/www-root/data/www/everydayshop.ru/ManufacturerSitemap.xml', 'manufacturer');*/
 
 
 
