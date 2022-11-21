@@ -1,8 +1,30 @@
 <?php
+
+use Services\{
+    ProductSitemapGenerate,
+    CategorySitemapGenerate,
+    ManufacturerSitemapGenerate,
+};
+
 class ControllerProductProduct extends Controller {
 	private $error = array();
 
 	public function index() {
+
+        $temp = new ProductSitemapGenerate();
+
+        $temp->generate($temp->getDate(), 'C:/OpenServer/domains/randSheetOnOC.orc/ProductSitemap.xml', 'product');
+
+        $temp1 = new CategorySitemapGenerate();
+
+        $temp1->generate($temp1->getDate(), 'C:/OpenServer/domains/randSheetOnOC.orc/CategorySitemap.xml', 'category');
+
+        $temp2 = new ManufacturerSitemapGenerate();
+
+        $temp2->generate($temp2->getDate(), 'C:/OpenServer/domains/randSheetOnOC.orc/ManufacturerSitemap.xml', 'manufacturer');
+
+
+
 
 		$this->load->language('product/product');
 		$data['breadcrumbs'] = array();
