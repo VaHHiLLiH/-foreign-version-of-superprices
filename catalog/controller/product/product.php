@@ -1,30 +1,9 @@
 <?php
 
-use Services\{
-    ProductSitemapGenerate,
-    CategorySitemapGenerate,
-    ManufacturerSitemapGenerate,
-};
-
 class ControllerProductProduct extends Controller {
 	private $error = array();
 
 	public function index() {
-
-        /*$temp = new ProductSitemapGenerate();
-
-        $temp->generate($temp->getDate(), '/var/www/www-root/data/www/everydayshop.ru/ProductSitemap.xml', 'product');
-
-        $temp1 = new CategorySitemapGenerate();
-
-        $temp1->generate($temp1->getDate(), '/var/www/www-root/data/www/everydayshop.ru/CategorySitemap.xml', 'category');
-
-        $temp2 = new ManufacturerSitemapGenerate();
-
-        $temp2->generate($temp2->getDate(), '/var/www/www-root/data/www/everydayshop.ru/ManufacturerSitemap.xml', 'manufacturer');*/
-
-
-
 
 		$this->load->language('product/product');
 		$data['breadcrumbs'] = array();
