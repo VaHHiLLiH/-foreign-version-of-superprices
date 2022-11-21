@@ -13,15 +13,15 @@ class ControllerProductProduct extends Controller {
 
         $temp = new ProductSitemapGenerate();
 
-        $temp->generate($temp->getDate(), 'C:/OpenServer/domains/randSheetOnOC.orc/ProductSitemap.xml', 'product');
+        $temp->generate($temp->getDate(), '/var/www/www-root/data/www/everydayshop.ru/ProductSitemap.xml', 'product');
 
         $temp1 = new CategorySitemapGenerate();
 
-        $temp1->generate($temp1->getDate(), 'C:/OpenServer/domains/randSheetOnOC.orc/CategorySitemap.xml', 'category');
+        $temp1->generate($temp1->getDate(), '/var/www/www-root/data/www/everydayshop.ru/CategorySitemap.xml', 'category');
 
         $temp2 = new ManufacturerSitemapGenerate();
 
-        $temp2->generate($temp2->getDate(), 'C:/OpenServer/domains/randSheetOnOC.orc/ManufacturerSitemap.xml', 'manufacturer');
+        $temp2->generate($temp2->getDate(), '/var/www/www-root/data/www/everydayshop.ru/ManufacturerSitemap.xml', 'manufacturer');
 
 
 
