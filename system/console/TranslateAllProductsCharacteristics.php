@@ -23,12 +23,12 @@ $current_page = 1;
 $maxPages = ceil($allRecords/$recordOnOnePage);
 
 while($current_page <= $maxPages) {
-    var_dump('zawel');die();
     $from = ($current_page-1)*$recordOnOnePage;
 
     $products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 0 LIMIT " . $from . ", " . $recordOnOnePage)->rows;
 
     if (!empty($products_chars)) {
+        var_dump('zawel');die();
         foreach ($products_chars as $key1 => $product_chars) {
 
             $checking_translated = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 2 AND spec_id = " . (int)$product_chars['spec_id'] . " AND product_id = " . (int)$product_chars['product_id'])->row;
