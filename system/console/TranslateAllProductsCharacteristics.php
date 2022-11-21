@@ -19,7 +19,7 @@ $tr = new GoogleTranslate('en');
 
 $recordOnOnePage = 2000;
 $allRecords = $db->query("SELECT COUNT(*) as count FROM oc_spec WHERE language_id = 0")->row['count'];
-$current_page = 3;
+$current_page = 1;
 $maxPages = ceil($allRecords/$recordOnOnePage);
 
 while($current_page <= $maxPages) {
@@ -54,7 +54,7 @@ while($current_page <= $maxPages) {
 
                 var_dump($products_chars[$key1]['product_id']);
 
-                $db->query("INSERT INTO " . DB_PREFIX . "spec (spec_id, product_id, language_id, spec) VALUES (" . (int)$products_chars[$key1]['spec_id'] . ", " . (int)$products_chars[$key1]['product_id'] . ", 2, '" . $db->escape($products_chars[$key1]['spec']) . "')");
+                $db->query("UPDATE " . DB_PREFIX . "spec SET spec = '" . $db->escape($products_chars[$key1]['spec']) . "' WHERE language_id = 2 AND spec_id = " . (int)$products_chars[$key1]['spec_id']);
             }
         }
     }
