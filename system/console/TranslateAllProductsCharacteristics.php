@@ -23,6 +23,7 @@ $current_page = 1;
 $maxPages = ceil($allRecords/$recordOnOnePage);
 
 while($current_page <= $maxPages) {
+    var_dump('zawel');die();
     $from = ($current_page-1)*$recordOnOnePage;
 
     $products_chars = $db->query("SELECT * FROM " . DB_PREFIX . "spec WHERE language_id = 0 LIMIT " . $from . ", " . $recordOnOnePage)->rows;
