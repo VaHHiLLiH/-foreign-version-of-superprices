@@ -286,5 +286,8 @@ function checkForBadWords($haystack)
 }
 
 function fixInUrlPage($link) {
-    return str_replace('?page=', '/page-', $link);
+    //return str_replace('?page=', '/page-', $link);
+    $link = str_replace('?page=', '/page-', $link);
+
+    return str_replace('/page-1', '', $link);
 }
