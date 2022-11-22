@@ -84,11 +84,10 @@ class Pagination {
 				} else {
 					if ($i === 1) {
 						$output .= '<li><a href="' . str_replace(array('&amp;page={page}', '?page={page}', '&page={page}', '/page-{page}'), '', $this->url) . '">' . $i . '</a></li>';
-                        var_dump($this->url);echo'<br/><br/>';
-                        var_dump(str_replace(array('&amp;page={page}', '?page={page}', '&page={page}', '/page-{page}'), '', $this->url));echo'<br/><br/>';
-                        var_dump($this->url);echo'<br/><br/>';
 					} else {
 						$output .= '<li><a href="' . str_replace('{page}', $i, $this->url) . '">' . $i . '</a></li>';
+
+                        $output =  str_replace('/page-1', '', $output);
 					}
 				}
 			}
