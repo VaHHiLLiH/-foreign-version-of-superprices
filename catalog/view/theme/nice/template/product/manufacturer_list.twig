@@ -39,7 +39,7 @@
       <div class="row">
         {% for manufacturer in manufacturers %}
         <div class="col-sm-3">
-          <a href="{{ manufacturer.href }}">{{ manufacturer.name }}</a>
+          <a name="{{ category.name }}" href="{{ manufacturer.href }}">{{ manufacturer.name }}</a>
         </div>
         {% endfor %}
       </div>
