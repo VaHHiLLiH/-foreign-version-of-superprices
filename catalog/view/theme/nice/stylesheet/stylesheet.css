@@ -3839,3 +3839,12 @@ footer.only-for-mobile{
   }
 }
 /*---------------------------EndOfFooter-----------------*/
+.char-index{
+  font-weight: 700;
+  font-size: 16px;
+}
+.big-char{
+  font-size: 36px;
+  color: #373737;
+  line-height: 1.25;
+}
