@@ -50,12 +50,14 @@
     <div id="top-2">
       <div class="top-2--column logo-column">
         <div class="logo-menu">
-
-          {% if isMobile %}
+          <div class="only-mobile-menu">
+            {{ mobile_menu }}
+          </div>
+          {#{% if isMobile %}
             <div class="only-mobile-menu">
               {{ mobile_menu }}
             </div>
-          {% endif %}
+          {% endif %}#}
           <div id="logo">
             {% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>
             {% else %}
