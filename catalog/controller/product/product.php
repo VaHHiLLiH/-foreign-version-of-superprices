@@ -19,6 +19,8 @@ class ControllerProductProduct extends Controller {
 
         $catFromProduct = $this->model_catalog_category->getProductCategories($this->request->get['product_id']);
 
+        $data['compare_button_text'] = $this->getCategoryName($catFromProduct);
+
         $data['product_description'] = $this->generateDescription(end($catFromProduct)['category_id'], $this->request->get['product_id']);
 
         $this->document->setTitle($this->generateMetaTitle($this->request->get['product_id']));
@@ -813,5 +815,20 @@ class ControllerProductProduct extends Controller {
         }
 
         return trim($chars_string, ', ');
+    }
+
+    public function getCategoryName(array $category_path) : string
+    {
+        $first_category = array_shift($category_path)['category_id'];
+        if ((int)$first_category !== 5) {
+            $category = $this->model_catalog_category->getCategory($first_category);
+
+            return $category['name'];
+        } else {
+            $second_category = array_shift($category_path)['category_id'];
+            $category = $this->model_catalog_category->getCategory($second_category);
+
+            return $category['name'];
+        }
     }
 }
