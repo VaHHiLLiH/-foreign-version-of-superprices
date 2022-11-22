@@ -558,7 +558,7 @@ class ControllerProductCategory extends Controller {
 
     public function generateMetaDescription($category_id)
     {
-        return 'Find out all ' . $this->getFullCategoryName($category_id) . ' Technical Specs and Detailed Information. Compare ' . $this->getFullCategoryName($category_id) . ' main Features (' . $this->generateCharacteristics(3, $category_id) . ') and browse more Info on ' . $this->config->get('config_name') . '.';
+        return htmlspecialchars('Find out all ' . $this->getFullCategoryName($category_id) . ' Technical Specs and Detailed Information. Compare ' . $this->getFullCategoryName($category_id) . ' main Features (' . $this->generateCharacteristics(3, $category_id) . ') and browse more Info on ' . $this->config->get('config_name') . '.');
     }
 
     public function generateCountProducts($category_id)
