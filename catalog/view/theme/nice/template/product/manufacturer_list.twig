@@ -31,7 +31,7 @@
       <h1>{{ heading_title }}</h1>
       {% if categories %}
       <p><div class="char-index">{{ text_index }}</div> {% for category in categories %}
-        &nbsp;&nbsp;&nbsp;<a href="index.php?route=product/manufacturer#{{ category.name }}">{{ category.name }}</a> {% endfor %} </p>
+        &nbsp;&nbsp;&nbsp;<a href="brand#{{ category.name }}">{{ category.name }}</a> {% endfor %} </p>
       {% for category in categories %}
       <p class="big-char" id="{{ category.name }}">{{ category.name }}</p>
       {% if category.manufacturer %}
