@@ -50,11 +50,11 @@
     <div id="top-2">
       <div class="top-2--column logo-column">
         <div class="logo-menu">
-          {% if isMobile %}
+          {#{% if isMobile %}#}
             <div class="only-mobile-menu">
               {{ mobile_menu }}
             </div>
-          {% endif %}
+          {#{% endif %}#}
           <div id="logo">
             {% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>
             {% else %}
@@ -95,11 +95,11 @@
     </div>
   </div>
 </header>
-{% if isDesc %}
+{#{% if isDesc %}#}
   <div class="only-desc-menu">
     {{ menu }}
   </div>
-{% endif %}
+{#{% endif %}#}
 <script type="text/javascript"><!--
   $('header .icon-search-mobile').on('click', function() {
     if ($('.special-mobile-search').hasClass('show-up')) {
