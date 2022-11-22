@@ -3,7 +3,8 @@
     "type": "project",
     "require": {
         "jenssegers/agent": "^2.6",
-        "stichoza/google-translate-php": "^4.1"
+        "stichoza/google-translate-php": "^4.1",
+        "phpoffice/phpspreadsheet": "^1.25"
     },
     "autoload": {
         "psr-4": {
