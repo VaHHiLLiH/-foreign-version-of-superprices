@@ -161,7 +161,7 @@ class ControllerStartupSeoUrl extends Controller {
 
                     $url .= ($data['route'] == 'product/product' && $key == 'product_id') ? '/product' : '';
                     if ($query->num_rows && $query->row['keyword']) {
-                        $url .= '/' . $query->row['keyword'];
+                        $url .= '/product/' . $query->row['keyword'];
 
                         unset($data[$key]);
                     }
@@ -180,7 +180,7 @@ class ControllerStartupSeoUrl extends Controller {
 
                     $url .= ($data['route'] == 'product/manufacturer/info' && $key == 'manufacturer_id') ? '/brand' : '';
                     if ($query->num_rows && $query->row['keyword']) {
-                        $url .= '/' . $query->row['keyword'];
+                        $url .= '/brand/' . $query->row['keyword'];
 
                         unset($data[$key]);
                     }
