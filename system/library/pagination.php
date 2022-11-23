@@ -82,7 +82,7 @@ class Pagination {
 				if ($page == $i) {
 					$output .= '<li class="active"><span>' . $i . '</span></li>';
 				} else {
-					if ($i === 1) {
+					if ($i == 1) {
 						$output .= '<li><a href="' . str_replace(array('&amp;page={page}', '?page={page}', '&page={page}', '/page-{page}'), '', $this->url) . '">' . $i . '</a></li>';
 					} else {
 						$output .= '<li><a href="' . str_replace('{page}', $i, $this->url) . '">' . $i . '</a></li>';
@@ -97,8 +97,6 @@ class Pagination {
 		}
 
 		$output .= '</ul>';
-
-        str_replace('/page-1"', '"', $output);
 
 		if ($num_pages > 1) {
 			return $output;
