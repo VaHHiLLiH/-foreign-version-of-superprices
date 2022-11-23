@@ -87,7 +87,7 @@ class Pagination {
 					} else {
 						$output .= '<li><a href="' . str_replace('{page}', $i, $this->url) . '">' . $i . '</a></li>';
 
-                        preg_match('/page-1/$',$output,$matches);
+                        preg_match('/page-1$/',$output,$matches);
 
                         if (!empty($matches)) {
                             $output =  str_replace('/page-1', '', $output);
