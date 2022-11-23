@@ -3113,14 +3113,15 @@ footer h5 {
   margin-top: 15px;
 }
 #button-compare{
-  /*width: 50%;*/
-  /*margin: auto;*/
+  margin: 20px 0;
+  width: 272px;
 }
 
 @media (max-width: 768px) {
   #button-compare {
     /*width: 80%;*/
-    margin: 20px 0;
+    margin: 20px auto;
+    width: 272px;
   }
 }
 .fixed-size {
