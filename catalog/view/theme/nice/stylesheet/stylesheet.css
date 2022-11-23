@@ -1580,9 +1580,12 @@ html[dir=rtl] .breadcrumb > li::after {
   text-shadow: 0 1px 0 #FFF;
   z-index: -10;
 }
-.section::-webkit-scrollbar {
+#column-left::-webkit-scrollbar {
   z-index: 999;
   color: greenyellow;
+}
+#column-left::-webkit-scrollbar-track {
+  background-color: greenyellow;
 }
 /* carousel */
 .carousel-caption {
