@@ -1582,16 +1582,8 @@ html[dir=rtl] .breadcrumb > li::after {
 }
 .list-group::-webkit-scrollbar {
   z-index: 999;
-  color: greenyellow;
-}
-.list-group::-webkit-scrollbar-track {
-  background-color: greenyellow;
 }
 .list-group {
-  scrollbar-width: thin;
-}
-.list-group {
-  scrollbar-color: #6969dd #e0e0e0;
   scrollbar-width: thin;
 }
 /* carousel */
