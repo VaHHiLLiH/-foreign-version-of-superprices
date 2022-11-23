@@ -1582,6 +1582,7 @@ html[dir=rtl] .breadcrumb > li::after {
 }
 .section::-webkit-scrollbar {
   z-index: 999;
+  color: greenyellow;
 }
 /* carousel */
 .carousel-caption {
