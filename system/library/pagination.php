@@ -87,7 +87,9 @@ class Pagination {
 					} else {
 						$output .= '<li><a href="' . str_replace('{page}', $i, $this->url) . '">' . $i . '</a></li>';
 
-                        $output =  str_replace('/page-1', '', $output);
+                        if ($i === 1) {
+                            $output =  str_replace('/page-1', '', $output);
+                        }
 					}
 				}
 			}
