@@ -19,7 +19,7 @@ $tr = new GoogleTranslate('en');
 
 $recordOnOnePage = 2000;
 $allRecords = $db->query("SELECT COUNT(*) as count FROM oc_spec WHERE language_id = 0")->row['count'];
-$current_page = 4;
+$current_page = 6;
 $maxPages = ceil($allRecords/$recordOnOnePage);
 
 while($current_page <= $maxPages) {
