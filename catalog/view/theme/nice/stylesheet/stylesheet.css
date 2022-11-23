@@ -1578,6 +1578,7 @@ html[dir=rtl] .breadcrumb > li::after {
   background: #eeeeee;
   border: 1px solid #DDDDDD;
   text-shadow: 0 1px 0 #FFF;
+  z-index: -10;
 }
 /* carousel */
 .carousel-caption {
