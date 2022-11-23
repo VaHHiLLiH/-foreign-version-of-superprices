@@ -24,7 +24,7 @@ class ControllerProductCategory extends Controller {
 		if (isset($this->request->get['order'])) {
 			$order = $this->request->get['order'];
 		} else {
-			$order = 'ASC';
+			$order = 'DESC';
 		}
 
 		if (isset($this->request->get['page'])) {
@@ -197,7 +197,6 @@ class ControllerProductCategory extends Controller {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
-            var_dump($results);
 			foreach ($results as $result) {
 				if ($result['image']) {
 					$image = $result['image'];
