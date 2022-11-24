@@ -36,19 +36,21 @@ while($current_page <= $maxPages) {
                 foreach ($groups_chars as $key1 => $group_chars) {
                     foreach ($group_chars as $key2 => $chars) {
                         foreach ($group_chars['subspecs'] as $key3 => $chars) {
-                            if ($key2 != 'name') {
-                                preg_match('/^[\s]*there is[\s]*$/', $chars['value'], $matches);
+                            if ($key2 == 'name' && $group_chars[$key2] == 'Food') {
+                                /*preg_match('/^[\s]*there is[\s]*$/', $chars['value'], $matches);
                                 if (!empty($matches)) {
                                     $groups_chars[$key1][$key2][$key3] = ['name' => $chars['name'], 'value' => str_replace('there is', 'yes', $chars['value'])];
                                     $updater = true;
-                                }
+                                }*/
+                                var_dump($product_chars['product_id']);
+                                $group_chars[$key2] = 'Power';
+                                $updater = true;
                             }
                         }
                     }
                 }
         }
         if($updater) {
-            //var_dump($product_chars['spec_id']);
             $db->query("UPDATE oc_spec SET spec = '" . $db->escape(json_encode($groups_chars)) . "' WHERE language_id = 2 AND spec_id = " . (int)$product_chars['spec_id']);
         }
     }
