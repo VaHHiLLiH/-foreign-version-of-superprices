@@ -43,7 +43,7 @@ while($current_page <= $maxPages) {
                                     $updater = true;
                                 }*/
                                 var_dump($product_chars['product_id']);
-                                $group_chars[$key2] = 'Power';
+                                $groups_chars[$key1][$key2] = 'Power';
                                 $updater = true;
                             }
                         }
