@@ -18,11 +18,11 @@ require_once(DIR_SYSTEM . 'startup.php');
 // Database
 $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
 
-//Excel file
+/*//Excel file
 $reader = IOFactory::createReader("Xlsx");
 $content = $reader->load("/var/www/www-root/data/www/everydayshop.ru/ru-eng_text.xlsx");
 
-$excel = $content->getActiveSheet();
+$excel = $content->getActiveSheet();*/
 
 
 
@@ -47,7 +47,7 @@ while($current_page <= $maxPages) {
                     foreach ($group_chars['subspecs'] as $key3 => $chars) {
                         if ($key2 != 'name') {
 
-                            $temporary = swapText($excel, $chars['value']);
+                            $temporary = swapText(/*$excel, */$chars['value']);
 
                                 $groups_chars[$key1][$key2][$key3] = [
                                     'name' => $chars['name'],
@@ -66,14 +66,17 @@ while($current_page <= $maxPages) {
     $current_page++;
 }
 
-function swapText($excel, $text) {
+function swapText($text) {
 
-    for ($i = 1; $i <= $excel->getHighestRow(); $i++) {
+    /*for ($i = 1; $i <= $excel->getHighestRow(); $i++) {
         $needle = $excel->getCell('A' . $i)->getValue();
         $search = $excel->getCell('B' . $i)->getValue();
 
         $text = str_replace($needle, $search, $text);
-    }
+    }*/
+    $text = str_replace('мА⋅ч', 'mAh', $text);
+
+    $text = str_replace('СCD', 'CCD', $text);
 
     return $text;
 }
