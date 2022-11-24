@@ -37,9 +37,9 @@ while($current_page <= $maxPages) {
                     foreach ($group_chars as $key2 => $chars) {
                         foreach ($group_chars['subspecs'] as $key3 => $chars) {
                             if ($key2 != 'name') {
-                                preg_match('/[\s]*years[\s]*$/', $chars['value'], $matches);
+                                preg_match('/^[\s]*there is[\s]*$/', $chars['value'], $matches);
                                 if (!empty($matches)) {
-                                    $groups_chars[$key1][$key2][$key3] = ['name' => $chars['name'], 'value' => str_replace('years', 'g', $chars['value'])];
+                                    $groups_chars[$key1][$key2][$key3] = ['name' => $chars['name'], 'value' => str_replace('there is', 'yes', $chars['value'])];
                                     $updater = true;
                                 }
                             }
