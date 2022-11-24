@@ -3633,6 +3633,9 @@ footer h5 {
   display: flex;
   justify-content: space-between;
 }
+.product-thumb--hidden-wrapper > span:hover{
+  cursor: pointer;
+}
 .product-thumb--hidden-wrapper > span > img{
   width: 50px;
   height: 38px;
