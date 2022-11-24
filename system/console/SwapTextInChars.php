@@ -36,10 +36,10 @@ while($current_page <= $maxPages) {
                 foreach ($groups_chars as $key1 => $group_chars) {
                     foreach ($group_chars as $key2 => $chars) {
                         foreach ($group_chars['subspecs'] as $key3 => $chars) {
-                            if ($key2 != 'name') {
-                                preg_match('/^[\s]*there is[\s]*$/', $chars['value'], $matches);
+                            if ($key2 == 'name') {
+                                preg_match('/^[\s]*food[\s]*$/i', $chars['value'], $matches);
                                 if (!empty($matches)) {
-                                    $groups_chars[$key1][$key2][$key3] = ['name' => $chars['name'], 'value' => str_replace('there is', 'yes', $chars['value'])];
+                                    $groups_chars[$key1][$key2][$key3] = ['name' => $chars['name'], 'value' => str_replace('Food', 'Power', $chars['value'])];
                                     $updater = true;
                                 }
                             }
