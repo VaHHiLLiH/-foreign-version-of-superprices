@@ -375,7 +375,7 @@ var compare = {
 		});
 	},
 	'goToCompare': function() {
-		document.location.href = 'http://'+document.location.host+'/index.php?route=product/compare';
+		document.location.href = 'http://'+document.location.host+'/comparison';
 	},
 
 }
