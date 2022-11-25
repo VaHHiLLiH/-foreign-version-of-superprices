@@ -24,7 +24,7 @@ abstract class SitemapGenerate
                     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
         foreach ($data as $item) {
             $xmlDate .= "<url>
-                            <loc>https://everydayshop.ru/" . $url . '/' . str_slug($item['keyword'], '-' , 'ru') . "</loc>
+                            <loc>https://technofox.site/" . $url . '/' . str_slug($item['keyword'], '-' , 'ru') . "</loc>
                             <lastmod>" . date('Y-m-d') . "</lastmod>
                             <changefreq>weekly</changefreq>
                             <priority>0.8</priority>
