@@ -3859,3 +3859,7 @@ footer.only-for-mobile{
   color: #373737;
   line-height: 1.25;
 }
+
+.table-bordered .text-center {
+  width: 33%;
+}
