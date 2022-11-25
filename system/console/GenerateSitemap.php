@@ -6,7 +6,7 @@ use Services\{
     ManufacturerSitemapGenerate,
 };
 
-$path = '/var/www/www-root/data/www/everydayshop.ru/';
+$path = '/var/www/www-root/data/www/technofox.site/';
 
 // Configuration
 require_once($path . 'config.php');
