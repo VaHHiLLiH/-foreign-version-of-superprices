@@ -569,7 +569,7 @@ class ModelCatalogProduct extends Model {
     }
 
     public function getFeaturedProducts() {
-        $products = $this->db->query("SELECT * FROM `oc_product` ORDER BY RAND() LIMIT 4")->rows;
+        $products = $this->db->query("SELECT * FROM `oc_product` p LEFT JOIN oc_product_description pd ON (p.product_id = pd.product_id) WHERE p.status = 1 ORDER BY RAND() LIMIT 4")->rows;
 
         /*$products = [];
         foreach ($product_ids as $key => $product_id) {
