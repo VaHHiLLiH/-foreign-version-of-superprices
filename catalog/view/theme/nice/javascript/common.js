@@ -924,7 +924,7 @@ $(document).ready(function() {
 
     };
 
-    $('#mobile-menu-categories').click(function (e) {
+    $('#mobile-menu-categories .navbar-header button.navbar-toggle').click(function (e) {
             e.preventDefault();
 
             $('#navbar-ex1-collapse').toggleClass('mobile-menu-opened');
