@@ -3880,3 +3880,7 @@ footer.only-for-mobile{
   background-color: darkgray;
   border-color: darkgray;
 }
+.list-group-item.active:hover{
+  background-color: darkgray;
+  border-color: darkgray;
+}
