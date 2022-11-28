@@ -1,635 +1,635 @@
 function getURLVar(key) {
-	var value = [];
+    var value = [];
 
-	var query = String(document.location).split('?');
+    var query = String(document.location).split('?');
 
-	if (query[1]) {
-		var part = query[1].split('&');
+    if (query[1]) {
+        var part = query[1].split('&');
 
-		for (i = 0; i < part.length; i++) {
-			var data = part[i].split('=');
+        for (i = 0; i < part.length; i++) {
+            var data = part[i].split('=');
 
-			if (data[0] && data[1]) {
-				value[data[0]] = data[1];
-			}
-		}
+            if (data[0] && data[1]) {
+                value[data[0]] = data[1];
+            }
+        }
 
-		if (value[key]) {
-			return value[key];
-		} else {
-			return '';
-		}
-	}
+        if (value[key]) {
+            return value[key];
+        } else {
+            return '';
+        }
+    }
 }
 
 $(document).ready(function() {
-	// Highlight any found errors
-	$('.text-danger').each(function() {
-		var element = $(this).parent().parent();
+    // Highlight any found errors
+    $('.text-danger').each(function() {
+        var element = $(this).parent().parent();
 
-		if (element.hasClass('form-group')) {
-			element.addClass('has-error');
-		}
-	});
+        if (element.hasClass('form-group')) {
+            element.addClass('has-error');
+        }
+    });
 
-	// Currency
-	$('#form-currency .currency-select').on('click', function(e) {
-		e.preventDefault();
+    // Currency
+    $('#form-currency .currency-select').on('click', function(e) {
+        e.preventDefault();
 
-		$('#form-currency input[name=\'code\']').val($(this).attr('name'));
+        $('#form-currency input[name=\'code\']').val($(this).attr('name'));
 
-		$('#form-currency').submit();
-	});
+        $('#form-currency').submit();
+    });
 
-	// Language
-	$('#form-language .language-select').on('click', function(e) {
-		e.preventDefault();
+    // Language
+    $('#form-language .language-select').on('click', function(e) {
+        e.preventDefault();
 
-		$('#form-language input[name=\'code\']').val($(this).attr('name'));
+        $('#form-language input[name=\'code\']').val($(this).attr('name'));
 
-		$('#form-language').submit();
-	});
+        $('#form-language').submit();
+    });
 
-	/* Search */
-	$(document).on('click', '#search-btn', function() {
-		var url = $('base').attr('href') + 'index.php?route=product/search';
+    /* Search */
+    $(document).on('click', '#search-btn', function() {
+        var url = $('base').attr('href') + 'index.php?route=product/search';
 
-		var value = $('header #search input[name=\'search\']').val();
+        var value = $('header #search input[name=\'search\']').val();
 
-		if (value) {
-			url += '&search=' + encodeURIComponent(value);
-		}
+        if (value) {
+            url += '&search=' + encodeURIComponent(value);
+        }
 
-		location = url;
-	});
+        location = url;
+    });
 
-	$('#search input[name=\'search\']').on('keydown', function(e) {
-		if (e.keyCode == 13) {
-			$('header #search input[name=\'search\']').parent().find('button').trigger('click');
-		}
-	});
+    $('#search input[name=\'search\']').on('keydown', function(e) {
+        if (e.keyCode == 13) {
+            $('header #search input[name=\'search\']').parent().find('button').trigger('click');
+        }
+    });
 
-	// Menu
-	$('#menu-categories .dropdown-menu').each(function() {
-		var menu = $('#menu-categories').offset();
-		var dropdown = $(this).parent().offset();
+    // Menu
+    $('#menu-categories .dropdown-menu').each(function() {
+        var menu = $('#menu-categories').offset();
+        var dropdown = $(this).parent().offset();
 
-		var i = (dropdown.left + $(this).outerWidth()) - (menu.left + $('#menu-categories').outerWidth());
+        var i = (dropdown.left + $(this).outerWidth()) - (menu.left + $('#menu-categories').outerWidth());
 
-		if (i > 0) {
-			$(this).css('margin-left', '-' + (i + 10) + 'px');
-		}
-	});
+        if (i > 0) {
+            $(this).css('margin-left', '-' + (i + 10) + 'px');
+        }
+    });
 
-	// Product List
-	$('#list-view').click(function() {
-		$('#content .product-grid > .clearfix').remove();
+    // Product List
+    $('#list-view').click(function() {
+        $('#content .product-grid > .clearfix').remove();
 
-		//$('#content .row > .product-grid').attr('class', 'product-layout product-list col-xs-12');
-    $('#content .product-grid').addClass('product-list');
-    $('#content .product-grid').removeClass('product-grid');
-		$('#grid-view').removeClass('active');
-		$('#list-view').addClass('active');
+        //$('#content .row > .product-grid').attr('class', 'product-layout product-list col-xs-12');
+        $('#content .product-grid').addClass('product-list');
+        $('#content .product-grid').removeClass('product-grid');
+        $('#grid-view').removeClass('active');
+        $('#list-view').addClass('active');
 
-		localStorage.setItem('display', 'list');
-	});
+        localStorage.setItem('display', 'list');
+    });
 
-	// Product Grid
-	$('#grid-view').click(function() {
-		// What a shame bootstrap does not take into account dynamically loaded columns
-		var cols = $('#column-right, #column-left').length;
+    // Product Grid
+    $('#grid-view').click(function() {
+        // What a shame bootstrap does not take into account dynamically loaded columns
+        var cols = $('#column-right, #column-left').length;
 
-		if (cols == 2) {
-			//$('#content .product-list').attr('class', 'product-layout product-grid col-lg-6 col-md-6 col-sm-12 col-xs-12');
-      $('#content .product-list').addClass('product-grid');
-      $('#content .product-list').removeClass('product-list');
-		} else if (cols == 1) {
-			//$('#content .product-list').attr('class', 'product-layout product-grid col-lg-4 col-md-4 col-sm-4 col-xs-6');
-      $('#content .product-list').addClass('product-grid');
-      $('#content .product-list').removeClass('product-list');
-		} else {
-			//$('#content .product-list').attr('class', 'product-layout product-grid col-lg-3 col-md-3 col-sm-4 col-xs-6');
-      $('#content .product-list').addClass('product-grid');
-      $('#content .product-list').removeClass('product-list');
-		}
+        if (cols == 2) {
+            //$('#content .product-list').attr('class', 'product-layout product-grid col-lg-6 col-md-6 col-sm-12 col-xs-12');
+            $('#content .product-list').addClass('product-grid');
+            $('#content .product-list').removeClass('product-list');
+        } else if (cols == 1) {
+            //$('#content .product-list').attr('class', 'product-layout product-grid col-lg-4 col-md-4 col-sm-4 col-xs-6');
+            $('#content .product-list').addClass('product-grid');
+            $('#content .product-list').removeClass('product-list');
+        } else {
+            //$('#content .product-list').attr('class', 'product-layout product-grid col-lg-3 col-md-3 col-sm-4 col-xs-6');
+            $('#content .product-list').addClass('product-grid');
+            $('#content .product-list').removeClass('product-list');
+        }
 
-		$('#list-view').removeClass('active');
-		$('#grid-view').addClass('active');
+        $('#list-view').removeClass('active');
+        $('#grid-view').addClass('active');
 
-		localStorage.setItem('display', 'grid');
-	});
+        localStorage.setItem('display', 'grid');
+    });
 
-	if (localStorage.getItem('display') == 'list') {
-		$('#list-view').trigger('click');
-		$('#list-view').addClass('active');
-	} else {
-		$('#grid-view').trigger('click');
-		$('#grid-view').addClass('active');
-	}
+    if (localStorage.getItem('display') == 'list') {
+        $('#list-view').trigger('click');
+        $('#list-view').addClass('active');
+    } else {
+        $('#grid-view').trigger('click');
+        $('#grid-view').addClass('active');
+    }
 
-	// Checkout
-	$(document).on('keydown', '#collapse-checkout-option input[name=\'email\'], #collapse-checkout-option input[name=\'password\']', function(e) {
-		if (e.keyCode == 13) {
-			$('#collapse-checkout-option #button-login').trigger('click');
-		}
-	});
+    // Checkout
+    $(document).on('keydown', '#collapse-checkout-option input[name=\'email\'], #collapse-checkout-option input[name=\'password\']', function(e) {
+        if (e.keyCode == 13) {
+            $('#collapse-checkout-option #button-login').trigger('click');
+        }
+    });
 
-	// tooltips on hover
-	$('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
+    // tooltips on hover
+    $('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
 
-	// Makes tooltips work on ajax generated content
-	$(document).ajaxStop(function() {
-		$('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
-	});
+    // Makes tooltips work on ajax generated content
+    $(document).ajaxStop(function() {
+        $('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
+    });
 });
 
 // Cart add remove functions
 var cart = {
-	'add': function(product_id, quantity) {
-		$.ajax({
-			url: 'index.php?route=checkout/cart/add',
-			type: 'post',
-			data: 'product_id=' + product_id + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
-			dataType: 'json',
-			beforeSend: function() {
-				$('#cart > button').button('loading');
-			},
-			complete: function() {
-				$('#cart > button').button('reset');
-			},
-			success: function(json) {
-				$('.alert-dismissible, .text-danger').remove();
+    'add': function(product_id, quantity) {
+        $.ajax({
+            url: 'index.php?route=checkout/cart/add',
+            type: 'post',
+            data: 'product_id=' + product_id + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#cart > button').button('loading');
+            },
+            complete: function() {
+                $('#cart > button').button('reset');
+            },
+            success: function(json) {
+                $('.alert-dismissible, .text-danger').remove();
 
-				if (json['redirect']) {
-					location = json['redirect'];
-				}
+                if (json['redirect']) {
+                    location = json['redirect'];
+                }
 
-				if (json['success']) {
-          $('#report-modal .modal-title').html(json['nice_text_modal_add_to_cart_title']);
-        
-          $('#report-modal .modal-body').html('<div class="alert alert-success"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;' + json['success'] + '</div>');  
-        
-          $('#report-modal .modal-footer').html('<button type="button" class="btn modal_btn-close margin-r-space-1" data-dismiss="modal">'+json['nice_text_modal_button_to_continue']+'</button>\n\
+                if (json['success']) {
+                    $('#report-modal .modal-title').html(json['nice_text_modal_add_to_cart_title']);
+
+                    $('#report-modal .modal-body').html('<div class="alert alert-success"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;' + json['success'] + '</div>');
+
+                    $('#report-modal .modal-footer').html('<button type="button" class="btn modal_btn-close margin-r-space-1" data-dismiss="modal">'+json['nice_text_modal_button_to_continue']+'</button>\n\
 					<a href="' + json['button_to_cart_link'] + '" class="btn btn-primary modal_btn-to-cart">'+json['nice_text_modal_button_to_cart']+'</a>');
 
-          $('#report-modal').modal('show');
+                    $('#report-modal').modal('show');
 
-					// Need to set timeout otherwise it wont update the total
-					setTimeout(function () {
-						$('#cart > button').html('<div class="cart-quantity-wrapper"><i class="fa fa-shopping-bag cart-icon"></i><span id="cart-quantity">' + json['quantity'] + '</div></span><div class="cart-total-wrapper"><span id="cart-total" class="hidden-xs hidden-sm">' + json['total'] + '</span></div>');
-					}, 100);
+                    // Need to set timeout otherwise it wont update the total
+                    setTimeout(function () {
+                        $('#cart > button').html('<div class="cart-quantity-wrapper"><i class="fa fa-shopping-bag cart-icon"></i><span id="cart-quantity">' + json['quantity'] + '</div></span><div class="cart-total-wrapper"><span id="cart-total" class="hidden-xs hidden-sm">' + json['total'] + '</span></div>');
+                    }, 100);
 
-					$('#cart > ul').load('index.php?route=common/cart/info ul li');
-				}
-			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
-		});
-	},
-	'update': function(key, quantity) {
-		$.ajax({
-			url: 'index.php?route=checkout/cart/edit',
-			type: 'post',
-			data: 'key=' + key + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
-			dataType: 'json',
-			beforeSend: function() {
-				$('#cart > button').button('loading');
-			},
-			complete: function() {
-				$('#cart > button').button('reset');
-			},
-			success: function(json) {
-				// Need to set timeout otherwise it wont update the total
-				setTimeout(function () {
-          $('#cart > button').html('<div class="cart-quantity-wrapper"><i class="fa fa-shopping-bag cart-icon"></i><span id="cart-quantity">' + json['quantity'] + '</div></span><div class="cart-total-wrapper"><span id="cart-total" class="hidden-xs hidden-sm">' + json['total'] + '</span></div>');
-				}, 100);
+                    $('#cart > ul').load('index.php?route=common/cart/info ul li');
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    },
+    'update': function(key, quantity) {
+        $.ajax({
+            url: 'index.php?route=checkout/cart/edit',
+            type: 'post',
+            data: 'key=' + key + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#cart > button').button('loading');
+            },
+            complete: function() {
+                $('#cart > button').button('reset');
+            },
+            success: function(json) {
+                // Need to set timeout otherwise it wont update the total
+                setTimeout(function () {
+                    $('#cart > button').html('<div class="cart-quantity-wrapper"><i class="fa fa-shopping-bag cart-icon"></i><span id="cart-quantity">' + json['quantity'] + '</div></span><div class="cart-total-wrapper"><span id="cart-total" class="hidden-xs hidden-sm">' + json['total'] + '</span></div>');
+                }, 100);
 
-				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
-					location = 'index.php?route=checkout/cart';
-				} else {
-					$('#cart > ul').load('index.php?route=common/cart/info ul li');
-				}
-			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
-		});
-	},
-	'remove': function(key) {
-		$.ajax({
-			url: 'index.php?route=checkout/cart/remove',
-			type: 'post',
-			data: 'key=' + key,
-			dataType: 'json',
-			beforeSend: function() {
-				$('#cart > button').button('loading');
-			},
-			complete: function() {
-				$('#cart > button').button('reset');
-			},
-			success: function(json) {
-				// Need to set timeout otherwise it wont update the total
-				setTimeout(function () {
-					$('#cart > button').html('<div class="cart-quantity-wrapper"><i class="fa fa-shopping-bag cart-icon"></i><span id="cart-quantity">' + json['quantity'] + '</div></span><div class="cart-total-wrapper"><span id="cart-total" class="hidden-xs hidden-sm">' + json['total'] + '</span></div>');
-				}, 100);
+                if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
+                    location = 'index.php?route=checkout/cart';
+                } else {
+                    $('#cart > ul').load('index.php?route=common/cart/info ul li');
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    },
+    'remove': function(key) {
+        $.ajax({
+            url: 'index.php?route=checkout/cart/remove',
+            type: 'post',
+            data: 'key=' + key,
+            dataType: 'json',
+            beforeSend: function() {
+                $('#cart > button').button('loading');
+            },
+            complete: function() {
+                $('#cart > button').button('reset');
+            },
+            success: function(json) {
+                // Need to set timeout otherwise it wont update the total
+                setTimeout(function () {
+                    $('#cart > button').html('<div class="cart-quantity-wrapper"><i class="fa fa-shopping-bag cart-icon"></i><span id="cart-quantity">' + json['quantity'] + '</div></span><div class="cart-total-wrapper"><span id="cart-total" class="hidden-xs hidden-sm">' + json['total'] + '</span></div>');
+                }, 100);
 
-				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
-					location = 'index.php?route=checkout/cart';
-				} else {
-					$('#cart > ul').load('index.php?route=common/cart/info ul li');
-				}
-			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
-		});
-	}
+                if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
+                    location = 'index.php?route=checkout/cart';
+                } else {
+                    $('#cart > ul').load('index.php?route=common/cart/info ul li');
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    }
 }
 
 var voucher = {
-	'add': function() {
+    'add': function() {
 
-	},
-	'remove': function(key) {
-		$.ajax({
-			url: 'index.php?route=checkout/cart/remove',
-			type: 'post',
-			data: 'key=' + key,
-			dataType: 'json',
-			beforeSend: function() {
-				$('#cart > button').button('loading');
-			},
-			complete: function() {
-				$('#cart > button').button('reset');
-			},
-			success: function(json) {
-				// Need to set timeout otherwise it wont update the total
-				setTimeout(function () {
-					$('#cart > button').html('<div class="cart-quantity-wrapper"><i class="fa fa-shopping-bag cart-icon"></i><span id="cart-quantity">' + json['quantity'] + '</div></span><div class="cart-total-wrapper"><span id="cart-total" class="hidden-xs hidden-sm">' + json['total'] + '</span></div>');
-				}, 100);
+    },
+    'remove': function(key) {
+        $.ajax({
+            url: 'index.php?route=checkout/cart/remove',
+            type: 'post',
+            data: 'key=' + key,
+            dataType: 'json',
+            beforeSend: function() {
+                $('#cart > button').button('loading');
+            },
+            complete: function() {
+                $('#cart > button').button('reset');
+            },
+            success: function(json) {
+                // Need to set timeout otherwise it wont update the total
+                setTimeout(function () {
+                    $('#cart > button').html('<div class="cart-quantity-wrapper"><i class="fa fa-shopping-bag cart-icon"></i><span id="cart-quantity">' + json['quantity'] + '</div></span><div class="cart-total-wrapper"><span id="cart-total" class="hidden-xs hidden-sm">' + json['total'] + '</span></div>');
+                }, 100);
 
-				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
-					location = 'index.php?route=checkout/cart';
-				} else {
-					$('#cart > ul').load('index.php?route=common/cart/info ul li');
-				}
-			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
-		});
-	}
+                if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
+                    location = 'index.php?route=checkout/cart';
+                } else {
+                    $('#cart > ul').load('index.php?route=common/cart/info ul li');
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    }
 }
 
 var wishlist = {
-	'add': function(product_id) {
-		$.ajax({
-			url: 'index.php?route=account/wishlist/add',
-			type: 'post',
-			data: 'product_id=' + product_id,
-			dataType: 'json',
-			success: function(json) {
-				$('.alert-dismissible').remove();
+    'add': function(product_id) {
+        $.ajax({
+            url: 'index.php?route=account/wishlist/add',
+            type: 'post',
+            data: 'product_id=' + product_id,
+            dataType: 'json',
+            success: function(json) {
+                $('.alert-dismissible').remove();
 
-				if (json['redirect']) {
-					location = json['redirect'];
-				}
+                if (json['redirect']) {
+                    location = json['redirect'];
+                }
 
-				if (json['success']) {          
-					$('#report-modal .modal-title').html(json['nice_text_modal_wishlist_title']);
-        
-          $('#report-modal .modal-body').html('<div class="alert ' + (json['is_logged'] ? 'alert-success' : 'alert-warning') + '"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;' + json['success'] + '</div>');  
-        
-          $('#report-modal .modal-footer').html('');
-          $('#report-modal .modal-footer').html('<a href="' + json['wishlist_create_account_link'] + '" role="button" class="btn btn-accent">'+json['nice_text_modal_button_to_create_account'] + '</a>');
+                if (json['success']) {
+                    $('#report-modal .modal-title').html(json['nice_text_modal_wishlist_title']);
 
-          $('#report-modal').modal('show');
-				}
+                    $('#report-modal .modal-body').html('<div class="alert ' + (json['is_logged'] ? 'alert-success' : 'alert-warning') + '"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;' + json['success'] + '</div>');
 
-				$('#wishlist-total span').html(json['total']);
-				$('#wishlist-total').attr('title', json['total']);
+                    $('#report-modal .modal-footer').html('');
+                    $('#report-modal .modal-footer').html('<a href="' + json['wishlist_create_account_link'] + '" role="button" class="btn btn-accent">'+json['nice_text_modal_button_to_create_account'] + '</a>');
 
-			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
-		});
-	}
+                    $('#report-modal').modal('show');
+                }
+
+                $('#wishlist-total span').html(json['total']);
+                $('#wishlist-total').attr('title', json['total']);
+
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    }
 }
 
 var compare = {
-	/*'add': function(product_id) {
-		$.ajax({
-			url: 'index.php?route=product/compare/add',
-			type: 'post',
-			data: 'product_id=' + product_id,
-			dataType: 'json',
-			success: function(json) {
-				$('.alert-dismissible').remove();
+    /*'add': function(product_id) {
+        $.ajax({
+            url: 'index.php?route=product/compare/add',
+            type: 'post',
+            data: 'product_id=' + product_id,
+            dataType: 'json',
+            success: function(json) {
+                $('.alert-dismissible').remove();
 
-				if (json['success']) {
-				  $('#report-modal .modal-title').html(json['nice_text_modal_compare_title']);
+                if (json['success']) {
+                  $('#report-modal .modal-title').html(json['nice_text_modal_compare_title']);
 
-				  $('#report-modal .modal-body').html('<div class="alert alert-success"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;' + json['success'] + '</div>');
+                  $('#report-modal .modal-body').html('<div class="alert alert-success"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;' + json['success'] + '</div>');
 
-				  $('#report-modal .modal-footer').html('<button type="button" class="btn modal_btn-close" data-dismiss="modal">'+json['nice_text_modal_button_to_continue']+'</button>');
+                  $('#report-modal .modal-footer').html('<button type="button" class="btn modal_btn-close" data-dismiss="modal">'+json['nice_text_modal_button_to_continue']+'</button>');
 
-				  $('#report-modal').modal('show');
-          
-				  $('#compare-total').html(json['total']);
-				}
-			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
-		});
-	},*/
-	'remove': function(product_id) {
-		$.ajax({
-			url: 'index.php?route=product/compare/deleteCompareProduct',
-			type: 'post',
-			data: 'product_id=' + product_id,
-		})
-	},
-	'newAdd' : function(product_id, product_name) {
-		$.ajax({
-			url: 'index.php?route=product/compare/getRightSide',
-			type: 'post',
-			data: 'product_id=' + product_id,
-			dataType: 'json',
-			success: function(json) {
-				if (json['side'] == 'left') {
-					modalToComparison.setLeftValue(product_id, product_name);
-				} else if (json['side'] == 'right'){
-					modalToComparison.setRightValue(product_id, product_name);
-				} else if (json['side'] == 'offset') {
-					modalToComparison.offsetComparisonProducts(product_id, product_name);
-				}
+                  $('#report-modal').modal('show');
 
-				modalToComparison.open();
-			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			},
-		});
-	},
-	'goToCompare': function() {
-		document.location.href = 'http://'+document.location.host+'/comparison';
-	},
+                  $('#compare-total').html(json['total']);
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    },*/
+    'remove': function(product_id) {
+        $.ajax({
+            url: 'index.php?route=product/compare/deleteCompareProduct',
+            type: 'post',
+            data: 'product_id=' + product_id,
+        })
+    },
+    'newAdd' : function(product_id, product_name) {
+        $.ajax({
+            url: 'index.php?route=product/compare/getRightSide',
+            type: 'post',
+            data: 'product_id=' + product_id,
+            dataType: 'json',
+            success: function(json) {
+                if (json['side'] == 'left') {
+                    modalToComparison.setLeftValue(product_id, product_name);
+                } else if (json['side'] == 'right'){
+                    modalToComparison.setRightValue(product_id, product_name);
+                } else if (json['side'] == 'offset') {
+                    modalToComparison.offsetComparisonProducts(product_id, product_name);
+                }
+
+                modalToComparison.open();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            },
+        });
+    },
+    'goToCompare': function() {
+        document.location.href = 'http://'+document.location.host+'/comparison';
+    },
 
 }
 
 var modalToComparison = {
-	'open': function() {
-		$(".modal-to-compare > .compare-select").slideDown(600);
-		$(".modal-to-compare").removeClass('close');
-		$(".modal-to-compare").addClass('open');
-	},
-	'close': function() {
-		$(".modal-to-compare > .compare-select").slideUp(600);
-		$(".modal-to-compare").removeClass('open');
-		$(".modal-to-compare").addClass('close');
-	},
-	'setLeftValue': function(product_id, product_name) {
-		$.ajax({
-			url: 'index.php?route=product/compare/setLeftValue',
-			type: 'post',
-			data: 'left_product_id=' + product_id,
-			dataType: 'json',
-			success: function(json) {
-				if (typeof json['error'] === 'undefined') {
-					$("#newcompare-1").val(product_name);
-					$("#newcompare-1").attr('data-product_id', product_id);
-					$("#newcompare-2").prop('disabled', false);
-					$(".compare-item-1 > .glyphicon").addClass('full');
-				}
-			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
-		});
-	},
-	'setRightValue': function(product_id, product_name) {
-		$.ajax({
-			url: 'index.php?route=product/compare/setRightValue',
-			type: 'post',
-			data: 'right_product_id=' + product_id,
-			dataType: 'json',
-			success: function(json) {
-				if (typeof json['error'] === 'undefined') {
-					$("#newcompare-2").val(product_name);
-					$("#newcompare-2").attr('data-product_id', product_id);
-					$(".compare-item-3 > .glyphicon").addClass('full');
-				}
-			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
-		});
-	},
-	'offsetComparisonProducts': function(product_id, product_name) {
-		$.ajax({
-			url: 'index.php?route=product/compare/offsetComparisonProducts',
-			type: 'post',
-			data: 'new_right_value=' + product_id,
-			dataType: 'json',
-			success: function(json) {
-				if (typeof json['error'] === 'undefined') {
-					let new_left_name = $('#newcompare-2').val();
-					let new_left_id = $('#newcompare-2').attr('data-product_id');
-					$('#newcompare-1').val();
-					$('#newcompare-2').val();
-					$('#newcompare-1').attr('data-product_id', '');
-					$('#newcompare-2').attr('data-product_id', '');
-					$('#newcompare-1').val(new_left_name);
-					$('#newcompare-2').val(product_name);
-					$('#newcompare-1').attr('data-product_id', new_left_id);
-					$('#newcompare-2').attr('data-product_id', product_id);
-					console.log(product_id);
-					$(".compare-item-1 > .glyphicon").addClass('full');
-					$(".compare-item-3 > .glyphicon").addClass('full');
-				}
-			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
-		});
-	},
-	'removeLeftValue': function() {
-		left_product_id = $("#newcompare-1").attr('data-product_id');
-		$('#newcompare-1').val('');
-		$('#newcompare-1').attr('data-product_id', '');
-		compare.remove(left_product_id);
-		$("#newcompare-2").prop('disabled', true);
-		$(".compare-item-1 > .glyphicon").removeClass('full');
-	},
-	'removeRightValue': function() {
-		right_product_id = $("#newcompare-2").attr('data-product_id');
-		$('#newcompare-2').val('');
-		$('#newcompare-2').attr('data-product_id', '');
-		compare.remove(right_product_id);
-		$(".compare-item-3 > .glyphicon").removeClass('full');
-	},
+    'open': function() {
+        $(".modal-to-compare > .compare-select").slideDown(600);
+        $(".modal-to-compare").removeClass('close');
+        $(".modal-to-compare").addClass('open');
+    },
+    'close': function() {
+        $(".modal-to-compare > .compare-select").slideUp(600);
+        $(".modal-to-compare").removeClass('open');
+        $(".modal-to-compare").addClass('close');
+    },
+    'setLeftValue': function(product_id, product_name) {
+        $.ajax({
+            url: 'index.php?route=product/compare/setLeftValue',
+            type: 'post',
+            data: 'left_product_id=' + product_id,
+            dataType: 'json',
+            success: function(json) {
+                if (typeof json['error'] === 'undefined') {
+                    $("#newcompare-1").val(product_name);
+                    $("#newcompare-1").attr('data-product_id', product_id);
+                    $("#newcompare-2").prop('disabled', false);
+                    $(".compare-item-1 > .glyphicon").addClass('full');
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    },
+    'setRightValue': function(product_id, product_name) {
+        $.ajax({
+            url: 'index.php?route=product/compare/setRightValue',
+            type: 'post',
+            data: 'right_product_id=' + product_id,
+            dataType: 'json',
+            success: function(json) {
+                if (typeof json['error'] === 'undefined') {
+                    $("#newcompare-2").val(product_name);
+                    $("#newcompare-2").attr('data-product_id', product_id);
+                    $(".compare-item-3 > .glyphicon").addClass('full');
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    },
+    'offsetComparisonProducts': function(product_id, product_name) {
+        $.ajax({
+            url: 'index.php?route=product/compare/offsetComparisonProducts',
+            type: 'post',
+            data: 'new_right_value=' + product_id,
+            dataType: 'json',
+            success: function(json) {
+                if (typeof json['error'] === 'undefined') {
+                    let new_left_name = $('#newcompare-2').val();
+                    let new_left_id = $('#newcompare-2').attr('data-product_id');
+                    $('#newcompare-1').val();
+                    $('#newcompare-2').val();
+                    $('#newcompare-1').attr('data-product_id', '');
+                    $('#newcompare-2').attr('data-product_id', '');
+                    $('#newcompare-1').val(new_left_name);
+                    $('#newcompare-2').val(product_name);
+                    $('#newcompare-1').attr('data-product_id', new_left_id);
+                    $('#newcompare-2').attr('data-product_id', product_id);
+                    console.log(product_id);
+                    $(".compare-item-1 > .glyphicon").addClass('full');
+                    $(".compare-item-3 > .glyphicon").addClass('full');
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+        });
+    },
+    'removeLeftValue': function() {
+        left_product_id = $("#newcompare-1").attr('data-product_id');
+        $('#newcompare-1').val('');
+        $('#newcompare-1').attr('data-product_id', '');
+        compare.remove(left_product_id);
+        $("#newcompare-2").prop('disabled', true);
+        $(".compare-item-1 > .glyphicon").removeClass('full');
+    },
+    'removeRightValue': function() {
+        right_product_id = $("#newcompare-2").attr('data-product_id');
+        $('#newcompare-2').val('');
+        $('#newcompare-2').attr('data-product_id', '');
+        compare.remove(right_product_id);
+        $(".compare-item-3 > .glyphicon").removeClass('full');
+    },
 }
 
 /* Agree to Terms */
 $(document).delegate('.agree', 'click', function(e) {
-	e.preventDefault();
+    e.preventDefault();
 
-	$('#modal-agree').remove();
+    $('#modal-agree').remove();
 
-	var element = this;
+    var element = this;
 
-	$.ajax({
-		url: $(element).attr('href'),
-		type: 'get',
-		dataType: 'html',
-		success: function(data) {
-			html  = '<div id="modal-agree" class="modal">';
-			html += '  <div class="modal-dialog">';
-			html += '    <div class="modal-content">';
-			html += '      <div class="modal-header">';
-			html += '        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>';
-			html += '        <h4 class="modal-title">' + $(element).text() + '</h4>';
-			html += '      </div>';
-			html += '      <div class="modal-body">' + data + '</div>';
-			html += '    </div>';
-			html += '  </div>';
-			html += '</div>';
+    $.ajax({
+        url: $(element).attr('href'),
+        type: 'get',
+        dataType: 'html',
+        success: function(data) {
+            html  = '<div id="modal-agree" class="modal">';
+            html += '  <div class="modal-dialog">';
+            html += '    <div class="modal-content">';
+            html += '      <div class="modal-header">';
+            html += '        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>';
+            html += '        <h4 class="modal-title">' + $(element).text() + '</h4>';
+            html += '      </div>';
+            html += '      <div class="modal-body">' + data + '</div>';
+            html += '    </div>';
+            html += '  </div>';
+            html += '</div>';
 
-			$('body').append(html);
+            $('body').append(html);
 
-			$('#modal-agree').modal('show');
-		}
-	});
+            $('#modal-agree').modal('show');
+        }
+    });
 });
 
 // Autocomplete */
 (function($) {
-	$.fn.autocomplete = function(option) {
-		return this.each(function() {
-			this.timer = null;
-			this.items = new Array();
+    $.fn.autocomplete = function(option) {
+        return this.each(function() {
+            this.timer = null;
+            this.items = new Array();
 
-			$.extend(this, option);
+            $.extend(this, option);
 
-			$(this).attr('autocomplete', 'off');
+            $(this).attr('autocomplete', 'off');
 
-			// Focus
-			$(this).on('focus', function() {
-				this.request();
-			});
+            // Focus
+            $(this).on('focus', function() {
+                this.request();
+            });
 
-			// Blur
-			$(this).on('blur', function() {
-				setTimeout(function(object) {
-					object.hide();
-				}, 200, this);
-			});
+            // Blur
+            $(this).on('blur', function() {
+                setTimeout(function(object) {
+                    object.hide();
+                }, 200, this);
+            });
 
-			// Keydown
-			$(this).on('keydown', function(event) {
-				switch(event.keyCode) {
-					case 27: // escape
-						this.hide();
-						break;
-					default:
-						this.request();
-						break;
-				}
-			});
+            // Keydown
+            $(this).on('keydown', function(event) {
+                switch(event.keyCode) {
+                    case 27: // escape
+                        this.hide();
+                        break;
+                    default:
+                        this.request();
+                        break;
+                }
+            });
 
-			// Click
-			this.click = function(event) {
-				event.preventDefault();
+            // Click
+            this.click = function(event) {
+                event.preventDefault();
 
-				value = $(event.target).parent().attr('data-value');
+                value = $(event.target).parent().attr('data-value');
 
-				if (value && this.items[value]) {
-					this.select(this.items[value]);
-				}
-			}
+                if (value && this.items[value]) {
+                    this.select(this.items[value]);
+                }
+            }
 
-			// Show
-			this.show = function() {
-				var pos = $(this).position();
+            // Show
+            this.show = function() {
+                var pos = $(this).position();
 
-				$(this).siblings('ul.dropdown-menu').css({
-					top: pos.top + $(this).outerHeight(),
-					left: pos.left
-				});
+                $(this).siblings('ul.dropdown-menu').css({
+                    top: pos.top + $(this).outerHeight(),
+                    left: pos.left
+                });
 
-				$(this).siblings('ul.dropdown-menu').show();
-			}
+                $(this).siblings('ul.dropdown-menu').show();
+            }
 
-			// Hide
-			this.hide = function() {
-				$(this).siblings('ul.dropdown-menu').hide();
-			}
+            // Hide
+            this.hide = function() {
+                $(this).siblings('ul.dropdown-menu').hide();
+            }
 
-			// Request
-			this.request = function() {
-				clearTimeout(this.timer);
+            // Request
+            this.request = function() {
+                clearTimeout(this.timer);
 
-				this.timer = setTimeout(function(object) {
-					object.source($(object).val(), $.proxy(object.response, object));
-				}, 200, this);
-			}
+                this.timer = setTimeout(function(object) {
+                    object.source($(object).val(), $.proxy(object.response, object));
+                }, 200, this);
+            }
 
-			// Response
-			this.response = function(json) {
-				html = '';
+            // Response
+            this.response = function(json) {
+                html = '';
 
-				if (json.length) {
-					for (i = 0; i < json.length; i++) {
-						this.items[json[i]['value']] = json[i];
-					}
+                if (json.length) {
+                    for (i = 0; i < json.length; i++) {
+                        this.items[json[i]['value']] = json[i];
+                    }
 
-					for (i = 0; i < json.length; i++) {
-						if (!json[i]['category']) {
-							html += '<li data-value="' + json[i]['value'] + '"><a href="#">' + json[i]['label'] + '</a></li>';
-						}
-					}
+                    for (i = 0; i < json.length; i++) {
+                        if (!json[i]['category']) {
+                            html += '<li data-value="' + json[i]['value'] + '"><a href="#">' + json[i]['label'] + '</a></li>';
+                        }
+                    }
 
-					// Get all the ones with a categories
-					var category = new Array();
+                    // Get all the ones with a categories
+                    var category = new Array();
 
-					for (i = 0; i < json.length; i++) {
-						if (json[i]['category']) {
-							if (!category[json[i]['category']]) {
-								category[json[i]['category']] = new Array();
-								category[json[i]['category']]['name'] = json[i]['category'];
-								category[json[i]['category']]['item'] = new Array();
-							}
+                    for (i = 0; i < json.length; i++) {
+                        if (json[i]['category']) {
+                            if (!category[json[i]['category']]) {
+                                category[json[i]['category']] = new Array();
+                                category[json[i]['category']]['name'] = json[i]['category'];
+                                category[json[i]['category']]['item'] = new Array();
+                            }
 
-							category[json[i]['category']]['item'].push(json[i]);
-						}
-					}
+                            category[json[i]['category']]['item'].push(json[i]);
+                        }
+                    }
 
-					for (i in category) {
-						html += '<li class="dropdown-header">' + category[i]['name'] + '</li>';
+                    for (i in category) {
+                        html += '<li class="dropdown-header">' + category[i]['name'] + '</li>';
 
-						for (j = 0; j < category[i]['item'].length; j++) {
-							html += '<li data-value="' + category[i]['item'][j]['value'] + '"><a href="#">&nbsp;&nbsp;&nbsp;' + category[i]['item'][j]['label'] + '</a></li>';
-						}
-					}
-				}
+                        for (j = 0; j < category[i]['item'].length; j++) {
+                            html += '<li data-value="' + category[i]['item'][j]['value'] + '"><a href="#">&nbsp;&nbsp;&nbsp;' + category[i]['item'][j]['label'] + '</a></li>';
+                        }
+                    }
+                }
 
-				if (html) {
-					this.show();
-				} else {
-					this.hide();
-				}
+                if (html) {
+                    this.show();
+                } else {
+                    this.hide();
+                }
 
-				$(this).siblings('ul.dropdown-menu').html(html);
-			}
+                $(this).siblings('ul.dropdown-menu').html(html);
+            }
 
-			$(this).after('<ul class="dropdown-menu"></ul>');
-			$(this).siblings('ul.dropdown-menu').delegate('a', 'click', $.proxy(this.click, this));
+            $(this).after('<ul class="dropdown-menu"></ul>');
+            $(this).siblings('ul.dropdown-menu').delegate('a', 'click', $.proxy(this.click, this));
 
-		});
-	}
+        });
+    }
 })(window.jQuery);
 
 
@@ -651,302 +651,313 @@ window.Modernizr=function(e,t,n){function r(e){b.cssText=e}function o(e,t){retur
  ---------------------------------------------------------------------------- */
 // Handles animationEnd prefixes
 $(document).ready(function() {
-var animEndEventNames = {
-
-	'WebkitAnimation' : 'webkitAnimationEnd',
-	'OAnimation' : 'oAnimationEnd',
-	'msAnimation' : 'MSAnimationEnd',
-	'animation' : 'animationend'
-
-};
-
-var animEndEventName = animEndEventNames[Modernizr.prefixed('animation')];
-
-var $mainNav		= $('ul.main-nav'),
-	$mainNavTrigger	= $('button.main-nav-trigger'),
-	$subnav 		= $('ul.subnav'),
-	$subnavTrigger 	= $('a.has-subnav-link'),
-	$subnavGoBack   = '<li class=\"go-back\"><a href=\"#\"><span class=\"fa fa-long-arrow-left\"></span> Back</a></li>';
 
 
-enquire.register("(max-width: 989px)", {
 
-	// Only insert the HTML when the MQ is matched
-	// We'll hide/show it on resize to reduce performance hiccups
-	setup: function() {
+    var animEndEventNames = {
 
-		// Toggle Nav
-		$mainNavTrigger.on('click', function(e) {
+        'WebkitAnimation' : 'webkitAnimationEnd',
+        'OAnimation' : 'oAnimationEnd',
+        'msAnimation' : 'MSAnimationEnd',
+        'animation' : 'animationend'
 
-			$(this).toggleClass('active');
+    };
 
-			if ( !$('.main-nav').is(':visible') ) {
+    var animEndEventName = animEndEventNames[Modernizr.prefixed('animation')];
 
-				$('.main-nav')
-					.show()
-					.addClass('active nav-in')
-					.on(animEndEventName, function(){
-
-						$(this)
-							.removeClass('nav-in')
-							.show();
-
-					});
-
-			} else {
-
-				$('.main-nav')
-					.removeClass('active')
-					.addClass('nav-out')
-					.on(animEndEventName, function(){
-
-						$(this)
-							.removeClass('nav-out')
-							.hide();
-
-						resetNav();
-
-					});
-
-			}
-
-		});
-
-		// Add the 'Back & View all links'
-		// It's done in setup so it only does it once it matches
-		$subnavTrigger.each(function() {
-
-			var trigger		= $(this),
-				viewAll 	= '',
-				viewAllLoc	= trigger.attr('href'),
-				viewAllText	= trigger.text();
-
-				viewAll += '<li class=\"view-all\">'
-				viewAll += '<a href=\"' + viewAllLoc + '\" class=\"subnav-header\">All ' + viewAllText + '</a>'
-				viewAll += '</li>'
-
-			trigger.next($subnav).prepend($subnavGoBack);
-			trigger.next($subnav).find('li:not(.go-back):first').before(viewAll);
-
-		});
-
-	},
-	match: function() {
-    tuneTopMenu();
-    tuneSearch();
-
-		$subnav.addClass('is-hidden');
-
-		$subnavTrigger.on('click', function(e) {
-
-			e.preventDefault();
-
-			var selected = $(this);
-
-			// Show subnavs if their trigger was clicked
-			if( selected.next($subnav).hasClass('is-hidden') ) {
-
-				// Add Active class to parent then go to siblings and
-				// hide their subnavs and remove active class from their has-subnav-links
-				selected
-					.addClass('selected')
-					.next('.subnav')
-					.removeClass('is-hidden')
-					.end()
-					.parent('.has-subnav')
-					.parent('ul')
-					.addClass('moves-in');
-
-				// Add Active class to clicked link and show it's subnav
-				selected
-					.parent('.has-subnav')
-					.siblings('.has-subnav')
-					.children('ul')
-					.addClass('is-hidden')
-					.end()
-					.children('a')
-					.removeClass('selected');
-
-			} else {
-
-				selected
-					.removeClass('selected')
-					.next('ul')
-					.addClass('is-hidden')
-					.end()
-					.parent('.has-subnav')
-					.parent('ul').removeClass('moves-in');
-
-			}
-
-		});
-
-		// Go Back
-		$('.go-back').on('click', function(e){
-
-			e.preventDefault();
-
-			$(this)
-				.parent('ul')
-				.addClass('is-hidden')
-				.parent('.has-subnav')
-				.parent('ul')
-				.removeClass('moves-in');
-
-		});
-
-	},
-	unmatch: function() {
-    resetTopMenu();
-    resetSearch();
-    
-    $mainNav.show();
-		resetNav();
-
-	},
-	deferSetup: true
-
-})
-.register("(min-width: 990px)", {
-
-		match: function() {
-      //resetTopMenu();      
-
-			$subnavTrigger.off('click');
-
-			// Probably do this once on setup instead of every match/unmatch
-			$('.main-dropdown').each(function(){
-
-				var subnav		= $(this).find('[data-nav]'),
-					navCol 		= $(this).find('[data-col]');
-
-					// iterates over X number of times navCol appears
-					navCol.each(function() {
-
-						var colNum = $(this).data('col').toString();
-
-						$(this).children('.nav').append($(this).siblings('[data-nav=\"' + colNum + '\"]'));
-
-					});
-
-			});
+    var $mainNav		= $('ul.main-nav'),
+        $mainNavTrigger	= $('button.main-nav-trigger'),
+        $subnav 		= $('ul.subnav'),
+        $subnavTrigger 	= $('a.has-subnav-link'),
+        $subnavGoBack   = '<li class=\"go-back\"><a href=\"#\"><span class=\"fa fa-long-arrow-left\"></span> Back</a></li>';
 
 
-      var tOut;
-			$('.main-nav > li.has-subnav').hover(           
-                
-				// Mouse Enter
-				function() {          
-          $.thisSubnav = $(this);
-          
-          //$('#top, header, .breadcrumb, #common-home, #content').addClass('is-blured');
-          
-          tOut = setTimeout(function() {
-            $.thisSubnav.addClass('hover');
-          }, 150);
+    enquire.register("(max-width: 989px)", {
+
+        // Only insert the HTML when the MQ is matched
+        // We'll hide/show it on resize to reduce performance hiccups
+        setup: function() {
+
+            // Toggle Nav
+            $mainNavTrigger.on('click', function(e) {
+
+                $(this).toggleClass('active');
+
+                if ( !$('.main-nav').is(':visible') ) {
+
+                    $('.main-nav')
+                        .show()
+                        .addClass('active nav-in')
+                        .on(animEndEventName, function(){
+
+                            $(this)
+                                .removeClass('nav-in')
+                                .show();
+
+                        });
+
+                } else {
+
+                    $('.main-nav')
+                        .removeClass('active')
+                        .addClass('nav-out')
+                        .on(animEndEventName, function(){
+
+                            $(this)
+                                .removeClass('nav-out')
+                                .hide();
+
+                            resetNav();
+
+                        });
+
+                }
+
+            });
+
+            // Add the 'Back & View all links'
+            // It's done in setup so it only does it once it matches
+            $subnavTrigger.each(function() {
+
+                var trigger		= $(this),
+                    viewAll 	= '',
+                    viewAllLoc	= trigger.attr('href'),
+                    viewAllText	= trigger.text();
+
+                viewAll += '<li class=\"view-all\">'
+                viewAll += '<a href=\"' + viewAllLoc + '\" class=\"subnav-header\">All ' + viewAllText + '</a>'
+                viewAll += '</li>'
+
+                trigger.next($subnav).prepend($subnavGoBack);
+                trigger.next($subnav).find('li:not(.go-back):first').before(viewAll);
+
+            });
+
         },
-				// Mouse Leave
-				function() {
-          if (undefined !== tOut) {
-            clearTimeout(tOut);
-          }
-          
-          //$('#top, header, .breadcrumb, #common-home, #content').removeClass('is-blured');
-          
-					$(this).removeClass('hover');
+        match: function() {
+            tuneTopMenu();
+            tuneSearch();
 
-				}
+            $subnav.addClass('is-hidden');
 
-			);
+            $subnavTrigger.on('click', function(e) {
 
-			$('.main-nav > li.has-subnav > a').on({
+                e.preventDefault();
 
-				'touchstart': function(e) {
+                var selected = $(this);
 
-					$('.main-nav > li.has-subnav').removeClass('hover');
+                // Show subnavs if their trigger was clicked
+                if( selected.next($subnav).hasClass('is-hidden') ) {
 
-					$(this).parent().addClass('hover');
+                    // Add Active class to parent then go to siblings and
+                    // hide their subnavs and remove active class from their has-subnav-links
+                    selected
+                        .addClass('selected')
+                        .next('.subnav')
+                        .removeClass('is-hidden')
+                        .end()
+                        .parent('.has-subnav')
+                        .parent('ul')
+                        .addClass('moves-in');
+
+                    // Add Active class to clicked link and show it's subnav
+                    selected
+                        .parent('.has-subnav')
+                        .siblings('.has-subnav')
+                        .children('ul')
+                        .addClass('is-hidden')
+                        .end()
+                        .children('a')
+                        .removeClass('selected');
+
+                } else {
+
+                    selected
+                        .removeClass('selected')
+                        .next('ul')
+                        .addClass('is-hidden')
+                        .end()
+                        .parent('.has-subnav')
+                        .parent('ul').removeClass('moves-in');
+
+                }
+
+            });
+
+            // Go Back
+            $('.go-back').on('click', function(e){
+
+                e.preventDefault();
+
+                $(this)
+                    .parent('ul')
+                    .addClass('is-hidden')
+                    .parent('.has-subnav')
+                    .parent('ul')
+                    .removeClass('moves-in');
+
+            });
+
+        },
+        unmatch: function() {
+            resetTopMenu();
+            resetSearch();
+
+            $mainNav.show();
+            resetNav();
+
+        },
+        deferSetup: true
 
 
-					$('body').on({
 
-						'touchstart': function() {
+    })
+        .register("(min-width: 990px)", {
 
-							$('li.has-subnav').removeClass('hover');
+            match: function() {
+                //resetTopMenu();
 
-						}
+                $subnavTrigger.off('click');
 
-					});
+                // Probably do this once on setup instead of every match/unmatch
+                $('.main-dropdown').each(function(){
 
-					return false;
+                    var subnav		= $(this).find('[data-nav]'),
+                        navCol 		= $(this).find('[data-col]');
 
-				}
+                    // iterates over X number of times navCol appears
+                    navCol.each(function() {
 
-			});
+                        var colNum = $(this).data('col').toString();
 
-			$('.subnav').removeClass('is-hidden');
+                        $(this).children('.nav').append($(this).siblings('[data-nav=\"' + colNum + '\"]'));
 
-		},
-		unmatch: function() {
+                    });
 
-			$('.main-nav > li.has-subnav').off('mouseenter mouseleave');
-			$('.main-nav > li.has-subnav > a').off('touchstart');
+                });
 
-			$('.main-nav').hide();
 
-			// Go through each dropdown and take the subnavs out
-			// of the nav-col's to get the mobile menu
-			$('.main-dropdown').each(function(){
+                var tOut;
+                $('.main-nav > li.has-subnav').hover(
 
-				var subnav = $(this).find('[data-nav]');
+                    // Mouse Enter
+                    function() {
+                        $.thisSubnav = $(this);
 
-				$(this).find('.nav-col:last').after(subnav);
+                        //$('#top, header, .breadcrumb, #common-home, #content').addClass('is-blured');
 
-			});
+                        tOut = setTimeout(function() {
+                            $.thisSubnav.addClass('hover');
+                        }, 150);
+                    },
+                    // Mouse Leave
+                    function() {
+                        if (undefined !== tOut) {
+                            clearTimeout(tOut);
+                        }
 
-		}
+                        //$('#top, header, .breadcrumb, #common-home, #content').removeClass('is-blured');
 
-	})
-;
+                        $(this).removeClass('hover');
 
-function resetNav () {
+                    }
 
-	$('.has-subnav-link').removeClass('selected');
+                );
 
-	$('.main-nav-wrap').find('ul.moves-in').removeClass('moves-in');
+                $('.main-nav > li.has-subnav > a').on({
 
-	$('.subnav').addClass('is-hidden');
+                    'touchstart': function(e) {
 
-};
+                        $('.main-nav > li.has-subnav').removeClass('hover');
 
+                        $(this).parent().addClass('hover');
+
+
+                        $('body').on({
+
+                            'touchstart': function() {
+
+                                $('li.has-subnav').removeClass('hover');
+
+                            }
+
+                        });
+
+                        return false;
+
+                    }
+
+                });
+
+                $('.subnav').removeClass('is-hidden');
+
+            },
+            unmatch: function() {
+
+                $('.main-nav > li.has-subnav').off('mouseenter mouseleave');
+                $('.main-nav > li.has-subnav > a').off('touchstart');
+
+                $('.main-nav').hide();
+
+                // Go through each dropdown and take the subnavs out
+                // of the nav-col's to get the mobile menu
+                $('.main-dropdown').each(function(){
+
+                    var subnav = $(this).find('[data-nav]');
+
+                    $(this).find('.nav-col:last').after(subnav);
+
+                });
+
+            }
+
+        })
+    ;
+
+    function resetNav () {
+
+        $('.has-subnav-link').removeClass('selected');
+
+        $('.main-nav-wrap').find('ul.moves-in').removeClass('moves-in');
+
+        $('.subnav').addClass('is-hidden');
+
+    };
+
+    $('#mobile-menu-categories').click(function (e) {
+            e.preventDefault();
+
+            $('#navbar-ex1-collapse').toggleClass('mobile-menu-opened');
+        }
+    );
 });
 
 function tuneTopMenu() {
-  //console.log('tuneTopMenu() is called');
-  
-  $('#menu-categories-top li').addClass('is-appended');
-  
-  $('.main-nav').prepend($('#menu-categories-top .navbar-nav').html());
+    //console.log('tuneTopMenu() is called');
+
+    $('#menu-categories-top li').addClass('is-appended');
+
+    $('.main-nav').prepend($('#menu-categories-top .navbar-nav').html());
 }
 
 function resetTopMenu() {
-  //console.log('resetTopMenu() is called');
+    //console.log('resetTopMenu() is called');
 
-  $('.main-nav .is-appended').each(function() {
-    $(this).remove();
-  });
+    $('.main-nav .is-appended').each(function() {
+        $(this).remove();
+    });
 }
 
 function tuneSearch() {
-  //console.log('tuneTopMenu() is called');
-  
-  $('.search--mobile').html($('.search-column--desktop').html());
-  //$('.search-column--desktop').html('');
+    //console.log('tuneTopMenu() is called');
+
+    $('.search--mobile').html($('.search-column--desktop').html());
+    //$('.search-column--desktop').html('');
 }
 
 function resetSearch() {
-  $('.search-column--desktop').html($('.search--mobile').html());
-  $('.search--mobile').html('');
+    $('.search-column--desktop').html($('.search--mobile').html());
+    $('.search--mobile').html('');
 }
 
 
@@ -958,7 +969,7 @@ function resetSearch() {
 // ААА!
 // При этом надо идентифицировать, что это касается только страница товара!!!!
 // А то валит ошибки в консоль
- 
+
 
 //$(window).scroll(function () {
 //  if ($(this).scrollTop() > 265) {

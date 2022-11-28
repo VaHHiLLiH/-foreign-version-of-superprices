@@ -3411,6 +3411,9 @@ footer h5 {
 .only-mobile-menu{
   display: none;
 }
+.mobile-menu-opened {
+  display: block;
+}
 @media (max-width: 768px) {
   .only-mobile-menu{
     display: flex;
