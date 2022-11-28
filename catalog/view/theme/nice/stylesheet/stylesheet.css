@@ -3876,3 +3876,7 @@ footer.only-for-mobile{
   max-height: 473px;
   overflow-y: auto;
 }
+.list-group-item.active{
+  background-color: darkgray;
+  border-color: darkgray;
+}
