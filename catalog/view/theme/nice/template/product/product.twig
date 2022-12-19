@@ -29,6 +29,22 @@
               <div class="product-tab--container">
 
 				  <h1 class="product-h1" itemprop="name">{{ heading_title }}</h1>
+					  <div class="value-of-rating">
+						  {% for i in 1..5 %}
+							  {% if fakeRatting >= i %}
+								  <img src="./image/catalog/reit_on.svg">
+							  {% else %}
+								  {% if trueRatting > fakeRatting and trueRatting > (i-1) %}
+									  <img src="./image/catalog/reit_half.svg">
+								  {% else %}
+									  <img src="./image/catalog/reit_off.svg">
+								  {% endif %}
+							  {% endif %}
+						  {% endfor %}
+						  <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+							  <span class="ratting-value" itemprop="ratingValue">{{ trueRatting }}</span>
+						  </div>
+					  </div>
                 <div class="tab-content">
                   <!-- tab-general -->
                   <div class="tab-pane active" id="tab-general">

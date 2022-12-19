@@ -54,7 +54,11 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
-
+        $data['trueRatting'] = $this->model_catalog_product->getProductRating($product_id);
+        if (empty($data['trueRatting'])) {
+            $data['trueRatting'] = 0;
+        }
+        $data['fakeRatting'] = floor($data['trueRatting']);
 		if ($product_info) {
 
             $product_info['quantity'] = 1;

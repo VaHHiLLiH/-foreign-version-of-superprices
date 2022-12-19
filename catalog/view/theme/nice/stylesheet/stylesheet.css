@@ -3884,3 +3884,12 @@ footer.only-for-mobile{
   background-color: darkgray;
   border-color: darkgray;
 }
+
+.value-of-rating img {
+  width: 20px;
+  height: 20px;
+}
+.ratting-value{
+  margin-left: 10px;
+  vertical-align: middle;
+}
