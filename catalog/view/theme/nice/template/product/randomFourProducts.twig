@@ -24,9 +24,9 @@
                                         {% endif %}
                                     {% endif %}
                                 {% endfor %}
-                                <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                                    <span class="ratting-value" itemprop="ratingValue">{{ product.trueRating }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <span>Reviews&nbsp;<span itemprop="reviewCount">{{ product.reviewsCount }}</span></span>
+                                <div>
+                                    <span class="ratting-value" >{{ product.trueRating }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span>Reviews&nbsp;{{ product.reviewsCount }}</span>
                                 </div>
                             </div>
                             <p class="product-thumb--description">{{ product.description }}</p>
