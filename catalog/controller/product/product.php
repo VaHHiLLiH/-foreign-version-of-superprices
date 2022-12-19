@@ -54,6 +54,8 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
+
+        $data['reviewsCount'] = $this->model_catalog_product->getCountProductReviews($product_id);
         $data['trueRatting'] = $this->model_catalog_product->getProductRating($product_id);
         $data['fakeRatting'] = floor($data['trueRatting']);
 		if ($product_info) {
@@ -200,7 +202,7 @@ class ControllerProductProduct extends Controller {
                     'description' => (strlen($productRand['description']) > 93) ? utf8_substr(trim(strip_tags(html_entity_decode($productRand['description'], ENT_QUOTES, 'UTF-8'))), 0, 93) . '...' : $productRand['description'],
                     'href'        => $this->url->link('product/product', '&product_id=' . $productRand['product_id']),
                     'trueRating'  => $this->model_catalog_product->getProductRating($productRand['product_id']),
-                    'fakeRating' => floor($this->model_catalog_product->getProductRating($productRand['product_id'])),
+                    'fakeRating'  => floor($this->model_catalog_product->getProductRating($productRand['product_id'])),
                 );
 
             }

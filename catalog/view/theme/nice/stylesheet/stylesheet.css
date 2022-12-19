@@ -2229,7 +2229,7 @@ a.meta-value {
   padding-top: 15px;
   border: 1px solid #eee;*/
   /*border-top-width: 0;*/
-  border-top: 1px solid #eee;
+  /*border-top: 1px solid #eee;*/
   margin-top: -1px;
   border-radius: 0 5px 5px 5px;
 }

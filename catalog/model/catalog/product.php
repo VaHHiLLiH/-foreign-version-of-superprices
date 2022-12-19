@@ -769,4 +769,9 @@ class ModelCatalogProduct extends Model {
         }
         return round(((float)$totalRating/(float)count($ratings)), 1);
     }
+
+    public function getCountProductReviews($product_id)
+    {
+        return $this->db->query("SELECT COUNT(*) as count FROM oc_review WHERE product_id = " . (int)$product_id)->row['count'];
+    }
 }
