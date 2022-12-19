@@ -201,6 +201,7 @@ class ControllerProductProduct extends Controller {
                     'name'        => $this->language->cutText($productRand['name'], 5),
                     'description' => (strlen($productRand['description']) > 93) ? utf8_substr(trim(strip_tags(html_entity_decode($productRand['description'], ENT_QUOTES, 'UTF-8'))), 0, 93) . '...' : $productRand['description'],
                     'href'        => $this->url->link('product/product', '&product_id=' . $productRand['product_id']),
+                    'reviewsCount'=> $this->model_catalog_product->getCountProductReviews($productRand['product_id']),
                     'trueRating'  => $this->model_catalog_product->getProductRating($productRand['product_id']),
                     'fakeRating'  => floor($this->model_catalog_product->getProductRating($productRand['product_id'])),
                 );
