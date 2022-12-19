@@ -37,6 +37,8 @@
               <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive fixed-size" /></a>
             </div>
             <div class="product-thumb--info">
+              {#<a class="product-thumb--name {% if 'bold' == nice.productlist_name_font_weight %}-bold-sm{% endif %}" href="{{ product.href }}">{{ product.name }}</a>#}
+              <a class="product-thumb--name-bold" href="{{ product.href }}">{{ product.name }}</a>
               <div class="value-of-rating">
                 {% for i in 1..5 %}
                   {% if product.fakeRating >= i %}
@@ -53,8 +55,6 @@
                   <span class="ratting-value" itemprop="ratingValue">{{ product.trueRating }}</span>
                 </div>
               </div>
-              {#<a class="product-thumb--name {% if 'bold' == nice.productlist_name_font_weight %}-bold-sm{% endif %}" href="{{ product.href }}">{{ product.name }}</a>#}
-              <a class="product-thumb--name-bold" href="{{ product.href }}">{{ product.name }}</a>
               {% if nice.productlist_description %}<p class="product-thumb--description {% if not nice.productlist_description_on_mobile %}hidden-xs hidden-sm{% endif %}">{{ product.description }}</p>{% endif %}
               <div class="product-thumb--hidden-wrapper">
                 <button type="button" class="btn btn-accent product-thumb--button-buy -grid-hover-effect-hidden"><a href="{{ product.href }}">Check it</a></button>
