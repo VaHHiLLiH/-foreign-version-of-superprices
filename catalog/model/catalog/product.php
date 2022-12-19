@@ -760,6 +760,9 @@ class ModelCatalogProduct extends Model {
     public function getProductRating($product_id)
     {
         $ratings = $this->db->query("SELECT * FROM oc_review WHERE product_id = " . (int)$product_id)->rows;
+        if (empty($ratings)) {
+            return 0;
+        }
         $totalRating = 0;
         foreach ($ratings as $rating) {
             $totalRating += (int)$rating['rating'];

@@ -216,7 +216,8 @@ class ControllerProductManufacturer extends Controller {
 					'special'     => $special,
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
-					'rating'      => $result['rating'],
+                    'trueRating'  => $this->model_catalog_product->getProductRating($result['product_id']),
+                    'fakeRating' => floor($this->model_catalog_product->getProductRating($result['product_id'])),
 					'href'        => $this->url->link('product/product', '&product_id=' . $result['product_id'])
 				);
 			}

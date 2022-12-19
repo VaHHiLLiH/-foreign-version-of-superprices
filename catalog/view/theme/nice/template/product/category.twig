@@ -37,12 +37,21 @@
               <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive fixed-size" /></a>
             </div>
             <div class="product-thumb--info">
-              <div class="product-thumb--rating">
-                {% if product.rating %}
-                  {% for i in 1..5 %}
-                    {% if product.rating < i %}<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span> {% else %} <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>{% endif %}
-                  {% endfor %}
-                {% endif %}
+              <div class="value-of-rating">
+                {% for i in 1..5 %}
+                  {% if product.fakeRating >= i %}
+                    <img src="./image/catalog/reit_on.svg">
+                  {% else %}
+                    {% if product.trueRating > product.fakeRating and product.trueRating > (i-1) %}
+                      <img src="./image/catalog/reit_half.svg">
+                    {% else %}
+                      <img src="./image/catalog/reit_off.svg">
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+                <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                  <span class="ratting-value" itemprop="ratingValue">{{ product.trueRating }}</span>
+                </div>
               </div>
               {#<a class="product-thumb--name {% if 'bold' == nice.productlist_name_font_weight %}-bold-sm{% endif %}" href="{{ product.href }}">{{ product.name }}</a>#}
               <a class="product-thumb--name-bold" href="{{ product.href }}">{{ product.name }}</a>
