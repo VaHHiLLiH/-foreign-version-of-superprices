@@ -63,7 +63,8 @@ function generateMethod()
 }
 
 function generateRatingByFirstMethod($db, $product_id) {
-    for($i = 0; $i < 10; $i++) {
+    $finally = mt_rand(50, 500);
+    for($i = 0; $i < $finally; $i++) {
         $rating = mt_rand(1, 10);
         $mark = 0;
         if ($rating <= 2) {
@@ -79,7 +80,8 @@ function generateRatingByFirstMethod($db, $product_id) {
 }
 
 function generateRatingBySecondMethod($db, $product_id) {
-    for($i = 0; $i < 10; $i++) {
+    $finally = mt_rand(50, 500);
+    for($i = 0; $i < $finally; $i++) {
         $rating = mt_rand(1, 100);
         $mark = 0;
         if ($rating <= 5) {
@@ -95,13 +97,15 @@ function generateRatingBySecondMethod($db, $product_id) {
 }
 
 function generateRatingByThirdMethod($db, $product_id) {
-    for($i = 0; $i < 10; $i++) {
+    $finally = mt_rand(50, 500);
+    for($i = 0; $i < $finally; $i++) {
         $db->query("INSERT INTO oc_review (product_id, customer_id, author, text, rating, status, date_added, date_modified) VALUES (" . $product_id . ", 0, 'NoName', 'NoText', 5, 1, NOW(), NOW())");
     }
 }
 
 function generateRatingByFourthMethod($db, $product_id) {
-    for($i = 0; $i < 10; $i++) {
+    $finally = mt_rand(50, 500);
+    for($i = 0; $i < $finally; $i++) {
         $rating = mt_rand(1, 10);
         $mark = 0;
         if ($rating <= 4) {
