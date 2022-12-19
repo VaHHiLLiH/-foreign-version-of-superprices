@@ -5,7 +5,7 @@
     <div class="section section--productlist">
         <div class="row productlist-row">
             {% for product in products %}
-                <div class="product-layout product-grid col-sm-3">
+                <div class="product-layout product-grid col-sm-3" itemprop="itemReviewed">
                     <div class="product-thumb transition">
                         <div class="product-thumb--image">
                             <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive fixed-size" /></a>
