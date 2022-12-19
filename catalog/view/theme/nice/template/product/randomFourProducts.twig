@@ -14,10 +14,10 @@
                             <a class="product-thumb--name-bold" href="{{ product.href }}">{{ product.name }}</a>
                             <div class="value-of-rating">
                                 {% for i in 1..5 %}
-                                    {% if fakeRatting >= i %}
+                                    {% if product.fakeRating >= i %}
                                         <img src="./image/catalog/reit_on.svg">
                                     {% else %}
-                                        {% if trueRatting > fakeRatting and trueRatting > (i-1) %}
+                                        {% if product.trueRating > product.fakeRating and product.trueRating > (i-1) %}
                                             <img src="./image/catalog/reit_half.svg">
                                         {% else %}
                                             <img src="./image/catalog/reit_off.svg">
@@ -25,8 +25,8 @@
                                     {% endif %}
                                 {% endfor %}
                                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                                    <span class="ratting-value" itemprop="ratingValue">{{ trueRatting }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <span>Reviews&nbsp;<span itemprop="reviewCount">{{ reviewsCount }}</span></span>
+                                    <span class="ratting-value" itemprop="ratingValue">{{ product.trueRating }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span>Reviews&nbsp;<span itemprop="reviewCount">{{ product.reviewsCount }}</span></span>
                                 </div>
                             </div>
                             <p class="product-thumb--description">{{ product.description }}</p>
