@@ -836,4 +836,18 @@ class ControllerProductProduct extends Controller {
             return $category['name'];
         }
     }
+
+    public function checkToReview()
+    {
+        $this->load->model('catalog/product');
+
+        if (!empty($this->model_catalog_product->checkReview($this->request->post['product_id'], $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT']))) {
+            $json['error'] = 'You have already reviewed this product';
+        } else {
+            $this->model_catalog_product->setReview($this->request->post['mark'], $this->request->post['product_id'], $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT']);
+            $json['message'] = 'Thanks for your feedback';
+        }
+
+        echo json_encode($json);
+    }
 }

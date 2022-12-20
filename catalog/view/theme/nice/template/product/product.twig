@@ -30,20 +30,19 @@
 
 				  <h1 class="product-h1" itemprop="name">{{ heading_title }}</h1>
 					  <div class="value-of-rating">
-						  {% for i in 1..5 %}
-							  {% if fakeRatting >= i %}
-								  <img src="./image/catalog/reit_on.svg">
-							  {% else %}
-								  {% if trueRatting > fakeRatting and trueRatting > (i-1) %}
-									  <img src="./image/catalog/reit_half.svg">
+						  <span class="stars">
+							  {% for i in 1..5 %}
+								  {% if fakeRatting >= i %}<i class="rating-image bi bi-star-fill" data-value="{{ i }}"></i>
 								  {% else %}
-									  <img src="./image/catalog/reit_off.svg">
+									  {% if trueRatting > fakeRatting and trueRatting > (i-1) %}<i class="rating-image bi bi-star-half" data-value="{{ i }}"></i>
+									  {% else %}<i class="rating-image bi bi-star" data-value="{{ i }}"></i>
+									  {% endif %}
 								  {% endif %}
-							  {% endif %}
-						  {% endfor %}
-						  <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-							  <span class="ratting-value" itemprop="ratingValue">{{ trueRatting }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							  <span>Reviews&nbsp;<span itemprop="reviewCount">{{ reviewsCount }}</span></span>
+							  {% endfor %}
+						  </span>
+						  <div id="product-rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+							  <span class="ratting-value" >{{ trueRatting }}</span>&nbsp;&nbsp;&nbsp;
+							  <span >Reviews&nbsp;<span itemprop="reviewCount">{{ reviewsCount }}</span></span>
 						  </div>
 					  </div>
                 <div class="tab-content">
@@ -58,8 +57,8 @@
                   </div>
                 </div>
               </div>
-                
-              <div id="product">           
+
+              <div id="product">
                 <div class="row">
                 <div class="col-xs-12">
 					<button type="button" id="button-compare" onclick="compare.newAdd('{{ product_id }}', '{{ heading_title }}');" data-loading-text="{{ text_loading }}" class="btn btn-accent btn-lg btn-block">{{ button_compare }}{{ compare_button_text }}</button>
@@ -114,9 +113,30 @@
       {{ content_bottom }}
     </div>
   </div>
-    
+
 </div>
 <script type="text/javascript">
+	$('.rating-image').click(function() {
+		var value = $(this).attr('data-value');
+		$.ajax({
+			url: 'index.php?route=product/product/checkToReview',
+			type: 'post',
+			data: 	{
+						'mark': value,
+						'product_id': {{ product_id }},
+					},
+			dataType: 'json',
+			success: function(json) {
+				if (json.message) {
+					location.reload();
+				} else {
+					$( "#error-block" ).remove();
+					$('<div id="error-block"><p class="error">' + json.error + '</p></div>').insertAfter("#product-rating");
+				}
+			}
+		});
+	});
+
 $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 	$.ajax({
 		url: 'index.php?route=product/product/getRecurringDescription',
@@ -135,12 +155,12 @@ $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 		}
 	});
 });
-</script> 
+</script>
 <script type="text/javascript">
 $('#button-cart').on('click', function() {
 
   var data = $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea');
-  
+
   console.log('data:');
   console.debug(data);
 
@@ -161,7 +181,7 @@ $('#button-cart').on('click', function() {
 
 			if (json['error']) {
         $('#add-to-cart-error').html('<div class="alert alert-danger alert-dismissible">{{ error.add_to_cart }}<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-              
+
 				if (json['error']['option']) {
 					for (i in json['error']['option']) {
 						var element = $('#input-option' + i.replace('_', '-'));
@@ -184,14 +204,14 @@ $('#button-cart').on('click', function() {
 
 			if (json['success']) {
         $('#report-modal .modal-title').html(json['nice_text_modal_add_to_cart_title']);
-        
-        $('#report-modal .modal-body').html('<div class="alert alert-success"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;' + json['success'] + '</div>');  
-        
+
+        $('#report-modal .modal-body').html('<div class="alert alert-success"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;' + json['success'] + '</div>');
+
 				$('#report-modal .modal-footer').html('<button type="button" class="btn modal_btn-close" data-dismiss="modal">'+json['nice_text_modal_button_to_continue']+'</button>\n\
 					<a href="' + json['button_to_cart_link'] + '" class="btn btn-primary modal_btn-to-cart">'+json['nice_text_modal_button_to_cart']+'</a>');
 
         $('#report-modal').modal('show');
-        
+
         $('#cart > button').html('<div class="cart-quantity-wrapper"><i class="fa fa-shopping-bag cart-icon"></i><span id="cart-quantity">' + json['quantity'] + '</div></span><div class="cart-total-wrapper"><span id="cart-total" class="hidden-xs hidden-sm">' + json['total'] + '</span></div>');
 
 				$('#cart > ul').load('index.php?route=common/cart/info ul li');
@@ -202,7 +222,7 @@ $('#button-cart').on('click', function() {
         }
 	});
 });
-</script> 
+</script>
 <script type="text/javascript">
 $('.date').datetimepicker({
 	language: '{{ datepicker }}',
@@ -271,7 +291,7 @@ $('button[id^=\'button-upload\']').on('click', function() {
 		}
 	}, 500);
 });
-</script> 
+</script>
 <script type="text/javascript">
 $('#review').delegate('.pagination a', 'click', function(e) {
     e.preventDefault();
@@ -362,23 +382,23 @@ $(document).ready(function() {
   function updateQuantity(value) {
     $('#input-quantity').val(parseInt($('#input-quantity').val(), 10) + value);
   }
-  
+
   $('#input-quantity--pluse').click(function() {
     updateQuantity(1);
-    
+
     $('#input-quantity').trigger('change');
   });
-  
+
   $('#input-quantity--minus').click(function() {
     if ($('#input-quantity').val () > 0) {
       updateQuantity(-1);
-    } 
+    }
 
     $('#input-quantity').trigger('change');
   });
 });
 </script>
-  
+
 <script type="text/javascript">
 function AjaxLivePrice() {
   $.ajax({
@@ -390,11 +410,11 @@ function AjaxLivePrice() {
       if (json.success) {
         $('#content .price').html(json.new_price.price);
         $('#content .price-special').html(json.new_price.special);
-        $('#content .tax').html("{{ text_tax }} " + json.new_price.tax);				
+        $('#content .tax').html("{{ text_tax }} " + json.new_price.tax);
       }
     }
   });
-}			
+}
 $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\'], #product input[type=\'checkbox\'], #product select, #product textarea').on('change', function() {
   AjaxLivePrice();
 });

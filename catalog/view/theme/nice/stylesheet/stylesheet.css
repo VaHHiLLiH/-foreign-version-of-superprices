@@ -127,6 +127,11 @@
   }
 }
 
+.error{
+  color: red;
+  margin: 10px;
+}
+
 .row, .form-horizontal .form-group {
   margin-left: var(--space-2x-);
   margin-right: var(--space-2x-);
@@ -3900,4 +3905,25 @@ footer.only-for-mobile{
   color: grey;
   font-size: 14px;
   vertical-align: middle;
+}
+
+/*.rating-image:hover{
+  background: bisque;
+  padding: 1px;
+}*/
+.stars{
+  display: inline-block;
+  height: 0px;
+}
+.stars > .bi{
+  color: grey;
+}
+/*.stars > .bi:hover{
+  font-size: 20px;
+}*/
+.stars:hover > .bi {
+  color: #FFCC66;
+}
+.stars > .bi:hover ~ .bi {
+  color: grey;
 }

@@ -774,4 +774,14 @@ class ModelCatalogProduct extends Model {
     {
         return $this->db->query("SELECT COUNT(*) as count FROM oc_review WHERE product_id = " . (int)$product_id)->row['count'];
     }
+
+    public function checkReview($product_id, $ip, $user_agent)
+    {
+       return $this->db->query("SELECT * FROM oc_review WHERE product_id = " . (int)$product_id . " AND (ip_address = '" . $ip . "' OR user_agent = '" . $user_agent . "')")->row;
+    }
+
+    public function setReview($mark, $product_id, $ip, $user_agent)
+    {
+        return $this->db->query("INSERT INTO oc_review (product_id, customer_id, author, text, rating, ip_address, user_agent, status, date_added, date_modified) VALUES (" . (int)$product_id . ", 0, 'NoName', 'NoText', " . (int)$mark . ", '" . $ip . "', '" . $user_agent . "', 1, NOW(), NOW())");
+    }
 }
