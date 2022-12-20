@@ -3899,4 +3899,5 @@ footer.only-for-mobile{
 .rating-count{
   color: grey;
   font-size: 14px;
+  vertical-align: middle;
 }
