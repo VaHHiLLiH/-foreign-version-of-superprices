@@ -53,6 +53,7 @@
                 {% endfor %}
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
                   <span class="ratting-value" itemprop="ratingValue">{{ product.trueRating }}</span>
+                  <span class="rating-count">{{ product.reviewsCount }}&nbsp;Reviews</span>
                 </div>
               </div>
               {% if nice.productlist_description %}<p class="product-thumb--description {% if not nice.productlist_description_on_mobile %}hidden-xs hidden-sm{% endif %}">{{ product.description }}</p>{% endif %}
