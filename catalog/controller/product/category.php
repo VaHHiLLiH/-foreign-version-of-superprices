@@ -237,6 +237,7 @@ class ControllerProductCategory extends Controller {
 					'special'     => $special,
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
+                    'reviewsCount'=> $this->model_catalog_product->getCountProductReviews($result['product_id']),
                     'trueRating'  => $this->model_catalog_product->getProductRating($result['product_id']),
                     'fakeRating' => floor($this->model_catalog_product->getProductRating($result['product_id'])),
 					'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
