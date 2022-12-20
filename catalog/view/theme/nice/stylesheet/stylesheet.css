@@ -3917,6 +3917,7 @@ footer.only-for-mobile{
 }
 .stars > .bi{
   color: grey;
+  padding: 3px;
 }
 /*.stars > .bi:hover{
   font-size: 20px;
