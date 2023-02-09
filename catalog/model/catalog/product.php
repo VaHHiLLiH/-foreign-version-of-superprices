@@ -805,6 +805,10 @@ class ModelCatalogProduct extends Model {
                 WHERE  ptc.product_id = " . $productId . " AND c.parent_id = " . $category['category_id'])
                     ->row;
 
+            if (empty($childCategory)) {
+                return '';
+            }
+
             if ($childCategory['name'] === 'Smartphones') {
                 return 'Smartphone';
             } else if ($childCategory['name'] === 'Mobiles') {
@@ -831,12 +835,6 @@ class ModelCatalogProduct extends Model {
                 return 'Semi-Acoustic Guitar';
             } else if ($childCategory['name'] === 'Accordions') {
                 return 'Accordion';
-            } else if (empty($childCategory) && $category['category_id'] == 3) {
-                return 'Phone';
-            } else if (empty($childCategory) && $category['category_id'] == 4) {
-                return 'Camera';
-            } else if (empty($childCategory) && $category['category_id'] == 5) {
-                return '';
             }
         }
 
