@@ -799,38 +799,44 @@ class ModelCatalogProduct extends Model {
         }
 
         if ($category['category_id'] == 3 || $category['category_id'] == 4 || $category['category_id'] == 5) {
-            $category =  $this->db->query("SELECT c.category_id, cd.name, c.parent_id FROM oc_product_to_category ptc 
+            $childCategory =  $this->db->query("SELECT c.category_id, cd.name, c.parent_id FROM oc_product_to_category ptc 
                 JOIN oc_category c ON (ptc.category_id = c.category_id) 
                 JOIN oc_category_description cd ON (c.category_id = cd.category_id) 
                 WHERE  ptc.product_id = " . $productId . " AND c.parent_id = " . $category['category_id'])
                     ->row;
-            var_dump($category);die();
-            if ($category['name'] === 'Smartphones') {
+
+            if ($childCategory['name'] === 'Smartphones') {
                 return 'Smartphone';
-            } else if ($category['name'] === 'Mobiles') {
+            } else if ($childCategory['name'] === 'Mobiles') {
                 return 'Mobile phone';
-            } else if ($category['name'] === 'Compact Cameras') {
+            } else if ($childCategory['name'] === 'Compact Cameras') {
                 return 'Compact Camera';
-            } else if ($category['name'] === 'Digital Cameras') {
+            } else if ($childCategory['name'] === 'Digital Cameras') {
                 return 'Digital Camera';
-            } else if ($category['name'] === 'DSLR Cameras') {
+            } else if ($childCategory['name'] === 'DSLR Cameras') {
                 return 'DSLR Camera';
-            } else if ($category['name'] === 'Mirrorless Cameras') {
+            } else if ($childCategory['name'] === 'Mirrorless Cameras') {
                 return 'Mirrorless Camera';
-            } else if ($category['name'] === 'Electric Guitars') {
+            } else if ($childCategory['name'] === 'Electric Guitars') {
                 return 'Electric Guitar';
-            } else if ($category['name'] === 'Synthesizers') {
+            } else if ($childCategory['name'] === 'Synthesizers') {
                 return 'Synthesizer';
-            } else if ($category['name'] === 'Digital Pianos') {
+            } else if ($childCategory['name'] === 'Digital Pianos') {
                 return 'Digital Piano';
-            } else if ($category['name'] === 'MIDI Keyboards') {
+            } else if ($childCategory['name'] === 'MIDI Keyboards') {
                 return 'MIDI Keyboard';
-            } else if ($category['name'] === 'Electric Bass') {
+            } else if ($childCategory['name'] === 'Electric Bass') {
                 return 'Electric Bass';
-            } else if ($category['name'] === 'Semi-Acoustic Guitars') {
+            } else if ($childCategory['name'] === 'Semi-Acoustic Guitars') {
                 return 'Semi-Acoustic Guitar';
-            } else if ($category['name'] === 'Accordions') {
+            } else if ($childCategory['name'] === 'Accordions') {
                 return 'Accordion';
+            } else if (empty($childCategory) && $category['category_id'] == 3) {
+                return 'Phone';
+            } else if (empty($childCategory) && $category['category_id'] == 4) {
+                return 'Camera';
+            } else if (empty($childCategory) && $category['category_id'] == 5) {
+                return '';
             }
         }
 
@@ -840,6 +846,10 @@ class ModelCatalogProduct extends Model {
 
         if ($category['category_id'] == 7) {
             return 'Console';
+        }
+
+        if (empty($category)) {
+            return '';
         }
 
         return $category['name'];
