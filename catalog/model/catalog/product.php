@@ -787,11 +787,16 @@ class ModelCatalogProduct extends Model {
 
     public function getMainParentCategoryName($productId)
     {
+        // я эту хуету захардкодил, потому что я ебал рот писать хоть что-то адекватное, если это заставили делать тебя, то мои соболезнования)
         $category =  $this->db->query("SELECT c.category_id, cd.name, c.parent_id FROM oc_product_to_category ptc 
             JOIN oc_category c ON (ptc.category_id = c.category_id) 
             JOIN oc_category_description cd ON (c.category_id = cd.category_id) 
             WHERE  ptc.product_id = " . $productId . " AND c.parent_id = 0")
             ->row;
+
+        if ($category['category_id'] == 2) {
+            return 'Monitor';
+        }
 
         if ($category['category_id'] == 3 || $category['category_id'] == 4 || $category['category_id'] == 5) {
             $category =  $this->db->query("SELECT c.category_id, cd.name, c.parent_id FROM oc_product_to_category ptc 
@@ -799,7 +804,44 @@ class ModelCatalogProduct extends Model {
                 JOIN oc_category_description cd ON (c.category_id = cd.category_id) 
                 WHERE  ptc.product_id = " . $productId . " AND c.parent_id = " . $category['category_id'])
                     ->row;
+
+            if ($category['name'] === 'Smartphones') {
+                return 'Smartphone';
+            } else if ($category['name'] === 'Mobiles') {
+                return 'Mobile phone';
+            } else if ($category['name'] === 'Compact Cameras') {
+                return 'Compact Camera';
+            } else if ($category['name'] === 'Digital Cameras') {
+                return 'Digital Camera';
+            } else if ($category['name'] === 'DSLR Cameras') {
+                return 'DSLR Camera';
+            } else if ($category['name'] === 'Mirrorless Cameras') {
+                return 'Mirrorless Camera';
+            } else if ($category['name'] === 'Electric Guitars') {
+                return 'Electric Guitar';
+            } else if ($category['name'] === 'Synthesizers') {
+                return 'Synthesizer';
+            } else if ($category['name'] === 'Digital Pianos') {
+                return 'Digital Piano';
+            } else if ($category['name'] === 'MIDI Keyboards') {
+                return 'MIDI Keyboard';
+            } else if ($category['name'] === 'Electric Bass') {
+                return 'Electric Bass';
+            } else if ($category['name'] === 'Semi-Acoustic Guitars') {
+                return 'Semi-Acoustic Guitar';
+            } else if ($category['name'] === 'Accordions') {
+                return 'Accordion';
+            }
         }
+
+        if ($category['category_id'] == 6) {
+            return 'Smart Watch';
+        }
+
+        if ($category['category_id'] == 7) {
+            return 'Console';
+        }
+
         return $category['name'];
     }
 }
