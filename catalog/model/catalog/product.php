@@ -804,7 +804,7 @@ class ModelCatalogProduct extends Model {
                 JOIN oc_category_description cd ON (c.category_id = cd.category_id) 
                 WHERE  ptc.product_id = " . $productId . " AND c.parent_id = " . $category['category_id'])
                     ->row;
-
+            die($category);
             if ($category['name'] === 'Smartphones') {
                 return 'Smartphone';
             } else if ($category['name'] === 'Mobiles') {
