@@ -784,4 +784,22 @@ class ModelCatalogProduct extends Model {
     {
         return $this->db->query("INSERT INTO oc_review (product_id, customer_id, author, text, rating, ip_address, user_agent, status, date_added, date_modified) VALUES (" . (int)$product_id . ", 0, 'NoName', 'NoText', " . (int)$mark . ", '" . $ip . "', '" . $user_agent . "', 1, NOW(), NOW())");
     }
+
+    public function getMainParentCategoryName($productId)
+    {
+        $category =  $this->db->query("SELECT c.category_id, cd.name, c.parent_id FROM oc_product_to_category ptc 
+            JOIN oc_category c ON (ptc.category_id = c.category_id) 
+            JOIN oc_category_description cd ON (c.category_id = cd.category_id) 
+            WHERE  ptc.product_id = " . $productId . " AND c.parent_id = 0")
+            ->row;
+
+        if ($category['category_id'] == 3 || $category['category_id'] == 4 || $category['category_id'] == 5) {
+            $category =  $this->db->query("SELECT c.category_id, cd.name, c.parent_id FROM oc_product_to_category ptc 
+                JOIN oc_category c ON (ptc.category_id = c.category_id) 
+                JOIN oc_category_description cd ON (c.category_id = cd.category_id) 
+                WHERE  ptc.product_id = " . $productId . " AND c.parent_id = " . $category['category_id'])
+                    ->row;
+        }
+        return $category['name'];
+    }
 }
